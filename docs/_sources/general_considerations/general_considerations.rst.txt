@@ -1,0 +1,12 @@
+.. _general_considerations:
+
+======================
+General considerations
+======================
+
+.. toctree::
+    :maxdepth: 1
+
+    ai_models
+
+

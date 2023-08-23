@@ -1,0 +1,14 @@
+.. _mouth_detection:
+
+===============
+Mouth Detection
+===============
+
+- Landmarks
+- Face attributes
+
+
+See Also
+--------
+
+- :ref:`face_attributes`

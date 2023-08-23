@@ -1,0 +1,61 @@
+.. _naming_conventions:
+
+==================
+Naming conventions
+==================
+
+For the sake of clarity in this multi-language documentation, the following naming conventions have been adopted.
+
+- Class, struct and enumeration names are written in Pascal case. Example: ``License``.
+- Class and struct member names are written in Camel case. Example: ``activateSerialKey``
+- Enumeration fields are written in Camel case. Example : ``LicenseError.invalidLicense``.
+
+Enumerations
+============
+
+Field names in enumerations must be formatted according to the programming language. For example:
+
+.. tab-set::
+
+    .. tab-item:: C
+        :sync: c
+
+        .. code-block:: c
+
+            id3LicenseError_InvalidLicense
+
+    .. tab-item:: Dart
+        :sync: dart
+
+        .. code-block:: dart
+
+            LicenseError.invalidLicense
+
+    .. tab-item:: C#
+        :sync: csharp
+
+        .. code-block:: csharp
+
+            LicenseError.InvalidLicense
+
+    .. tab-item:: Java
+        :sync: java
+   
+        .. code-block:: java
+        
+            LicenseError.invalidLicense
+
+    .. tab-item:: Python
+        :sync: python
+
+        .. code-block:: python
+
+            LicenseError.invalidLicense
+
+    .. tab-item:: Swift
+        :sync: swift
+
+        .. code-block:: swift
+
+            LicenseError.InvalidLicense
+

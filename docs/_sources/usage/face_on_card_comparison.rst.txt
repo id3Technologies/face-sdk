@@ -1,0 +1,58 @@
+.. _face_on_card_comparison:
+
+=============================
+Face comparison on smart card
+=============================
+
+Face comparison on smart card, also known as Match-on-Card technology, means that the final stage of biometric verification is carried out on an integrated circuit card (ICC). This technology makes a smart card truly personal by replacing the PIN code needed to give access to the card with facial recognition.
+
+`Contact us<contact@id3.eu>`_ for a list of cards compatible with our Match-on-Card technology.
+
+Decision thresholds
+===================
+
+The decision threshold for reaching a specific FMR varies according to the facial encoder used.
+
+Encoder version 9A
+------------------
+The table below defines typical matching decision values for use with version 9A of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 494
+  * - 0.1%
+    - 632
+  * - 0.01%
+    - 744
+  * - 0.001%
+    - 843
+  * - 0.0001%
+    - 946
+
+Encoder version 9B
+------------------
+The table below defines typical matching decision values for use with version 9B of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 4228
+  * - 0.1%
+    - 5399
+  * - 0.01%
+    - 6316
+  * - 0.001%
+    - 7026
+  * - 0.0001%
+    - 7531

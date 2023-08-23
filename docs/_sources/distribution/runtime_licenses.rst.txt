@@ -1,0 +1,7 @@
+.. _runtime_licenses:
+
+================
+Runtime Licenses 
+================
+
+To deploy a product developed with |product-name|, the integrator should obtain runtime licenses corresponding to the modules and functionalities used by the application. Please see sample for licence management strategies.

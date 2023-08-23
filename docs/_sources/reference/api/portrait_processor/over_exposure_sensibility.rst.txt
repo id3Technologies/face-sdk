@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.OverExposureSensibility Property
+
+.. _portrait_processor_over_exposure_sensibility_class_member:
+
+===============================================================================
+PortraitProcessor.OverExposureSensibility Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Sensibility of the over-exposure classifier.
+
+The higher the value, the more sensitive the algorithm will be, meaning that it will be more likely to estimate over-exposed face images.
+
+Default value is 70.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetOverExposureSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * overExposureSensibility)
+      int id3FacePortraitProcessor_SetOverExposureSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int overExposureSensibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get overExposureSensibility => getOverExposureSensibility();
+      set overExposureSensibility(int value) => setOverExposureSensibility(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int overExposureSensibility
+      {
+          get => GetoverExposureSensibility();
+          set => SetoverExposureSensibility(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getOverExposureSensibility() throws FaceException
+      public void setOverExposureSensibility(int overExposureSensibility) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      overExposureSensibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

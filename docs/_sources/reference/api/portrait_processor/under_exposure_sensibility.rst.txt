@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.UnderExposureSensibility Property
+
+.. _portrait_processor_under_exposure_sensibility_class_member:
+
+===============================================================================
+PortraitProcessor.UnderExposureSensibility Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Sensibility of the under-exposure classifier.
+
+The higher the value, the more sensitive the algorithm will be, meaning that it will be more likely to estimate under-exposed face images.
+
+Default value is 70
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetUnderExposureSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * underExposureSensibility)
+      int id3FacePortraitProcessor_SetUnderExposureSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int underExposureSensibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get underExposureSensibility => getUnderExposureSensibility();
+      set underExposureSensibility(int value) => setUnderExposureSensibility(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int underExposureSensibility
+      {
+          get => GetunderExposureSensibility();
+          set => SetunderExposureSensibility(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getUnderExposureSensibility() throws FaceException
+      public void setUnderExposureSensibility(int underExposureSensibility) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      underExposureSensibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

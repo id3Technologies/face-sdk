@@ -1,0 +1,9 @@
+.. _red_eye:
+
+==================
+Red Eyes Detection
+==================
+
+Detect if a person's eyes are red or not (due to flash mostly).
+
+.. note:: Required AI model: **EyeRednessClassifier1A**

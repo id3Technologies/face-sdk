@@ -1,0 +1,41 @@
+.. _handling_licenses:
+
+=================
+Handling licenses
+=================
+
+
+.. _checking_license:
+
+Checking the license
+--------------------
+
+Before calling any function of the SDK, you need to check a valid license file first.
+
+.. note:: To obtain a license file, please use the provided activation tool or call one of the activation methods in your application.
+
+.. tab-set::
+
+    .. tab-item:: C#
+        :sync: csharp
+   
+        .. literalinclude:: /_static/samples/init.cs
+            :language: c#
+            :start-after: [check_license]
+            :end-before: [check_license]
+            :dedent: 12
+            :emphasize-lines: 5
+
+    .. tab-item:: C
+        :sync: c
+ 
+        .. literalinclude:: /_static/samples/init.cpp
+            :language: c
+            :start-after: [check_license]
+            :end-before: [check_license]
+            :dedent: 
+
+See also
+--------
+- :ref:`license_activation`
+- :ref:`face_library_check_license_class_method`

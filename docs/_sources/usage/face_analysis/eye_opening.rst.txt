@@ -1,0 +1,14 @@
+.. _eye_opening:
+
+======================
+Eye opening estimation
+======================
+
+The :ref:`face_analyser_class` can estimate the opening of both eyes.
+The resulting scores are in the range 0 to 100.
+
+.. note:: Required AI model: **EyeOpennessDetector1A**
+
+See also
+========
+- :ref:`face_analyser_compute_eye_openness_class_method`  
