@@ -1,7 +1,0 @@
-.. _noise:
-
-=====
-Noise
-=====
-
-Measures the image noise.
