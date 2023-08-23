@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.headPoseEstimation Property
+
+.. _portrait_processor_head_pose_estimation_class_member:
+
+===============================================================================
+PortraitProcessor.headPoseEstimation Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether head pose estimation is enabled.
+
+.. important:: This option requires the FacePoseEstimator model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetHeadPoseEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * headPoseEstimation)
+      int id3FacePortraitProcessor_SetHeadPoseEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool headPoseEstimation)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get headPoseEstimation => getHeadPoseEstimation();
+      set headPoseEstimation(bool value) => setHeadPoseEstimation(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool headPoseEstimation
+      {
+          get => GetheadPoseEstimation();
+          set => SetheadPoseEstimation(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getHeadPoseEstimation() throws FaceException
+      public void setHeadPoseEstimation(boolean headPoseEstimation) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      head_pose_estimation: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

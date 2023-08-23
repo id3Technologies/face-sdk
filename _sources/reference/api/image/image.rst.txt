@@ -1,0 +1,290 @@
+.. index:: 
+  !Image Class
+
+.. _image_class:
+
+===============================================================================
+Image Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  clone<clone>
+  compare<compare>
+  correctGamma<correct_gamma>
+  data<data>
+  downscale<downscale>
+  downscaleTo<downscale_to>
+  extractRoi<extract_roi>
+  flip<flip>
+  flipTo<flip_to>
+  fromBuffer<from_buffer>
+  fromFile<from_file>
+  fromRawBuffer<from_raw_buffer>
+  fromYuvPlanes<from_yuv_planes>
+  getPixels<get_pixels>
+  height<height>
+  pixelDepth<pixel_depth>
+  pixelFormat<pixel_format>
+  reallocate<reallocate>
+  resize<resize>
+  resizeTo<resize_to>
+  rotate<rotate>
+  rotateTo<rotate_to>
+  set<set>
+  stride<stride>
+  toBuffer<to_buffer>
+  toBufferObject<to_buffer_object>
+  toFile<to_file>
+  toNumpy<to_numpy>
+  toRawBuffer<to_raw_buffer>
+  transpose<transpose>
+  width<width>
+
+
+Definition
+----------
+.. line-block::
+    This class represents a Image
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImage *ID3_FACE_IMAGE;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class Image implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class Image
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class Image implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class Image
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class Image
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE hImage{};
+        int err = id3FaceImage_Initialize(&hImage);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImage_Dispose(&hImage);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final image = sdk.Image();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        image.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var image = new Image())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var image = new Image()
+        // ...
+        image.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (Image image = new Image()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        Image image = new Image();
+        // ...
+        image.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        image = Image()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del image
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var image: Image? = nil
+        image = try Image()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`data<image_data_class_member>`
+    - byte[]
+    - Raw data buffer of the image.
+  * - :ref:`height<image_height_class_member>`
+    - int
+    - Height in pixels.
+  * - :ref:`pixelDepth<image_pixel_depth_class_member>`
+    - int
+    - Pixel depth.
+  * - :ref:`pixelFormat<image_pixel_format_class_member>`
+    - :ref:`PixelFormat<pixel_format_enum>`
+    - Pixel format.
+  * - :ref:`stride<image_stride_class_member>`
+    - int
+    - Stride in bytes.
+  * - :ref:`width<image_width_class_member>`
+    - int
+    - Width in pixels.
+
+Static Methods
+--------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`fromBuffer<image_from_buffer_class_method>`
+    - Imports the image object from a buffer.
+  * - :ref:`fromFile<image_from_file_class_method>`
+    - Imports the image object from a file.
+  * - :ref:`fromRawBuffer<image_from_raw_buffer_class_method>`
+    - Imports the image object from a raw buffer.
+  * - :ref:`fromYuvPlanes<image_from_yuv_planes_class_method>`
+    - Imports the image object from YUV planes.
+  * - :ref:`set<image_set_class_method>`
+    - Sets the image object fields. This function does not allocate any memory and is unsafe! The user must handle the pixels pointer carefully.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clone<image_clone_class_method>`
+    - Clones the Image object.
+  * - :ref:`compare<image_compare_class_method>`
+    - Compute the difference with another image.
+  * - :ref:`correctGamma<image_correct_gamma_class_method>`
+    - Applies a gamma correction to the image object.
+  * - :ref:`downscale<image_downscale_class_method>`
+    - Downscales an image inplace so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+  * - :ref:`downscaleTo<image_downscale_to_class_method>`
+    - Downscales an image into another so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+  * - :ref:`extractRoi<image_extract_roi_class_method>`
+    - Extracts a region of interest in the image object according to the given bounds.
+  * - :ref:`flip<image_flip_class_method>`
+    - Flips the image object in-place.
+  * - :ref:`flipTo<image_flip_to_class_method>`
+    - Flips the image object into another.
+  * - :ref:`getPixels<image_get_pixels_class_method>`
+    - Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixels pointer carefully.
+  * - :ref:`reallocate<image_reallocate_class_method>`
+    - Reallocates the internal memory of an image object from parameters. If the given parameters are the same as the ones of the object, then there is nothing done in this function.
+  * - :ref:`resize<image_resize_class_method>`
+    - Resizes the image object to the required width and height in-place.
+  * - :ref:`resizeTo<image_resize_to_class_method>`
+    - Resizes the image object to the required width and height into another.
+  * - :ref:`rotate<image_rotate_class_method>`
+    - Rotates the image object of the required angle in-place. The rotation is performed counter-clockwise.
+  * - :ref:`rotateTo<image_rotate_to_class_method>`
+    - Rotates the image object of the required angle into another. The rotation is performed counter-clockwise.
+  * - :ref:`toBuffer<image_to_buffer_class_method>`
+    - Exports the image object to a buffer. The compression level meaning depends on the used algorithm:
+  * - :ref:`toBufferObject<image_to_buffer_object_class_method>`
+    - Exports the image object to a buffer object. The compression level meaning depends on the used algorithm:
+  * - :ref:`toFile<image_to_file_class_method>`
+    - Exports the image object to a file. The compression level meaning depends on the used algorithm:
+  * - :ref:`toNumpy<image_to_numpy_class_method>`
+    - Exports the image object to a numpy array
+  * - :ref:`toRawBuffer<image_to_raw_buffer_class_method>`
+    - Convert image to another pixel format dans store the result in a image buffer object.
+  * - :ref:`transpose<image_transpose_class_method>`
+    - Transposes the image object.

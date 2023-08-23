@@ -1,0 +1,114 @@
+.. index:: 
+  !Portrait.faceId Property
+
+.. _portrait_face_id_class_member:
+
+===============================================================================
+Portrait.faceId Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: int
+
+Definition
+----------
+
+Unique face ID.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetFaceId (ID3_FACE_PORTRAIT hPortrait, int * faceId)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get faceId => getFaceId();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int faceId
+      {
+          get => GetfaceId();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getFaceId() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      face_id: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

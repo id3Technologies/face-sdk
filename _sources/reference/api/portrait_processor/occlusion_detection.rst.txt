@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.occlusionDetection Property
+
+.. _portrait_processor_occlusion_detection_class_member:
+
+===============================================================================
+PortraitProcessor.occlusionDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether occlusion detection is enabled.
+
+.. important:: This option requires the FaceOcclusionDetector model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetOcclusionDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * occlusionDetection)
+      int id3FacePortraitProcessor_SetOcclusionDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool occlusionDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get occlusionDetection => getOcclusionDetection();
+      set occlusionDetection(bool value) => setOcclusionDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool occlusionDetection
+      {
+          get => GetocclusionDetection();
+          set => SetocclusionDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getOcclusionDetection() throws FaceException
+      public void setOcclusionDetection(boolean occlusionDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      occlusion_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

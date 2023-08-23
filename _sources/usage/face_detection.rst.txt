@@ -1,0 +1,160 @@
+.. index:: 
+  !Face detection
+
+.. _face_detection:
+
+==============
+Face detection
+==============
+
+The :ref:`FaceDetector<face_detector_class>` class detects human faces in still images.
+
+.. important:: The face detector requires the relevant AI models to run. See :ref:`face_detection_models` for details.
+
+.. _detected_face:
+
+The face detector outputs a list of :ref:`DetectedFace<detected_face_class>` objects containing the following information:
+
+- An identifier
+- A face detection score
+- The :ref:`face_detection_face_bounds`
+- The :ref:`face_detection_portrait_bounds`
+- The interocular distance (IOD)
+- The 5 landmark features (eyes, nose and mouth)
+
+.. warning:: The identifier is an auto-incremented value and is not linked to a user's identity.
+
+.. _face_detection_face_bounds:
+.. include:: face_bounds.rst
+
+.. _face_detection_portrait_bounds:
+.. include:: portrait_bounds.rst
+
+.. _face_detection_models:
+.. include:: face_detection_models.rst
+
+Tolerance
+=========
+
+The face detection tolerance depends on the AI model used. The following characteristics can be assumed:
+
+.. list-table:: 
+    :widths: 30 70
+
+    * - Face angle tolerance
+      - yaw < ±45°, pitch < ±30°, roll < 45°
+      
+    * - Minimal interocular distance (IOD)
+      - 10 pixels
+
+.. warning:: The algorithm searches for faces in the range [16px;512px]. If the image is too large to fit this range, one must resize it before the detection process.
+.. hint:: For optimum facial recognition performance, a minimum distance of 100 pixels between eyes is recommended.
+
+Parameters
+==========
+
+The face detector is configured by default with the most common parameters. For specific applications, it may be useful to adjust certain parameters.
+
+The following parameters are defined:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+
+  * - Confidence threshold
+    - | Value above which the detector considers the detected element to be a face.
+      | Setting a high threshold reduces false detection but can increase the number of undetected faces.
+
+  * - Model
+    - :ref:`face_detection_models` used to detect faces.
+  
+  * - NMS IoU threshold
+    - | Non-maximum suppression (NMS) intersection-over-union (IoU) threshold.
+      | Setting a high threshold allows to detect more overlapping faces which can be useful in a multi-face scenario. On the contrary, in a portrait scenario, a low NMS IoU threshold should be preferred.
+
+      .. image:: /_static/images/iou.bmp
+        :width: 264
+
+  * - Thread count
+    - Number of threads to use for face detection. Default is 1.
+ 
+
+Example
+=======
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. literalinclude:: /_static/samples/sample.c
+        :language: c
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. literalinclude:: /_static/samples/sample.dart
+        :language: dart
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 2
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. literalinclude:: /_static/samples/sample.cs
+        :language: c#
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 12
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. literalinclude:: /_static/samples/sample.java
+        :language: java
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 8
+
+    .. tab-item:: Kotlin
+      :sync: Kotlin
+
+      .. literalinclude:: /_static/samples/sample.kt
+        :language: kotlin
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Python
+      :sync: python
+
+      .. literalinclude:: /_static/samples/sample.py
+        :language: python
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. literalinclude:: /_static/samples/sample.swift
+        :language: swift
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+
+See Also
+========
+
+- :ref:`face_detector_class`
+- :ref:`detected_face_list_class`
+- :ref:`detected_face_class`

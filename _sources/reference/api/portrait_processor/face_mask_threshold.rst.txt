@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.faceMaskThreshold Property
+
+.. _portrait_processor_face_mask_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.faceMaskThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Face mask detection threshold.
+
+If the detection score is above this value, the person is probably wearing a mask.
+
+.. hint:: Default value is 35.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * faceMaskThreshold)
+      int id3FacePortraitProcessor_SetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int faceMaskThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get faceMaskThreshold => getFaceMaskThreshold();
+      set faceMaskThreshold(int value) => setFaceMaskThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int faceMaskThreshold
+      {
+          get => GetfaceMaskThreshold();
+          set => SetfaceMaskThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getFaceMaskThreshold() throws FaceException
+      public void setFaceMaskThreshold(int faceMaskThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      face_mask_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

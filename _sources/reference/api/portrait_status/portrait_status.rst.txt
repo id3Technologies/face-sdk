@@ -1,0 +1,88 @@
+.. index:: 
+  !PortraitStatus Enumeration
+
+.. _portrait_status_enum:
+
+===============================================================================
+PortraitStatus Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the possible statuses of a portrait.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FacePortraitStatus
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum PortraitStatus
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum PortraitStatus
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum PortraitStatus
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class PortraitStatus
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum PortraitStatus
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``undefined``
+    - 0
+    - The status is undefined.
+  * - ``updated``
+    - 1
+    - The portrait is correctly created and updated.
+  * - ``noFaceDetected``
+    - 2
+    - No face detected in the provided image.
+  * - ``incorrectSubjectPosition``
+    - 3
+    - The position of the subject is incorrect.
+  * - ``movingSubject``
+    - 4
+    - The subject is moving and the portrait couldn't be updated.

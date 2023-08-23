@@ -1,0 +1,145 @@
+.. index:: 
+  !Face tracking
+
+.. _face_tracking:
+
+=============
+Face tracking
+=============
+
+The :ref:`FaceTracker<face_tracker_class>` class tracks faces in consecutive frames. It detects faces with motion prediction models that make it robust to occlusions.
+It also automatically creates and consolidates templates over time. 
+
+.. important:: The face tracker requires the relevant AI models to run. See :ref:`face_detection_models` for details.
+
+The face tracker outputs a list of :ref:`TrackedFace<tracked_face_class>` objects containing similar information as in a :ref:`DetectedFace<detected_face_class>`:
+
+- An identifier
+- A face detection score
+- The :ref:`face bounds<face_detection_face_bounds>`
+- The :ref:`portrait bounds<face_detection_portrait_bounds>`
+- The interocular distance (IOD)
+- The 5 landmark features (eyes, nose and mouth)
+
+Plus the following:
+
+- The :ref:`predicted_bounds`
+- The consolidated :ref:`face_template`
+
+.. _predicted_bounds:
+
+Predicted bounds
+================
+
+Predicted bounds are computed using a Kalman filter which has the effect of making them smooth and robust to false non-detections.
+
+Parameters
+==========
+
+The face tracker defines the following parameters:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - Detection model
+    - :ref:`face_detection_models` used to detect faces.
+  * - Detection threshold
+    - | Confidence threshold of the face detector. Range is 0-100. Default value is 50.
+  * - Encoding model
+    - | Model used to create features and assess consistancy among views of a given face. Default value is FaceEncoder9B.
+      | Some better accuracy/speed balances can be found by choosing another model.
+  * - Matching threshold
+    - | Minimum match score to reach to preserve the ID of a tracked face between frame 't-1' and frame 't'.
+      | Default value is 3000 which corresponds to a False Match Rate of 1/1000.
+  * - Maximum tracked face age
+    - | Maximum number of consecutive non-detections to reach before deleting a tracked face.
+      | Default value is 30 which corresponds to 2s at a frame rate of 15 FPS.
+      | One must adapt this value to its needs in terms of tracker identity memory (in seconds) and measured frame rate on target platform.
+  * - Minimum tracked face age
+    - | Minimum number of consecutive detections to reach before creating a tracked face. 
+      | Default value is 1 for FaceDetector3B since the false detection rate is low enough.
+      | If using a less accurate detector (such as FaceDetector3C) one might consider increasing a bit this value to avoid false tracks.
+  * - NMS IOU threshold
+    - | Non-maximum suppression (NMS) intersection-over-union (IOU) threshold.
+      | Setting a high threshold allows to detect more overlapping faces which can be useful in a multi-face scenario. On the contrary, in a portrait scenario, a low NMS IOU threshold should be preferred.
+  * - Thread count
+    - Number of threads to use for face detection. Default is 1.
+
+Example
+=======
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. literalinclude:: /_static/samples/sample.c
+        :language: c
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. literalinclude:: /_static/samples/sample.dart
+        :language: dart
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 2
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. literalinclude:: /_static/samples/sample.cs
+        :language: c#
+        :start-after: [face_tracking]
+        :end-before: [face_tracking]
+        :dedent: 12
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. literalinclude:: /_static/samples/sample.java
+        :language: java
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 8
+
+    .. tab-item:: Kotlin
+      :sync: Kotlin
+
+      .. literalinclude:: /_static/samples/sample.kt
+        :language: kotlin
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Python
+      :sync: python
+
+      .. literalinclude:: /_static/samples/sample.py
+        :language: python
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. literalinclude:: /_static/samples/sample.swift
+        :language: swift
+        :start-after: [face_detection]
+        :end-before: [face_detection]
+        :dedent: 4
+
+See Also
+========
+
+- :ref:`face_tracker_class`
+- :ref:`tracked_face_list_class`
+- :ref:`tracked_face_class`

@@ -1,0 +1,25 @@
+.. _distribution:
+
+============
+Distribution
+============
+
+This section describes how to distribute your application implementing functionalities of the |product-name|.
+
+.. toctree::
+    
+    distributing_windows_apps
+    distributing_linux_apps
+    distributing_android_apps
+
+
+.. important:: To deploy a product developed with |product-name|, the integrator should obtain runtime licenses corresponding to the modules and functionalities used by the application.
+
+Please see sample for licence management strategies.
+
+On Jetson Nano
+~~~~~~~~~~~~~~
+
+- JetPack 4.6 OS
+
+

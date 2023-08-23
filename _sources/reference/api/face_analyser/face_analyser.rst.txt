@@ -1,0 +1,249 @@
+.. index:: 
+  !FaceAnalyser Class
+
+.. _face_analyser_class:
+
+===============================================================================
+FaceAnalyser Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  applySegmentationMask<apply_segmentation_mask>
+  checkColorizedImage<check_colorized_image>
+  computeAge<compute_age>
+  computeAttributes<compute_attributes>
+  computeBackgroundUniformity<compute_background_uniformity>
+  computeExpression<compute_expression>
+  computeEyeGaze<compute_eye_gaze>
+  computeEyeOpenness<compute_eye_openness>
+  computeEyeRedness<compute_eye_redness>
+  computeGeometricAttributes<compute_geometric_attributes>
+  computeGlassesAttributes<compute_glasses_attributes>
+  computeLandmarks<compute_landmarks>
+  computeNoise<compute_noise>
+  computePhotographicAttributes<compute_photographic_attributes>
+  computePose<compute_pose>
+  computePoseWithLandmarks<compute_pose_with_landmarks>
+  detectFaceMask<detect_face_mask>
+  detectOcclusions<detect_occlusions>
+  expressionSensibility<expression_sensibility>
+  overExposureSensibility<over_exposure_sensibility>
+  segmentFace<segment_face>
+  underExposureSensibility<under_exposure_sensibility>
+
+
+Definition
+----------
+.. line-block::
+    Provides methods for analysing the characteristics of portrait image.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceAnalyser *ID3_FACE_ANALYSER;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceAnalyser implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceAnalyser
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceAnalyser implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceAnalyser
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceAnalyser
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_ANALYSER hFaceAnalyser{};
+        int err = id3FaceAnalyser_Initialize(&hFaceAnalyser);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceAnalyser_Dispose(&hFaceAnalyser);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceAnalyser = sdk.FaceAnalyser();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceAnalyser.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceAnalyser = new FaceAnalyser())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceAnalyser = new FaceAnalyser()
+        // ...
+        faceAnalyser.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceAnalyser faceAnalyser = new FaceAnalyser()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceAnalyser faceAnalyser = new FaceAnalyser();
+        // ...
+        faceAnalyser.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceAnalyser = FaceAnalyser()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceAnalyser
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceAnalyser: FaceAnalyser? = nil
+        faceAnalyser = try FaceAnalyser()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`expressionSensibility<face_analyser_expression_sensibility_class_member>`
+    - int
+    - Sensibility of the expression classifier.
+  * - :ref:`overExposureSensibility<face_analyser_over_exposure_sensibility_class_member>`
+    - int
+    - Sensibility of the over-exposure classifier, from 0 to 255.
+  * - :ref:`underExposureSensibility<face_analyser_under_exposure_sensibility_class_member>`
+    - int
+    - Sensibility of the under-exposure classifier, from 0 to 255.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`applySegmentationMask<face_analyser_apply_segmentation_mask_class_method>`
+    - Applies the face segmentation mask to suppress the background.
+  * - :ref:`checkColorizedImage<face_analyser_check_colorized_image_class_method>`
+    - Verifies if an image is colorized or grayscale.
+  * - :ref:`computeAge<face_analyser_compute_age_class_method>`
+    - Computes the age of a detected face.
+  * - :ref:`computeAttributes<face_analyser_compute_attributes_class_method>`
+    - Computes the attributes of a detected face.
+  * - :ref:`computeBackgroundUniformity<face_analyser_compute_background_uniformity_class_method>`
+    - Computes the background uniformity behind a detected face.
+  * - :ref:`computeExpression<face_analyser_compute_expression_class_method>`
+    - Computes the expression of a detected face.
+  * - :ref:`computeEyeGaze<face_analyser_compute_eye_gaze_class_method>`
+    - Computes the eye gaze of a detected face.
+  * - :ref:`computeEyeOpenness<face_analyser_compute_eye_openness_class_method>`
+    - Computes the eye openness of a detected face.
+  * - :ref:`computeEyeRedness<face_analyser_compute_eye_redness_class_method>`
+    - Computes the eye redness of a detected face.
+  * - :ref:`computeGeometricAttributes<face_analyser_compute_geometric_attributes_class_method>`
+    - Computes the geometric attributes of a detected face. This function must be used for a portrait image with only one face in it.
+  * - :ref:`computeGlassesAttributes<face_analyser_compute_glasses_attributes_class_method>`
+    - Computes the glasses attributes of a detected face. This function must be used for a portrait image with only one face in it.
+  * - :ref:`computeLandmarks<face_analyser_compute_landmarks_class_method>`
+    - Computes 68 landmarks of a detected face.
+  * - :ref:`computeNoise<face_analyser_compute_noise_class_method>`
+    - Measures the image noise.
+  * - :ref:`computePhotographicAttributes<face_analyser_compute_photographic_attributes_class_method>`
+    - Computes the photographic attributes of a detected face. This function must be used for a portrait image with only one face in it.
+  * - :ref:`computePose<face_analyser_compute_pose_class_method>`
+    - Computes the pose of a detected face.
+  * - :ref:`computePoseWithLandmarks<face_analyser_compute_pose_with_landmarks_class_method>`
+    - Computes the pose of a detected face using the specified 68-point landmarks.
+  * - :ref:`detectFaceMask<face_analyser_detect_face_mask_class_method>`
+    - Detects the presence of a face mask on a detected face.
+  * - :ref:`detectOcclusions<face_analyser_detect_occlusions_class_method>`
+    - Detects the presence of occlusions on top of a detected face.
+  * - :ref:`segmentFace<face_analyser_segment_face_class_method>`
+    - Computes face segmentation mask for background removal.

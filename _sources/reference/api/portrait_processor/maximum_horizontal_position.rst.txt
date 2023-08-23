@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.maximumHorizontalPosition Property
+
+.. _portrait_processor_maximum_horizontal_position_class_member:
+
+===============================================================================
+PortraitProcessor.maximumHorizontalPosition Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Value indicating if the head is correctly centered horizontally.
+
+For ICAO compliance, the value must be in the range 45 to 55.
+
+.. hint:: Default value is 55.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumHorizontalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumHorizontalPosition)
+      int id3FacePortraitProcessor_SetMaximumHorizontalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumHorizontalPosition)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maximumHorizontalPosition => getMaximumHorizontalPosition();
+      set maximumHorizontalPosition(int value) => setMaximumHorizontalPosition(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maximumHorizontalPosition
+      {
+          get => GetmaximumHorizontalPosition();
+          set => SetmaximumHorizontalPosition(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaximumHorizontalPosition() throws FaceException
+      public void setMaximumHorizontalPosition(int maximumHorizontalPosition) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_horizontal_position: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

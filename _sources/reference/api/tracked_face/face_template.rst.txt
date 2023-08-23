@@ -1,0 +1,114 @@
+.. index:: 
+  !TrackedFace.faceTemplate Property
+
+.. _tracked_face_face_template_class_member:
+
+===============================================================================
+TrackedFace.faceTemplate Property
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Type: :ref:`FaceTemplate<face_template_class>`
+
+Definition
+----------
+
+Computed template the tracked face. It aims at tracking an identity over time and is consolidated.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetFaceTemplate (ID3_TRACKED_FACE hTrackedFace, ID3_FACE_TEMPLATE hFaceTemplate)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceTemplate get faceTemplate => getFaceTemplate();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceTemplate faceTemplate
+      {
+          get => GetfaceTemplate();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceTemplate getFaceTemplate() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      face_template: FaceTemplate
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

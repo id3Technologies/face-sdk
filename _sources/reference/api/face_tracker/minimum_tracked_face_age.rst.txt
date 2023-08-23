@@ -1,0 +1,120 @@
+.. index:: 
+  !FaceTracker.minimumTrackedFaceAge Property
+
+.. _face_tracker_minimum_tracked_face_age_class_member:
+
+===============================================================================
+FaceTracker.minimumTrackedFaceAge Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum number of consecutive detections to reach before creating a tracked face.
+
+.. hint:: Default value is 1 for FaceDetector4B since the false detection rate is low enough. If using a less accurate detector (such as FaceDetector3C) one might consider increasing a bit this value to avoid false tracks.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * minimumTrackedFaceAge)
+      int id3FaceTracker_SetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int minimumTrackedFaceAge)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get minimumTrackedFaceAge => getMinimumTrackedFaceAge();
+      set minimumTrackedFaceAge(int value) => setMinimumTrackedFaceAge(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int minimumTrackedFaceAge
+      {
+          get => GetminimumTrackedFaceAge();
+          set => SetminimumTrackedFaceAge(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMinimumTrackedFaceAge() throws FaceException
+      public void setMinimumTrackedFaceAge(int minimumTrackedFaceAge) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      minimum_tracked_face_age: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,158 @@
+.. index:: 
+  !TrackedFace.getAsDetectedFace Method
+  
+.. _tracked_face_get_as_detected_face_class_method:
+
+===============================================================================
+TrackedFace.getAsDetectedFace Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Gets the tracked face as a detected face.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_GetAsDetectedFace (
+            ID3_TRACKED_FACE hTrackedFace, 
+            ID3_DETECTED_FACE hDetectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`out` The tracked face as a detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        DetectedFace getAsDetectedFace()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`DetectedFace<detected_face_class>`
+          The tracked face as a detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public DetectedFace GetAsDetectedFace()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`DetectedFace<detected_face_class>`
+          The tracked face as a detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public DetectedFace getAsDetectedFace() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`DetectedFace<detected_face_class>`
+          The tracked face as a detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_as_detected_face(self) -> DetectedFace
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`DetectedFace<detected_face_class>`
+          The tracked face as a detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getAsDetectedFace() throws -> DetectedFace
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`DetectedFace<detected_face_class>`
+          The tracked face as a detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

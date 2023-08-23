@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.portraitAspectRatio Property
+
+.. _portrait_processor_portrait_aspect_ratio_class_member:
+
+===============================================================================
+PortraitProcessor.portraitAspectRatio Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Aspect ratio (height to width) of the portrait image.
+
+.. hint:: Default value is 4/3.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPortraitAspectRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitAspectRatio)
+      int id3FacePortraitProcessor_SetPortraitAspectRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitAspectRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get portraitAspectRatio => getPortraitAspectRatio();
+      set portraitAspectRatio(double value) => setPortraitAspectRatio(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float portraitAspectRatio
+      {
+          get => GetportraitAspectRatio();
+          set => SetportraitAspectRatio(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getPortraitAspectRatio() throws FaceException
+      public void setPortraitAspectRatio(float portraitAspectRatio) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      portrait_aspect_ratio: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

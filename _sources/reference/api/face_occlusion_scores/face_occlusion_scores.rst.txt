@@ -1,0 +1,92 @@
+.. index:: 
+  !FaceOcclusionScores Structure
+
+.. _face_occlusion_scores_struct:
+
+===============================================================================
+FaceOcclusionScores Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  leftEyeOcclusionScore<left_eye_occlusion_score>
+  mouthOcclusionScore<mouth_occlusion_score>
+  noseOcclusionScore<nose_occlusion_score>
+  rightEyeOcclusionScore<right_eye_occlusion_score>
+
+Definition
+----------
+.. line-block::
+    Represents the result of face occlusion detection.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceOcclusionScores
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class FaceOcclusionScores
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct FaceOcclusionScores
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class FaceOcclusionScores
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class FaceOcclusionScores
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias FaceOcclusionScores = id3FaceOcclusionScores
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`leftEyeOcclusionScore<face_occlusion_scores_left_eye_occlusion_score_struct_member>`
+    - int
+    - Value indicating whether the left eye is occluded or not.
+  * - :ref:`mouthOcclusionScore<face_occlusion_scores_mouth_occlusion_score_struct_member>`
+    - int
+    - Value indicating whether the mouth is occluded or not.
+  * - :ref:`noseOcclusionScore<face_occlusion_scores_nose_occlusion_score_struct_member>`
+    - int
+    - Value indicating whether the nose is occluded or not.
+  * - :ref:`rightEyeOcclusionScore<face_occlusion_scores_right_eye_occlusion_score_struct_member>`
+    - int
+    - Value indicating whether the right eye is occluded or not.

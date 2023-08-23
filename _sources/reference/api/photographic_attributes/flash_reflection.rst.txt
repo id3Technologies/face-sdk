@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.flashReflection Property
+
+.. _photographic_attributes_flash_reflection_struct_member:
+
+===============================================================================
+PhotographicAttributes.flashReflection Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if a flash reflection is present on the face.
+
+100 means that there is no flash reflection.
+
+.. hint:: The recommended value is over 70.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int FlashReflection
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int flashReflection
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int FlashReflection
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int flashReflection
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int flash_reflection
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int flashReflection
+

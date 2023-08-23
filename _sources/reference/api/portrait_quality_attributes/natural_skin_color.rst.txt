@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.naturalSkinColor Property
+
+.. _portrait_quality_attributes_natural_skin_color_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.naturalSkinColor Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the skin looks natural.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NaturalSkinColor
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int naturalSkinColor
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NaturalSkinColor
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int naturalSkinColor
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int natural_skin_color
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int naturalSkinColor
+

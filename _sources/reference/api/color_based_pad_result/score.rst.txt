@@ -1,0 +1,61 @@
+.. index:: 
+  !ColorBasedPadResult.score Property
+
+.. _color_based_pad_result_score_struct_member:
+
+===============================================================================
+ColorBasedPadResult.score Property
+===============================================================================
+
+Structure: :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
+
+Definition
+----------
+
+Color-based PAD score, in the range [0:100].
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Score
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int score
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Score
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int score
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int score
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int score
+

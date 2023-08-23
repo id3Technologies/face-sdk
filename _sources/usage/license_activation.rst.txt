@@ -1,0 +1,101 @@
+.. _license_activation:
+
+==================
+License handling
+==================
+
+Activating a license 
+=====================
+
+.. tab-set::
+
+    .. tab-item:: C#
+        :sync: csharp
+   
+        .. code-block:: csharp
+
+            string hardwareCode = License.GetHostHardwareCode(LicenseHardwareCodeType.WindowsOs);
+            
+            try
+            {
+                License.ActivateSerialKey(hardwareCode,"XXXX-XXXX-XXXX-XXXX", "[Computer name]", "data/id3Face.lic");
+            }
+            catch (FaceException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+    .. tab-item:: Dart
+        :sync: dart
+   
+        .. code-block:: dart
+
+            string hardwareCode = License.GetHostHardwareCode(LicenseHardwareCodeType.Android);
+            
+            try
+            {
+                License.ActivateSerialKey(hardwareCode,"XXXX-XXXX-XXXX-XXXX", "Activated through C# API", "data/id3Face.lic");
+            }
+            on FaceException catch (e) {
+                print('Face SDK exception: $e');
+            }
+
+    .. tab-item:: Java
+        :sync: java
+   
+        .. code-block:: java
+
+            val hardwareCode = License.getHostHardwareCode(LicenseHardwareCodeType.linuxOs)
+            var licenseBuffer: ByteArray? = null
+            licenseBuffer = License.activateSerialKeyBuffer(hardwareCode, "XXXX-XXXX-XXXX-XXXX", "[Computer name]")
+
+    .. tab-item:: Kotlin
+        :sync: kotlin
+   
+        .. code-block:: kotlin
+
+            val hardwareCode = License.getHostHardwareCode(LicenseHardwareCodeType.Android)
+            var licenseBuffer: ByteArray? = null
+            
+            licenseBuffer = License.activateSerialKeyBuffer(hardwareCode, "XXXX-XXXX-XXXX-XXXX", "[Computer name]")
+
+.. important:: 
+    On Android and iOS platforms, it is not possible, for reasons of confidentiality, to retrieve a truly unique hardware identifier. The side effect is that the hardware code is different (but fixed) for every application you develop, even on the same device.
+
+
+
+Checking the license
+====================
+
+Before calling any function of the SDK, you need to check a valid license file first.
+
+.. note:: To obtain a license file, please use the provided activation tool or call one of the activation methods in your application.
+
+.. tab-set::
+
+    .. tab-item:: C#
+        :sync: csharp
+   
+        .. literalinclude:: /_static/samples/init.cs
+            :language: c#
+            :start-after: [check_license]
+            :end-before: [check_license]
+            :dedent: 12
+            :emphasize-lines: 5
+
+    .. tab-item:: C
+        :sync: c
+ 
+        .. literalinclude:: /_static/samples/init.cpp
+            :language: c
+            :start-after: [check_license]
+            :end-before: [check_license]
+            :dedent: 
+
+
+See also
+========
+- :ref:`license_activation_options`
+- :ref:`license_hardware_id`
+- :ref:`license_activate_serial_key_class_method`
+- :ref:`license_get_host_hardware_code_class_method`

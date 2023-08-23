@@ -1,0 +1,88 @@
+.. index:: 
+  !TrackingStatus Enumeration
+
+.. _tracking_status_enum:
+
+===============================================================================
+TrackingStatus Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the possible face-tracking statuses.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceTrackingStatus
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum TrackingStatus
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum TrackingStatus
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum TrackingStatus
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class TrackingStatus
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum TrackingStatus
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``none``
+    - 0
+    - No status.
+  * - ``initialized``
+    - 1
+    - A face was detected and a track is initialized. Once the required number of consecutive detections will be reached (see MinimumTrackedFaceAge in FaceTracker), the track will move on to 'Confirmed' status.
+  * - ``confirmed``
+    - 2
+    - The face was detected and tracked for the required number of consecutive frames, hence the track is confirmed.
+  * - ``temporaryLost``
+    - 3
+    - The face was missed for at least one frame. It can come back to 'Confirmed' if it is re-detected or move on to 'Deleted' if it keeps being missed for a given number of consecutive frames (see MinimumTrackedFaceAge in FaceTracker).
+  * - ``deleted``
+    - 4
+    - The face was missed for too many frames, the track is over. Remark: this state is purely internal.

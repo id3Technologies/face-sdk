@@ -1,0 +1,158 @@
+.. index:: 
+  !FaceCandidate.clone Method
+  
+.. _face_candidate_clone_class_method:
+
+===============================================================================
+FaceCandidate.clone Method
+===============================================================================
+
+Module: :ref:`FaceCandidate<face_candidate_class>`
+
+Definition
+----------
+
+Clones the FaceCandidate object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceCandidate_CopyTo (
+            ID3_FACE_CANDIDATE hFaceCandidate, 
+            ID3_FACE_CANDIDATE hFaceCandidateDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceCandidate`` :ref:`ID3_FACE_CANDIDATE<face_candidate_class>`
+          :guilabel:`in` Handle to the FaceCandidate object.
+
+          ``hFaceCandidateDst`` :ref:`ID3_FACE_CANDIDATE<face_candidate_class>`
+          :guilabel:`out` The newly created face candidate.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        FaceCandidate clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidate<face_candidate_class>`
+          The newly created face candidate.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public FaceCandidate Clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidate<face_candidate_class>`
+          The newly created face candidate.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public FaceCandidate clone() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidate<face_candidate_class>`
+          The newly created face candidate.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        clone(self) -> FaceCandidate
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidate<face_candidate_class>`
+          The newly created face candidate.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func clone() throws -> FaceCandidate
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidate<face_candidate_class>`
+          The newly created face candidate.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,84 @@
+.. index:: 
+  !BackgroundUniformity Structure
+
+.. _background_uniformity_struct:
+
+===============================================================================
+BackgroundUniformity Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  colorUniformity<color_uniformity>
+  structureUniformity<structure_uniformity>
+
+Definition
+----------
+.. line-block::
+    Represents the result of the background uniformity check.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceBackgroundUniformity
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class BackgroundUniformity
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct BackgroundUniformity
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class BackgroundUniformity
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class BackgroundUniformity
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias BackgroundUniformity = id3FaceBackgroundUniformity
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`colorUniformity<background_uniformity_color_uniformity_struct_member>`
+    - int
+    - Color uniformity score, in the range [0:100].
+  * - :ref:`structureUniformity<background_uniformity_structure_uniformity_struct_member>`
+    - int
+    - Structure uniformity score, in the range [0:100].

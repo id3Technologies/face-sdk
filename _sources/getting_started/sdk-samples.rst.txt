@@ -1,0 +1,24 @@
+.. _sdk-samples:
+
+===================
+Running the samples
+===================
+
+|product-name| contains sample projects for the following programming platforms and languages:
+
+- Windows, Linux (C/C++)
+- .NET (C#)
+- Flutter (Dart)
+- Android (Kotlin + Java)
+- iOS (Swift)
+
+.. note:: 
+    | Those samples are not delivered in the ZIP archive.
+    | They can be found directly here: https://github.com/id3Technologies/face-sdk-samples
+
+
+Samples demonstrate how to use the main functionalities of the |product-name|, including:
+
+- one-to-one face comparison
+- face PAD
+- face portrait analysis

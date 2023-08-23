@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noFlashReflection Property
+
+.. _portrait_quality_attributes_no_flash_reflection_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noFlashReflection Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether no flash reflection is visible.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoFlashReflection
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noFlashReflection
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoFlashReflection
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noFlashReflection
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int no_flash_reflection
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noFlashReflection
+

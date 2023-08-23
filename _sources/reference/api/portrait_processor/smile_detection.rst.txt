@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.smileDetection Property
+
+.. _portrait_processor_smile_detection_class_member:
+
+===============================================================================
+PortraitProcessor.smileDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether smile detection is enabled.
+
+.. important:: This option requires the FaceAttributesClassifier model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetSmileDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * smileDetection)
+      int id3FacePortraitProcessor_SetSmileDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool smileDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get smileDetection => getSmileDetection();
+      set smileDetection(bool value) => setSmileDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool smileDetection
+      {
+          get => GetsmileDetection();
+          set => SetsmileDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getSmileDetection() throws FaceException
+      public void setSmileDetection(boolean smileDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      smile_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

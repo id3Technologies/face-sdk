@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.pixelation Property
+
+.. _photographic_attributes_pixelation_struct_member:
+
+===============================================================================
+PhotographicAttributes.pixelation Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the image is pixelized.
+
+0 means that there is no pixelation at all.
+
+.. hint:: The recommended value is under 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Pixelation
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int pixelation
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Pixelation
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int pixelation
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int pixelation
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int pixelation
+

@@ -1,0 +1,42 @@
+.. index:: 
+  !Image.toNumpy Method
+  
+.. _image_to_numpy_class_method:
+
+===============================================================================
+Image.toNumpy Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Exports the image object to a numpy array
+
+
+.. tab-set::
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        to_numpy(self) -> bytearray
+
+      **Returns**
+
+        .. line-block::
+
+          ``bytearray``
+          Buffer to export the image object to (numpy array).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

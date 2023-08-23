@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.equalBrightnessThreshold Property
+
+.. _portrait_processor_equal_brightness_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.equalBrightnessThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Equal brightness threshold.
+
+Above this value, the face is equally exposed.
+
+.. hint:: Default value is 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * equalBrightnessThreshold)
+      int id3FacePortraitProcessor_SetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int equalBrightnessThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get equalBrightnessThreshold => getEqualBrightnessThreshold();
+      set equalBrightnessThreshold(int value) => setEqualBrightnessThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int equalBrightnessThreshold
+      {
+          get => GetequalBrightnessThreshold();
+          set => SetequalBrightnessThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getEqualBrightnessThreshold() throws FaceException
+      public void setEqualBrightnessThreshold(int equalBrightnessThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      equal_brightness_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

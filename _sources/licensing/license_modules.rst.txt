@@ -1,0 +1,38 @@
+.. index:: 
+  !License modules
+
+.. _license_modules:
+
+===================
+License modules
+===================
+
+A license module gives access to some functionalities of the SDK as described below:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Module
+    - Description
+  * - Face
+    - Main module
+  * - FaceAttributes
+    - Provides access to the :ref:`face_analyser_class`
+  * - FaceEncoder
+    - Provides access to the :ref:`face_encoder_class`
+  * - FaceGPU
+    - Provides access to the GPU.
+  * - FaceMatcher
+    - Provides access to the :ref:`face_matcher_class`
+  * - FacePAD
+    - Provides access to the :ref:`face_pad_class`
+  * - ServerEdition
+    - Identifies the server edition (Windows, Linux, Mac)
+  * - MobileEdition
+    - Identifies the mobile edition (Android, iOS)
+  * - EdgeEdition
+    - Identifies the edge edition (Raspberry PI)
+
+.. hint:: In your application, call the :ref:`license_check_module_class_method` to find out whether a particular module is enabled in your license.

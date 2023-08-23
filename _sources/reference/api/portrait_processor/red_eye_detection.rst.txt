@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.redEyeDetection Property
+
+.. _portrait_processor_red_eye_detection_class_member:
+
+===============================================================================
+PortraitProcessor.redEyeDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether red eye detection is enabled.
+
+.. important:: This option requires the EyeRednessDetector model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetRedEyeDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * redEyeDetection)
+      int id3FacePortraitProcessor_SetRedEyeDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool redEyeDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get redEyeDetection => getRedEyeDetection();
+      set redEyeDetection(bool value) => setRedEyeDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool redEyeDetection
+      {
+          get => GetredEyeDetection();
+          set => SetredEyeDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getRedEyeDetection() throws FaceException
+      public void setRedEyeDetection(boolean redEyeDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      red_eye_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

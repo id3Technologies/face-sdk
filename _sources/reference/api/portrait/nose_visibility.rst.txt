@@ -1,0 +1,114 @@
+.. index:: 
+  !Portrait.noseVisibility Property
+
+.. _portrait_nose_visibility_class_member:
+
+===============================================================================
+Portrait.noseVisibility Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: int
+
+Definition
+----------
+
+Value estimating the visibility of the nose. -1 if not computed. The range is 0-100, 100 meaning the nose is fully visible.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetNoseVisibility (ID3_FACE_PORTRAIT hPortrait, int * noseVisibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get noseVisibility => getNoseVisibility();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int noseVisibility
+      {
+          get => GetnoseVisibility();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getNoseVisibility() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      nose_visibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

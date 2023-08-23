@@ -1,0 +1,63 @@
+.. _error_handling:
+
+===============
+Error Handling
+===============
+
+When an error occurs within the SDK, a FaceException is thrown. Generally you should wrap all invocations of the API into a try-catch block:
+
+.. exception:: In C language, exceptions don't exist.
+
+.. tab-set::
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        TODO
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        try
+        {
+           // ...
+        }
+        catch (FaceException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try {
+            // ...
+        }
+        catch (FaceException ex) {
+        }
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        TODO
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        TODO
+
+
+See also
+--------
+- :ref:`face_exception`
+- :ref:`face_error_enum`

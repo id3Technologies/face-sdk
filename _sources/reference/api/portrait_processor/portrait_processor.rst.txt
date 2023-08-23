@@ -1,0 +1,502 @@
+.. index:: 
+  !PortraitProcessor Class
+
+.. _portrait_processor_class:
+
+===============================================================================
+PortraitProcessor Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  ageEstimation<age_estimation>
+  analyzePortrait<analyze_portrait>
+  backgroundColorUniformityThreshold<background_color_uniformity_threshold>
+  backgroundStructureUniformityThreshold<background_structure_uniformity_threshold>
+  backgroundUniformityComputation<background_uniformity_computation>
+  computeBackgroundUniformity<compute_background_uniformity>
+  computeGeometricAttributes<compute_geometric_attributes>
+  computePhotographicAttributes<compute_photographic_attributes>
+  cropIcaoPortrait<crop_icao_portrait>
+  cropPortrait<crop_portrait>
+  detectEmotion<detect_emotion>
+  dynamicRangeThreshold<dynamic_range_threshold>
+  emotionDetection<emotion_detection>
+  equalBrightnessThreshold<equal_brightness_threshold>
+  estimateAge<estimate_age>
+  expressionSensibility<expression_sensibility>
+  eyeGazeDetection<eye_gaze_detection>
+  eyeOcclusionThreshold<eye_occlusion_threshold>
+  eyeOpeningDetection<eye_opening_detection>
+  eyeOpeningThreshold<eye_opening_threshold>
+  faceDetectionModel<face_detection_model>
+  faceDetectionStrength<face_detection_strength>
+  faceDetectionThreshold<face_detection_threshold>
+  faceEncodingModel<face_encoding_model>
+  faceMaskDetection<face_mask_detection>
+  faceMaskThreshold<face_mask_threshold>
+  genderEstimation<gender_estimation>
+  glassesDetection<glasses_detection>
+  glassesThreshold<glasses_threshold>
+  hatDetection<hat_detection>
+  hatThreshold<hat_threshold>
+  headPoseEstimation<head_pose_estimation>
+  landmarkDetection<landmark_detection>
+  makeupDetection<makeup_detection>
+  makeupThreshold<makeup_threshold>
+  maleThreshold<male_threshold>
+  maximumEyeGazeX<maximum_eye_gaze_x>
+  maximumEyeGazeY<maximum_eye_gaze_y>
+  maximumHeadHeightRatio<maximum_head_height_ratio>
+  maximumHeadWidthRatio<maximum_head_width_ratio>
+  maximumHorizontalPosition<maximum_horizontal_position>
+  maximumIod<maximum_iod>
+  maximumPitchAngle<maximum_pitch_angle>
+  maximumRollAngle<maximum_roll_angle>
+  maximumTrackedFaceAge<maximum_tracked_face_age>
+  maximumVerticalPosition<maximum_vertical_position>
+  maximumYawAngle<maximum_yaw_angle>
+  minimumHeadHeightRatio<minimum_head_height_ratio>
+  minimumHeadWidthRatio<minimum_head_width_ratio>
+  minimumHorizontalPosition<minimum_horizontal_position>
+  minimumIod<minimum_iod>
+  minimumTrackedFaceAge<minimum_tracked_face_age>
+  minimumVerticalPosition<minimum_vertical_position>
+  mouthOcclusionThreshold<mouth_occlusion_threshold>
+  mouthOpenThreshold<mouth_open_threshold>
+  mouthOpeningDetection<mouth_opening_detection>
+  naturalSkinColorThreshold<natural_skin_color_threshold>
+  noFlashReflectionThreshold<no_flash_reflection_threshold>
+  noiseThreshold<noise_threshold>
+  noseOcclusionThreshold<nose_occlusion_threshold>
+  occlusionDetection<occlusion_detection>
+  overExposureThreshold<over_exposure_threshold>
+  padAttackSupportThreshold<pad_attack_support_threshold>
+  photographicQualityComputation<photographic_quality_computation>
+  pixelationThreshold<pixelation_threshold>
+  portraitAspectRatio<portrait_aspect_ratio>
+  portraitEyePositionRatio<portrait_eye_position_ratio>
+  portraitIodRatio<portrait_iod_ratio>
+  portraitMargin<portrait_margin>
+  presentationAttackDetection<presentation_attack_detection>
+  redEyeDetection<red_eye_detection>
+  redEyeThreshold<red_eye_threshold>
+  reset<reset>
+  resolutionThreshold<resolution_threshold>
+  sharpnessThreshold<sharpness_threshold>
+  smileDetection<smile_detection>
+  smileThreshold<smile_threshold>
+  threadCount<thread_count>
+  tintedGlassThreshold<tinted_glass_threshold>
+  trackerMatchingThreshold<tracker_matching_threshold>
+  trackerNmsIouThreshold<tracker_nms_iou_threshold>
+  underExposureThreshold<under_exposure_threshold>
+  updatePortrait<update_portrait>
+
+
+Definition
+----------
+.. line-block::
+    Facilitates the creation of portraits in various scenarios such as enrolment or face verification.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePortraitProcessor *ID3_FACE_PORTRAIT_PROCESSOR;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class PortraitProcessor implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class PortraitProcessor
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class PortraitProcessor implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class PortraitProcessor
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class PortraitProcessor
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor{};
+        int err = id3FacePortraitProcessor_Initialize(&hPortraitProcessor);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePortraitProcessor_Dispose(&hPortraitProcessor);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final portraitProcessor = sdk.PortraitProcessor();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        portraitProcessor.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var portraitProcessor = new PortraitProcessor())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var portraitProcessor = new PortraitProcessor()
+        // ...
+        portraitProcessor.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (PortraitProcessor portraitProcessor = new PortraitProcessor()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        PortraitProcessor portraitProcessor = new PortraitProcessor();
+        // ...
+        portraitProcessor.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        portraitProcessor = PortraitProcessor()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del portraitProcessor
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var portraitProcessor: PortraitProcessor? = nil
+        portraitProcessor = try PortraitProcessor()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`ageEstimation<portrait_processor_age_estimation_class_member>`
+    - bool
+    - Value indicating whether age estimation is enabled.
+  * - :ref:`backgroundColorUniformityThreshold<portrait_processor_background_color_uniformity_threshold_class_member>`
+    - int
+    - Background color uniformity threshold.
+  * - :ref:`backgroundStructureUniformityThreshold<portrait_processor_background_structure_uniformity_threshold_class_member>`
+    - int
+    - Background structure uniformity threshold.
+  * - :ref:`backgroundUniformityComputation<portrait_processor_background_uniformity_computation_class_member>`
+    - bool
+    - Value indicating whether background uniformity computation is enabled.
+  * - :ref:`dynamicRangeThreshold<portrait_processor_dynamic_range_threshold_class_member>`
+    - int
+    - Face dynamic range threshold.
+  * - :ref:`emotionDetection<portrait_processor_emotion_detection_class_member>`
+    - bool
+    - Value indicating whether emotion detection is enabled.
+  * - :ref:`equalBrightnessThreshold<portrait_processor_equal_brightness_threshold_class_member>`
+    - int
+    - Equal brightness threshold.
+  * - :ref:`expressionSensibility<portrait_processor_expression_sensibility_class_member>`
+    - int
+    - Sensibility of the expression classifier.
+  * - :ref:`eyeGazeDetection<portrait_processor_eye_gaze_detection_class_member>`
+    - bool
+    - Value indicating whether eye gaze detection is enabled.
+  * - :ref:`eyeOcclusionThreshold<portrait_processor_eye_occlusion_threshold_class_member>`
+    - int
+    - Visible eye threshold.
+  * - :ref:`eyeOpeningDetection<portrait_processor_eye_opening_detection_class_member>`
+    - bool
+    - Value indicating whether eye opening detection is enabled.
+  * - :ref:`eyeOpeningThreshold<portrait_processor_eye_opening_threshold_class_member>`
+    - int
+    - Eye opening threshold.
+  * - :ref:`faceDetectionModel<portrait_processor_face_detection_model_class_member>`
+    - :ref:`FaceModel<face_model_enum>`
+    - Specifies the model used to detect and track faces.
+  * - :ref:`faceDetectionStrength<portrait_processor_face_detection_strength_class_member>`
+    - int
+    - Face detection strength, from 1 to 10.
+  * - :ref:`faceDetectionThreshold<portrait_processor_face_detection_threshold_class_member>`
+    - int
+    - Specifies the face detection confidence threshold, in the range is [0;100].
+  * - :ref:`faceEncodingModel<portrait_processor_face_encoding_model_class_member>`
+    - :ref:`FaceModel<face_model_enum>`
+    - Model used to create features and assess consistancy among views of a given face.
+  * - :ref:`faceMaskDetection<portrait_processor_face_mask_detection_class_member>`
+    - bool
+    - Value indicating whether face mask detection is enabled.
+  * - :ref:`faceMaskThreshold<portrait_processor_face_mask_threshold_class_member>`
+    - int
+    - Face mask detection threshold.
+  * - :ref:`genderEstimation<portrait_processor_gender_estimation_class_member>`
+    - bool
+    - Value indicating whether gender estimation is enabled.
+  * - :ref:`glassesDetection<portrait_processor_glasses_detection_class_member>`
+    - bool
+    - Value indicating whether eye glasses detection is enabled.
+  * - :ref:`glassesThreshold<portrait_processor_glasses_threshold_class_member>`
+    - int
+    - Glasses detection threshold.
+  * - :ref:`hatDetection<portrait_processor_hat_detection_class_member>`
+    - bool
+    - Value indicating whether hat detection is enabled.
+  * - :ref:`hatThreshold<portrait_processor_hat_threshold_class_member>`
+    - int
+    - Threshold for confirming that the person is wearing a hat.
+  * - :ref:`headPoseEstimation<portrait_processor_head_pose_estimation_class_member>`
+    - bool
+    - Value indicating whether head pose estimation is enabled.
+  * - :ref:`landmarkDetection<portrait_processor_landmark_detection_class_member>`
+    - bool
+    - Value indicating whether landmark detection is enabled.
+  * - :ref:`makeupDetection<portrait_processor_makeup_detection_class_member>`
+    - bool
+    - Value indicating whether makeup detection is enabled.
+  * - :ref:`makeupThreshold<portrait_processor_makeup_threshold_class_member>`
+    - int
+    - Make-up detection threshold.
+  * - :ref:`maleThreshold<portrait_processor_male_threshold_class_member>`
+    - int
+    - Male gender detection threshold.
+  * - :ref:`maximumEyeGazeX<portrait_processor_maximum_eye_gaze_x_class_member>`
+    - int
+    - Maximum value of the eye gaze alongside the X axis.
+  * - :ref:`maximumEyeGazeY<portrait_processor_maximum_eye_gaze_y_class_member>`
+    - int
+    - Maximum value of the eye gaze alongside the Y axis.
+  * - :ref:`maximumHeadHeightRatio<portrait_processor_maximum_head_height_ratio_class_member>`
+    - int
+    - Maximum distance between the base of the chin and the crown is less than 80% of the total height of the image.
+  * - :ref:`maximumHeadWidthRatio<portrait_processor_maximum_head_width_ratio_class_member>`
+    - int
+    - Value indicating if the image width is conform to the (image width / head width) ratio of 7:5.
+  * - :ref:`maximumHorizontalPosition<portrait_processor_maximum_horizontal_position_class_member>`
+    - int
+    - Value indicating if the head is correctly centered horizontally.
+  * - :ref:`maximumIod<portrait_processor_maximum_iod_class_member>`
+    - int
+    - Maximum interocular distance (IOD), in pixels.
+  * - :ref:`maximumPitchAngle<portrait_processor_maximum_pitch_angle_class_member>`
+    - float
+    - Maximum head pitch angle, in degrees.
+  * - :ref:`maximumRollAngle<portrait_processor_maximum_roll_angle_class_member>`
+    - float
+    - Maximum head roll angle, in degrees.
+  * - :ref:`maximumTrackedFaceAge<portrait_processor_maximum_tracked_face_age_class_member>`
+    - int
+    - Maximum number of consecutive non-detections to reach before deleting a tracked face.
+  * - :ref:`maximumVerticalPosition<portrait_processor_maximum_vertical_position_class_member>`
+    - int
+    - Maximum distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50% - 70% of the total vertical length of the image.
+  * - :ref:`maximumYawAngle<portrait_processor_maximum_yaw_angle_class_member>`
+    - float
+    - Maximum head yaw angle, in degrees.
+  * - :ref:`minimumHeadHeightRatio<portrait_processor_minimum_head_height_ratio_class_member>`
+    - int
+    - Minimum distance between the base of the chin and the crown is less than 80% of the total height of the image.
+  * - :ref:`minimumHeadWidthRatio<portrait_processor_minimum_head_width_ratio_class_member>`
+    - int
+    - Value indicating if the image width is conform to the (image width / head width) ratio of 7:5.
+  * - :ref:`minimumHorizontalPosition<portrait_processor_minimum_horizontal_position_class_member>`
+    - int
+    - Value indicating if the head is correctly centered horizontally.
+  * - :ref:`minimumIod<portrait_processor_minimum_iod_class_member>`
+    - int
+    - Minimum intra-occular distance, in pixels.
+  * - :ref:`minimumTrackedFaceAge<portrait_processor_minimum_tracked_face_age_class_member>`
+    - int
+    - Minimum number of consecutive detections to reach before creating a tracked face.
+  * - :ref:`minimumVerticalPosition<portrait_processor_minimum_vertical_position_class_member>`
+    - int
+    - Minimum distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50% - 70% of the total vertical length of the image.
+  * - :ref:`mouthOcclusionThreshold<portrait_processor_mouth_occlusion_threshold_class_member>`
+    - int
+    - Mouth occlusion threshold. 
+  * - :ref:`mouthOpenThreshold<portrait_processor_mouth_open_threshold_class_member>`
+    - int
+    - Mouth opening threshold.
+  * - :ref:`mouthOpeningDetection<portrait_processor_mouth_opening_detection_class_member>`
+    - bool
+    - Value indicating whether mouth opening detection is enabled.
+  * - :ref:`naturalSkinColorThreshold<portrait_processor_natural_skin_color_threshold_class_member>`
+    - int
+    - Natural skin color threshold.
+  * - :ref:`noFlashReflectionThreshold<portrait_processor_no_flash_reflection_threshold_class_member>`
+    - int
+    - Flash reflexion detection threshold.
+  * - :ref:`noiseThreshold<portrait_processor_noise_threshold_class_member>`
+    - int
+    - Threshold for confirming the presence of noise in the image.
+  * - :ref:`noseOcclusionThreshold<portrait_processor_nose_occlusion_threshold_class_member>`
+    - int
+    - Nose occlusion threshold. 
+  * - :ref:`occlusionDetection<portrait_processor_occlusion_detection_class_member>`
+    - bool
+    - Value indicating whether occlusion detection is enabled.
+  * - :ref:`overExposureThreshold<portrait_processor_over_exposure_threshold_class_member>`
+    - int
+    - Over exposure threshold.
+  * - :ref:`padAttackSupportThreshold<portrait_processor_pad_attack_support_threshold_class_member>`
+    - int
+    - Threshold of the attack support PAD method.
+  * - :ref:`photographicQualityComputation<portrait_processor_photographic_quality_computation_class_member>`
+    - bool
+    - Value indicating whether photographic quality computation is enabled.
+  * - :ref:`pixelationThreshold<portrait_processor_pixelation_threshold_class_member>`
+    - int
+    - Pixelation detection threshold.
+  * - :ref:`portraitAspectRatio<portrait_processor_portrait_aspect_ratio_class_member>`
+    - float
+    - Aspect ratio (height to width) of the portrait image.
+  * - :ref:`portraitEyePositionRatio<portrait_processor_portrait_eye_position_ratio_class_member>`
+    - float
+    - Ratio between the vertical eye position and the image height for ICAO portrait cropping. Must be in the range ]0;1[.
+  * - :ref:`portraitIodRatio<portrait_processor_portrait_iod_ratio_class_member>`
+    - float
+    - Ratio between the interocular distance (IOD) and the image width for ICAO portrait cropping. Must be in the range ]0;1[.
+  * - :ref:`portraitMargin<portrait_processor_portrait_margin_class_member>`
+    - float
+    - Relative margin around the face for portrait cropping.
+  * - :ref:`presentationAttackDetection<portrait_processor_presentation_attack_detection_class_member>`
+    - bool
+    - Value indicating whether presentation attack detection using passive methods is enabled.
+  * - :ref:`redEyeDetection<portrait_processor_red_eye_detection_class_member>`
+    - bool
+    - Value indicating whether red eye detection is enabled.
+  * - :ref:`redEyeThreshold<portrait_processor_red_eye_threshold_class_member>`
+    - int
+    - Threshold for confirming the presence of red eyes.
+  * - :ref:`resolutionThreshold<portrait_processor_resolution_threshold_class_member>`
+    - int
+    - Threshold indicating whether the image resolution is sufficient.
+  * - :ref:`sharpnessThreshold<portrait_processor_sharpness_threshold_class_member>`
+    - int
+    - Sharpness threshold. 
+  * - :ref:`smileDetection<portrait_processor_smile_detection_class_member>`
+    - bool
+    - Value indicating whether smile detection is enabled.
+  * - :ref:`smileThreshold<portrait_processor_smile_threshold_class_member>`
+    - int
+    - Smile threshold.
+  * - :ref:`threadCount<portrait_processor_thread_count_class_member>`
+    - int
+    - Number of threads to use for detection and encoding.
+  * - :ref:`tintedGlassThreshold<portrait_processor_tinted_glass_threshold_class_member>`
+    - int
+    - Tinted glass detection threshold.
+  * - :ref:`trackerMatchingThreshold<portrait_processor_tracker_matching_threshold_class_member>`
+    - int
+    - Minimum match score to reach to preserve the ID of a tracked face between frame 't-1' and frame 't'.
+  * - :ref:`trackerNmsIouThreshold<portrait_processor_tracker_nms_iou_threshold_class_member>`
+    - int
+    - Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the range [0;100].
+  * - :ref:`underExposureThreshold<portrait_processor_under_exposure_threshold_class_member>`
+    - int
+    - Under exposure threshold.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`analyzePortrait<portrait_processor_analyze_portrait_class_method>`
+    - Analyzes a still image and creates a portrait with the first detected face.
+  * - :ref:`computeBackgroundUniformity<portrait_processor_compute_background_uniformity_class_method>`
+    - Computes the background uniformity of the specified portrait.
+  * - :ref:`computeGeometricAttributes<portrait_processor_compute_geometric_attributes_class_method>`
+    - Computes the geometric attributes of the specified portrait.
+  * - :ref:`computePhotographicAttributes<portrait_processor_compute_photographic_attributes_class_method>`
+    - Computes the photographic quality of the specified portrait.
+  * - :ref:`cropIcaoPortrait<portrait_processor_crop_icao_portrait_class_method>`
+    - Creates an ICAO-compliant portrait image by cropping the source image around the detected face.
+  * - :ref:`cropPortrait<portrait_processor_crop_portrait_class_method>`
+    - Creates a portrait image by cropping the source image around the detected face.
+  * - :ref:`detectEmotion<portrait_processor_detect_emotion_class_method>`
+    - Detects the subject's emotion on the specified portrait.
+  * - :ref:`estimateAge<portrait_processor_estimate_age_class_method>`
+    - Estimates the age of the person.
+  * - :ref:`reset<portrait_processor_reset_class_method>`
+    - Resets the face tracker.
+  * - :ref:`updatePortrait<portrait_processor_update_portrait_class_method>`
+    - Analyses an image, generally a video frame, and creates a portrait with the currently tracked face.

@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.naturalSkinColorThreshold Property
+
+.. _portrait_processor_natural_skin_color_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.naturalSkinColorThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Natural skin color threshold.
+
+Above this threshold, th skin of the person looks natural.
+
+.. hint:: Default value is 5.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetNaturalSkinColorThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * naturalSkinColorThreshold)
+      int id3FacePortraitProcessor_SetNaturalSkinColorThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int naturalSkinColorThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get naturalSkinColorThreshold => getNaturalSkinColorThreshold();
+      set naturalSkinColorThreshold(int value) => setNaturalSkinColorThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int naturalSkinColorThreshold
+      {
+          get => GetnaturalSkinColorThreshold();
+          set => SetnaturalSkinColorThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getNaturalSkinColorThreshold() throws FaceException
+      public void setNaturalSkinColorThreshold(int naturalSkinColorThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      natural_skin_color_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,100 @@
+.. index:: 
+  !FaceAttributes Structure
+
+.. _face_attributes_struct:
+
+===============================================================================
+FaceAttributes Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  glasses<glasses>
+  hat<hat>
+  makeUp<make_up>
+  male<male>
+  mouthOpen<mouth_open>
+  smile<smile>
+
+Definition
+----------
+.. line-block::
+    Represents the face attributes.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceAttributes
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class FaceAttributes
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct FaceAttributes
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class FaceAttributes
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class FaceAttributes
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias FaceAttributes = id3FaceAttributes
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`glasses<face_attributes_glasses_struct_member>`
+    - int
+    - Value indicating whether the person is wearing glasses or not.
+  * - :ref:`hat<face_attributes_hat_struct_member>`
+    - int
+    - Value indicating whether the person is wearing a hat or not.
+  * - :ref:`makeUp<face_attributes_make_up_struct_member>`
+    - int
+    - Value indicating whether the person is wearing make-up or not.
+  * - :ref:`male<face_attributes_male_struct_member>`
+    - int
+    - Value indicating whether the person is a male or a female.
+  * - :ref:`mouthOpen<face_attributes_mouth_open_struct_member>`
+    - int
+    - Value indicating whether the person's mouth is open or not.
+  * - :ref:`smile<face_attributes_smile_struct_member>`
+    - int
+    - Value indicating whether the person is smiling or not.

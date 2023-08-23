@@ -1,0 +1,217 @@
+.. index:: 
+  !FaceCandidateList Class
+
+.. _face_candidate_list_class:
+
+===============================================================================
+FaceCandidateList Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  count<count>
+  get<get>
+  getCount<get_count>
+  removeAt<remove_at>
+  resize<resize>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a candidate list in a one-to-many search.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceCandidateList *ID3_FACE_CANDIDATE_LIST;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceCandidateList implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceCandidateList
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceCandidateList implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceCandidateList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceCandidateList
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_CANDIDATE_LIST hFaceCandidateList{};
+        int err = id3FaceCandidateList_Initialize(&hFaceCandidateList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceCandidateList_Dispose(&hFaceCandidateList);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceCandidateList = sdk.FaceCandidateList();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceCandidateList.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceCandidateList = new FaceCandidateList())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceCandidateList = new FaceCandidateList()
+        // ...
+        faceCandidateList.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceCandidateList faceCandidateList = new FaceCandidateList()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceCandidateList faceCandidateList = new FaceCandidateList();
+        // ...
+        faceCandidateList.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceCandidateList = FaceCandidateList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceCandidateList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceCandidateList: FaceCandidateList? = nil
+        faceCandidateList = try FaceCandidateList()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<face_candidate_list_count_class_member>`
+    - int
+    - Gets the number of elements contained in the list
+  * - operator [int index]
+    - :ref:`FaceCandidate<face_candidate_class>`
+    - Gets or sets the element at the specified index in the list.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<face_candidate_list_add_class_method>`
+    - Adds an item to the FaceCandidateList object.
+  * - :ref:`clear<face_candidate_list_clear_class_method>`
+    - Clears the FaceCandidateList object.
+  * - :ref:`clone<face_candidate_list_clone_class_method>`
+    - Clones the FaceCandidateList object.
+  * - :ref:`get<face_candidate_list_get_class_method>`
+    - Gets an item of the FaceCandidateList object.
+  * - :ref:`getCount<face_candidate_list_get_count_class_method>`
+    - Gets the number of elements in the FaceCandidateList object.
+  * - :ref:`removeAt<face_candidate_list_remove_at_class_method>`
+    - Removes an element of the FaceCandidateList object.
+  * - :ref:`resize<face_candidate_list_resize_class_method>`
+    - FaceCandidateList object.
+  * - :ref:`set<face_candidate_list_set_class_method>`
+    - Sets an item of the FaceCandidateList object.

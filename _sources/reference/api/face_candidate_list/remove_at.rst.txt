@@ -1,0 +1,163 @@
+.. index:: 
+  !FaceCandidateList.removeAt Method
+  
+.. _face_candidate_list_remove_at_class_method:
+
+===============================================================================
+FaceCandidateList.removeAt Method
+===============================================================================
+
+Module: :ref:`FaceCandidateList<face_candidate_list_class>`
+
+Definition
+----------
+
+Removes an element of the FaceCandidateList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceCandidateList_RemoveAt (
+            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
+            int index)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`in` Handle to the FaceCandidateList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void removeAt(int index)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void RemoveAt(int index)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void removeAt(int index) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        remove_at(self, index: int) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func removeAt(index: Int32) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` Int32
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

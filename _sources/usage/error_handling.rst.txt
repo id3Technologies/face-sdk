@@ -1,0 +1,83 @@
+.. _error_handling:
+
+===============
+Error Handling
+===============
+
+When an error occurs within the SDK, a :ref:`FaceException<face_exception>` exception is thrown. Generally you should wrap all invocations of the API into a try-catch block. 
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      In C and C++ languages, you have to handle the errors manually. The possible error codes are listed in the :ref:`FaceError<face_error_enum>`, :ref:`ImageError<image_error_enum>` and :ref:`LicenseError<license_error_enum>` enumerations.
+
+      An example is given below:
+      
+      .. code-block:: cpp
+
+        int err = id3FaceLibrary_CheckLicense(path, nullptr);
+        if (err != id3FaceError_Success) {
+          // handle error here.
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: dart
+
+        try
+        {
+           // ...
+        }
+        on FaceException catch (e) {
+            print('Face SDK exception: $e');
+        }
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        try
+        {
+           // ...
+        }
+        catch (FaceException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try {
+            // ...
+        }
+        catch (FaceException ex) {
+        }
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        TODO
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        TODO
+
+
+See also
+--------
+- :ref:`face_exception`
+- :ref:`face_error_enum`
+- :ref:`image_error_enum`
+- :ref:`license_error_enum`

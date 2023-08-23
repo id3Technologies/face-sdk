@@ -1,0 +1,120 @@
+.. index:: 
+  !FacePad.colorPadMinimumIod Property
+
+.. _face_pad_color_pad_minimum_iod_class_member:
+
+===============================================================================
+FacePad.colorPadMinimumIod Property
+===============================================================================
+
+Module: :ref:`FacePad<face_pad_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum interocular distance (IOD) required for color PAD processing.
+
+.. hint:: Default value is 64.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePad_GetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int * colorPadMinimumIod)
+      int id3FacePad_SetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int colorPadMinimumIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get colorPadMinimumIod => getColorPadMinimumIod();
+      set colorPadMinimumIod(int value) => setColorPadMinimumIod(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int colorPadMinimumIod
+      {
+          get => GetcolorPadMinimumIod();
+          set => SetcolorPadMinimumIod(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getColorPadMinimumIod() throws FaceException
+      public void setColorPadMinimumIod(int colorPadMinimumIod) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      color_pad_minimum_iod: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,1028 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="AI Models" href="ai_models.html" /><link rel="prev" title="SDK Overview" href="overview.html" />
+
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
+        <title>Technology - Face SDK 0.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  --color-highlight-on-target: transparent;
+  --color-background-border: #eeebee;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  --color-highlight-on-target: transparent;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  --color-highlight-on-target: transparent;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Face SDK 0.0.0</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/id3_logo_100.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Face SDK 0.0.0</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="overview.html">SDK Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of SDK Overview</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_models.html">AI Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terms.html">Terms and Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Quick start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../licensing/licensing.html">Licensing</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Licensing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/license_activation.html">Activating a license</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/license_check.html">Checking the license</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/license_manager.html">License Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/license_transfer.html">Transfering a license</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/general_considerations.html">General considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/error_handling.html">Handling errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/handling_licenses.html">Handling licenses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usage/usage.html">Main usages</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Main usages</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/handling_images.html">Handling images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/face_detection.html">Detecting faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/face_tracking.html">Tracking faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/face_recognition.html">Recognizing faces</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../usage/face_analysis/face_analysis.html">Analysing faces</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Analysing faces</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/age_estimation.html">Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/background_uniformity.html">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/eye_gaze.html">Eye gaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/eye_opening.html">Eye opening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/face_mask.html">Face mask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/head_pose.html">Head pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/landmarks.html">Landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/face_attributes.html">Face attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/face_expression.html">Expression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/geometric_attributes.html">Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/gender_estimation.html">Gender</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/glasses_detection.html">Glasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/image_colorization.html">Image colorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/mouth_detection.html">Mouth opening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/noise.html">Image noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/occlusions.html">Occlusions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/photographic_attributes.html">Photographic attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/face_analysis/red_eye.html">Red eyes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/liveness_detection.html">Detecting presentation attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/portrait_processing/portrait_processing.html">Processing portraits</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../distribution/distribution.html">Distribution</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Distribution</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../distribution/distributing_windows_apps.html">Distributing Windows applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distribution/distributing_linux_apps.html">Distributing Linux applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distribution/distributing_android_apps.html">Distributing Android applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distribution/runtime_licenses.html">Runtime Licenses</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/api/api.html">id3Face API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of id3Face API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/background_uniformity/background_uniformity.html">BackgroundUniformity</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of BackgroundUniformity</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/background_uniformity/color_uniformity.html">ColorUniformity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/background_uniformity/structure_uniformity.html">StructureUniformity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/color_based_pad_result/color_based_pad_result.html">ColorBasedPadResult</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of ColorBasedPadResult</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/color_based_pad_result/confidence.html">Confidence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/color_based_pad_result/score.html">Score</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/detected_face/detected_face.html">DetectedFace</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of DetectedFace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/bounds.html">Bounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/create.html">Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/detection_score.html">DetectionScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/from_buffer.html">FromBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/from_file.html">FromFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/get_distance_to_camera.html">GetDistanceToCamera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/get_expanded_bounds.html">GetExpandedBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/get_interocular_distance.html">GetInterocularDistance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/get_portrait_bounds.html">GetPortraitBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/id.html">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/landmarks.html">Landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/rescale.html">Rescale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/rotate.html">Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/to_buffer.html">ToBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/to_file.html">ToFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face/translate.html">Translate</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/detected_face_attack_support/detected_face_attack_support.html">DetectedFaceAttackSupport</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of DetectedFaceAttackSupport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_attack_support/attack_support.html">AttackSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_attack_support/score.html">Score</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/detected_face_list/detected_face_list.html">DetectedFaceList</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of DetectedFaceList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/find_detected_face.html">FindDetectedFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/get_id_list.html">GetIdList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/get_largest_face.html">GetLargestFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/rescale_all.html">RescaleAll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/detected_face_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/eye_gaze/eye_gaze.html">EyeGaze</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of EyeGaze</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/eye_gaze/left_eye_x_gaze.html">LeftEyeXGaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/eye_gaze/left_eye_y_gaze.html">LeftEyeYGaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/eye_gaze/right_eye_x_gaze.html">RightEyeXGaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/eye_gaze/right_eye_y_gaze.html">RightEyeYGaze</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_analyser/face_analyser.html">FaceAnalyser</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of FaceAnalyser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/apply_segmentation_mask.html">ApplySegmentationMask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/check_colorized_image.html">CheckColorizedImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_age.html">ComputeAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_attributes.html">ComputeAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_background_uniformity.html">ComputeBackgroundUniformity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_expression.html">ComputeExpression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_eye_gaze.html">ComputeEyeGaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_eye_openness.html">ComputeEyeOpenness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_eye_redness.html">ComputeEyeRedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_geometric_attributes.html">ComputeGeometricAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_glasses_attributes.html">ComputeGlassesAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_landmarks.html">ComputeLandmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_noise.html">ComputeNoise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_photographic_attributes.html">ComputePhotographicAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_pose.html">ComputePose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/compute_pose_with_landmarks.html">ComputePoseWithLandmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/detect_face_mask.html">DetectFaceMask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/detect_occlusions.html">DetectOcclusions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/expression_sensibility.html">ExpressionSensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/over_exposure_sensibility.html">OverExposureSensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/segment_face.html">SegmentFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_analyser/under_exposure_sensibility.html">UnderExposureSensibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_attack_support/face_attack_support.html">FaceAttackSupport</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_attributes/face_attributes.html">FaceAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of FaceAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/glasses.html">Glasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/hat.html">Hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/make_up.html">MakeUp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/male.html">Male</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/mouth_open.html">MouthOpen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_attributes/smile.html">Smile</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_candidate/face_candidate.html">FaceCandidate</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of FaceCandidate</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate/id.html">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate/score.html">Score</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_candidate_list/face_candidate_list.html">FaceCandidateList</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of FaceCandidateList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_candidate_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_detector/face_detector.html">FaceDetector</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of FaceDetector</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/confidence_threshold.html">ConfidenceThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/detect_faces.html">DetectFaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/model.html">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/nms_iou_threshold.html">NmsIouThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/processing_unit.html">ProcessingUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/thread_count.html">ThreadCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/track_faces.html">TrackFaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_detector/warm_up.html">WarmUp</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_encoder/face_encoder.html">FaceEncoder</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of FaceEncoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/compute_quality.html">ComputeQuality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/create_template.html">CreateTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/minimal_iod.html">MinimalIod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/model.html">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/processing_unit.html">ProcessingUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/thread_count.html">ThreadCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_encoder/warm_up.html">WarmUp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_error/face_error.html">FaceError</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_exception/face_exception.html">FaceException</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of FaceException</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_expression/face_expression.html">FaceExpression</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_indexer/face_indexer.html">FaceIndexer</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of FaceIndexer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/add_template.html">AddTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/create.html">Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/delete_template.html">DeleteTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/format.html">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/from_file.html">FromFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/get_template.html">GetTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/maximum_template_count.html">MaximumTemplateCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/search_template.html">SearchTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/template_count.html">TemplateCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_indexer/to_file.html">ToFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_library/face_library.html">FaceLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of FaceLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/check_license.html">CheckLicense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/check_license_buffer.html">CheckLicenseBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/get_version.html">GetVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/load_model.html">LoadModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/load_model_buffer.html">LoadModelBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_library/unload_model.html">UnloadModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_matcher/face_matcher.html">FaceMatcher</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of FaceMatcher</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_matcher/compare_template_lists.html">CompareTemplateLists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_matcher/compare_templates.html">CompareTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_matcher/search_template.html">SearchTemplate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_matcher_threshold/face_matcher_threshold.html">FaceMatcherThreshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_model/face_model.html">FaceModel</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_occlusion_scores/face_occlusion_scores.html">FaceOcclusionScores</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of FaceOcclusionScores</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_occlusion_scores/left_eye_occlusion_score.html">LeftEyeOcclusionScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_occlusion_scores/mouth_occlusion_score.html">MouthOcclusionScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_occlusion_scores/nose_occlusion_score.html">NoseOcclusionScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_occlusion_scores/right_eye_occlusion_score.html">RightEyeOcclusionScore</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_pad/face_pad.html">FacePad</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of FacePad</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/attack_support_detector_confidence_threshold.html">AttackSupportDetectorConfidenceThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/color_pad_minimum_iod.html">ColorPadMinimumIod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/compute_blurriness_score.html">ComputeBlurrinessScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/compute_color_based_score.html">ComputeColorBasedScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/compute_depth_based_score.html">ComputeDepthBasedScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pad/detect_attack_support.html">DetectAttackSupport</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_pose/face_pose.html">FacePose</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of FacePose</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pose/pitch.html">Pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pose/roll.html">Roll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_pose/yaw.html">Yaw</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_template/face_template.html">FaceTemplate</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of FaceTemplate</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/format.html">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/from_buffer.html">FromBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/from_file.html">FromFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/to_bdt.html">ToBdt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/to_bit.html">ToBit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/to_buffer.html">ToBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/to_file.html">ToFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template/update.html">Update</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_template_buffer_type/face_template_buffer_type.html">FaceTemplateBufferType</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_template_dict/face_template_dict.html">FaceTemplateDict</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of FaceTemplateDict</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/contains_key.html">ContainsKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/remove.html">Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_dict/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/face_template_format/face_template_format.html">FaceTemplateFormat</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_template_list/face_template_list.html">FaceTemplateList</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of FaceTemplateList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_template_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/face_tracker/face_tracker.html">FaceTracker</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of FaceTracker</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/confidence_threshold.html">ConfidenceThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/detection_model.html">DetectionModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/encoding_model.html">EncodingModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/match_threshold.html">MatchThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/maximum_tracked_face_age.html">MaximumTrackedFaceAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/minimum_tracked_face_age.html">MinimumTrackedFaceAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/nms_iou_threshold.html">NmsIouThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/processing_unit.html">ProcessingUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/thread_count.html">ThreadCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/track_faces.html">TrackFaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/face_tracker/warm_up.html">WarmUp</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/geometric_attributes/geometric_attributes.html">GeometricAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of GeometricAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/geometric_attributes/head_image_height_ratio.html">HeadImageHeightRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/geometric_attributes/head_image_width_ratio.html">HeadImageWidthRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/geometric_attributes/horizontal_position.html">HorizontalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/geometric_attributes/resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/geometric_attributes/vertical_position.html">VerticalPosition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/glasses_attributes/glasses_attributes.html">GlassesAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of GlassesAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/glasses_attributes/frame_on_eye.html">FrameOnEye</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/glasses_attributes/heavy_frame.html">HeavyFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/glasses_attributes/tinted_glasses.html">TintedGlasses</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/image/image.html">Image</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of Image</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/compare.html">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/correct_gamma.html">CorrectGamma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/data.html">Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/downscale.html">Downscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/downscale_to.html">DownscaleTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/extract_roi.html">ExtractRoi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/flip.html">Flip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/flip_to.html">FlipTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/from_buffer.html">FromBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/from_file.html">FromFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/from_raw_buffer.html">FromRawBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/from_yuv_planes.html">FromYuvPlanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/get_pixels.html">GetPixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/height.html">Height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/pixel_depth.html">PixelDepth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/pixel_format.html">PixelFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/reallocate.html">Reallocate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/resize_to.html">ResizeTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/rotate.html">Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/rotate_to.html">RotateTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/set.html">Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/stride.html">Stride</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/to_buffer.html">ToBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/to_buffer_object.html">ToBufferObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/to_file.html">ToFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/to_numpy.html">ToNumpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/to_raw_buffer.html">ToRawBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/transpose.html">Transpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image/width.html">Width</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/image_buffer/image_buffer.html">ImageBuffer</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of ImageBuffer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_buffer/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_buffer/get_data.html">GetData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_buffer/get_pixels.html">GetPixels</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/image_dict/image_dict.html">ImageDict</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of ImageDict</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/contains_key.html">ContainsKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/keys.html">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/remove.html">Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_dict/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/image_error/image_error.html">ImageError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/image_format/image_format.html">ImageFormat</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/image_list/image_list.html">ImageList</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of ImageList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/image_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/license/license.html">License</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of License</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate.html">Activate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate_activation_key.html">ActivateActivationKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate_activation_key_buffer.html">ActivateActivationKeyBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate_buffer.html">ActivateBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate_serial_key.html">ActivateSerialKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/activate_serial_key_buffer.html">ActivateSerialKeyBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/check_module.html">CheckModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_expiry_date.html">GetExpiryDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_external_drive_hardware_code.html">GetExternalDriveHardwareCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_host_hardware_code.html">GetHostHardwareCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_file_hardware_code.html">GetLicenseFileHardwareCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_file_serial.html">GetLicenseFileSerial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_name.html">GetLicenseName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_owner.html">GetLicenseOwner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_path.html">GetLicensePath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_license_type.html">GetLicenseType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_module_count.html">GetModuleCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_module_name.html">GetModuleName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_module_value.html">GetModuleValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_product_reference.html">GetProductReference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/get_remaining_days.html">GetRemainingDays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/load_license.html">LoadLicense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/load_license_buffer.html">LoadLicenseBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/reactivate.html">Reactivate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/license/reactivate_buffer.html">ReactivateBuffer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/license_error/license_error.html">LicenseError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/license_hardware_code_type/license_hardware_code_type.html">LicenseHardwareCodeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/license_type/license_type.html">LicenseType</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/photographic_attributes/photographic_attributes.html">PhotographicAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of PhotographicAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/equal_brightness.html">EqualBrightness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/face_dynamic_range.html">FaceDynamicRange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/flash_reflection.html">FlashReflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/natural_skin_color.html">NaturalSkinColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/over_exposure.html">OverExposure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/pixelation.html">Pixelation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/sharpness.html">Sharpness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/photographic_attributes/under_exposure.html">UnderExposure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/pixel_format/pixel_format.html">PixelFormat</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/point/point.html">Point</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of Point</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point/x.html">X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point/y.html">Y</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/point_list/point_list.html">PointList</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of PointList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/point_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/pooling_method/pooling_method.html">PoolingMethod</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/portrait/portrait.html">Portrait</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of Portrait</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/age.html">Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/background_uniformity.html">BackgroundUniformity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/emotion.html">Emotion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/eye_gaze.html">EyeGaze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/face_id.html">FaceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/face_mask.html">FaceMask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/face_template.html">FaceTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/gender_male.html">GenderMale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/geometric_attributes.html">GeometricAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/glasses.html">Glasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/hat.html">Hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/image.html">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/image_center.html">ImageCenter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/image_scale.html">ImageScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/image_translation.html">ImageTranslation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/is_presentation_attack.html">IsPresentationAttack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/landmarks.html">Landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/left_eye_opening.html">LeftEyeOpening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/left_eye_visibility.html">LeftEyeVisibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/makeup.html">Makeup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/mouth_opening.html">MouthOpening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/mouth_visibility.html">MouthVisibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/nose_visibility.html">NoseVisibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/pad_attack_support.html">PadAttackSupport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/pad_color.html">PadColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/photographic_attributes.html">PhotographicAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/pose.html">Pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/quality_attributes.html">QualityAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/quality_score.html">QualityScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/right_eye_opening.html">RightEyeOpening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/right_eye_visibility.html">RightEyeVisibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/smile.html">Smile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/status.html">Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/subject_position.html">SubjectPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait/tracked_face.html">TrackedFace</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/portrait_processor/portrait_processor.html">PortraitProcessor</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" role="switch" type="checkbox"/><label for="toctree-checkbox-41"><div class="visually-hidden">Toggle navigation of PortraitProcessor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/age_estimation.html">AgeEstimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/analyze_portrait.html">AnalyzePortrait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/background_color_uniformity_threshold.html">BackgroundColorUniformityThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/background_structure_uniformity_threshold.html">BackgroundStructureUniformityThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/background_uniformity_computation.html">BackgroundUniformityComputation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/compute_background_uniformity.html">ComputeBackgroundUniformity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/compute_geometric_attributes.html">ComputeGeometricAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/compute_photographic_attributes.html">ComputePhotographicAttributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/crop_icao_portrait.html">CropIcaoPortrait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/crop_portrait.html">CropPortrait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/detect_emotion.html">DetectEmotion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/dynamic_range_threshold.html">DynamicRangeThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/emotion_detection.html">EmotionDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/equal_brightness_threshold.html">EqualBrightnessThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/estimate_age.html">EstimateAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/expression_sensibility.html">ExpressionSensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/eye_gaze_detection.html">EyeGazeDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/eye_occlusion_threshold.html">EyeOcclusionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/eye_opening_detection.html">EyeOpeningDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/eye_opening_threshold.html">EyeOpeningThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_detection_model.html">FaceDetectionModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_detection_strength.html">FaceDetectionStrength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_detection_threshold.html">FaceDetectionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_encoding_model.html">FaceEncodingModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_mask_detection.html">FaceMaskDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/face_mask_threshold.html">FaceMaskThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/gender_estimation.html">GenderEstimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/glasses_detection.html">GlassesDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/glasses_threshold.html">GlassesThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/hat_detection.html">HatDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/hat_threshold.html">HatThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/head_pose_estimation.html">HeadPoseEstimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/landmark_detection.html">LandmarkDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/makeup_detection.html">MakeupDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/makeup_threshold.html">MakeupThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/male_threshold.html">MaleThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_eye_gaze_x.html">MaximumEyeGazeX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_eye_gaze_y.html">MaximumEyeGazeY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_head_height_ratio.html">MaximumHeadHeightRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_head_width_ratio.html">MaximumHeadWidthRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_horizontal_position.html">MaximumHorizontalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_iod.html">MaximumIod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_pitch_angle.html">MaximumPitchAngle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_roll_angle.html">MaximumRollAngle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_tracked_face_age.html">MaximumTrackedFaceAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_vertical_position.html">MaximumVerticalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/maximum_yaw_angle.html">MaximumYawAngle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_head_height_ratio.html">MinimumHeadHeightRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_head_width_ratio.html">MinimumHeadWidthRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_horizontal_position.html">MinimumHorizontalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_iod.html">MinimumIod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_tracked_face_age.html">MinimumTrackedFaceAge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/minimum_vertical_position.html">MinimumVerticalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/mouth_occlusion_threshold.html">MouthOcclusionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/mouth_open_threshold.html">MouthOpenThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/mouth_opening_detection.html">MouthOpeningDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/natural_skin_color_threshold.html">NaturalSkinColorThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/no_flash_reflection_threshold.html">NoFlashReflectionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/noise_threshold.html">NoiseThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/nose_occlusion_threshold.html">NoseOcclusionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/occlusion_detection.html">OcclusionDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/over_exposure_sensibility.html">OverExposureSensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/over_exposure_threshold.html">OverExposureThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/pad_attack_support_threshold.html">PadAttackSupportThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/photographic_quality_computation.html">PhotographicQualityComputation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/pixelation_threshold.html">PixelationThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/portrait_aspect_ratio.html">PortraitAspectRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/portrait_eye_position_ratio.html">PortraitEyePositionRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/portrait_iod_ratio.html">PortraitIodRatio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/portrait_margin.html">PortraitMargin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/presentation_attack_detection.html">PresentationAttackDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/red_eye_detection.html">RedEyeDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/red_eye_threshold.html">RedEyeThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/reset.html">Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/resolution_threshold.html">ResolutionThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/sharpness_threshold.html">SharpnessThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/smile_detection.html">SmileDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/smile_threshold.html">SmileThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/thread_count.html">ThreadCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/tinted_glass_threshold.html">TintedGlassThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/tracker_matching_threshold.html">TrackerMatchingThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/tracker_nms_iou_threshold.html">TrackerNmsIouThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/under_exposure_sensibility.html">UnderExposureSensibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/under_exposure_threshold.html">UnderExposureThreshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_processor/update_portrait.html">UpdatePortrait</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/portrait_quality_attributes/portrait_quality_attributes.html">PortraitQualityAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" role="switch" type="checkbox"/><label for="toctree-checkbox-42"><div class="visually-hidden">Toggle navigation of PortraitQualityAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/closed_mouth.html">ClosedMouth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/colorized_image.html">ColorizedImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/dynamic_range.html">DynamicRange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/equal_brightness.html">EqualBrightness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/frontal_pose.html">FrontalPose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/head_height.html">HeadHeight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/head_width.html">HeadWidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/horizontal_position.html">HorizontalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/natural_skin_color.html">NaturalSkinColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/neutral_expression.html">NeutralExpression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_flash_reflection.html">NoFlashReflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_glasses.html">NoGlasses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_hat.html">NoHat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_noise.html">NoNoise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_over_exposure.html">NoOverExposure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_pixelation.html">NoPixelation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_red_eye.html">NoRedEye</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_smile.html">NoSmile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/no_under_exposure.html">NoUnderExposure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/open_eyes.html">OpenEyes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/sharpness.html">Sharpness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/straight_look.html">StraightLook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/uniform_background_color.html">UniformBackgroundColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/uniform_background_structure.html">UniformBackgroundStructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/vertical_position.html">VerticalPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/visible_left_eye.html">VisibleLeftEye</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/visible_mouth.html">VisibleMouth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/visible_nose.html">VisibleNose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/portrait_quality_attributes/visible_right_eye.html">VisibleRightEye</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/portrait_status/portrait_status.html">PortraitStatus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/processing_unit/processing_unit.html">ProcessingUnit</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/rectangle/rectangle.html">Rectangle</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" role="switch" type="checkbox"/><label for="toctree-checkbox-43"><div class="visually-hidden">Toggle navigation of Rectangle</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/rectangle/bottom_left.html">BottomLeft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/rectangle/bottom_right.html">BottomRight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/rectangle/top_left.html">TopLeft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/rectangle/top_right.html">TopRight</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/string_list/string_list.html">StringList</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" role="switch" type="checkbox"/><label for="toctree-checkbox-44"><div class="visually-hidden">Toggle navigation of StringList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/string_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/subject_position/subject_position.html">SubjectPosition</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/tracked_face/tracked_face.html">TrackedFace</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" role="switch" type="checkbox"/><label for="toctree-checkbox-45"><div class="visually-hidden">Toggle navigation of TrackedFace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/bounds.html">Bounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/create.html">Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/detection_score.html">DetectionScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/face_template.html">FaceTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/from_buffer.html">FromBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/from_file.html">FromFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/get_as_detected_face.html">GetAsDetectedFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/get_distance_to_camera.html">GetDistanceToCamera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/get_expanded_bounds.html">GetExpandedBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/get_interocular_distance.html">GetInterocularDistance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/get_portrait_bounds.html">GetPortraitBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/id.html">Id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/landmarks.html">Landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/predicted_bounds.html">PredictedBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/rescale.html">Rescale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/rotate.html">Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/to_buffer.html">ToBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/to_file.html">ToFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/tracking_status.html">TrackingStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face/translate.html">Translate</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/api/tracked_face_list/tracked_face_list.html">TrackedFaceList</a><input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" role="switch" type="checkbox"/><label for="toctree-checkbox-46"><div class="visually-hidden">Toggle navigation of TrackedFaceList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/clear.html">Clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/clone.html">Clone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/count.html">Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/find_tracked_face.html">FindTrackedFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/get_count.html">GetCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/get_id_list.html">GetIdList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/get_largest_face.html">GetLargestFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/remove_at.html">RemoveAt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/rescale_all.html">RescaleAll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/resize.html">Resize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/api/tracked_face_list/set.html">Set</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/tracking_status/tracking_status.html">TrackingStatus</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog-view.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/third-party-libraries.html">Third-Party Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="technology">
+<h1>Technology<a class="headerlink" href="#technology" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>Thanks to many years of research and development in the field of computer vision and artificial intelligence, our experts have designed a unique algorithm that reproduces the visual recognition abilities of the human brain.</p>
+<p>With the power of deep learning techniques trained on millions of faces, our technology outperforms human performance enabling unconstrained/non-voluntary real-time detection and recognition of faces in a crowd. It operates on any type of people face whatever the gender, age or race and is robust to intra-personal variations such as ageing, facial hair, scars/injuries, accessories (e.g. glasses, hats, etc.), cosmetics, etc. The technology is also robust to variations of the lightning conditions and has the ability to work with a large range of cameras under either visible or near-infrared light.</p>
+<p>The face identification process is nearly instantaneous. It has the capability to compare millions of faces in less than one second on a single processing unit. The matching algorithm has also very low resource requirements enabling possible applications on secure elements.</p>
+<p>id3 Technologies face recognition algorithm has proven excellent tradeoff between accuracy, speed and template size in the NIST ongoing Face Recognition Vendor Test (FRVT).</p>
+</section>
+<section id="biometric-performance">
+<h2>Biometric Performance<a class="headerlink" href="#biometric-performance" title="Permalink to this heading">#</a></h2>
+<p>The overall accuracy of a facial recognition system may vary according to a number of factors such as:</p>
+<ul class="simple">
+<li><p>Quality of the camera system,</p></li>
+<li><p>Lighting conditions,</p></li>
+<li><p>Facial pose variations,</p></li>
+<li><p>Population under test,</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p><strong>Performance metrics</strong></p>
+<p>False non match rate (FNMR) is the proportion of mated comparisons below a threshold set to achieve the false match rate (FMR) specified. FMR is the proportion of impostor comparisons at or above that threshold. Since FMR and FNMR is in inverse proportion to each other, choosing the operational threshold is a trade-off between system security and user convenience.</p>
+</section>
+<section id="nist-frvt-evaluation">
+<h2>NIST FRVT evaluation<a class="headerlink" href="#nist-frvt-evaluation" title="Permalink to this heading">#</a></h2>
+<p>The Face Recognition Vendor Test (FRVT) was initiated by the National Institute of Standards and Technologies (NIST) in February 2017. It is aimed at measurement of the performance of automated face recognition technologies applied to a wide range of civil, law enforcement and homeland security applications including verification of visa images, de-duplication of passports, recognition across photojournalism images, and identification of child exploitation victims.</p>
+<section id="frvt-datasets">
+<h3>FRVT datasets<a class="headerlink" href="#frvt-datasets" title="Permalink to this heading">#</a></h3>
+<p><strong>Visa images</strong></p>
+<ul class="simple">
+<li><p>The images have geometry in reasonable conformance with the ISO/IEC 19794-5 Full Frontal image type. Pose is generally excellent.</p></li>
+<li><p>The images are of size 252x300 pixels. The mean interocular distance (IOD) is 69 pixels.</p></li>
+<li><p>The images are of subjects from greater than 100 countries, with significant imbalance due to visa issuance patterns.</p></li>
+<li><p>The images are of subjects of all ages, including children, again with imbalance due to visa issuance demand.</p></li>
+<li><p>Many of the images are live capture. A substantial number of the images are photographs of paper photographs.</p></li>
+</ul>
+<p><strong>Mugshot images</strong></p>
+<ul class="simple">
+<li><p>The images have geometry in reasonable conformance with the ISO/IEC 19794-5 Full Frontal image type.</p></li>
+<li><p>The images are of variable sizes. The median IOD is 104 pixels. The mean IOD is 123 pixels.</p></li>
+<li><p>The images are of subjects from the United States.</p></li>
+<li><p>The images are of adults.</p></li>
+<li><p>The images are all live capture.</p></li>
+</ul>
+<p><strong>Wild images</strong></p>
+<ul class="simple">
+<li><p>The images include many photojournalism-style images. Images are given to the algorithm using a variable but generally tight crop of the head. Resolution varies very widely. The images are very unconstrained, with wide yaw and pitch pose variation. Faces can be occluded, including hair and hands.</p></li>
+<li><p>The images are of adults.</p></li>
+<li><p>All of the images are live capture, none are scanned.</p></li>
+</ul>
+</section>
+<section id="frvt-results">
+<h3>FRVT results<a class="headerlink" href="#frvt-results" title="Permalink to this heading">#</a></h3>
+<p>The latest report of the FRVT can be found <a class="reference external" href="https://pages.nist.gov/frvt/reports/11/frvt_11_report.pdf">here</a>.</p>
+<p>The face encoder 9A of this SDK corresponds to the <em>id3_008</em> submission.</p>
+<p>A complete report card can also be found <a class="reference external" href="https://pages.nist.gov/frvt/reportcards/11/id3_008.html">here</a>, showing among things, the evolution of our face recognition technology over the years.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ai_models.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">AI Models</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="overview.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">SDK Overview</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, id3 Technologies
+            </div>
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Technology</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#biometric-performance">Biometric Performance</a></li>
+<li><a class="reference internal" href="#nist-frvt-evaluation">NIST FRVT evaluation</a><ul>
+<li><a class="reference internal" href="#frvt-datasets">FRVT datasets</a></li>
+<li><a class="reference internal" href="#frvt-results">FRVT results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

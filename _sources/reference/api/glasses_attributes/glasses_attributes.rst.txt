@@ -1,0 +1,88 @@
+.. index:: 
+  !GlassesAttributes Structure
+
+.. _glasses_attributes_struct:
+
+===============================================================================
+GlassesAttributes Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  frameOnEye<frame_on_eye>
+  heavyFrame<heavy_frame>
+  tintedGlasses<tinted_glasses>
+
+Definition
+----------
+.. line-block::
+    Represents some glasses attributes.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceGlassesAttributes
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class GlassesAttributes
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct GlassesAttributes
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class GlassesAttributes
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class GlassesAttributes
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias GlassesAttributes = id3FaceGlassesAttributes
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`frameOnEye<glasses_attributes_frame_on_eye_struct_member>`
+    - int
+    - Value indicating if the glasses frame is not on the eyes.
+  * - :ref:`heavyFrame<glasses_attributes_heavy_frame_struct_member>`
+    - int
+    - Value indicating if the glasses' frame is too heavy, in the range [0; 100].
+  * - :ref:`tintedGlasses<glasses_attributes_tinted_glasses_struct_member>`
+    - int
+    - Value indicating if the glasses are tinted.

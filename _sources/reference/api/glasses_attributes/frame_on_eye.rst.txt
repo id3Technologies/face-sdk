@@ -1,0 +1,65 @@
+.. index:: 
+  !GlassesAttributes.frameOnEye Property
+
+.. _glasses_attributes_frame_on_eye_struct_member:
+
+===============================================================================
+GlassesAttributes.frameOnEye Property
+===============================================================================
+
+Structure: :ref:`GlassesAttributes<glasses_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the glasses frame is not on the eyes.
+
+0 means that there is no occlusion of the eye by the frame.
+
+.. hint:: The recommended value is under 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int FrameOnEye
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int frameOnEye
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int FrameOnEye
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int frameOnEye
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int frame_on_eye
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int frameOnEye
+

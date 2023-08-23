@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.eyeOpeningThreshold Property
+
+.. _portrait_processor_eye_opening_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.eyeOpeningThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Eye opening threshold.
+
+If the score is above this value, the eyes are definitely open.
+
+.. hint:: Default value is 5.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * eyeOpeningThreshold)
+      int id3FacePortraitProcessor_SetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int eyeOpeningThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get eyeOpeningThreshold => getEyeOpeningThreshold();
+      set eyeOpeningThreshold(int value) => setEyeOpeningThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int eyeOpeningThreshold
+      {
+          get => GeteyeOpeningThreshold();
+          set => SeteyeOpeningThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getEyeOpeningThreshold() throws FaceException
+      public void setEyeOpeningThreshold(int eyeOpeningThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      eye_opening_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,70 @@
+.. index:: 
+  !Image.getPixels Method
+  
+.. _image_get_pixels_class_method:
+
+===============================================================================
+Image.getPixels Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixels pointer carefully.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_GetPixels (
+            ID3_FACE_IMAGE hImage, 
+            void ** pixels)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``pixels`` void **
+          :guilabel:`out` Pointer to the pixels of the image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public IntPtr GetPixels()
+
+      **Returns**
+
+        .. line-block::
+
+          ``IntPtr``
+          Pointer to the pixels of the image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

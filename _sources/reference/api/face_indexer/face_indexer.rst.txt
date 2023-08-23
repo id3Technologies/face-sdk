@@ -1,0 +1,227 @@
+.. index:: 
+  !FaceIndexer Class
+
+.. _face_indexer_class:
+
+===============================================================================
+FaceIndexer Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  addTemplate<add_template>
+  create<create>
+  deleteTemplate<delete_template>
+  format<format>
+  fromFile<from_file>
+  getTemplate<get_template>
+  maximumTemplateCount<maximum_template_count>
+  resize<resize>
+  searchTemplate<search_template>
+  templateCount<template_count>
+  toFile<to_file>
+
+
+Definition
+----------
+.. line-block::
+    Performs a one-to-many search on a large number of face templates.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceIndexer *ID3_FACE_INDEXER;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceIndexer implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceIndexer
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceIndexer implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceIndexer
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceIndexer
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_INDEXER hFaceIndexer{};
+        int err = id3FaceIndexer_Initialize(&hFaceIndexer);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceIndexer_Dispose(&hFaceIndexer);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceIndexer = sdk.FaceIndexer();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceIndexer.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceIndexer = new FaceIndexer())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceIndexer = new FaceIndexer()
+        // ...
+        faceIndexer.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceIndexer faceIndexer = new FaceIndexer()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceIndexer faceIndexer = new FaceIndexer();
+        // ...
+        faceIndexer.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceIndexer = FaceIndexer()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceIndexer
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceIndexer: FaceIndexer? = nil
+        faceIndexer = try FaceIndexer()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`format<face_indexer_format_class_member>`
+    - :ref:`FaceTemplateFormat<face_template_format_enum>`
+    - Face template format accepted by this face indexer.
+  * - :ref:`maximumTemplateCount<face_indexer_maximum_template_count_class_member>`
+    - int
+    - Maximum number of templates that this face indexer can hold.
+  * - :ref:`templateCount<face_indexer_template_count_class_member>`
+    - int
+    - Current number of indexed templates.
+
+Static Methods
+--------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`create<face_indexer_create_class_method>`
+    - Creates an empty face indexer
+  * - :ref:`fromFile<face_indexer_from_file_class_method>`
+    - Imports the face indexer object from a file.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`addTemplate<face_indexer_add_template_class_method>`
+    - Adds a template to the Face Indexer.
+  * - :ref:`deleteTemplate<face_indexer_delete_template_class_method>`
+    - Deletes a template from the face indexer.
+  * - :ref:`getTemplate<face_indexer_get_template_class_method>`
+    - Retrieves a template from the face indexer by ID.
+  * - :ref:`resize<face_indexer_resize_class_method>`
+    - Resizes the maximum number of templates that the face indexer can hold.
+  * - :ref:`searchTemplate<face_indexer_search_template_class_method>`
+    - Performs a one-to-many search of a face template probe against a previously initialized face indexer and outputs a candidate list.
+  * - :ref:`toFile<face_indexer_to_file_class_method>`
+    - Saves the face indexer object to a file.

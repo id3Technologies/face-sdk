@@ -1,0 +1,256 @@
+.. index:: 
+  !TrackedFace.create Method
+  
+.. _tracked_face_create_class_method:
+
+===============================================================================
+TrackedFace.create Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Creates a detected face.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_Create (
+            ID3_TRACKED_FACE hTrackedFace, 
+            const id3FaceRectangle * sBounds, 
+            int detectionScore, 
+            int id, 
+            ID3_FACE_POINT_LIST hLandmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``sBounds`` :ref:`const id3FaceRectangle *<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        static TrackedFace create(Rectangle bounds, int detectionScore, int id, PointList landmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static TrackedFace Create(Rectangle bounds, int detectionScore, int id, PointList landmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public static TrackedFace create(Rectangle bounds, int detectionScore, int id, PointList landmarks) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        @staticmethod
+        create(bounds: Rectangle, detection_score: int, id: int, landmarks: PointList) -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detection_score`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public static func create(bounds: Rectangle, detectionScore: Int32, id: Int32, landmarks: PointList) throws -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` Int32
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` Int32
+          :guilabel:`in` ID of the detected face.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

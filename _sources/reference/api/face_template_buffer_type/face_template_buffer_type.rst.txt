@@ -1,0 +1,79 @@
+.. index:: 
+  !FaceTemplateBufferType Enumeration
+
+.. _face_template_buffer_type_enum:
+
+===============================================================================
+FaceTemplateBufferType Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the buffer types for face templates.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceTemplateBufferType
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceTemplateBufferType
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceTemplateBufferType
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceTemplateBufferType
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceTemplateBufferType
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceTemplateBufferType
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``normal``
+    - 0
+    - Standard face template buffer type.
+  * - ``card``
+    - 1
+    - Card compact face template buffer type. For match-on-card enrolment applications, this buffer type is mandatory.

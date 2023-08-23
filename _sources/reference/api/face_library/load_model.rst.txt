@@ -1,0 +1,198 @@
+.. index:: 
+  !FaceLibrary.loadModel Method
+  
+.. _face_library_load_model_class_method:
+
+===============================================================================
+FaceLibrary.loadModel Method
+===============================================================================
+
+Module: :ref:`FaceLibrary<face_library_class>`
+
+Definition
+----------
+
+Loads a model from the zoo into the required processing unit.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLibrary_LoadModel (
+            const char * modelPath, 
+            id3FaceModel eFaceModel, 
+            id3FaceProcessingUnit eProcessingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` const char *
+          :guilabel:`in` Path to the models' directory.
+
+          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        static void loadModel(String? modelPath, FaceModel faceModel, ProcessingUnit processingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` String
+          :guilabel:`in` Path to the models' directory.
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static void LoadModel(string modelPath, FaceModel faceModel, ProcessingUnit processingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` string
+          :guilabel:`in` Path to the models' directory.
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public static void loadModel(String modelPath, FaceModel faceModel, ProcessingUnit processingUnit) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` String
+          :guilabel:`in` Path to the models' directory.
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        @staticmethod
+        load_model(model_path: str, face_model: FaceModel, processing_unit: ProcessingUnit) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``model_path`` str
+          :guilabel:`in` Path to the models' directory.
+
+          ``face_model`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public static func loadModel(modelPath: String, faceModel: FaceModel, processingUnit: ProcessingUnit) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` String
+          :guilabel:`in` Path to the models' directory.
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to load.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to load the model into.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

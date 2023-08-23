@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.straightLook Property
+
+.. _portrait_quality_attributes_straight_look_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.straightLook Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the subject looks straight towards the camera.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int StraightLook
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int straightLook
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int StraightLook
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int straightLook
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int straight_look
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int straightLook
+

@@ -1,0 +1,38 @@
+Detection models
+================
+
+|product-name| includes the several machine learning models that should be selected according to the target platform and use-case.
+
+.. list-table::
+    :width: 100
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Model
+      - Size
+      - Description
+
+    * - FaceDetector4A
+      - 8.29 MB
+      - This model provides the best accuracy. It is recommended for 1-to-N applications or in an uncontrolled environment.
+
+    * - FaceDetector4B
+      - 1.25 MB
+      - This model provides a good balance of accuracy, speed, and size. This model is less robust to variations of head pose than the 4A version and should therefore only be used in a controlled environment.
+
+    * - FaceDetector3A
+      - 57.66 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 4A whenever possible.
+
+    * - FaceDetector3B
+      - 0.98 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 4B whenever possible.
+
+    * - FaceDetector3C
+      - 0.22 MB
+      - Ultra-light detector, dedicated to short-range real-time detection/tracking applications only.
+
+.. note:: Call the :ref:`face_library_load_model_class_method` to load the chosen model on application start.
+
+.. hint:: On startup, call the :ref:`face_detector_warm_up_class_method` to prepare inference of the AI model.
+

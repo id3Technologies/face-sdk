@@ -1,0 +1,261 @@
+.. index:: 
+  !TrackedFace Class
+
+.. _tracked_face_class:
+
+===============================================================================
+TrackedFace Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  bounds<bounds>
+  clone<clone>
+  create<create>
+  detectionScore<detection_score>
+  faceTemplate<face_template>
+  fromBuffer<from_buffer>
+  fromFile<from_file>
+  getAsDetectedFace<get_as_detected_face>
+  getDistanceToCamera<get_distance_to_camera>
+  getExpandedBounds<get_expanded_bounds>
+  getInterocularDistance<get_interocular_distance>
+  getPortraitBounds<get_portrait_bounds>
+  id<id>
+  landmarks<landmarks>
+  predictedBounds<predicted_bounds>
+  rescale<rescale>
+  rotate<rotate>
+  toBuffer<to_buffer>
+  toFile<to_file>
+  trackingStatus<tracking_status>
+  translate<translate>
+
+
+Definition
+----------
+.. line-block::
+    Represents a tracked face.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3TrackedFace *ID3_TRACKED_FACE;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class TrackedFace implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class TrackedFace
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class TrackedFace implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class TrackedFace
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class TrackedFace
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_TRACKED_FACE hTrackedFace{};
+        int err = id3TrackedFace_Initialize(&hTrackedFace);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3TrackedFace_Dispose(&hTrackedFace);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final trackedFace = sdk.TrackedFace();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        trackedFace.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var trackedFace = new TrackedFace())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var trackedFace = new TrackedFace()
+        // ...
+        trackedFace.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (TrackedFace trackedFace = new TrackedFace()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        TrackedFace trackedFace = new TrackedFace();
+        // ...
+        trackedFace.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        trackedFace = TrackedFace()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del trackedFace
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var trackedFace: TrackedFace? = nil
+        trackedFace = try TrackedFace()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`bounds<tracked_face_bounds_class_member>`
+    - :ref:`Rectangle<rectangle_struct>`
+    - Bounds of the detected face.
+  * - :ref:`detectionScore<tracked_face_detection_score_class_member>`
+    - int
+    - Confidence score of the detected face.
+  * - :ref:`faceTemplate<tracked_face_face_template_class_member>`
+    - :ref:`FaceTemplate<face_template_class>`
+    - Computed template the tracked face. It aims at tracking an identity over time and is consolidated.
+  * - :ref:`id<tracked_face_id_class_member>`
+    - int
+    - ID of the detected face.
+  * - :ref:`landmarks<tracked_face_landmarks_class_member>`
+    - :ref:`PointList<point_list_class>`
+    - Landmarks (eyes, nose and mouth corners) of the detected face.
+  * - :ref:`predictedBounds<tracked_face_predicted_bounds_class_member>`
+    - :ref:`Rectangle<rectangle_struct>`
+    - Predicted bounds of the tracked face. Those bounds are computed using a Kalman filter which has the effect of making them smooth and robust to false non-detections.
+  * - :ref:`trackingStatus<tracked_face_tracking_status_class_member>`
+    - :ref:`TrackingStatus<tracking_status_enum>`
+    - Status of the tracked face. See FaceTrackingStatus for more details.
+
+Static Methods
+--------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`create<tracked_face_create_class_method>`
+    - Creates a detected face.
+  * - :ref:`fromBuffer<tracked_face_from_buffer_class_method>`
+    - Imports the face object from a buffer.
+  * - :ref:`fromFile<tracked_face_from_file_class_method>`
+    - Imports the face object from a file.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clone<tracked_face_clone_class_method>`
+    - Clones the TrackedFace object.
+  * - :ref:`getAsDetectedFace<tracked_face_get_as_detected_face_class_method>`
+    - Gets the tracked face as a detected face.
+  * - :ref:`getDistanceToCamera<tracked_face_get_distance_to_camera_class_method>`
+    - Gets the distance between the detected face and the camera when using a depth map in pixels.
+  * - :ref:`getExpandedBounds<tracked_face_get_expanded_bounds_class_method>`
+    - Gets the bounding box around the detected face with specified aspect ratio and specified margin.
+  * - :ref:`getInterocularDistance<tracked_face_get_interocular_distance_class_method>`
+    - Gets the distance between the eyes (IOD) of the detected face in pixels.
+  * - :ref:`getPortraitBounds<tracked_face_get_portrait_bounds_class_method>`
+    - Gets the bounding box of the detected face for ICAO portrait cropping.
+  * - :ref:`rescale<tracked_face_rescale_class_method>`
+    - Rescales the detected face object bounding box and landmarks. This function can be useful if the image was downscaled to speed up detection, then you need to upscale the detected face to fit the source image size.
+  * - :ref:`rotate<tracked_face_rotate_class_method>`
+    - Rotates the face object by a given angle in degrees from a given center.
+  * - :ref:`toBuffer<tracked_face_to_buffer_class_method>`
+    - Exports the face object to a buffer.
+  * - :ref:`toFile<tracked_face_to_file_class_method>`
+    - Saves the face object to a file.
+  * - :ref:`translate<tracked_face_translate_class_method>`
+    - Translates the face object.

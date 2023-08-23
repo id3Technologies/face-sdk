@@ -1,0 +1,182 @@
+.. index:: 
+  !TrackedFace.translate Method
+  
+.. _tracked_face_translate_class_method:
+
+===============================================================================
+TrackedFace.translate Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Translates the face object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_Translate (
+            ID3_TRACKED_FACE hTrackedFace, 
+            int tx, 
+            int ty)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``tx`` int
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` int
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void translate(int tx, int ty)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``tx`` int
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` int
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Translate(int tx, int ty)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``tx`` int
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` int
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void translate(int tx, int ty) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``tx`` int
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` int
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        translate(self, tx: int, ty: int) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``tx`` int
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` int
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func translate(tx: Int32, ty: Int32) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``tx`` Int32
+          :guilabel:`in` Translation to apply to the face object alongside the x-axis.
+
+          ``ty`` Int32
+          :guilabel:`in` Translation to apply to the face object alongside the y-axis.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

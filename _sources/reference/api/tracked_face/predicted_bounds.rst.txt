@@ -1,0 +1,114 @@
+.. index:: 
+  !TrackedFace.predictedBounds Property
+
+.. _tracked_face_predicted_bounds_class_member:
+
+===============================================================================
+TrackedFace.predictedBounds Property
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Type: :ref:`Rectangle<rectangle_struct>`
+
+Definition
+----------
+
+Predicted bounds of the tracked face. Those bounds are computed using a Kalman filter which has the effect of making them smooth and robust to false non-detections.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetPredictedBounds (ID3_TRACKED_FACE hTrackedFace, id3FaceRectangle * sPredictedBounds)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      Rectangle get predictedBounds => getPredictedBounds();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public Rectangle predictedBounds
+      {
+          get => GetpredictedBounds();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public Rectangle getPredictedBounds() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      predicted_bounds: Rectangle
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.faceEncodingModel Property
+
+.. _portrait_processor_face_encoding_model_class_member:
+
+===============================================================================
+PortraitProcessor.faceEncodingModel Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: :ref:`FaceModel<face_model_enum>`
+
+Definition
+----------
+
+Model used to create features and assess consistancy among views of a given face.
+
+.. hint:: Default value is FaceEncoder9B. Some better accuracy/speed balances can be found by choosing another model.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel * eFaceEncodingModel)
+      int id3FacePortraitProcessor_SetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel eFaceEncodingModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceModel get faceEncodingModel => getFaceEncodingModel();
+      set faceEncodingModel(FaceModel value) => setFaceEncodingModel(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceModel faceEncodingModel
+      {
+          get => GetfaceEncodingModel();
+          set => SetfaceEncodingModel(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceModel getFaceEncodingModel() throws FaceException
+      public void setFaceEncodingModel(FaceModel faceEncodingModel) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      face_encoding_model: FaceModel
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

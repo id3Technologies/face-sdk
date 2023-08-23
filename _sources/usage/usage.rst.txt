@@ -1,0 +1,71 @@
+.. index:: 
+  !Usage
+
+.. _sdk_usage:
+
+=====
+Usage
+=====
+
+This section describes the main usages of |product-name|.
+
+.. toctree::
+    :maxdepth: 1
+
+    conventions
+    error_handling
+    license_handling
+    image_handling
+    face_analysis/face_analysis
+    face_comparison
+    face_comparison_on_card
+    face_detection
+    face_encoding
+    face_tracking
+    face_search
+    liveness_detection
+..    portrait_processing/portrait_processing
+
+Adding the library to your project
+==================================
+
+.. tab-set::
+
+    .. tab-item:: C
+        :sync: c
+
+        .. code-block:: c
+
+            #include "id3Face.h"
+
+    .. tab-item:: Dart
+        :sync: dart
+
+        .. code-block:: dart
+
+            import 'package:id3_face/id3_face.dart';
+
+    .. tab-item:: C#
+        :sync: csharp
+
+        id3 Face C# API is available in the package `id3.Face`:
+
+        .. code-block:: csharp
+
+            using id3.Face;
+
+    .. tab-item:: Java
+        :sync: java
+   
+        .. code-block:: java
+        
+            import eu.id3.face;
+
+    .. tab-item:: Python
+        :sync: python
+
+        .. code-block:: python
+
+            import id3Face as face_library
+
+

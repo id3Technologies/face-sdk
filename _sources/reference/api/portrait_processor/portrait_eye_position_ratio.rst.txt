@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.portraitEyePositionRatio Property
+
+.. _portrait_processor_portrait_eye_position_ratio_class_member:
+
+===============================================================================
+PortraitProcessor.portraitEyePositionRatio Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Ratio between the vertical eye position and the image height for ICAO portrait cropping. Must be in the range ]0;1[.
+
+.. hint:: Default value is 0.45.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitEyePositionRatio)
+      int id3FacePortraitProcessor_SetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitEyePositionRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get portraitEyePositionRatio => getPortraitEyePositionRatio();
+      set portraitEyePositionRatio(double value) => setPortraitEyePositionRatio(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float portraitEyePositionRatio
+      {
+          get => GetportraitEyePositionRatio();
+          set => SetportraitEyePositionRatio(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getPortraitEyePositionRatio() throws FaceException
+      public void setPortraitEyePositionRatio(float portraitEyePositionRatio) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      portrait_eye_position_ratio: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

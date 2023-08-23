@@ -1,0 +1,63 @@
+.. index:: 
+  !BackgroundUniformity.colorUniformity Property
+
+.. _background_uniformity_color_uniformity_struct_member:
+
+===============================================================================
+BackgroundUniformity.colorUniformity Property
+===============================================================================
+
+Structure: :ref:`BackgroundUniformity<background_uniformity_struct>`
+
+Definition
+----------
+
+Color uniformity score, in the range [0:100].
+
+.. hint:: Recommended threshold is 80.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int ColorUniformity
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int colorUniformity
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int ColorUniformity
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int colorUniformity
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int color_uniformity
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int colorUniformity
+

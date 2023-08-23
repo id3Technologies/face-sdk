@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.noiseThreshold Property
+
+.. _portrait_processor_noise_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.noiseThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Threshold for confirming the presence of noise in the image.
+
+.. hint:: Default value is 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetNoiseThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * noiseThreshold)
+      int id3FacePortraitProcessor_SetNoiseThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int noiseThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get noiseThreshold => getNoiseThreshold();
+      set noiseThreshold(int value) => setNoiseThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int noiseThreshold
+      {
+          get => GetnoiseThreshold();
+          set => SetnoiseThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getNoiseThreshold() throws FaceException
+      public void setNoiseThreshold(int noiseThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      noise_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

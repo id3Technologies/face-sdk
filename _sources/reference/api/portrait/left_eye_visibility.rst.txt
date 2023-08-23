@@ -1,0 +1,114 @@
+.. index:: 
+  !Portrait.leftEyeVisibility Property
+
+.. _portrait_left_eye_visibility_class_member:
+
+===============================================================================
+Portrait.leftEyeVisibility Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: int
+
+Definition
+----------
+
+Value estimating the visibility of the left eye. -1 if not computed. The range is 0-100, 100 meaning the left eye is fully visible.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetLeftEyeVisibility (ID3_FACE_PORTRAIT hPortrait, int * leftEyeVisibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get leftEyeVisibility => getLeftEyeVisibility();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int leftEyeVisibility
+      {
+          get => GetleftEyeVisibility();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getLeftEyeVisibility() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      left_eye_visibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

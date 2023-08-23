@@ -1,0 +1,61 @@
+.. index:: 
+  !DetectedFaceAttackSupport.score Property
+
+.. _detected_face_attack_support_score_struct_member:
+
+===============================================================================
+DetectedFaceAttackSupport.score Property
+===============================================================================
+
+Structure: :ref:`DetectedFaceAttackSupport<detected_face_attack_support_struct>`
+
+Definition
+----------
+
+Confidence score of the detected attack support, in the range [0:100].
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Score
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int score
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Score
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int score
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int score
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int score
+

@@ -1,0 +1,84 @@
+.. index:: 
+  !DetectedFaceAttackSupport Structure
+
+.. _detected_face_attack_support_struct:
+
+===============================================================================
+DetectedFaceAttackSupport Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  attackSupport<attack_support>
+  score<score>
+
+Definition
+----------
+.. line-block::
+    Represents the result of the attack support detection.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3DetectedFaceAttackSupport
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class DetectedFaceAttackSupport
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct DetectedFaceAttackSupport
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class DetectedFaceAttackSupport
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class DetectedFaceAttackSupport
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias DetectedFaceAttackSupport = id3DetectedFaceAttackSupport
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`attackSupport<detected_face_attack_support_attack_support_struct_member>`
+    - :ref:`FaceAttackSupport<face_attack_support_enum>`
+    - Attack support type.
+  * - :ref:`score<detected_face_attack_support_score_struct_member>`
+    - int
+    - Confidence score of the detected attack support, in the range [0:100].

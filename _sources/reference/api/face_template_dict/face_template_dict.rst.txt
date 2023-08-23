@@ -1,0 +1,223 @@
+.. index:: 
+  !FaceTemplateDict Class
+
+.. _face_template_dict_class:
+
+===============================================================================
+FaceTemplateDict Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  containsKey<contains_key>
+  count<count>
+  get<get>
+  getCount<get_count>
+  keys<keys>
+  remove<remove>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a dictionary of face templates.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTemplateDict *ID3_FACE_TEMPLATE_DICT;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceTemplateDict implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceTemplateDict
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceTemplateDict implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceTemplateDict
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceTemplateDict
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TEMPLATE_DICT hFaceTemplateDict{};
+        int err = id3FaceTemplateDict_Initialize(&hFaceTemplateDict);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTemplateDict_Dispose(&hFaceTemplateDict);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceTemplateDict = sdk.FaceTemplateDict();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceTemplateDict.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceTemplateDict = new FaceTemplateDict())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceTemplateDict = new FaceTemplateDict()
+        // ...
+        faceTemplateDict.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceTemplateDict faceTemplateDict = new FaceTemplateDict()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceTemplateDict faceTemplateDict = new FaceTemplateDict();
+        // ...
+        faceTemplateDict.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceTemplateDict = FaceTemplateDict()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTemplateDict
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceTemplateDict: FaceTemplateDict? = nil
+        faceTemplateDict = try FaceTemplateDict()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<face_template_dict_count_class_member>`
+    - int
+    - Gets the number of elements contained in the dict
+  * - :ref:`keys<face_template_dict_keys_class_member>`
+    - :ref:`StringList<string_list_class>`
+    - Gets a string list containing the keys in the dict.
+  * - operator [string key]
+    - :ref:`FaceTemplate<face_template_class>`
+    - Gets or sets the element for the key in the dict.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+The iteration is done on keys
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<face_template_dict_add_class_method>`
+    - Adds an item to the FaceTemplateDict object.
+  * - :ref:`clear<face_template_dict_clear_class_method>`
+    - Clears the FaceTemplateDict object.
+  * - :ref:`clone<face_template_dict_clone_class_method>`
+    - Clones the FaceTemplateDict object.
+  * - :ref:`containsKey<face_template_dict_contains_key_class_method>`
+    - Determines whether the FaceTemplateDictobject contains the specified key.
+  * - :ref:`get<face_template_dict_get_class_method>`
+    - Gets an item of the FaceTemplateDict object.
+  * - :ref:`getCount<face_template_dict_get_count_class_method>`
+    - Gets the number of elements in the FaceTemplateDict object.
+  * - :ref:`remove<face_template_dict_remove_class_method>`
+    - Removes an element of the FaceTemplateDict object.
+  * - :ref:`set<face_template_dict_set_class_method>`
+    - Sets an item of the FaceTemplateDict object.

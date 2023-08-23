@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.sharpness Property
+
+.. _photographic_attributes_sharpness_struct_member:
+
+===============================================================================
+PhotographicAttributes.sharpness Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the image sharpness is sufficient.
+
+0 means that the image is not sharp at all.
+
+.. hint:: The recommended value is over 40.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Sharpness
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int sharpness
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Sharpness
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int sharpness
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int sharpness
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int sharpness
+

@@ -1,0 +1,23 @@
+.. _face_attributes:
+
+===========================
+Face attributes computation
+===========================
+
+The :ref:`face_analyser_class` can estimate in one step a group of facial attributes, including:
+
+- Glasses 
+- Hat 
+- Make-up 
+- Male (gender estimation)
+- Mouth opening 
+- Smile 
+
+.. note:: Required AI model: **FaceAttributesClassifier2A**
+
+
+See also
+========
+- :ref:`face_analyser_compute_attributes_class_method`
+
+

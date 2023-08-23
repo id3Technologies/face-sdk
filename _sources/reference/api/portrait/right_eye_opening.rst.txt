@@ -1,0 +1,114 @@
+.. index:: 
+  !Portrait.rightEyeOpening Property
+
+.. _portrait_right_eye_opening_class_member:
+
+===============================================================================
+Portrait.rightEyeOpening Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: int
+
+Definition
+----------
+
+Value estimating the opening of the left eye. -1 if not computed. The range is 0-100, 100 meaning the eye is fully opened.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetRightEyeOpening (ID3_FACE_PORTRAIT hPortrait, int * rightEyeOpening)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get rightEyeOpening => getRightEyeOpening();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int rightEyeOpening
+      {
+          get => GetrightEyeOpening();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getRightEyeOpening() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      right_eye_opening: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,97 @@
+.. index:: 
+  !FaceTemplateFormat Enumeration
+
+.. _face_template_format_enum:
+
+===============================================================================
+FaceTemplateFormat Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the face template formats.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceTemplateFormat
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceTemplateFormat
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceTemplateFormat
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceTemplateFormat
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceTemplateFormat
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceTemplateFormat
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``undefined``
+    - 0x0000
+    - Undefined template format.
+  * - ``v8A``
+    - 0x218A
+    - Template generated with model FaceEncoder8A.
+  * - ``v8B``
+    - 0x218B
+    - Template generated with model FaceEncoder8B.
+  * - ``v9A``
+    - 0x219A
+    - Template generated with model FaceEncoder9A.
+  * - ``v9B``
+    - 0x219B
+    - Template generated with model FaceEncoder9B.
+  * - ``v9C``
+    - 0x219C
+    - Template generated with model FaceEncoder9C.
+  * - ``periocularV2A``
+    - 0x222A
+    - Template generated with model FacePeriocularEncoder2A.
+  * - ``periocularV2B``
+    - 0x222B
+    - Template generated with model FacePeriocularEncoder2B.

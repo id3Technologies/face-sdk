@@ -1,0 +1,65 @@
+.. index:: 
+  !FaceAttributes.hat Property
+
+.. _face_attributes_hat_struct_member:
+
+===============================================================================
+FaceAttributes.hat Property
+===============================================================================
+
+Structure: :ref:`FaceAttributes<face_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the person is wearing a hat or not.
+
+100 means that the person is definitely wearing a hat.
+
+.. hint:: The recommended value is less than 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Hat
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int hat
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Hat
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int hat
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int hat
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int hat
+

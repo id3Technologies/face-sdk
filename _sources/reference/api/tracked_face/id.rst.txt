@@ -1,0 +1,118 @@
+.. index:: 
+  !TrackedFace.id Property
+
+.. _tracked_face_id_class_member:
+
+===============================================================================
+TrackedFace.id Property
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Type: int
+
+Definition
+----------
+
+ID of the detected face.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetId (ID3_TRACKED_FACE hTrackedFace, int * id)
+      int id3TrackedFace_SetId (ID3_TRACKED_FACE hTrackedFace, int id)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get id => getId();
+      set id(int value) => setId(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int id
+      {
+          get => Getid();
+          set => Setid(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getId() throws FaceException
+      public void setId(int id) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      id: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

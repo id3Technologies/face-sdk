@@ -1,0 +1,85 @@
+.. index:: 
+  !FaceAttackSupport Enumeration
+
+.. _face_attack_support_enum:
+
+===============================================================================
+FaceAttackSupport Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the types of presentation attack supports.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceAttackSupport
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceAttackSupport
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceAttackSupport
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceAttackSupport
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceAttackSupport
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceAttackSupport
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``none``
+    - 0
+    - No attack support.
+  * - ``idCard``
+    - 1
+    - ID card support.
+  * - ``screen``
+    - 2
+    - Screen support (includes smartphones, tablets, laptops, etc).
+  * - ``print``
+    - 3
+    - Printed support.

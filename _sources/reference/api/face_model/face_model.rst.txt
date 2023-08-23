@@ -1,0 +1,160 @@
+.. index:: 
+  !FaceModel Enumeration
+
+.. _face_model_enum:
+
+===============================================================================
+FaceModel Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the AI models available in this SDK.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceModel
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceModel
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceModel
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceModel
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceModel
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceModel
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``faceDetector3A``
+    - 1001
+    - Face detector 3A. Legacy high-accuracy detector, mainly for server-based or offline applications.
+  * - ``faceDetector3B``
+    - 1002
+    - Face detector 3B. Legacy light detector, mainly for mobile/embedded real-time detection/tracking applications.
+  * - ``faceDetector3C``
+    - 1003
+    - Face detector 3C. Ultra-light detector, dedicated to short-range real-time detection/tracking applications only.
+  * - ``faceDetector4A``
+    - 1004
+    - Face detector 4A. Highest accuracy detector in this SDK, mainly for server-based or offline applications.
+  * - ``faceDetector4B``
+    - 1005
+    - Face detector 4B. Light and accurate detector, mainly for mobile/embedded real-time detection/tracking applications.
+  * - ``faceDetector4BQ``
+    - 1006
+    - Hardware specific declination of Face detector 4B.
+  * - ``faceEncoder8A``
+    - 1102
+    - Face encoder 8A. Legacy model.
+  * - ``faceEncoder8B``
+    - 1103
+    - Face encoder 8B. Legacy model.
+  * - ``faceEncoder9A``
+    - 1104
+    - Face encoder 9A. Highest accuracy face encoder in this SDK, mainly for server-based 1:N applications.
+  * - ``faceEncoder9B``
+    - 1105
+    - Face encoder 9B. Light and accurate face encoder, mainly for mobile/embedded 1:1 applications.
+  * - ``faceEncoder9C``
+    - 1106
+    - Face encoder 9C. Ultra-light face encoder, dedicated to face tracking only.
+  * - ``facePeriocularEncoder2A``
+    - 1152
+    - Periocular encoder 2A. Highest accuracy periocular encoder in this SDK. Provides an efficient alternative to face encoders when people wear masks in server-based 1:N applications.
+  * - ``faceEncodingQualityEstimator3A``
+    - 1202
+    - Face encoding quality estimator 3A.
+  * - ``faceLandmarksEstimator2A``
+    - 1301
+    - Face landmarks estimator 2A.
+  * - ``faceAgeEstimator1A``
+    - 1350
+    - Face age estimator 1A.
+  * - ``faceAttributesClassifier2A``
+    - 1401
+    - Face attributes estimator 2A.
+  * - ``faceExpressionClassifier1A``
+    - 1450
+    - Face expression classifier 1A.
+  * - ``eyeOpennessDetector1A``
+    - 1510
+    - Eye openness detector 1A.
+  * - ``eyeRednessDetector1A``
+    - 1520
+    - Eye redness detector 1A.
+  * - ``eyeGazeEstimator2A``
+    - 1531
+    - Eye gaze estimator 2A.
+  * - ``faceBackgroundUniformity1A``
+    - 1550
+    - Face background uniformity estimator 1A.
+  * - ``faceMaskClassifier2A``
+    - 1601
+    - Face mask classifier 2A.
+  * - ``faceOcclusionDetector2A``
+    - 1651
+    - Face occlusion detector 2A.
+  * - ``facePoseEstimator1A``
+    - 1700
+    - Face pose estimator 1A.
+  * - ``faceColorBasedPad2A``
+    - 1801
+    - Face color-based presentation attack detector (PAD) 2A.
+  * - ``faceBlurrinessDetector1A``
+    - 1810
+    - Face blurriness detector 1A.
+  * - ``faceAttackSupportDetector2A``
+    - 1831
+    - Face attack support detector 2A.
+  * - ``faceDepthBasedPad2A``
+    - 1850
+    - Face depth-based presentation attack detector (PAD) 2A.
+  * - ``faceSegmenter1A``
+    - 1870
+    - Face segmenter / background removal.

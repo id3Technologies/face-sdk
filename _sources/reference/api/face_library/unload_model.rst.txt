@@ -1,0 +1,179 @@
+.. index:: 
+  !FaceLibrary.unloadModel Method
+  
+.. _face_library_unload_model_class_method:
+
+===============================================================================
+FaceLibrary.unloadModel Method
+===============================================================================
+
+Module: :ref:`FaceLibrary<face_library_class>`
+
+Definition
+----------
+
+Unloads a model from the processing unit it was loaded into.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLibrary_UnloadModel (
+            id3FaceModel eFaceModel, 
+            id3FaceProcessingUnit eProcessingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        static void unloadModel(FaceModel faceModel, ProcessingUnit processingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static void UnloadModel(FaceModel faceModel, ProcessingUnit processingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public static void unloadModel(FaceModel faceModel, ProcessingUnit processingUnit) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        @staticmethod
+        unload_model(face_model: FaceModel, processing_unit: ProcessingUnit) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``face_model`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public static func unloadModel(faceModel: FaceModel, processingUnit: ProcessingUnit) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``faceModel`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` Face model to unload.
+
+          ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` Processing unit to unload the model from.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

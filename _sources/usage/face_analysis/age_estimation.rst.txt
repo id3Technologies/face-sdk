@@ -1,0 +1,27 @@
+.. _age_estimation:
+
+==============
+Age estimation
+==============
+
+Landmarks such as the location of the pupils, eye corners, lip boundaries, etc. change with age.
+
+|product-name| was trained on a large database of different faces to detect the approximate age of a person based on such features.
+
+- Age estimation accuracy up to +/- 5 years.
+- Accuracy depends on conditions such as lighting, head pose, etc.
+
+.. note:: Required AI model: **FaceAgeEstimator1A**
+
+
+Example
+=======
+
+.. tab-set-code::
+
+    .. literalinclude:: /_static/samples/age.cs
+       :language: c#
+
+See also
+========
+- :ref:`face_analyser_compute_age_class_method`

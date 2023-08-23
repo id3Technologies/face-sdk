@@ -1,0 +1,217 @@
+.. index:: 
+  !FaceTemplateList Class
+
+.. _face_template_list_class:
+
+===============================================================================
+FaceTemplateList Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  count<count>
+  get<get>
+  getCount<get_count>
+  removeAt<remove_at>
+  resize<resize>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a list of face templates.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTemplateList *ID3_FACE_TEMPLATE_LIST;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceTemplateList implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceTemplateList
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceTemplateList implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceTemplateList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceTemplateList
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TEMPLATE_LIST hFaceTemplateList{};
+        int err = id3FaceTemplateList_Initialize(&hFaceTemplateList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTemplateList_Dispose(&hFaceTemplateList);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceTemplateList = sdk.FaceTemplateList();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceTemplateList.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceTemplateList = new FaceTemplateList())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceTemplateList = new FaceTemplateList()
+        // ...
+        faceTemplateList.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceTemplateList faceTemplateList = new FaceTemplateList()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceTemplateList faceTemplateList = new FaceTemplateList();
+        // ...
+        faceTemplateList.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceTemplateList = FaceTemplateList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTemplateList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceTemplateList: FaceTemplateList? = nil
+        faceTemplateList = try FaceTemplateList()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<face_template_list_count_class_member>`
+    - int
+    - Gets the number of elements contained in the list
+  * - operator [int index]
+    - :ref:`FaceTemplate<face_template_class>`
+    - Gets or sets the element at the specified index in the list.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<face_template_list_add_class_method>`
+    - Adds an item to the FaceTemplateList object.
+  * - :ref:`clear<face_template_list_clear_class_method>`
+    - Clears the FaceTemplateList object.
+  * - :ref:`clone<face_template_list_clone_class_method>`
+    - Clones the FaceTemplateList object.
+  * - :ref:`get<face_template_list_get_class_method>`
+    - Gets an item of the FaceTemplateList object.
+  * - :ref:`getCount<face_template_list_get_count_class_method>`
+    - Gets the number of elements in the FaceTemplateList object.
+  * - :ref:`removeAt<face_template_list_remove_at_class_method>`
+    - Removes an element of the FaceTemplateList object.
+  * - :ref:`resize<face_template_list_resize_class_method>`
+    - FaceTemplateList object.
+  * - :ref:`set<face_template_list_set_class_method>`
+    - Sets an item of the FaceTemplateList object.

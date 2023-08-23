@@ -1,0 +1,240 @@
+.. index:: 
+  !FaceMatcher.compareTemplateLists Method
+  
+.. _face_matcher_compare_template_lists_class_method:
+
+===============================================================================
+FaceMatcher.compareTemplateLists Method
+===============================================================================
+
+Module: :ref:`FaceMatcher<face_matcher_class>`
+
+Definition
+----------
+
+Compares two template lists and outputs a comparison score.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceMatcher_CompareTemplateLists (
+            ID3_FACE_MATCHER hFaceMatcher, 
+            ID3_FACE_TEMPLATE_LIST hReferenceList, 
+            ID3_FACE_TEMPLATE_LIST hProbeList, 
+            id3FacePoolingMethod ePoolingMethod, 
+            int * score)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceMatcher`` :ref:`ID3_FACE_MATCHER<face_matcher_class>`
+          :guilabel:`in` Handle to the FaceMatcher object.
+
+          ``hReferenceList`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``hProbeList`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``ePoolingMethod`` :ref:`id3FacePoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+          ``score`` int *
+          :guilabel:`out` The comparison score, in the range [0;65535].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int compareTemplateLists(FaceTemplateList referenceList, FaceTemplateList probeList, PoolingMethod poolingMethod)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``referenceList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``probeList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``poolingMethod`` :ref:`PoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int CompareTemplateLists(FaceTemplateList referenceList, FaceTemplateList probeList, PoolingMethod poolingMethod)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``referenceList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``probeList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``poolingMethod`` :ref:`PoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int compareTemplateLists(FaceTemplateList referenceList, FaceTemplateList probeList, PoolingMethod poolingMethod) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``referenceList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``probeList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``poolingMethod`` :ref:`PoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compare_template_lists(self, reference_list: FaceTemplateList, probe_list: FaceTemplateList, pooling_method: PoolingMethod) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference_list`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``probe_list`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``pooling_method`` :ref:`PoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func compareTemplateLists(referenceList: FaceTemplateList, probeList: FaceTemplateList, poolingMethod: PoolingMethod) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``referenceList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Reference template list.
+
+          ``probeList`` :ref:`FaceTemplateList<face_template_list_class>`
+          :guilabel:`in` Probe template list.
+
+          ``poolingMethod`` :ref:`PoolingMethod<pooling_method_enum>`
+          :guilabel:`in` Pooling method applied during the match process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

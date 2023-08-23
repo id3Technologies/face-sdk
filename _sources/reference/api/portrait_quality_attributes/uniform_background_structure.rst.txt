@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.uniformBackgroundStructure Property
+
+.. _portrait_quality_attributes_uniform_background_structure_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.uniformBackgroundStructure Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the structure of the background is uniform.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int UniformBackgroundStructure
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int uniformBackgroundStructure
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int UniformBackgroundStructure
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int uniformBackgroundStructure
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int uniform_background_structure
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int uniformBackgroundStructure
+

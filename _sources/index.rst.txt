@@ -1,0 +1,44 @@
+============
+id3 Face SDK
+============
+
+id3 Face SDK is a cross-platform library aimed at system integrators willing to quickly add face detection, recognition, PAD and/or analysis capabilities to their products. It is available as a Software Development Kit (SDK) offering a comprehensive interface to simplify integration of the library on servers, desktops/laptops, mobile and edge devices.
+
+This document is the developer's guide of id3 Face SDK.
+
+Contents
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   introduction/introduction
+   requirements/requirements
+   quick_start/quick_start
+   ai_models/ai_models
+   licensing/licensing
+   usage/usage
+   distribution/distribution
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reference
+
+   reference/api/api
+
+.. toctree::
+   :maxdepth: 1
+   :caption: ABOUT
+
+   about/release_notes
+   about/license_agreement
+   about/third-party-libraries
+   about/faq
+   about/troubleshooting
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+

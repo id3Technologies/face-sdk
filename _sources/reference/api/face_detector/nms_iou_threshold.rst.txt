@@ -1,0 +1,122 @@
+.. index:: 
+  !FaceDetector.nmsIouThreshold Property
+
+.. _face_detector_nms_iou_threshold_class_member:
+
+===============================================================================
+FaceDetector.nmsIouThreshold Property
+===============================================================================
+
+Module: :ref:`FaceDetector<face_detector_class>`
+
+Type: int
+
+Definition
+----------
+
+Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the range is [0;100].
+
+.. hint:: Default value is 40.
+
+.. note:: Setting a high threshold allows to detect more overlapping faces which can be useful in a multi-face secenario. On the contrary, in a portrait scenario, a low NMS IOU threshold should be preferred.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceDetector_GetNmsIouThreshold (ID3_FACE_DETECTOR hFaceDetector, int * nmsIouThreshold)
+      int id3FaceDetector_SetNmsIouThreshold (ID3_FACE_DETECTOR hFaceDetector, int nmsIouThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get nmsIouThreshold => getNmsIouThreshold();
+      set nmsIouThreshold(int value) => setNmsIouThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int nmsIouThreshold
+      {
+          get => GetnmsIouThreshold();
+          set => SetnmsIouThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getNmsIouThreshold() throws FaceException
+      public void setNmsIouThreshold(int nmsIouThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      nms_iou_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.naturalSkinColor Property
+
+.. _photographic_attributes_natural_skin_color_struct_member:
+
+===============================================================================
+PhotographicAttributes.naturalSkinColor Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the skin looks natural.
+
+0 means that the face does not have a natural skin color at all.
+
+.. hint:: The recommended value for a portrait is over 110.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NaturalSkinColor
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int naturalSkinColor
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NaturalSkinColor
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int naturalSkinColor
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int natural_skin_color
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int naturalSkinColor
+

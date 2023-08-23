@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.colorizedImage Property
+
+.. _portrait_quality_attributes_colorized_image_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.colorizedImage Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the image is colorized, not grayscale.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int ColorizedImage
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int colorizedImage
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int ColorizedImage
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int colorizedImage
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int colorized_image
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int colorizedImage
+

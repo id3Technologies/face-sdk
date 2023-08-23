@@ -1,0 +1,158 @@
+.. index:: 
+  !FaceTemplateList.clone Method
+  
+.. _face_template_list_clone_class_method:
+
+===============================================================================
+FaceTemplateList.clone Method
+===============================================================================
+
+Module: :ref:`FaceTemplateList<face_template_list_class>`
+
+Definition
+----------
+
+Clones the FaceTemplateList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplateList_CopyTo (
+            ID3_FACE_TEMPLATE_LIST hFaceTemplateList, 
+            ID3_FACE_TEMPLATE_LIST hFaceTemplateListDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplateList`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
+          :guilabel:`in` Handle to the FaceTemplateList object.
+
+          ``hFaceTemplateListDst`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
+          :guilabel:`out` The newly created face template list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        FaceTemplateList clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceTemplateList<face_template_list_class>`
+          The newly created face template list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public FaceTemplateList Clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceTemplateList<face_template_list_class>`
+          The newly created face template list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public FaceTemplateList clone() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceTemplateList<face_template_list_class>`
+          The newly created face template list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        clone(self) -> FaceTemplateList
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceTemplateList<face_template_list_class>`
+          The newly created face template list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func clone() throws -> FaceTemplateList
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceTemplateList<face_template_list_class>`
+          The newly created face template list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

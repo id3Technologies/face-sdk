@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.portraitMargin Property
+
+.. _portrait_processor_portrait_margin_class_member:
+
+===============================================================================
+PortraitProcessor.portraitMargin Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Relative margin around the face for portrait cropping.
+
+.. hint:: Default value is 0.5.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPortraitMargin (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitMargin)
+      int id3FacePortraitProcessor_SetPortraitMargin (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitMargin)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get portraitMargin => getPortraitMargin();
+      set portraitMargin(double value) => setPortraitMargin(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float portraitMargin
+      {
+          get => GetportraitMargin();
+          set => SetportraitMargin(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getPortraitMargin() throws FaceException
+      public void setPortraitMargin(float portraitMargin) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      portrait_margin: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

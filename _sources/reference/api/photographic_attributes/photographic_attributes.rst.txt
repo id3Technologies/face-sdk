@@ -1,0 +1,108 @@
+.. index:: 
+  !PhotographicAttributes Structure
+
+.. _photographic_attributes_struct:
+
+===============================================================================
+PhotographicAttributes Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  equalBrightness<equal_brightness>
+  faceDynamicRange<face_dynamic_range>
+  flashReflection<flash_reflection>
+  naturalSkinColor<natural_skin_color>
+  overExposure<over_exposure>
+  pixelation<pixelation>
+  sharpness<sharpness>
+  underExposure<under_exposure>
+
+Definition
+----------
+.. line-block::
+    Represents the photographic attributes of a portrait image.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FacePhotographicAttributes
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class PhotographicAttributes
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct PhotographicAttributes
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class PhotographicAttributes
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class PhotographicAttributes
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias PhotographicAttributes = id3FacePhotographicAttributes
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`equalBrightness<photographic_attributes_equal_brightness_struct_member>`
+    - int
+    - Value indicating if one side of the face is ligther than the other side.
+  * - :ref:`faceDynamicRange<photographic_attributes_face_dynamic_range_struct_member>`
+    - int
+    - Value indicating the dynamic range of the image in the face region.
+  * - :ref:`flashReflection<photographic_attributes_flash_reflection_struct_member>`
+    - int
+    - Value indicating if a flash reflection is present on the face.
+  * - :ref:`naturalSkinColor<photographic_attributes_natural_skin_color_struct_member>`
+    - int
+    - Value indicating if the skin looks natural.
+  * - :ref:`overExposure<photographic_attributes_over_exposure_struct_member>`
+    - int
+    - Value indicating the ratio of face pixels that are over-exposed.
+  * - :ref:`pixelation<photographic_attributes_pixelation_struct_member>`
+    - int
+    - Value indicating if the image is pixelized.
+  * - :ref:`sharpness<photographic_attributes_sharpness_struct_member>`
+    - int
+    - Value indicating if the image sharpness is sufficient.
+  * - :ref:`underExposure<photographic_attributes_under_exposure_struct_member>`
+    - int
+    - Value indicating the ratio of face pixels that are under-exposed.

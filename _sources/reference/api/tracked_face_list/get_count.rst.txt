@@ -1,0 +1,158 @@
+.. index:: 
+  !TrackedFaceList.getCount Method
+  
+.. _tracked_face_list_get_count_class_method:
+
+===============================================================================
+TrackedFaceList.getCount Method
+===============================================================================
+
+Module: :ref:`TrackedFaceList<tracked_face_list_class>`
+
+Definition
+----------
+
+Gets the number of elements in the TrackedFaceList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_GetCount (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            int * count)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``count`` int *
+          :guilabel:`out` Number of elements in the TrackedFace object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int getCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the TrackedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int GetCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the TrackedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int getCount() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the TrackedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_count(self) -> int
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the TrackedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getCount() throws -> Int32
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          Number of elements in the TrackedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

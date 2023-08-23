@@ -1,0 +1,188 @@
+.. index:: 
+  !FaceDetector.warmUp Method
+  
+.. _face_detector_warm_up_class_method:
+
+===============================================================================
+FaceDetector.warmUp Method
+===============================================================================
+
+Module: :ref:`FaceDetector<face_detector_class>`
+
+Definition
+----------
+
+Gets the face detector module ready to work on a specific image size by initializing all its internal memory layout.
+
+This function can be called after setting all the parameters of the face detector module if the image size is fixed, for example using frames from a video stream.
+
+Calling this function is not mandatory as the internal memory layout is automatically initialized in the first call to detectFaces() or trackFaces() if missing.
+
+.. important:: Loading a face detector model is required to use this function. This SDK supports id3 face detectors 3A and 3B.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceDetector_WarmUp (
+            ID3_FACE_DETECTOR hFaceDetector, 
+            int imageWidth, 
+            int imageHeight)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
+          :guilabel:`in` Handle to the FaceDetector object.
+
+          ``imageWidth`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void warmUp(int imageWidth, int imageHeight)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageWidth`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void WarmUp(int imageWidth, int imageHeight)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageWidth`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void warmUp(int imageWidth, int imageHeight) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageWidth`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        warm_up(self, image_width: int, image_height: int) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image_width`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``image_height`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func warmUp(imageWidth: Int32, imageHeight: Int32) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageWidth`` Int32
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` Int32
+          :guilabel:`in` Height of expected image size.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

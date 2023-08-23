@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.landmarkDetection Property
+
+.. _portrait_processor_landmark_detection_class_member:
+
+===============================================================================
+PortraitProcessor.landmarkDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether landmark detection is enabled.
+
+.. important:: This option requires the FaceLandmarksEstimator model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetLandmarkDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * landmarkDetection)
+      int id3FacePortraitProcessor_SetLandmarkDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool landmarkDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get landmarkDetection => getLandmarkDetection();
+      set landmarkDetection(bool value) => setLandmarkDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool landmarkDetection
+      {
+          get => GetlandmarkDetection();
+          set => SetlandmarkDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getLandmarkDetection() throws FaceException
+      public void setLandmarkDetection(boolean landmarkDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      landmark_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

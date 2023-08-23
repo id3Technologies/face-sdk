@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.hatDetection Property
+
+.. _portrait_processor_hat_detection_class_member:
+
+===============================================================================
+PortraitProcessor.hatDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether hat detection is enabled.
+
+.. important:: This option requires the FaceAttributesClassifier model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetHatDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * hatDetection)
+      int id3FacePortraitProcessor_SetHatDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool hatDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get hatDetection => getHatDetection();
+      set hatDetection(bool value) => setHatDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool hatDetection
+      {
+          get => GethatDetection();
+          set => SethatDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getHatDetection() throws FaceException
+      public void setHatDetection(boolean hatDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      hat_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

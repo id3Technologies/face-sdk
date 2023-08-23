@@ -1,0 +1,63 @@
+.. index:: 
+  !GeometricAttributes.resolution Property
+
+.. _geometric_attributes_resolution_struct_member:
+
+===============================================================================
+GeometricAttributes.resolution Property
+===============================================================================
+
+Structure: :ref:`GeometricAttributes<geometric_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the image resolution is sufficient.
+
+.. hint:: The recommended value is over 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Resolution
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int resolution
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Resolution
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int resolution
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int resolution
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int resolution
+

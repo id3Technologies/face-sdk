@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.redEyeThreshold Property
+
+.. _portrait_processor_red_eye_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.redEyeThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Threshold for confirming the presence of red eyes.
+
+.. hint:: Default value is 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetRedEyeThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * redEyeThreshold)
+      int id3FacePortraitProcessor_SetRedEyeThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int redEyeThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get redEyeThreshold => getRedEyeThreshold();
+      set redEyeThreshold(int value) => setRedEyeThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int redEyeThreshold
+      {
+          get => GetredEyeThreshold();
+          set => SetredEyeThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getRedEyeThreshold() throws FaceException
+      public void setRedEyeThreshold(int redEyeThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      red_eye_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

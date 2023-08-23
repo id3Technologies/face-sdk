@@ -1,0 +1,163 @@
+.. index:: 
+  !TrackedFace.rescale Method
+  
+.. _tracked_face_rescale_class_method:
+
+===============================================================================
+TrackedFace.rescale Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Rescales the detected face object bounding box and landmarks. This function can be useful if the image was downscaled to speed up detection, then you need to upscale the detected face to fit the source image size.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_Rescale (
+            ID3_TRACKED_FACE hTrackedFace, 
+            float scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``scale`` float
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void rescale(double scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` double
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Rescale(float scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void rescale(float scale) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        rescale(self, scale: float) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func rescale(scale: Float) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` Float
+          :guilabel:`in` The multiplicative rescaling factor to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

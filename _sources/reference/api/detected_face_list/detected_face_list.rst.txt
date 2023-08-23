@@ -1,0 +1,229 @@
+.. index:: 
+  !DetectedFaceList Class
+
+.. _detected_face_list_class:
+
+===============================================================================
+DetectedFaceList Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  count<count>
+  findDetectedFace<find_detected_face>
+  get<get>
+  getCount<get_count>
+  getIdList<get_id_list>
+  getLargestFace<get_largest_face>
+  removeAt<remove_at>
+  rescaleAll<rescale_all>
+  resize<resize>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a list of detected faces.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3DetectedFaceList *ID3_DETECTED_FACE_LIST;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class DetectedFaceList implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class DetectedFaceList
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class DetectedFaceList implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class DetectedFaceList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class DetectedFaceList
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_DETECTED_FACE_LIST hDetectedFaceList{};
+        int err = id3DetectedFaceList_Initialize(&hDetectedFaceList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3DetectedFaceList_Dispose(&hDetectedFaceList);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final detectedFaceList = sdk.DetectedFaceList();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        detectedFaceList.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var detectedFaceList = new DetectedFaceList())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var detectedFaceList = new DetectedFaceList()
+        // ...
+        detectedFaceList.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (DetectedFaceList detectedFaceList = new DetectedFaceList()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        DetectedFaceList detectedFaceList = new DetectedFaceList();
+        // ...
+        detectedFaceList.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        detectedFaceList = DetectedFaceList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del detectedFaceList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var detectedFaceList: DetectedFaceList? = nil
+        detectedFaceList = try DetectedFaceList()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<detected_face_list_count_class_member>`
+    - int
+    - Gets the number of elements contained in the list
+  * - operator [int index]
+    - :ref:`DetectedFace<detected_face_class>`
+    - Gets or sets the element at the specified index in the list.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<detected_face_list_add_class_method>`
+    - Adds an item to the DetectedFaceList object.
+  * - :ref:`clear<detected_face_list_clear_class_method>`
+    - Clears the DetectedFaceList object.
+  * - :ref:`clone<detected_face_list_clone_class_method>`
+    - Clones the DetectedFaceList object.
+  * - :ref:`findDetectedFace<detected_face_list_find_detected_face_class_method>`
+    - Finds a detected face by ID.
+  * - :ref:`get<detected_face_list_get_class_method>`
+    - Gets an item of the DetectedFaceList object.
+  * - :ref:`getCount<detected_face_list_get_count_class_method>`
+    - Gets the number of elements in the DetectedFaceList object.
+  * - :ref:`getIdList<detected_face_list_get_id_list_class_method>`
+    - Gets the list of IDs in the list.
+  * - :ref:`getLargestFace<detected_face_list_get_largest_face_class_method>`
+    - Gets the largest face in the list.
+  * - :ref:`removeAt<detected_face_list_remove_at_class_method>`
+    - Removes an element of the DetectedFaceList object.
+  * - :ref:`rescaleAll<detected_face_list_rescale_all_class_method>`
+    - Rescales all detected faces in the list.
+  * - :ref:`resize<detected_face_list_resize_class_method>`
+    - DetectedFaceList object.
+  * - :ref:`set<detected_face_list_set_class_method>`
+    - Sets an item of the DetectedFaceList object.

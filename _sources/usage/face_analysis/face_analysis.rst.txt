@@ -1,0 +1,161 @@
+.. _face_analysis:
+
+=============
+Face analysis
+=============
+
+|product-name| can analyse a wide range of facial attributes. For instance, it can evaluate the compliancy of a portrait to the ISO/IEC 19794-5 full frontal and the ICAO Portrait Quality Standards thanks to the following modules:
+
+
+.. list-table:: 
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Attribute
+      - Description
+
+    * - :ref:`Age<face_analyser_compute_age_class_method>`
+      - Estimated age of the subject.
+
+    * - :ref:`Background uniformity<face_analyser_compute_background_uniformity_class_method>`
+      - Estimated color and structure uniformity of the background in a portrait image. See also :ref:`background_removal`.
+
+    * - :ref:`Colorized image<face_analyser_check_colorized_image_class_method>`
+      - Value indicating whether an image is colorized or grayscale.
+
+    * - :ref:`Expression<face_analyser_compute_expression_class_method>`
+      - Estimated facial expressions of a subject classified in six universal emotions: angriness, disgust, fear, happiness, sadness, surprise, and additionally neutral.
+
+    * - :ref:`Eye gaze<face_analyser_compute_eye_gaze_class_method>`
+      - Estimated gaze direction for both eyes. When the subject looks directly towards the camera, the return values equal 0.
+
+        .. image:: ../img/eye-gaze.jpg
+          :width: 300
+
+    * - :ref:`Eye opening<face_analyser_compute_eye_openness_class_method>`
+      - Degree of opening of both eyes. The resulting scores are in the range 0 to 100.
+
+    * - :ref:`Face attributes<face_analyser_compute_attributes_class_method>`
+      - Group of additional attributes, including:
+        
+        - Glasses
+        - Hat
+        - Make-up
+        - Male (gender estimation)
+        - Mouth opening
+        - Smile
+
+    * - :ref:`Face mask<face_analyser_detect_face_mask_class_method>`
+      - Presence of a protective mask on the subject face.
+
+        .. image:: ../img/facemask.jpg
+          :width: 200
+
+    * - :ref:`Geometric attributes<face_analyser_compute_geometric_attributes_class_method>`
+      - Set of geometric characteristics of a portrait image.
+
+        - Resolution: Checks if the image resolution is sufficient.
+        - Vertical position: Checks the distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50\% - 70\% of the total vertical length of the image.
+        - Horizontal position: Checks if the head is correctly centered horizontally.
+        - Width of head: Checks if the image width is conform to the (image width / head width) ratio of 7:5. The head width is defined as the distance between the left and right ears.
+        - Length of head:  Checks if the distance between the base of the chin and the crown is less than 80\% of the total height of the image.
+
+        .. image:: ../img/GeometricAttributes.jpg
+          :width: 300
+
+    * - :ref:`Glasses attributes<face_analyser_compute_glasses_attributes_class_method>`
+      - Additional set of attributes related to glasses (if present). It includes:
+        
+        - Frame on eye
+        - Heavy frame
+        - Tinted glasses
+ 
+        .. image:: ../img/frame-crossing-the-eyes.jpg
+          :width: 200
+
+    * - :ref:`Head pose<face_analyser_compute_pose_class_method>`
+      - Estimation of the head pose. Yaw, pitch and roll angles are returned in degrees.
+
+        .. image:: ../img/headpose.png
+          :width: 200
+
+    * - :ref:`Landmarks<face_analyser_compute_landmarks_class_method>`
+      - Estimated 68 landmark features
+
+        .. image:: ../img/facelandmarks.jpg
+          :width: 300
+
+    * - :ref:`Noise<face_analyser_compute_noise_class_method>`
+      - Quantity of noise in the image.
+
+    * - :ref:`Occlusions<face_analyser_detect_occlusions_class_method>`
+      - Presence of occlusions on the subject's face (eyes, nose, mouth).
+
+    * - :ref:`Photographic attributes<face_analyser_compute_photographic_attributes_class_method>`
+      - Photographic quality attributes such as brigthness, dynamic range, flash reflection, natural skin color, exposure, pixelation, sharpness.
+
+    * - :ref:`Red eyes<face_analyser_compute_eye_redness_class_method>`
+      - Detect if a person's eyes are red or not (due to flash mostly).
+
+
+Parameters
+==========
+
+.. list-table:: 
+    :width: 100%
+    :widths: 30 70
+    :header-rows: 1
+
+    * - Parameter 
+      - Description
+
+    * - :ref:`Expression sensibility<face_analyser_expression_sensibility_class_member>`
+      - The sensibility of the expression classifier.
+    
+    * - :ref:`Over-exposure sensibility<face_analyser_over_exposure_sensibility_class_member>`
+      - Sensibility of the over-exposure classifier. 
+
+    * - :ref:`Under-exposure sensibility<face_analyser_under_exposure_sensibility_class_member>`
+      - Sensibility of the under-exposure classifier.
+
+
+.. _background_removal:
+
+Background removal
+==================
+
+Background removal should be performed in two steps:
+
+#. Call the :ref:`FaceAnalyser.segmentFace<face_analyser_segment_face_class_method>` method to create a segmentation mask.
+#. Call the :ref:`FaceAnalyser.applySegmentationMask<face_analyser_apply_segmentation_mask_class_method>` method to apply the segmentation mask and replace the background by a specified color.
+
+.. important:: 
+    The FaceBackgroundUniformity1A model is required to check the background uniformity.
+    The FaceSegmenter1A model is required to suppress the background.
+
+Example
+=======
+
+.. tab-set::
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. literalinclude:: /_static/samples/sample.cs
+        :language: c#
+        :start-after: [face_analysing]
+        :end-before: [face_analysing]
+        :dedent: 12
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. literalinclude:: /_static/samples/sample.java
+        :language: java
+        :start-after: [face_analysing]
+        :end-before: [face_analysing]
+        :dedent: 8
+
+See also
+========
+- :ref:`face_analyser_class`

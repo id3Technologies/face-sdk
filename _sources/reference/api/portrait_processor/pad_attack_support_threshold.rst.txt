@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.padAttackSupportThreshold Property
+
+.. _portrait_processor_pad_attack_support_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.padAttackSupportThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Threshold of the attack support PAD method.
+
+.. hint:: Default value is 25.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPadAttackSupportThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * padAttackSupportThreshold)
+      int id3FacePortraitProcessor_SetPadAttackSupportThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int padAttackSupportThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get padAttackSupportThreshold => getPadAttackSupportThreshold();
+      set padAttackSupportThreshold(int value) => setPadAttackSupportThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int padAttackSupportThreshold
+      {
+          get => GetpadAttackSupportThreshold();
+          set => SetpadAttackSupportThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getPadAttackSupportThreshold() throws FaceException
+      public void setPadAttackSupportThreshold(int padAttackSupportThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      pad_attack_support_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

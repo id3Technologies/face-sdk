@@ -1,0 +1,338 @@
+.. _reference_api:
+
+===============================================================================
+id3 Face API
+===============================================================================
+
+|product-name| provides an easy to use programming interface available in various languages.
+
+|api-description| 
+
+It includes:
+
+.. toctree::
+  :hidden:
+
+  BackgroundUniformity <background_uniformity/background_uniformity>
+  ColorBasedPadResult <color_based_pad_result/color_based_pad_result>
+  DetectedFace <detected_face/detected_face>
+  DetectedFaceAttackSupport <detected_face_attack_support/detected_face_attack_support>
+  DetectedFaceList <detected_face_list/detected_face_list>
+  EyeGaze <eye_gaze/eye_gaze>
+  FaceAnalyser <face_analyser/face_analyser>
+  FaceAttackSupport <face_attack_support/face_attack_support>
+  FaceAttributes <face_attributes/face_attributes>
+  FaceCandidate <face_candidate/face_candidate>
+  FaceCandidateList <face_candidate_list/face_candidate_list>
+  FaceDetector <face_detector/face_detector>
+  FaceEncoder <face_encoder/face_encoder>
+  FaceError <face_error/face_error>
+  FaceException <face_exception/face_exception>
+  FaceExpression <face_expression/face_expression>
+  FaceIndexer <face_indexer/face_indexer>
+  FaceLibrary <face_library/face_library>
+  FaceMatcher <face_matcher/face_matcher>
+  FaceMatcherThreshold <face_matcher_threshold/face_matcher_threshold>
+  FaceModel <face_model/face_model>
+  FaceOcclusionScores <face_occlusion_scores/face_occlusion_scores>
+  FacePad <face_pad/face_pad>
+  FacePose <face_pose/face_pose>
+  FaceTemplate <face_template/face_template>
+  FaceTemplateBufferType <face_template_buffer_type/face_template_buffer_type>
+  FaceTemplateDict <face_template_dict/face_template_dict>
+  FaceTemplateFormat <face_template_format/face_template_format>
+  FaceTemplateList <face_template_list/face_template_list>
+  FaceTracker <face_tracker/face_tracker>
+  GeometricAttributes <geometric_attributes/geometric_attributes>
+  GlassesAttributes <glasses_attributes/glasses_attributes>
+  Image <image/image>
+  ImageBuffer <image_buffer/image_buffer>
+  ImageDict <image_dict/image_dict>
+  ImageError <image_error/image_error>
+  ImageFormat <image_format/image_format>
+  ImageList <image_list/image_list>
+  License <license/license>
+  LicenseError <license_error/license_error>
+  LicenseHardwareCodeType <license_hardware_code_type/license_hardware_code_type>
+  LicenseType <license_type/license_type>
+  PhotographicAttributes <photographic_attributes/photographic_attributes>
+  PixelFormat <pixel_format/pixel_format>
+  Point <point/point>
+  PointList <point_list/point_list>
+  PoolingMethod <pooling_method/pooling_method>
+  Portrait <portrait/portrait>
+  PortraitProcessor <portrait_processor/portrait_processor>
+  PortraitQualityAttributes <portrait_quality_attributes/portrait_quality_attributes>
+  PortraitStatus <portrait_status/portrait_status>
+  ProcessingUnit <processing_unit/processing_unit>
+  Rectangle <rectangle/rectangle>
+  StringList <string_list/string_list>
+  SubjectPosition <subject_position/subject_position>
+  TrackedFace <tracked_face/tracked_face>
+  TrackedFaceList <tracked_face_list/tracked_face_list>
+  TrackingStatus <tracking_status/tracking_status>
+
+
+Classes
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+
+  * - :ref:`DetectedFace <detected_face_class>`
+    - 
+     | Represents a detected face.
+
+  * - :ref:`DetectedFaceList <detected_face_list_class>`
+    - 
+     | Represents a list of detected faces.
+
+  * - :ref:`FaceAnalyser <face_analyser_class>`
+    - 
+     | Provides methods for analysing the characteristics of portrait image.
+
+  * - :ref:`FaceCandidate <face_candidate_class>`
+    - 
+     | Represents a candidate in a one-to-many search.
+
+  * - :ref:`FaceCandidateList <face_candidate_list_class>`
+    - 
+     | Represents a candidate list in a one-to-many search.
+
+  * - :ref:`FaceDetector <face_detector_class>`
+    - 
+     | Detects human faces in images.
+
+  * - :ref:`FaceEncoder <face_encoder_class>`
+    - 
+     | Extracts facial features and encodes face templates.
+
+  * - :ref:`FaceIndexer <face_indexer_class>`
+    - 
+     | Performs a one-to-many search on a large number of face templates.
+
+  * - :ref:`FaceLibrary <face_library_class>`
+    - 
+     | Initialises the face SDK library.
+
+  * - :ref:`FaceMatcher <face_matcher_class>`
+    - 
+     | Compares two face templates and searches for a face template in a list.
+
+  * - :ref:`FacePad <face_pad_class>`
+    - 
+     | Detects presentation attacks in still images or video frames.
+
+  * - :ref:`FaceTemplate <face_template_class>`
+    - 
+     | Represents a face template.
+
+  * - :ref:`FaceTemplateDict <face_template_dict_class>`
+    - 
+     | Represents a dictionary of face templates.
+
+  * - :ref:`FaceTemplateList <face_template_list_class>`
+    - 
+     | Represents a list of face templates.
+
+  * - :ref:`FaceTracker <face_tracker_class>`
+    - 
+     | Tracks faces on consecutive images and automatically creates and updates associated face templates.
+
+  * - :ref:`Image <image_class>`
+    - 
+     | This class represents a Image
+
+  * - :ref:`ImageBuffer <image_buffer_class>`
+    - 
+     | This class represents a ImageBuffer
+
+  * - :ref:`ImageDict <image_dict_class>`
+    - 
+     | This class represents a ImageDict
+
+  * - :ref:`ImageList <image_list_class>`
+    - 
+     | Represents a list of images.
+
+  * - :ref:`License <license_class>`
+    - 
+     | This class represents a License
+
+  * - :ref:`PointList <point_list_class>`
+    - 
+     | This class represents a PointList
+
+  * - :ref:`Portrait <portrait_class>`
+    - 
+     | Represents a portrait.
+
+  * - :ref:`PortraitProcessor <portrait_processor_class>`
+    - 
+     | Facilitates the creation of portraits in various scenarios such as enrolment or face verification.
+
+  * - :ref:`StringList <string_list_class>`
+    - 
+     | Represents a list of strings.
+
+  * - :ref:`TrackedFace <tracked_face_class>`
+    - 
+     | Represents a tracked face.
+
+  * - :ref:`TrackedFaceList <tracked_face_list_class>`
+    - 
+     | Represents a list of tracked faces.
+
+
+Enumerations
+------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30,70
+
+  * - :ref:`FaceAttackSupport<face_attack_support_enum>`
+    - 
+     | Enumerates the types of presentation attack supports.
+
+  * - :ref:`FaceError<face_error_enum>`
+    - 
+     | Enumerates the possible error codes returned by this SDK.
+
+  * - :ref:`FaceExpression<face_expression_enum>`
+    - 
+     | Enumerates the possible facial expressions.
+
+  * - :ref:`FaceMatcherThreshold<face_matcher_threshold_enum>`
+    - 
+     | Enumerates some typical values for the matching decision threshold.
+
+  * - :ref:`FaceModel<face_model_enum>`
+    - 
+     | Enumerates the AI models available in this SDK.
+
+  * - :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
+    - 
+     | Enumerates the buffer types for face templates.
+
+  * - :ref:`FaceTemplateFormat<face_template_format_enum>`
+    - 
+     | Enumerates the face template formats.
+
+  * - :ref:`ImageError<image_error_enum>`
+    - 
+     | Enumeration of possible values for a ImageError of the Face module.
+
+  * - :ref:`ImageFormat<image_format_enum>`
+    - 
+     | Enumeration of possible values for a ImageFormat of the Face module.
+
+  * - :ref:`LicenseError<license_error_enum>`
+    - 
+     | Enumeration of possible values for a LicenseError of the Face module.
+
+  * - :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
+    - 
+     | Enumeration of possible values for a LicenseHardwareCodeType of the Face module.
+
+  * - :ref:`LicenseType<license_type_enum>`
+    - 
+     | Enumeration of possible values for a LicenseType of the Face module.
+
+  * - :ref:`PixelFormat<pixel_format_enum>`
+    - 
+     | Enumeration of possible values for a PixelFormat of the Face module.
+
+  * - :ref:`PoolingMethod<pooling_method_enum>`
+    - 
+     | Enumerates the possible pooling methods for template agregration in the FaceTracker module.
+
+  * - :ref:`PortraitStatus<portrait_status_enum>`
+    - 
+     | Enumerates the possible statuses of a portrait.
+
+  * - :ref:`ProcessingUnit<processing_unit_enum>`
+    - 
+     | Enumerates the processing units for the inference of AI models.
+
+  * - :ref:`SubjectPosition<subject_position_enum>`
+    - 
+     | Enumerates the positions of a subject in an image.
+
+  * - :ref:`TrackingStatus<tracking_status_enum>`
+    - 
+     | Enumerates the possible face-tracking statuses.
+
+
+Structures
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30,70
+
+  * - :ref:`BackgroundUniformity<background_uniformity_struct>`
+    - 
+     | Represents the result of the background uniformity check.
+
+  * - :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
+    - 
+     | Represents the result of the color-based PAD method.
+
+  * - :ref:`DetectedFaceAttackSupport<detected_face_attack_support_struct>`
+    - 
+     | Represents the result of the attack support detection.
+
+  * - :ref:`EyeGaze<eye_gaze_struct>`
+    - 
+     | Represents the eye gaze.
+
+  * - :ref:`FaceAttributes<face_attributes_struct>`
+    - 
+     | Represents the face attributes.
+
+  * - :ref:`FaceOcclusionScores<face_occlusion_scores_struct>`
+    - 
+     | Represents the result of face occlusion detection.
+
+  * - :ref:`FacePose<face_pose_struct>`
+    - 
+     | Represents the face pose (yaw, pitch, roll).
+
+  * - :ref:`GeometricAttributes<geometric_attributes_struct>`
+    - 
+     | Represents the geometric attributes of a portrait image.
+
+  * - :ref:`GlassesAttributes<glasses_attributes_struct>`
+    - 
+     | Represents some glasses attributes.
+
+  * - :ref:`PhotographicAttributes<photographic_attributes_struct>`
+    - 
+     | Represents the photographic attributes of a portrait image.
+
+  * - :ref:`Point<point_struct>`
+    - 
+     | Contains data for Point
+
+  * - :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+    - 
+     | Represents the portrait quality attributes.
+
+  * - :ref:`Rectangle<rectangle_struct>`
+    - 
+     | Contains data for Rectangle
+
+
+
+
+Exceptions
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30,70
+
+  * - :ref:`FaceException<face_exception>`
+    - This exception is thrown when an error occurs in the id3 Face library.

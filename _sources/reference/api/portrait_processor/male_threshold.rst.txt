@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.maleThreshold Property
+
+.. _portrait_processor_male_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.maleThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Male gender detection threshold.
+
+If the score is above this value, the person is probably a male.
+
+.. hint:: Default value is 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaleThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maleThreshold)
+      int id3FacePortraitProcessor_SetMaleThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maleThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maleThreshold => getMaleThreshold();
+      set maleThreshold(int value) => setMaleThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maleThreshold
+      {
+          get => GetmaleThreshold();
+          set => SetmaleThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaleThreshold() throws FaceException
+      public void setMaleThreshold(int maleThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      male_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

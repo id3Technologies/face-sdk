@@ -1,0 +1,158 @@
+.. index:: 
+  !DetectedFaceList.getCount Method
+  
+.. _detected_face_list_get_count_class_method:
+
+===============================================================================
+DetectedFaceList.getCount Method
+===============================================================================
+
+Module: :ref:`DetectedFaceList<detected_face_list_class>`
+
+Definition
+----------
+
+Gets the number of elements in the DetectedFaceList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_GetCount (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            int * count)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``count`` int *
+          :guilabel:`out` Number of elements in the DetectedFace object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int getCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the DetectedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int GetCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the DetectedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int getCount() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the DetectedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_count(self) -> int
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the DetectedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getCount() throws -> Int32
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          Number of elements in the DetectedFace object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

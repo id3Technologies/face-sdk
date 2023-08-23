@@ -1,0 +1,182 @@
+.. index:: 
+  !TrackedFace.rotate Method
+  
+.. _tracked_face_rotate_class_method:
+
+===============================================================================
+TrackedFace.rotate Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Rotates the face object by a given angle in degrees from a given center.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_Rotate (
+            ID3_TRACKED_FACE hTrackedFace, 
+            int angle, 
+            const id3FacePoint * sCenter)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``sCenter`` :ref:`const id3FacePoint *<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void rotate(int angle, Point center)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``center`` :ref:`Point<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Rotate(int angle, Point center)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``center`` :ref:`Point<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void rotate(int angle, Point center) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``center`` :ref:`Point<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        rotate(self, angle: int, center: Point) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``center`` :ref:`Point<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func rotate(angle: Int32, center: Point) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``angle`` Int32
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``center`` :ref:`Point<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

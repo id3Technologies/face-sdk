@@ -1,0 +1,63 @@
+.. index:: 
+  !GeometricAttributes.headImageHeightRatio Property
+
+.. _geometric_attributes_head_image_height_ratio_struct_member:
+
+===============================================================================
+GeometricAttributes.headImageHeightRatio Property
+===============================================================================
+
+Structure: :ref:`GeometricAttributes<geometric_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the distance between the base of the chin and the crown is less than 80% of the total height of the image.
+
+.. hint:: For ICAO compliance, the value must be in the range 60 to 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeadImageHeightRatio
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int headImageHeightRatio
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeadImageHeightRatio
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int headImageHeightRatio
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int head_image_height_ratio
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int headImageHeightRatio
+

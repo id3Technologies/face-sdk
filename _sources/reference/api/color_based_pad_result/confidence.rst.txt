@@ -1,0 +1,61 @@
+.. index:: 
+  !ColorBasedPadResult.confidence Property
+
+.. _color_based_pad_result_confidence_struct_member:
+
+===============================================================================
+ColorBasedPadResult.confidence Property
+===============================================================================
+
+Structure: :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
+
+Definition
+----------
+
+Confidence score of the color-based PAD algorithm, in the range [0:100].
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Confidence
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int confidence
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Confidence
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int confidence
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int confidence
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int confidence
+

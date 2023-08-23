@@ -1,0 +1,223 @@
+.. index:: 
+  !ImageDict Class
+
+.. _image_dict_class:
+
+===============================================================================
+ImageDict Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  containsKey<contains_key>
+  count<count>
+  get<get>
+  getCount<get_count>
+  keys<keys>
+  remove<remove>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    This class represents a ImageDict
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImageDict *ID3_FACE_IMAGE_DICT;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class ImageDict implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class ImageDict
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class ImageDict implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class ImageDict
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class ImageDict
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE_DICT hImageDict{};
+        int err = id3FaceImageDict_Initialize(&hImageDict);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImageDict_Dispose(&hImageDict);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final imageDict = sdk.ImageDict();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        imageDict.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var imageDict = new ImageDict())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var imageDict = new ImageDict()
+        // ...
+        imageDict.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (ImageDict imageDict = new ImageDict()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        ImageDict imageDict = new ImageDict();
+        // ...
+        imageDict.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        imageDict = ImageDict()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del imageDict
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var imageDict: ImageDict? = nil
+        imageDict = try ImageDict()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<image_dict_count_class_member>`
+    - int
+    - Gets the number of elements contained in the dict
+  * - :ref:`keys<image_dict_keys_class_member>`
+    - :ref:`StringList<string_list_class>`
+    - Gets a string list containing the keys in the dict.
+  * - operator [string key]
+    - :ref:`Image<image_class>`
+    - Gets or sets the element for the key in the dict.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+The iteration is done on keys
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<image_dict_add_class_method>`
+    - Adds an item to the ImageDict object.
+  * - :ref:`clear<image_dict_clear_class_method>`
+    - Clears the ImageDict object.
+  * - :ref:`clone<image_dict_clone_class_method>`
+    - Clones the ImageDict object.
+  * - :ref:`containsKey<image_dict_contains_key_class_method>`
+    - Determines whether the ImageDictobject contains the specified key.
+  * - :ref:`get<image_dict_get_class_method>`
+    - Gets an item of the ImageDict object.
+  * - :ref:`getCount<image_dict_get_count_class_method>`
+    - Gets the number of elements in the ImageDict object.
+  * - :ref:`remove<image_dict_remove_class_method>`
+    - Removes an element of the ImageDict object.
+  * - :ref:`set<image_dict_set_class_method>`
+    - Sets an item of the ImageDict object.

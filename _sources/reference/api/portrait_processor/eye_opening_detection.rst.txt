@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.eyeOpeningDetection Property
+
+.. _portrait_processor_eye_opening_detection_class_member:
+
+===============================================================================
+PortraitProcessor.eyeOpeningDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether eye opening detection is enabled.
+
+.. important:: This option requires the EyeOpennessDetector model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEyeOpeningDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * eyeOpeningDetection)
+      int id3FacePortraitProcessor_SetEyeOpeningDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool eyeOpeningDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get eyeOpeningDetection => getEyeOpeningDetection();
+      set eyeOpeningDetection(bool value) => setEyeOpeningDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool eyeOpeningDetection
+      {
+          get => GeteyeOpeningDetection();
+          set => SeteyeOpeningDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getEyeOpeningDetection() throws FaceException
+      public void setEyeOpeningDetection(boolean eyeOpeningDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      eye_opening_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

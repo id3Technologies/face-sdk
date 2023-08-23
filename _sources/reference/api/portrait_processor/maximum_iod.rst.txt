@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.maximumIod Property
+
+.. _portrait_processor_maximum_iod_class_member:
+
+===============================================================================
+PortraitProcessor.maximumIod Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Maximum interocular distance (IOD), in pixels.
+
+This parameter is used to prevent the subject from being too close to the camera.
+
+.. hint:: Default value is 512.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumIod)
+      int id3FacePortraitProcessor_SetMaximumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maximumIod => getMaximumIod();
+      set maximumIod(int value) => setMaximumIod(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maximumIod
+      {
+          get => GetmaximumIod();
+          set => SetmaximumIod(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaximumIod() throws FaceException
+      public void setMaximumIod(int maximumIod) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_iod: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

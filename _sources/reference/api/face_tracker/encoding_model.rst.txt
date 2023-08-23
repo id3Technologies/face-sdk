@@ -1,0 +1,120 @@
+.. index:: 
+  !FaceTracker.encodingModel Property
+
+.. _face_tracker_encoding_model_class_member:
+
+===============================================================================
+FaceTracker.encodingModel Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: :ref:`FaceModel<face_model_enum>`
+
+Definition
+----------
+
+Model used to create features and assess consistancy among views of a given face.
+
+.. hint:: Default value is FaceEncoder9B. Some better accuracy/speed balances can be found by choosing another model.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetEncodingModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel * eEncodingModel)
+      int id3FaceTracker_SetEncodingModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel eEncodingModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceModel get encodingModel => getEncodingModel();
+      set encodingModel(FaceModel value) => setEncodingModel(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceModel encodingModel
+      {
+          get => GetencodingModel();
+          set => SetencodingModel(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceModel getEncodingModel() throws FaceException
+      public void setEncodingModel(FaceModel encodingModel) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      encoding_model: FaceModel
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

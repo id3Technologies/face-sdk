@@ -1,0 +1,221 @@
+.. index:: 
+  !Image.downscaleTo Method
+  
+.. _image_downscale_to_class_method:
+
+===============================================================================
+Image.downscaleTo Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Downscales an image into another so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_DownscaleTo (
+            ID3_FACE_IMAGE hImage, 
+            ID3_FACE_IMAGE hDstImage, 
+            int maxSize, 
+            float * scaleRatio)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``hDstImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``maxSize`` int
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+          ``scaleRatio`` float *
+          :guilabel:`out` Applied scale ratio. Range is ]0:1].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        double downscaleTo(Image dstImage, int maxSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``maxSize`` int
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``double``
+          Applied scale ratio. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public float DownscaleTo(Image dstImage, int maxSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``maxSize`` int
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Applied scale ratio. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public float downscaleTo(Image dstImage, int maxSize) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``maxSize`` int
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Applied scale ratio. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        downscale_to(self, dst_image: Image, max_size: int) -> float
+
+      **Parameters**
+
+        .. line-block::
+
+          ``dst_image`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``max_size`` int
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Applied scale ratio. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func downscaleTo(dstImage: Image, maxSize: Int32) throws -> Float
+
+      **Parameters**
+
+        .. line-block::
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the flipped image.
+
+          ``maxSize`` Int32
+          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Float``
+          Applied scale ratio. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

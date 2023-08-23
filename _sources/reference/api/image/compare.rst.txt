@@ -1,0 +1,202 @@
+.. index:: 
+  !Image.compare Method
+  
+.. _image_compare_class_method:
+
+===============================================================================
+Image.compare Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Compute the difference with another image.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_Compare (
+            ID3_FACE_IMAGE hImage, 
+            ID3_FACE_IMAGE hCmpImage, 
+            float * result)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``hCmpImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Image object to compare.
+
+          ``result`` float *
+          :guilabel:`out` Comparison result in percent (0% is same, 100% is full different).
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        double compare(Image cmpImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``cmpImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object to compare.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``double``
+          Comparison result in percent (0% is same, 100% is full different).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public float Compare(Image cmpImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``cmpImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object to compare.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Comparison result in percent (0% is same, 100% is full different).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public float compare(Image cmpImage) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``cmpImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object to compare.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Comparison result in percent (0% is same, 100% is full different).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compare(self, cmp_image: Image) -> float
+
+      **Parameters**
+
+        .. line-block::
+
+          ``cmp_image`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object to compare.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``float``
+          Comparison result in percent (0% is same, 100% is full different).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func compare(cmpImage: Image) throws -> Float
+
+      **Parameters**
+
+        .. line-block::
+
+          ``cmpImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object to compare.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Float``
+          Comparison result in percent (0% is same, 100% is full different).
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

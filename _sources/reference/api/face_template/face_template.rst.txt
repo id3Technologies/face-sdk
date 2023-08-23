@@ -1,0 +1,223 @@
+.. index:: 
+  !FaceTemplate Class
+
+.. _face_template_class:
+
+===============================================================================
+FaceTemplate Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  clone<clone>
+  format<format>
+  fromBuffer<from_buffer>
+  fromFile<from_file>
+  quality<quality>
+  toBdt<to_bdt>
+  toBit<to_bit>
+  toBuffer<to_buffer>
+  toFile<to_file>
+  update<update>
+
+
+Definition
+----------
+.. line-block::
+    Represents a face template.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTemplate *ID3_FACE_TEMPLATE;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceTemplate implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceTemplate
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceTemplate implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceTemplate
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceTemplate
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TEMPLATE hFaceTemplate{};
+        int err = id3FaceTemplate_Initialize(&hFaceTemplate);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTemplate_Dispose(&hFaceTemplate);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceTemplate = sdk.FaceTemplate();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceTemplate.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceTemplate = new FaceTemplate())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceTemplate = new FaceTemplate()
+        // ...
+        faceTemplate.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceTemplate faceTemplate = new FaceTemplate()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceTemplate faceTemplate = new FaceTemplate();
+        // ...
+        faceTemplate.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceTemplate = FaceTemplate()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTemplate
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceTemplate: FaceTemplate? = nil
+        faceTemplate = try FaceTemplate()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`format<face_template_format_class_member>`
+    - :ref:`FaceTemplateFormat<face_template_format_enum>`
+    - Format of the face template.
+  * - :ref:`quality<face_template_quality_class_member>`
+    - int
+    - Quality of the face template.
+
+Static Methods
+--------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`fromBuffer<face_template_from_buffer_class_method>`
+    - Imports the face template object from a buffer.
+  * - :ref:`fromFile<face_template_from_file_class_method>`
+    - Imports the face template object from a file.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clone<face_template_clone_class_method>`
+    - Clones the FaceTemplate object.
+  * - :ref:`toBdt<face_template_to_bdt_class_method>`
+    - Exports the face template object to a Biometric Data Template (BDT) buffer.
+  * - :ref:`toBit<face_template_to_bit_class_method>`
+    - Exports the face template object to a Biometric Information Template (BIT) buffer.
+  * - :ref:`toBuffer<face_template_to_buffer_class_method>`
+    - Exports the face template object to a buffer.
+  * - :ref:`toFile<face_template_to_file_class_method>`
+    - Exports the face template object to a file.
+  * - :ref:`update<face_template_update_class_method>`
+    - Updates the face template by combining it with the specified face template.

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.maximumRollAngle Property
+
+.. _portrait_processor_maximum_roll_angle_class_member:
+
+===============================================================================
+PortraitProcessor.maximumRollAngle Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Maximum head roll angle, in degrees.
+
+.. hint:: Default value is 15.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * maximumRollAngle)
+      int id3FacePortraitProcessor_SetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float maximumRollAngle)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get maximumRollAngle => getMaximumRollAngle();
+      set maximumRollAngle(double value) => setMaximumRollAngle(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float maximumRollAngle
+      {
+          get => GetmaximumRollAngle();
+          set => SetmaximumRollAngle(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getMaximumRollAngle() throws FaceException
+      public void setMaximumRollAngle(float maximumRollAngle) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_roll_angle: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

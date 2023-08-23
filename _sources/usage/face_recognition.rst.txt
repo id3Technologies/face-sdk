@@ -1,0 +1,93 @@
+.. _face_recognition:
+
+=================
+Recognizing faces
+=================
+
+Initialisations
+---------------
+
+.. tab-set::
+
+    .. tab-item:: Python
+
+        .. code:: python
+
+            import id3Face
+            id3Face.FaceLibrary.checkLicense('/opt/id3License/id3FaceToolkit.lic')
+            # Detection
+            id3Face.FaceLibrary.loadModel('/mnt/algo_int/models/sdk/', id3Face.id3FaceModel_FaceDetector3B, id3Face.id3FaceProcessingUnit_Cpu)
+            face_detector = id3Face.FaceDetector()
+            face_detector.setConfidenceThreshold(70)
+            face_detector.setNmsIouThreshold(0)
+            face_detector.setThreadCount(4)
+            face_detector.setModel(id3Face.id3FaceModel_FaceDetector3B)
+            # Recognition
+            id3Face.FaceLibrary.loadModel('/mnt/algo_int/models/sdk/', id3Face.id3FaceModel_FaceEncoder9B, id3Face.id3FaceProcessingUnit_Cpu)
+            id3Face.FaceLibrary.loadModel('/mnt/algo_int/models/sdk/', id3Face.id3FaceModel_FaceEncoder9A, id3Face.id3FaceProcessingUnit_Cpu)
+            face_encoder = id3Face.FaceEncoder()
+            face_encoder.setModel(id3Face.id3FaceModel_FaceEncoder9B)
+            face_encoder.setThreadCount(4)
+            face_matcher = id3Face.FaceMatcher()
+            # (optionnal) Quality
+            id3Face.FaceLibrary.loadModel('/mnt/algo_int/models/sdk/', id3Face.id3FaceModel_FaceEncodingQualityEstimator3A, id3Face.id3FaceProcessingUnit_Cpu)
+
+
+
+.. tab-set::
+
+  .. tab-item:: C/C++
+    :sync: c
+
+    .. code:: c
+
+      ID3_FACE_ENCODER hFaceEncoder = nullptr;
+      int err;
+      
+      err = id3FaceEncoder_Initialize(&hFaceEncoder);
+
+      if (err == ID3_SUCCESS)
+      {
+        // ...
+
+        id3FaceEncoder_Dispose(&hFaceEncoder);
+      }
+
+  .. tab-item:: C#
+    :sync: csharp
+
+    .. code:: c#
+
+      FaceEncoder encoder = new FaceEncoder();
+
+      // ...
+
+      FaceEncoder.Dispose();
+
+  .. tab-item:: Java
+    :sync: java
+
+    .. code:: java
+
+        FaceTemplate createTemplate (Image image, DetectedFace detectedFace);
+
+  .. tab-item:: Dart
+    :sync: dart
+
+    .. code:: Dart
+
+        FaceTemplate createTemplate (Image image, DetectedFace detectedFace);
+  
+  .. tab-item:: Python
+    :sync: python
+
+    .. code:: Python
+
+        FaceTemplate createTemplate (Image image, DetectedFace detectedFace)
+
+
+See also
+--------
+
+- :ref:`face_encoder_create_template_class_method`
+- :ref:`face_encoder_compute_quality_class_method`

@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.noseOcclusionThreshold Property
+
+.. _portrait_processor_nose_occlusion_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.noseOcclusionThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Nose occlusion threshold. 
+
+If the score is above this value, the nose is probably occluded.
+
+.. hint:: Default value 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetNoseOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * noseOcclusionThreshold)
+      int id3FacePortraitProcessor_SetNoseOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int noseOcclusionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get noseOcclusionThreshold => getNoseOcclusionThreshold();
+      set noseOcclusionThreshold(int value) => setNoseOcclusionThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int noseOcclusionThreshold
+      {
+          get => GetnoseOcclusionThreshold();
+          set => SetnoseOcclusionThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getNoseOcclusionThreshold() throws FaceException
+      public void setNoseOcclusionThreshold(int noseOcclusionThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      nose_occlusion_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

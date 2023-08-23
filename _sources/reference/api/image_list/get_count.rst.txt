@@ -1,0 +1,158 @@
+.. index:: 
+  !ImageList.getCount Method
+  
+.. _image_list_get_count_class_method:
+
+===============================================================================
+ImageList.getCount Method
+===============================================================================
+
+Module: :ref:`ImageList<image_list_class>`
+
+Definition
+----------
+
+Gets the number of elements in the ImageList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageList_GetCount (
+            ID3_FACE_IMAGE_LIST hImageList, 
+            int * count)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`in` Handle to the ImageList object.
+
+          ``count`` int *
+          :guilabel:`out` Number of elements in the Image object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int getCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the Image object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int GetCount()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the Image object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int getCount() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the Image object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_count(self) -> int
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          Number of elements in the Image object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getCount() throws -> Int32
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          Number of elements in the Image object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

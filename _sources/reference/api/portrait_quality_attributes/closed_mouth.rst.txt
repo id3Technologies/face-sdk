@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.closedMouth Property
+
+.. _portrait_quality_attributes_closed_mouth_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.closedMouth Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the mouth is closed.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int ClosedMouth
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int closedMouth
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int ClosedMouth
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int closedMouth
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int closed_mouth
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int closedMouth
+

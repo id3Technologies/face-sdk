@@ -1,0 +1,246 @@
+.. index:: 
+  !DetectedFace Class
+
+.. _detected_face_class:
+
+===============================================================================
+DetectedFace Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  bounds<bounds>
+  clone<clone>
+  create<create>
+  detectionScore<detection_score>
+  fromBuffer<from_buffer>
+  fromFile<from_file>
+  getDistanceToCamera<get_distance_to_camera>
+  getExpandedBounds<get_expanded_bounds>
+  getInterocularDistance<get_interocular_distance>
+  getPortraitBounds<get_portrait_bounds>
+  id<id>
+  landmarks<landmarks>
+  rescale<rescale>
+  rotate<rotate>
+  toBuffer<to_buffer>
+  toFile<to_file>
+  translate<translate>
+
+
+Definition
+----------
+.. line-block::
+    Represents a detected face.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3DetectedFace *ID3_DETECTED_FACE;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class DetectedFace implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class DetectedFace
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class DetectedFace implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class DetectedFace
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class DetectedFace
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_DETECTED_FACE hDetectedFace{};
+        int err = id3DetectedFace_Initialize(&hDetectedFace);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3DetectedFace_Dispose(&hDetectedFace);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final detectedFace = sdk.DetectedFace();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        detectedFace.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var detectedFace = new DetectedFace())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var detectedFace = new DetectedFace()
+        // ...
+        detectedFace.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (DetectedFace detectedFace = new DetectedFace()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        DetectedFace detectedFace = new DetectedFace();
+        // ...
+        detectedFace.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        detectedFace = DetectedFace()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del detectedFace
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var detectedFace: DetectedFace? = nil
+        detectedFace = try DetectedFace()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`bounds<detected_face_bounds_class_member>`
+    - :ref:`Rectangle<rectangle_struct>`
+    - Bounds of the detected face.
+  * - :ref:`detectionScore<detected_face_detection_score_class_member>`
+    - int
+    - Confidence score of the detected face.
+  * - :ref:`id<detected_face_id_class_member>`
+    - int
+    - ID of the detected face.
+  * - :ref:`landmarks<detected_face_landmarks_class_member>`
+    - :ref:`PointList<point_list_class>`
+    - Landmarks (eyes, nose and mouth corners) of the detected face.
+
+Static Methods
+--------------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`create<detected_face_create_class_method>`
+    - Creates a detected face.
+  * - :ref:`fromBuffer<detected_face_from_buffer_class_method>`
+    - Imports the face object from a buffer.
+  * - :ref:`fromFile<detected_face_from_file_class_method>`
+    - Imports the face object from a file.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clone<detected_face_clone_class_method>`
+    - Clones the DetectedFace object.
+  * - :ref:`getDistanceToCamera<detected_face_get_distance_to_camera_class_method>`
+    - Gets the distance between the detected face and the camera when using a depth map in pixels.
+  * - :ref:`getExpandedBounds<detected_face_get_expanded_bounds_class_method>`
+    - Gets the bounding box around the detected face with specified aspect ratio and specified margin.
+  * - :ref:`getInterocularDistance<detected_face_get_interocular_distance_class_method>`
+    - Gets the distance between the eyes (IOD) of the detected face in pixels.
+  * - :ref:`getPortraitBounds<detected_face_get_portrait_bounds_class_method>`
+    - Gets the bounding box of the detected face for ICAO portrait cropping.
+  * - :ref:`rescale<detected_face_rescale_class_method>`
+    - Rescales the detected face object bounding box and landmarks. This function can be useful if the image was downscaled to speed up detection, then you need to upscale the detected face to fit the source image size.
+  * - :ref:`rotate<detected_face_rotate_class_method>`
+    - Rotates the face object by a given angle in degrees from a given center.
+  * - :ref:`toBuffer<detected_face_to_buffer_class_method>`
+    - Exports the face object to a buffer.
+  * - :ref:`toFile<detected_face_to_file_class_method>`
+    - Saves the face object to a file.
+  * - :ref:`translate<detected_face_translate_class_method>`
+    - Translates the face object.

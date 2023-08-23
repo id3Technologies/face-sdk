@@ -1,0 +1,118 @@
+.. index:: 
+  !TrackedFace.landmarks Property
+
+.. _tracked_face_landmarks_class_member:
+
+===============================================================================
+TrackedFace.landmarks Property
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Type: :ref:`PointList<point_list_class>`
+
+Definition
+----------
+
+Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetLandmarks (ID3_TRACKED_FACE hTrackedFace, ID3_FACE_POINT_LIST hLandmarks)
+      int id3TrackedFace_SetLandmarks (ID3_TRACKED_FACE hTrackedFace, ID3_FACE_POINT_LIST hLandmarks)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      PointList get landmarks => getLandmarks();
+      set landmarks(PointList value) => setLandmarks(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public PointList landmarks
+      {
+          get => Getlandmarks();
+          set => Setlandmarks(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public PointList getLandmarks() throws FaceException
+      public void setLandmarks(PointList landmarks) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      landmarks: PointList
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

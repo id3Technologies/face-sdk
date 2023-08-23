@@ -1,0 +1,65 @@
+.. index:: 
+  !FaceAttributes.glasses Property
+
+.. _face_attributes_glasses_struct_member:
+
+===============================================================================
+FaceAttributes.glasses Property
+===============================================================================
+
+Structure: :ref:`FaceAttributes<face_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the person is wearing glasses or not.
+
+100 means that the person is definitely wearing glasses.
+
+.. hint:: The recommended threshold is 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Glasses
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int glasses
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Glasses
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int glasses
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int glasses
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int glasses
+

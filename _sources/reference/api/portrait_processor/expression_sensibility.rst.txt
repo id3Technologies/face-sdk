@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.expressionSensibility Property
+
+.. _portrait_processor_expression_sensibility_class_member:
+
+===============================================================================
+PortraitProcessor.expressionSensibility Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Sensibility of the expression classifier.
+
+The higher the value, the more sensitive the algorithm will be, meaning that it will be less likely to estimate neutral expression out of the detected face.
+
+.. hint:: Default value is 60.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetExpressionSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * expressionSensibility)
+      int id3FacePortraitProcessor_SetExpressionSensibility (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int expressionSensibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get expressionSensibility => getExpressionSensibility();
+      set expressionSensibility(int value) => setExpressionSensibility(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int expressionSensibility
+      {
+          get => GetexpressionSensibility();
+          set => SetexpressionSensibility(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getExpressionSensibility() throws FaceException
+      public void setExpressionSensibility(int expressionSensibility) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      expression_sensibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

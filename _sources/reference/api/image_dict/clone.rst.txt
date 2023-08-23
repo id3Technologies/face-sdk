@@ -1,0 +1,158 @@
+.. index:: 
+  !ImageDict.clone Method
+  
+.. _image_dict_clone_class_method:
+
+===============================================================================
+ImageDict.clone Method
+===============================================================================
+
+Module: :ref:`ImageDict<image_dict_class>`
+
+Definition
+----------
+
+Clones the ImageDict object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageDict_CopyTo (
+            ID3_FACE_IMAGE_DICT hImageDict, 
+            ID3_FACE_IMAGE_DICT hImageDictDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageDict`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
+          :guilabel:`in` Handle to the ImageDict object.
+
+          ``hImageDictDst`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
+          :guilabel:`out` The newly created image dict.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        ImageDict clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageDict<image_dict_class>`
+          The newly created image dict.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public ImageDict Clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageDict<image_dict_class>`
+          The newly created image dict.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public ImageDict clone() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageDict<image_dict_class>`
+          The newly created image dict.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        clone(self) -> ImageDict
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageDict<image_dict_class>`
+          The newly created image dict.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func clone() throws -> ImageDict
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageDict<image_dict_class>`
+          The newly created image dict.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

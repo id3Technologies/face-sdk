@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.minimumVerticalPosition Property
+
+.. _portrait_processor_minimum_vertical_position_class_member:
+
+===============================================================================
+PortraitProcessor.minimumVerticalPosition Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50% - 70% of the total vertical length of the image.
+
+For ICAO compliance, the value must be in the range 30 to 50.
+
+.. hint:: Default value is 30.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumVerticalPosition)
+      int id3FacePortraitProcessor_SetMinimumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumVerticalPosition)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get minimumVerticalPosition => getMinimumVerticalPosition();
+      set minimumVerticalPosition(int value) => setMinimumVerticalPosition(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int minimumVerticalPosition
+      {
+          get => GetminimumVerticalPosition();
+          set => SetminimumVerticalPosition(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMinimumVerticalPosition() throws FaceException
+      public void setMinimumVerticalPosition(int minimumVerticalPosition) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      minimum_vertical_position: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

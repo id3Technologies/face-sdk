@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.photographicQualityComputation Property
+
+.. _portrait_processor_photographic_quality_computation_class_member:
+
+===============================================================================
+PortraitProcessor.photographicQualityComputation Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether photographic quality computation is enabled.
+
+It includes image colorization, equal brightness, dynamic range, resolution, natural skin color, flash reflection, noise, over-exposure, under-exposure, pixelation, sharpness
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * photographicQualityComputation)
+      int id3FacePortraitProcessor_SetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool photographicQualityComputation)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get photographicQualityComputation => getPhotographicQualityComputation();
+      set photographicQualityComputation(bool value) => setPhotographicQualityComputation(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool photographicQualityComputation
+      {
+          get => GetphotographicQualityComputation();
+          set => SetphotographicQualityComputation(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getPhotographicQualityComputation() throws FaceException
+      public void setPhotographicQualityComputation(boolean photographicQualityComputation) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      photographic_quality_computation: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

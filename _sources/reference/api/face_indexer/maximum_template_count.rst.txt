@@ -1,0 +1,114 @@
+.. index:: 
+  !FaceIndexer.maximumTemplateCount Property
+
+.. _face_indexer_maximum_template_count_class_member:
+
+===============================================================================
+FaceIndexer.maximumTemplateCount Property
+===============================================================================
+
+Module: :ref:`FaceIndexer<face_indexer_class>`
+
+Type: int
+
+Definition
+----------
+
+Maximum number of templates that this face indexer can hold.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceIndexer_GetMaximumTemplateCount (ID3_FACE_INDEXER hFaceIndexer, int * maximumTemplateCount)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maximumTemplateCount => getMaximumTemplateCount();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maximumTemplateCount
+      {
+          get => GetmaximumTemplateCount();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaximumTemplateCount() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_template_count: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

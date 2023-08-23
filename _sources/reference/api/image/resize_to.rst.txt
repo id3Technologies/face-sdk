@@ -1,0 +1,201 @@
+.. index:: 
+  !Image.resizeTo Method
+  
+.. _image_resize_to_class_method:
+
+===============================================================================
+Image.resizeTo Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Resizes the image object to the required width and height into another.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ResizeTo (
+            ID3_FACE_IMAGE hImage, 
+            int width, 
+            int height, 
+            ID3_FACE_IMAGE hDstImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``width`` int
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` int
+          :guilabel:`in` Height to resize the image object to.
+
+          ``hDstImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void resizeTo(int width, int height, Image dstImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` int
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` int
+          :guilabel:`in` Height to resize the image object to.
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void ResizeTo(int width, int height, Image dstImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` int
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` int
+          :guilabel:`in` Height to resize the image object to.
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void resizeTo(int width, int height, Image dstImage) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` int
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` int
+          :guilabel:`in` Height to resize the image object to.
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        resize_to(self, width: int, height: int, dst_image: Image) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` int
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` int
+          :guilabel:`in` Height to resize the image object to.
+
+          ``dst_image`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func resizeTo(width: Int32, height: Int32, dstImage: Image) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` Int32
+          :guilabel:`in` Width to resize the image object to.
+
+          ``height`` Int32
+          :guilabel:`in` Height to resize the image object to.
+
+          ``dstImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Image object where to store the resized image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

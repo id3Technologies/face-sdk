@@ -1,0 +1,202 @@
+.. index:: 
+  !FaceTemplateDict.containsKey Method
+  
+.. _face_template_dict_contains_key_class_method:
+
+===============================================================================
+FaceTemplateDict.containsKey Method
+===============================================================================
+
+Module: :ref:`FaceTemplateDict<face_template_dict_class>`
+
+Definition
+----------
+
+Determines whether the FaceTemplateDictobject contains the specified key.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplateDict_ContainsKey (
+            ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, 
+            const char * key, 
+            bool * result)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplateDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
+          :guilabel:`in` Handle to the FaceTemplateDict object.
+
+          ``key`` const char *
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+          ``result`` bool *
+          :guilabel:`out` true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        bool containsKey(String? key)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``key`` String
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public bool ContainsKey(string key)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``key`` string
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public boolean containsKey(String key) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``key`` String
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``boolean``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        contains_key(self, key: str) -> bool
+
+      **Parameters**
+
+        .. line-block::
+
+          ``key`` str
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func containsKey(key: String) throws -> Bool
+
+      **Parameters**
+
+        .. line-block::
+
+          ``key`` String
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Bool``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

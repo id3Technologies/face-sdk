@@ -1,0 +1,199 @@
+.. index:: 
+  !TrackedFace.fromFile Method
+  
+.. _tracked_face_from_file_class_method:
+
+===============================================================================
+TrackedFace.fromFile Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Imports the face object from a file.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_FromFile (
+            ID3_TRACKED_FACE hTrackedFace, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        static TrackedFace fromFile(String? path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``path`` String
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static TrackedFace FromFile(string path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``path`` string
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public static TrackedFace fromFile(String path) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``path`` String
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        @staticmethod
+        from_file(path: str) -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``path`` str
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public static func fromFile(path: String) throws -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``path`` String
+          :guilabel:`in` Path to the file to import the face object from.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The newly created tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

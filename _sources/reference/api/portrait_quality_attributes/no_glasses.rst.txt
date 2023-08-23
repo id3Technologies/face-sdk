@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noGlasses Property
+
+.. _portrait_quality_attributes_no_glasses_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noGlasses Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the subject does not wear glasses.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoGlasses
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noGlasses
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoGlasses
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noGlasses
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int no_glasses
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noGlasses
+

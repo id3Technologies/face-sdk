@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.maximumPitchAngle Property
+
+.. _portrait_processor_maximum_pitch_angle_class_member:
+
+===============================================================================
+PortraitProcessor.maximumPitchAngle Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Maximum head pitch angle, in degrees.
+
+.. hint:: Default value is 20.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumPitchAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * maximumPitchAngle)
+      int id3FacePortraitProcessor_SetMaximumPitchAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float maximumPitchAngle)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get maximumPitchAngle => getMaximumPitchAngle();
+      set maximumPitchAngle(double value) => setMaximumPitchAngle(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float maximumPitchAngle
+      {
+          get => GetmaximumPitchAngle();
+          set => SetmaximumPitchAngle(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getMaximumPitchAngle() throws FaceException
+      public void setMaximumPitchAngle(float maximumPitchAngle) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_pitch_angle: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

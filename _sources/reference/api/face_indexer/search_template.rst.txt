@@ -1,0 +1,223 @@
+.. index:: 
+  !FaceIndexer.searchTemplate Method
+  
+.. _face_indexer_search_template_class_method:
+
+===============================================================================
+FaceIndexer.searchTemplate Method
+===============================================================================
+
+Module: :ref:`FaceIndexer<face_indexer_class>`
+
+Definition
+----------
+
+Performs a one-to-many search of a face template probe against a previously initialized face indexer and outputs a candidate list.
+
+This function is thread safe with other SearchTemplate() calls but not with AddTemplate() calls.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceIndexer_SearchTemplate (
+            ID3_FACE_INDEXER hFaceIndexer, 
+            ID3_FACE_TEMPLATE hProbe, 
+            int maxCandidates, 
+            ID3_FACE_CANDIDATE_LIST hCandidates)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
+          :guilabel:`in` Handle to the FaceIndexer object.
+
+          ``hProbe`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``maxCandidates`` int
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+          ``hCandidates`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`out` The list of candidates sorted by decreasing match score.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        FaceCandidateList searchTemplate(FaceTemplate probe, int maxCandidates)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``maxCandidates`` int
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The list of candidates sorted by decreasing match score.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public FaceCandidateList SearchTemplate(FaceTemplate probe, int maxCandidates)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``maxCandidates`` int
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The list of candidates sorted by decreasing match score.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public FaceCandidateList searchTemplate(FaceTemplate probe, int maxCandidates) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``maxCandidates`` int
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The list of candidates sorted by decreasing match score.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        search_template(self, probe: FaceTemplate, max_candidates: int) -> FaceCandidateList
+
+      **Parameters**
+
+        .. line-block::
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``max_candidates`` int
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The list of candidates sorted by decreasing match score.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func searchTemplate(probe: FaceTemplate, maxCandidates: Int32) throws -> FaceCandidateList
+
+      **Parameters**
+
+        .. line-block::
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` The face template probe.
+
+          ``maxCandidates`` Int32
+          :guilabel:`in` Maximum number of candidates in the candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The list of candidates sorted by decreasing match score.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

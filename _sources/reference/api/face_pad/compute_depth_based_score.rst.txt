@@ -1,0 +1,227 @@
+.. index:: 
+  !FacePad.computeDepthBasedScore Method
+  
+.. _face_pad_compute_depth_based_score_class_method:
+
+===============================================================================
+FacePad.computeDepthBasedScore Method
+===============================================================================
+
+Module: :ref:`FacePad<face_pad_class>`
+
+Definition
+----------
+
+Computes the PAD score of a detected face using a depth map image.
+
+A high score means a high probability for the face to be bona-fide, hence not an attack.
+
+The minimum recommended value is 10.
+
+.. important:: Loading the FaceDepthBasedPad2A model is required to use this function.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePad_ComputeDepthBasedScore (
+            ID3_FACE_PAD hFacePad, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            int * score)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFacePad`` :ref:`ID3_FACE_PAD<face_pad_class>`
+          :guilabel:`in` Handle to the FacePad object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``score`` int *
+          :guilabel:`out` The computed PAD score, in the range [0;100].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int computeDepthBasedScore(Image image, DetectedFace detectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed PAD score, in the range [0;100].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int ComputeDepthBasedScore(Image image, DetectedFace detectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed PAD score, in the range [0;100].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int computeDepthBasedScore(Image image, DetectedFace detectedFace) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed PAD score, in the range [0;100].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compute_depth_based_score(self, image: Image, detected_face: DetectedFace) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed PAD score, in the range [0;100].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func computeDepthBasedScore(image: Image, detectedFace: DetectedFace) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process. Must be Grayscale 16 Bits.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The computed PAD score, in the range [0;100].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,182 @@
+.. index:: 
+  !PointList.set Method
+  
+.. _point_list_set_class_method:
+
+===============================================================================
+PointList.set Method
+===============================================================================
+
+Module: :ref:`PointList<point_list_class>`
+
+Definition
+----------
+
+Sets an item of the PointList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePointList_Set (
+            ID3_FACE_POINT_LIST hPointList, 
+            int index, 
+            const id3FacePoint * sPointItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPointList`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Handle to the PointList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to set.
+
+          ``sPointItem`` :ref:`const id3FacePoint *<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void set(int index, Point pointItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to set.
+
+          ``pointItem`` :ref:`Point<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Set(int index, Point pointItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to set.
+
+          ``pointItem`` :ref:`Point<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void set(int index, Point pointItem) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to set.
+
+          ``pointItem`` :ref:`Point<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        set(self, index: int, point_item: Point) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to set.
+
+          ``point_item`` :ref:`Point<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func set(index: Int32, pointItem: Point) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` Int32
+          :guilabel:`in` Index of the Point item to set.
+
+          ``pointItem`` :ref:`Point<point_struct>`
+          :guilabel:`in` Point item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,202 @@
+.. index:: 
+  !TrackedFace.getDistanceToCamera Method
+  
+.. _tracked_face_get_distance_to_camera_class_method:
+
+===============================================================================
+TrackedFace.getDistanceToCamera Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Gets the distance between the detected face and the camera when using a depth map in pixels.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_GetDistanceToCamera (
+            ID3_TRACKED_FACE hTrackedFace, 
+            ID3_FACE_IMAGE hDepthImage, 
+            int * distanceToCamera)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``hDepthImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Depth image to process.
+
+          ``distanceToCamera`` int *
+          :guilabel:`out` The estimated distance to camera in pixels.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int getDistanceToCamera(Image depthImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``depthImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Depth image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated distance to camera in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int GetDistanceToCamera(Image depthImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``depthImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Depth image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated distance to camera in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int getDistanceToCamera(Image depthImage) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``depthImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Depth image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated distance to camera in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_distance_to_camera(self, depth_image: Image) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``depth_image`` :ref:`Image<image_class>`
+          :guilabel:`in` Depth image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated distance to camera in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getDistanceToCamera(depthImage: Image) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``depthImage`` :ref:`Image<image_class>`
+          :guilabel:`in` Depth image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The estimated distance to camera in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

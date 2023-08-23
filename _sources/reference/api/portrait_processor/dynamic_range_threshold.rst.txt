@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.dynamicRangeThreshold Property
+
+.. _portrait_processor_dynamic_range_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.dynamicRangeThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Face dynamic range threshold.
+
+Above this threshold, the dynamic range of the image in the face region is good enough.
+
+.. hint:: Default value is 128.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetDynamicRangeThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * dynamicRangeThreshold)
+      int id3FacePortraitProcessor_SetDynamicRangeThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int dynamicRangeThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get dynamicRangeThreshold => getDynamicRangeThreshold();
+      set dynamicRangeThreshold(int value) => setDynamicRangeThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int dynamicRangeThreshold
+      {
+          get => GetdynamicRangeThreshold();
+          set => SetdynamicRangeThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getDynamicRangeThreshold() throws FaceException
+      public void setDynamicRangeThreshold(int dynamicRangeThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      dynamic_range_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

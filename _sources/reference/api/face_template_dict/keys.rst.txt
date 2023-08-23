@@ -1,0 +1,114 @@
+.. index:: 
+  !FaceTemplateDict.keys Property
+
+.. _face_template_dict_keys_class_member:
+
+===============================================================================
+FaceTemplateDict.keys Property
+===============================================================================
+
+Module: :ref:`FaceTemplateDict<face_template_dict_class>`
+
+Type: :ref:`StringList<string_list_class>`
+
+Definition
+----------
+
+Gets a string list containing the keys in the dict.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTemplateDict_GetKeys (ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, ID3_FACE_STRING_LIST hKeys)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      StringList get keys => getKeys();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public StringList keys
+      {
+          get => Getkeys();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public StringList getKeys() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      keys: StringList
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

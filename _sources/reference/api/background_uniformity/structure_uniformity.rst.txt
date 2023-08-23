@@ -1,0 +1,63 @@
+.. index:: 
+  !BackgroundUniformity.structureUniformity Property
+
+.. _background_uniformity_structure_uniformity_struct_member:
+
+===============================================================================
+BackgroundUniformity.structureUniformity Property
+===============================================================================
+
+Structure: :ref:`BackgroundUniformity<background_uniformity_struct>`
+
+Definition
+----------
+
+Structure uniformity score, in the range [0:100].
+
+.. hint:: Recommended threshold is 80.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int StructureUniformity
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int structureUniformity
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int StructureUniformity
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int structureUniformity
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int structure_uniformity
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int structureUniformity
+

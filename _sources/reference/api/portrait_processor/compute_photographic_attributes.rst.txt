@@ -1,0 +1,165 @@
+.. index:: 
+  !PortraitProcessor.computePhotographicAttributes Method
+  
+.. _portrait_processor_compute_photographic_attributes_class_method:
+
+===============================================================================
+PortraitProcessor.computePhotographicAttributes Method
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Definition
+----------
+
+Computes the photographic quality of the specified portrait.
+
+It includes image colorization, equal brightness, dynamic range, resolution, natural skin color, flash reflection, noise, over-exposure, under-exposure, pixelation, sharpness.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortraitProcessor_ComputePhotographicAttributes (
+            ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, 
+            ID3_FACE_PORTRAIT hPortrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortraitProcessor`` :ref:`ID3_FACE_PORTRAIT_PROCESSOR<portrait_processor_class>`
+          :guilabel:`in` Handle to the PortraitProcessor object.
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void computePhotographicAttributes(Portrait portrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void ComputePhotographicAttributes(Portrait portrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void computePhotographicAttributes(Portrait portrait) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compute_photographic_attributes(self, portrait: Portrait) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func computePhotographicAttributes(portrait: Portrait) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` The portrait.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

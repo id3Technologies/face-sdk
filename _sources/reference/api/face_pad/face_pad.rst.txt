@@ -1,0 +1,200 @@
+.. index:: 
+  !FacePad Class
+
+.. _face_pad_class:
+
+===============================================================================
+FacePad Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  attackSupportDetectorConfidenceThreshold<attack_support_detector_confidence_threshold>
+  colorPadMinimumIod<color_pad_minimum_iod>
+  computeBlurrinessScore<compute_blurriness_score>
+  computeColorBasedScore<compute_color_based_score>
+  computeDepthBasedScore<compute_depth_based_score>
+  detectAttackSupport<detect_attack_support>
+
+
+Definition
+----------
+.. line-block::
+    Detects presentation attacks in still images or video frames.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePad *ID3_FACE_PAD;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FacePad implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FacePad
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FacePad implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FacePad
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FacePad
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_PAD hFacePad{};
+        int err = id3FacePad_Initialize(&hFacePad);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePad_Dispose(&hFacePad);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final facePad = sdk.FacePad();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        facePad.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var facePad = new FacePad())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var facePad = new FacePad()
+        // ...
+        facePad.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FacePad facePad = new FacePad()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FacePad facePad = new FacePad();
+        // ...
+        facePad.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        facePad = FacePad()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del facePad
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var facePad: FacePad? = nil
+        facePad = try FacePad()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`attackSupportDetectorConfidenceThreshold<face_pad_attack_support_detector_confidence_threshold_class_member>`
+    - int
+    - Attack support detector confidence threshold, in the range [0;100].
+  * - :ref:`colorPadMinimumIod<face_pad_color_pad_minimum_iod_class_member>`
+    - int
+    - Minimum interocular distance (IOD) required for color PAD processing.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`computeBlurrinessScore<face_pad_compute_blurriness_score_class_method>`
+    - Computes a blurriness score for a color image.
+  * - :ref:`computeColorBasedScore<face_pad_compute_color_based_score_class_method>`
+    - Computes the PAD score and confidence of a detected face using only the color image.
+  * - :ref:`computeDepthBasedScore<face_pad_compute_depth_based_score_class_method>`
+    - Computes the PAD score of a detected face using a depth map image.
+  * - :ref:`detectAttackSupport<face_pad_detect_attack_support_class_method>`
+    - Detects if an attack support surrounds the detected face.

@@ -1,0 +1,84 @@
+.. index:: 
+  !ColorBasedPadResult Structure
+
+.. _color_based_pad_result_struct:
+
+===============================================================================
+ColorBasedPadResult Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  confidence<confidence>
+  score<score>
+
+Definition
+----------
+.. line-block::
+    Represents the result of the color-based PAD method.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceColorBasedPadResult
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class ColorBasedPadResult
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct ColorBasedPadResult
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class ColorBasedPadResult
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class ColorBasedPadResult
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias ColorBasedPadResult = id3FaceColorBasedPadResult
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`confidence<color_based_pad_result_confidence_struct_member>`
+    - int
+    - Confidence score of the color-based PAD algorithm, in the range [0:100].
+  * - :ref:`score<color_based_pad_result_score_struct_member>`
+    - int
+    - Color-based PAD score, in the range [0:100].

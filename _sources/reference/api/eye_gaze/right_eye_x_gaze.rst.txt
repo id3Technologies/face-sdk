@@ -1,0 +1,65 @@
+.. index:: 
+  !EyeGaze.rightEyeXGaze Property
+
+.. _eye_gaze_right_eye_x_gaze_struct_member:
+
+===============================================================================
+EyeGaze.rightEyeXGaze Property
+===============================================================================
+
+Structure: :ref:`EyeGaze<eye_gaze_struct>`
+
+Definition
+----------
+
+Value indicating the gaze alongside the x-axis of the right eye in degrees.
+
+Values vary in the range [-90, +90].
+
+.. hint:: The maximum recommended value for an ICAO-compliant portrait is +/- 35 degrees.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float RightEyeXGaze
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double rightEyeXGaze
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      float RightEyeXGaze
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      float rightEyeXGaze
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      float right_eye_x_gaze
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Float rightEyeXGaze
+

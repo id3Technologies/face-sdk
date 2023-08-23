@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.glassesThreshold Property
+
+.. _portrait_processor_glasses_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.glassesThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Glasses detection threshold.
+
+If the score is above this value, the person is probably wearing glasses.
+
+.. hint:: Default value 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetGlassesThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * glassesThreshold)
+      int id3FacePortraitProcessor_SetGlassesThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int glassesThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get glassesThreshold => getGlassesThreshold();
+      set glassesThreshold(int value) => setGlassesThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int glassesThreshold
+      {
+          get => GetglassesThreshold();
+          set => SetglassesThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getGlassesThreshold() throws FaceException
+      public void setGlassesThreshold(int glassesThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      glasses_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

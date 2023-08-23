@@ -1,0 +1,139 @@
+.. index:: 
+  !FaceError Enumeration
+
+.. _face_error_enum:
+
+===============================================================================
+FaceError Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the possible error codes returned by this SDK.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceError
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceError
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceError
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceError
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceError
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceError
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``success``
+    - 0
+    - No error.
+  * - ``base``
+    - -1000
+    - Base error code of the Face module.
+  * - ``minimum``
+    - -1999
+    - Minimum error code of the Face module.
+  * - ``invalidHandle``
+    - -1001
+    - The handle is invalid.
+  * - ``invalidParameter``
+    - -1002
+    - The parameter is invalid.
+  * - ``insufficientBuffer``
+    - -1003
+    - The given buffer is too small.
+  * - ``invalidPixelFormat``
+    - -1004
+    - The image pixel format is invalid.
+  * - ``invalidTemplateFormat``
+    - -1005
+    - The template format is invalid.
+  * - ``invalidLandmarks``
+    - -1006
+    - The computed landmarks are invalid and do not allow to process the desired information.
+  * - ``iodTooSmall``
+    - -1007
+    - The computed interocular distance (IOD) is too small to allow to process the desired information.
+  * - ``invalidModelPath``
+    - -1008
+    - The model could not be found in the given directory path.
+  * - ``objectDoesNotExist``
+    - -1009
+    - The object does not exists.
+  * - ``invalidImageSize``
+    - -1010
+    - The input image size is invalid for this operation.
+  * - ``unloadedModel``
+    - -1020
+    - The model which is required for this operation was not loaded.
+  * - ``inferenceBackendError``
+    - -1040
+    - The inference backend failed to infer, probably due to inconsistent input.
+  * - ``indexerAlreadyInitialized``
+    - -1050
+    - The face indexer object is already initialized.
+  * - ``indexerIdAlreadyExists``
+    - -1051
+    - The requested id already exists in the Face Indexer object.
+  * - ``indexerInvalidTemplateData``
+    - -1052
+    - The data of the template is corrupted and cannot be added to the Face Indexer object.
+  * - ``indexerFull``
+    - -1053
+    - Maximum template number of the Face Indexer object has been reached.
+  * - ``indexerIdNotFound``
+    - -1054
+    - No template with this id has been found in the Face Indexer object.
+  * - ``indexerInvalidIndexFile``
+    - -1055
+    - This index file is not valid and cannot be loaded.
+  * - ``functionNotImplemented``
+    - -1056
+    - This function is not implemented.

@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.minimumHorizontalPosition Property
+
+.. _portrait_processor_minimum_horizontal_position_class_member:
+
+===============================================================================
+PortraitProcessor.minimumHorizontalPosition Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Value indicating if the head is correctly centered horizontally.
+
+For ICAO compliance, the value must be in the range 45 to 55.
+
+.. hint:: Default value is 45.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumHorizontalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumHorizontalPosition)
+      int id3FacePortraitProcessor_SetMinimumHorizontalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumHorizontalPosition)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get minimumHorizontalPosition => getMinimumHorizontalPosition();
+      set minimumHorizontalPosition(int value) => setMinimumHorizontalPosition(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int minimumHorizontalPosition
+      {
+          get => GetminimumHorizontalPosition();
+          set => SetminimumHorizontalPosition(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMinimumHorizontalPosition() throws FaceException
+      public void setMinimumHorizontalPosition(int minimumHorizontalPosition) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      minimum_horizontal_position: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

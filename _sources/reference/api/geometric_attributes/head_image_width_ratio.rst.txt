@@ -1,0 +1,65 @@
+.. index:: 
+  !GeometricAttributes.headImageWidthRatio Property
+
+.. _geometric_attributes_head_image_width_ratio_struct_member:
+
+===============================================================================
+GeometricAttributes.headImageWidthRatio Property
+===============================================================================
+
+Structure: :ref:`GeometricAttributes<geometric_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the image width is conform to the (image width / head width) ratio of 7:5.
+
+The head width is defined as the distance between the left and right ears.
+
+.. hint:: For ICAO compliance, the value must be in the range 50 to 75.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeadImageWidthRatio
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int headImageWidthRatio
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeadImageWidthRatio
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int headImageWidthRatio
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int head_image_width_ratio
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int headImageWidthRatio
+

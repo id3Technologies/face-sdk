@@ -1,0 +1,190 @@
+.. index:: 
+  !FaceDetector.trackFaces Method
+  
+.. _face_detector_track_faces_class_method:
+
+===============================================================================
+FaceDetector.trackFaces Method
+===============================================================================
+
+Module: :ref:`FaceDetector<face_detector_class>`
+
+Definition
+----------
+
+Tracks faces in an image and update their info in a DetectedFaceList object.
+
+In a realtime process, one must use this function instead of DetectFaces() to keep the face IDs stable in time.
+
+.. note:: The algorithm searches for faces in the range [16px;512px]. If the image is too large to fit this range, one must resize it before the detection process.
+
+.. important:: Loading a face detector model is required to use this function.
+
+.. warning:: This function is deprecated: use FaceTracker module instead.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceDetector_TrackFaces (
+            ID3_FACE_DETECTOR hFaceDetector, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE_LIST hDetectedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
+          :guilabel:`in` Handle to the FaceDetector object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void trackFaces(Image image, DetectedFaceList detectedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFaceList`` :ref:`DetectedFaceList<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void TrackFaces(Image image, DetectedFaceList detectedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFaceList`` :ref:`DetectedFaceList<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void trackFaces(Image image, DetectedFaceList detectedFaceList) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFaceList`` :ref:`DetectedFaceList<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        track_faces(self, image: Image, detected_face_list: DetectedFaceList) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detected_face_list`` :ref:`DetectedFaceList<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func trackFaces(image: Image, detectedFaceList: DetectedFaceList) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFaceList`` :ref:`DetectedFaceList<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

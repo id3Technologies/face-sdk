@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.tintedGlassThreshold Property
+
+.. _portrait_processor_tinted_glass_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.tintedGlassThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Tinted glass detection threshold.
+
+If the score is above this value, the person is definitely wearing tinted glasses.
+
+.. hint:: Default value 25.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetTintedGlassThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * tintedGlassThreshold)
+      int id3FacePortraitProcessor_SetTintedGlassThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int tintedGlassThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get tintedGlassThreshold => getTintedGlassThreshold();
+      set tintedGlassThreshold(int value) => setTintedGlassThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int tintedGlassThreshold
+      {
+          get => GettintedGlassThreshold();
+          set => SettintedGlassThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getTintedGlassThreshold() throws FaceException
+      public void setTintedGlassThreshold(int tintedGlassThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      tinted_glass_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

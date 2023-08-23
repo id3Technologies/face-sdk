@@ -1,0 +1,61 @@
+.. index:: 
+  !FacePose.roll Property
+
+.. _face_pose_roll_struct_member:
+
+===============================================================================
+FacePose.roll Property
+===============================================================================
+
+Structure: :ref:`FacePose<face_pose_struct>`
+
+Definition
+----------
+
+Roll angle in degrees.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float Roll
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double roll
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      float Roll
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      float roll
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      float roll
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Float roll
+

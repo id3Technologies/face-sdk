@@ -1,0 +1,202 @@
+.. index:: 
+  !FaceAnalyser.computeNoise Method
+  
+.. _face_analyser_compute_noise_class_method:
+
+===============================================================================
+FaceAnalyser.computeNoise Method
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Definition
+----------
+
+Measures the image noise.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeNoise (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            int * noiseScore)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``noiseScore`` int *
+          :guilabel:`out` The estimated noise score. 0 means no noise, 100 means no signal.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int computeNoise(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int ComputeNoise(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int computeNoise(Image image) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compute_noise(self, image: Image) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func computeNoise(image: Image) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

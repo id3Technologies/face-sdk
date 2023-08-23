@@ -1,0 +1,63 @@
+.. index:: 
+  !GeometricAttributes.verticalPosition Property
+
+.. _geometric_attributes_vertical_position_struct_member:
+
+===============================================================================
+GeometricAttributes.verticalPosition Property
+===============================================================================
+
+Structure: :ref:`GeometricAttributes<geometric_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50% - 70% of the total vertical length of the image.
+
+.. hint:: For ICAO compliance, the value must be in the range 30 to 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int VerticalPosition
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int verticalPosition
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int VerticalPosition
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int verticalPosition
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int vertical_position
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int verticalPosition
+

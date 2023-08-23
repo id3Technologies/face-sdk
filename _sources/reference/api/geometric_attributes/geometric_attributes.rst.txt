@@ -1,0 +1,96 @@
+.. index:: 
+  !GeometricAttributes Structure
+
+.. _geometric_attributes_struct:
+
+===============================================================================
+GeometricAttributes Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  headImageHeightRatio<head_image_height_ratio>
+  headImageWidthRatio<head_image_width_ratio>
+  horizontalPosition<horizontal_position>
+  resolution<resolution>
+  verticalPosition<vertical_position>
+
+Definition
+----------
+.. line-block::
+    Represents the geometric attributes of a portrait image.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceGeometricAttributes
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class GeometricAttributes
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct GeometricAttributes
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class GeometricAttributes
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class GeometricAttributes
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias GeometricAttributes = id3FaceGeometricAttributes
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`headImageHeightRatio<geometric_attributes_head_image_height_ratio_struct_member>`
+    - int
+    - Value indicating if the distance between the base of the chin and the crown is less than 80% of the total height of the image.
+  * - :ref:`headImageWidthRatio<geometric_attributes_head_image_width_ratio_struct_member>`
+    - int
+    - Value indicating if the image width is conform to the (image width / head width) ratio of 7:5.
+  * - :ref:`horizontalPosition<geometric_attributes_horizontal_position_struct_member>`
+    - int
+    - Value indicating if the head is correctly centered horizontally.
+  * - :ref:`resolution<geometric_attributes_resolution_struct_member>`
+    - int
+    - Value indicating if the image resolution is sufficient.
+  * - :ref:`verticalPosition<geometric_attributes_vertical_position_struct_member>`
+    - int
+    - Value indicating if the distance from the bottom edge of the image to the imaginary line passing through the center of the eyes is between 50% - 70% of the total vertical length of the image.

@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.overExposure Property
+
+.. _photographic_attributes_over_exposure_struct_member:
+
+===============================================================================
+PhotographicAttributes.overExposure Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating the ratio of face pixels that are over-exposed.
+
+0 means that the face is not over-exposed at all.
+
+.. hint:: The recommended value is under 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int OverExposure
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int overExposure
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int OverExposure
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int overExposure
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int over_exposure
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int overExposure
+

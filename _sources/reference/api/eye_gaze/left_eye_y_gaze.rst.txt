@@ -1,0 +1,65 @@
+.. index:: 
+  !EyeGaze.leftEyeYGaze Property
+
+.. _eye_gaze_left_eye_y_gaze_struct_member:
+
+===============================================================================
+EyeGaze.leftEyeYGaze Property
+===============================================================================
+
+Structure: :ref:`EyeGaze<eye_gaze_struct>`
+
+Definition
+----------
+
+Value indicating the gaze alongside the y-axis of the left eye in degrees.
+
+Values vary in the range [-90, +90].
+
+.. hint:: The maximum recommended value for an ICAO-compliant portrait is +/- 35 degrees.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float LeftEyeYGaze
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double leftEyeYGaze
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      float LeftEyeYGaze
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      float leftEyeYGaze
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      float left_eye_y_gaze
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Float leftEyeYGaze
+

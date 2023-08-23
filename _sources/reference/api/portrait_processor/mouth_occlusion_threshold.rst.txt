@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.mouthOcclusionThreshold Property
+
+.. _portrait_processor_mouth_occlusion_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.mouthOcclusionThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Mouth occlusion threshold. 
+
+If the mouth occlusion score is above this value, the mouth is probably occluded.
+
+.. hint:: Default value 70.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMouthOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * mouthOcclusionThreshold)
+      int id3FacePortraitProcessor_SetMouthOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int mouthOcclusionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get mouthOcclusionThreshold => getMouthOcclusionThreshold();
+      set mouthOcclusionThreshold(int value) => setMouthOcclusionThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int mouthOcclusionThreshold
+      {
+          get => GetmouthOcclusionThreshold();
+          set => SetmouthOcclusionThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMouthOcclusionThreshold() throws FaceException
+      public void setMouthOcclusionThreshold(int mouthOcclusionThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      mouth_occlusion_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

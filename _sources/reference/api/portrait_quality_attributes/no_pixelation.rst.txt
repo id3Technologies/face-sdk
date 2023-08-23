@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noPixelation Property
+
+.. _portrait_quality_attributes_no_pixelation_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noPixelation Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the image is not pixelated.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoPixelation
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noPixelation
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoPixelation
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noPixelation
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int no_pixelation
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noPixelation
+

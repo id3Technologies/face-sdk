@@ -1,0 +1,118 @@
+.. index:: 
+  !PortraitProcessor.backgroundUniformityComputation Property
+
+.. _portrait_processor_background_uniformity_computation_class_member:
+
+===============================================================================
+PortraitProcessor.backgroundUniformityComputation Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether background uniformity computation is enabled.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetBackgroundUniformityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * backgroundUniformityComputation)
+      int id3FacePortraitProcessor_SetBackgroundUniformityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool backgroundUniformityComputation)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get backgroundUniformityComputation => getBackgroundUniformityComputation();
+      set backgroundUniformityComputation(bool value) => setBackgroundUniformityComputation(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool backgroundUniformityComputation
+      {
+          get => GetbackgroundUniformityComputation();
+          set => SetbackgroundUniformityComputation(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getBackgroundUniformityComputation() throws FaceException
+      public void setBackgroundUniformityComputation(boolean backgroundUniformityComputation) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      background_uniformity_computation: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

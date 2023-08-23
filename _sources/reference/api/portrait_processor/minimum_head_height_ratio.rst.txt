@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.minimumHeadHeightRatio Property
+
+.. _portrait_processor_minimum_head_height_ratio_class_member:
+
+===============================================================================
+PortraitProcessor.minimumHeadHeightRatio Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum distance between the base of the chin and the crown is less than 80% of the total height of the image.
+
+For ICAO compliance, this distance must be in the range 60 to 90.
+
+.. hint:: Default value is 60.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumHeadHeightRatio)
+      int id3FacePortraitProcessor_SetMinimumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumHeadHeightRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get minimumHeadHeightRatio => getMinimumHeadHeightRatio();
+      set minimumHeadHeightRatio(int value) => setMinimumHeadHeightRatio(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int minimumHeadHeightRatio
+      {
+          get => GetminimumHeadHeightRatio();
+          set => SetminimumHeadHeightRatio(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMinimumHeadHeightRatio() throws FaceException
+      public void setMinimumHeadHeightRatio(int minimumHeadHeightRatio) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      minimum_head_height_ratio: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

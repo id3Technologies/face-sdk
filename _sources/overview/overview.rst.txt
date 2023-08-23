@@ -1,0 +1,61 @@
+.. _overview:
+
+============
+SDK Overview 
+============
+
+.. toctree::
+   :hidden:
+
+   technology
+   ai_models
+   requirements
+   terms
+
+id3 Face SDK is a cross-platform library aimed at system integrators willing to quickly add face detection, tracking, analysis, liveness check and recognition capabilities to their products. 
+
+It is available as a Software Development Kit (SDK) offering a comprehensive interface to simplify integration of the library on servers, desktops/laptops, mobile and edge devices.
+
+Features & Benefits
+-------------------
+
+id3 Face SDK offers the following features and benefits:
+
+- Top performance facial biometrics, AI powered
+- Optimized for AI hardware, including GPU acceleration, for fast operation
+- Robust human face detection and tracking in digital images or video frames
+- Small facial features template (268 bytes or 140 bytes)
+- Ultra-fast face template matching in one-to-one comparison and one-to-many search modes
+- Multiple face analysis functionalities: landmarks estimation, pose estimation, mask detection, etc.
+- Facial attributes determination for ICAO compliant portraits
+- Face image quality assessment
+- Accurate passive liveness detection methods to protect against biometric fraud, e.g. presentation attacks with photos and videos
+- Compact library designed to run on most hardware configurations from high-end workstations to low-power edge devices
+- Compatible with Windows, Linux, MacOS, Android and iOS operating systems
+- Simple and comprehensive programming interface in various languages
+
+Programming Languages
+---------------------
+
+|product-name| provides API for the following programming languages:
+
+- C
+- C++
+- C\#
+- Dart
+- Java
+- Objective C
+- Python
+- Swift
+
+Applications
+------------
+
+- Public Safety
+- Border Control
+- Mobile apps
+- ID Management
+- Banking \& Payment
+- Automobile \& Transportation
+- Healthcare
+

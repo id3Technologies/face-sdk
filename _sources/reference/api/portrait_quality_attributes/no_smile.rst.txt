@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noSmile Property
+
+.. _portrait_quality_attributes_no_smile_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noSmile Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the subject is not smiling.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoSmile
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noSmile
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoSmile
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noSmile
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int no_smile
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noSmile
+

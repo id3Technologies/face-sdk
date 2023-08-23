@@ -1,0 +1,8 @@
+Portrait bounds
+===============
+
+|product-name| detects human faces and returns a rectangle for ISO/ICAO compliant portraits, as shown in the
+figure below.
+
+.. image:: img/face-portrait-rectangle.jpg
+

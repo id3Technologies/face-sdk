@@ -1,0 +1,326 @@
+.. index:: 
+  !Portrait Class
+
+.. _portrait_class:
+
+===============================================================================
+Portrait Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  age<age>
+  backgroundUniformity<background_uniformity>
+  clear<clear>
+  clone<clone>
+  emotion<emotion>
+  eyeGaze<eye_gaze>
+  faceId<face_id>
+  faceMask<face_mask>
+  faceTemplate<face_template>
+  genderMale<gender_male>
+  geometricAttributes<geometric_attributes>
+  glasses<glasses>
+  hat<hat>
+  image<image>
+  imageCenter<image_center>
+  imageScale<image_scale>
+  imageTranslation<image_translation>
+  isPresentationAttack<is_presentation_attack>
+  landmarks<landmarks>
+  leftEyeOpening<left_eye_opening>
+  leftEyeVisibility<left_eye_visibility>
+  makeup<makeup>
+  mouthOpening<mouth_opening>
+  mouthVisibility<mouth_visibility>
+  noseVisibility<nose_visibility>
+  padAttackSupport<pad_attack_support>
+  padColor<pad_color>
+  photographicAttributes<photographic_attributes>
+  pose<pose>
+  qualityAttributes<quality_attributes>
+  qualityScore<quality_score>
+  rightEyeOpening<right_eye_opening>
+  rightEyeVisibility<right_eye_visibility>
+  smile<smile>
+  status<status>
+  subjectPosition<subject_position>
+  trackedFace<tracked_face>
+
+
+Definition
+----------
+.. line-block::
+    Represents a portrait.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePortrait *ID3_FACE_PORTRAIT;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class Portrait implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class Portrait
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class Portrait implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class Portrait
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class Portrait
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_PORTRAIT hPortrait{};
+        int err = id3FacePortrait_Initialize(&hPortrait);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePortrait_Dispose(&hPortrait);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final portrait = sdk.Portrait();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        portrait.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var portrait = new Portrait())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var portrait = new Portrait()
+        // ...
+        portrait.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (Portrait portrait = new Portrait()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        Portrait portrait = new Portrait();
+        // ...
+        portrait.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        portrait = Portrait()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del portrait
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var portrait: Portrait? = nil
+        portrait = try Portrait()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`age<portrait_age_class_member>`
+    - int
+    - Estimated age of the subject. -1 if not computed.
+  * - :ref:`backgroundUniformity<portrait_background_uniformity_class_member>`
+    - :ref:`BackgroundUniformity<background_uniformity_struct>`
+    - Result of the background uniformity computation.
+  * - :ref:`emotion<portrait_emotion_class_member>`
+    - :ref:`FaceExpression<face_expression_enum>`
+    - Estimated emotion of the subject (angriness, disgust, fear, happiness, sadness, surprise, or neutral). Unknown if not computed.
+  * - :ref:`eyeGaze<portrait_eye_gaze_class_member>`
+    - :ref:`EyeGaze<eye_gaze_struct>`
+    - Estimated gaze.
+  * - :ref:`faceId<portrait_face_id_class_member>`
+    - int
+    - Unique face ID.
+  * - :ref:`faceMask<portrait_face_mask_class_member>`
+    - int
+    - Value indicating whether a face mask is detected. The range is 0-100, 100 meaning a mask is detected.
+  * - :ref:`faceTemplate<portrait_face_template_class_member>`
+    - :ref:`FaceTemplate<face_template_class>`
+    - Face template.
+  * - :ref:`genderMale<portrait_gender_male_class_member>`
+    - int
+    - Value indicating whether the subject is a male. -1 if not computed. The range is 0 (female) -100 (male).
+  * - :ref:`geometricAttributes<portrait_geometric_attributes_class_member>`
+    - :ref:`GeometricAttributes<geometric_attributes_struct>`
+    - Geometric attributes.
+  * - :ref:`glasses<portrait_glasses_class_member>`
+    - int
+    - Value indicating whether the subject wears glasses. -1 if not computed. The range is 0-100, 100 meaning glasses are detected.
+  * - :ref:`hat<portrait_hat_class_member>`
+    - int
+    - Value indicating whether the subject wears a hat. -1 if not computed. The range is 0-100, 100 meaning a hat is detected.
+  * - :ref:`image<portrait_image_class_member>`
+    - :ref:`Image<image_class>`
+    - Source image.
+  * - :ref:`imageCenter<portrait_image_center_class_member>`
+    - :ref:`Point<point_struct>`
+    - Center of the portrait in the source image.
+  * - :ref:`imageScale<portrait_image_scale_class_member>`
+    - float
+    - Scale to be applied to the source image to display the portrait.
+  * - :ref:`imageTranslation<portrait_image_translation_class_member>`
+    - :ref:`Point<point_struct>`
+    - Translation to be applied to the source image to display the portrait.
+  * - :ref:`isPresentationAttack<portrait_is_presentation_attack_class_member>`
+    - bool
+    - Value indicating whether the portrait is a presentation attack.
+  * - :ref:`landmarks<portrait_landmarks_class_member>`
+    - :ref:`PointList<point_list_class>`
+    - 68-points landmarks.
+  * - :ref:`leftEyeOpening<portrait_left_eye_opening_class_member>`
+    - int
+    - Value estimating the opening of the left eye. -1 if not computed. The range is 0-100, 100 meaning the eye is fully opened.
+  * - :ref:`leftEyeVisibility<portrait_left_eye_visibility_class_member>`
+    - int
+    - Value estimating the visibility of the left eye. -1 if not computed. The range is 0-100, 100 meaning the left eye is fully visible.
+  * - :ref:`makeup<portrait_makeup_class_member>`
+    - int
+    - Value indicating whether makeup is detected. -1 if not computed. The range is 0-100, 100 meaning makeup is detected.
+  * - :ref:`mouthOpening<portrait_mouth_opening_class_member>`
+    - int
+    - Value indicating estimating the opening of the mouth. -1 if not computed. The range is 0-100, 100 meaning the mouth is fully open.
+  * - :ref:`mouthVisibility<portrait_mouth_visibility_class_member>`
+    - int
+    - Value estimating the visibility of the mouth. -1 if not computed. The range is 0-100, 100 meaning the mouth is fully visible.
+  * - :ref:`noseVisibility<portrait_nose_visibility_class_member>`
+    - int
+    - Value estimating the visibility of the nose. -1 if not computed. The range is 0-100, 100 meaning the nose is fully visible.
+  * - :ref:`padAttackSupport<portrait_pad_attack_support_class_member>`
+    - int
+    - Presentation attack support detection result. -1 if not computed. The range is 0-100, 100 meaning an attack has definitely been detected.
+  * - :ref:`padColor<portrait_pad_color_class_member>`
+    - :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
+    - Color-based PAD result. -1 if not computed. The range is 0-100, 100 meaning an attack a definitely been detected.
+  * - :ref:`photographicAttributes<portrait_photographic_attributes_class_member>`
+    - :ref:`PhotographicAttributes<photographic_attributes_struct>`
+    - Photographic attributes.
+  * - :ref:`pose<portrait_pose_class_member>`
+    - :ref:`FacePose<face_pose_struct>`
+    - Face pose.
+  * - :ref:`qualityAttributes<portrait_quality_attributes_class_member>`
+    - :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+    - Quality attributes of the portrait.
+  * - :ref:`qualityScore<portrait_quality_score_class_member>`
+    - int
+    - Unified quality score, from 0 to 100. -1 if not computed.
+  * - :ref:`rightEyeOpening<portrait_right_eye_opening_class_member>`
+    - int
+    - Value estimating the opening of the left eye. -1 if not computed. The range is 0-100, 100 meaning the eye is fully opened.
+  * - :ref:`rightEyeVisibility<portrait_right_eye_visibility_class_member>`
+    - int
+    - Value estimating the visibility of the right eye. -1 if not computed. The range is 0-100, 100 meaning the right eye is fully visible.
+  * - :ref:`smile<portrait_smile_class_member>`
+    - int
+    - Value indicating whether the subject is smiling. -1 if not computed. The range is 0-100, 100 meaning the person is smiling.
+  * - :ref:`status<portrait_status_class_member>`
+    - :ref:`PortraitStatus<portrait_status_enum>`
+    - Status of the portrait.
+  * - :ref:`subjectPosition<portrait_subject_position_class_member>`
+    - :ref:`SubjectPosition<subject_position_enum>`
+    - Position of the subject in the image.
+  * - :ref:`trackedFace<portrait_tracked_face_class_member>`
+    - :ref:`TrackedFace<tracked_face_class>`
+    - Tracked face.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clear<portrait_clear_class_method>`
+    - Clears all attributes.
+  * - :ref:`clone<portrait_clone_class_method>`
+    - Clones the Portrait object.

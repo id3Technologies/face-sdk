@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.uniformBackgroundColor Property
+
+.. _portrait_quality_attributes_uniform_background_color_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.uniformBackgroundColor Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the color of the background is uniform.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int UniformBackgroundColor
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int uniformBackgroundColor
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int UniformBackgroundColor
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int uniformBackgroundColor
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int uniform_background_color
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int uniformBackgroundColor
+

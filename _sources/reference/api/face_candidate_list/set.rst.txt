@@ -1,0 +1,182 @@
+.. index:: 
+  !FaceCandidateList.set Method
+  
+.. _face_candidate_list_set_class_method:
+
+===============================================================================
+FaceCandidateList.set Method
+===============================================================================
+
+Module: :ref:`FaceCandidateList<face_candidate_list_class>`
+
+Definition
+----------
+
+Sets an item of the FaceCandidateList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceCandidateList_Set (
+            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
+            int index, 
+            ID3_FACE_CANDIDATE hFaceCandidateItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`in` Handle to the FaceCandidateList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``hFaceCandidateItem`` :ref:`ID3_FACE_CANDIDATE<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void set(int index, FaceCandidate faceCandidateItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``faceCandidateItem`` :ref:`FaceCandidate<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Set(int index, FaceCandidate faceCandidateItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``faceCandidateItem`` :ref:`FaceCandidate<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void set(int index, FaceCandidate faceCandidateItem) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``faceCandidateItem`` :ref:`FaceCandidate<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        set(self, index: int, face_candidate_item: FaceCandidate) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``face_candidate_item`` :ref:`FaceCandidate<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func set(index: Int32, faceCandidateItem: FaceCandidate) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` Int32
+          :guilabel:`in` Index of the FaceCandidate item to set.
+
+          ``faceCandidateItem`` :ref:`FaceCandidate<face_candidate_class>`
+          :guilabel:`in` FaceCandidate item to set.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

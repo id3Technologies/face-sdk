@@ -1,0 +1,158 @@
+.. index:: 
+  !DetectedFace.getInterocularDistance Method
+  
+.. _detected_face_get_interocular_distance_class_method:
+
+===============================================================================
+DetectedFace.getInterocularDistance Method
+===============================================================================
+
+Module: :ref:`DetectedFace<detected_face_class>`
+
+Definition
+----------
+
+Gets the distance between the eyes (IOD) of the detected face in pixels.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFace_GetInterocularDistance (
+            ID3_DETECTED_FACE hDetectedFace, 
+            int * iod)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Handle to the DetectedFace object.
+
+          ``iod`` int *
+          :guilabel:`out` The computed interocular distance (IOD) in pixels.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int getInterocularDistance()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed interocular distance (IOD) in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int GetInterocularDistance()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed interocular distance (IOD) in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int getInterocularDistance() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed interocular distance (IOD) in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_interocular_distance(self) -> int
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The computed interocular distance (IOD) in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getInterocularDistance() throws -> Int32
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The computed interocular distance (IOD) in pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,229 @@
+.. index:: 
+  !TrackedFaceList Class
+
+.. _tracked_face_list_class:
+
+===============================================================================
+TrackedFaceList Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  count<count>
+  findTrackedFace<find_tracked_face>
+  get<get>
+  getCount<get_count>
+  getIdList<get_id_list>
+  getLargestFace<get_largest_face>
+  removeAt<remove_at>
+  rescaleAll<rescale_all>
+  resize<resize>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a list of tracked faces.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3TrackedFaceList *ID3_TRACKED_FACE_LIST;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class TrackedFaceList implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class TrackedFaceList
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class TrackedFaceList implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class TrackedFaceList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class TrackedFaceList
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_TRACKED_FACE_LIST hTrackedFaceList{};
+        int err = id3TrackedFaceList_Initialize(&hTrackedFaceList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3TrackedFaceList_Dispose(&hTrackedFaceList);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final trackedFaceList = sdk.TrackedFaceList();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        trackedFaceList.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var trackedFaceList = new TrackedFaceList())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var trackedFaceList = new TrackedFaceList()
+        // ...
+        trackedFaceList.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (TrackedFaceList trackedFaceList = new TrackedFaceList()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        TrackedFaceList trackedFaceList = new TrackedFaceList();
+        // ...
+        trackedFaceList.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        trackedFaceList = TrackedFaceList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del trackedFaceList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var trackedFaceList: TrackedFaceList? = nil
+        trackedFaceList = try TrackedFaceList()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<tracked_face_list_count_class_member>`
+    - int
+    - Gets the number of elements contained in the list
+  * - operator [int index]
+    - :ref:`TrackedFace<tracked_face_class>`
+    - Gets or sets the element at the specified index in the list.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<tracked_face_list_add_class_method>`
+    - Adds an item to the TrackedFaceList object.
+  * - :ref:`clear<tracked_face_list_clear_class_method>`
+    - Clears the TrackedFaceList object.
+  * - :ref:`clone<tracked_face_list_clone_class_method>`
+    - Clones the TrackedFaceList object.
+  * - :ref:`findTrackedFace<tracked_face_list_find_tracked_face_class_method>`
+    - Finds a tracked face by ID.
+  * - :ref:`get<tracked_face_list_get_class_method>`
+    - Gets an item of the TrackedFaceList object.
+  * - :ref:`getCount<tracked_face_list_get_count_class_method>`
+    - Gets the number of elements in the TrackedFaceList object.
+  * - :ref:`getIdList<tracked_face_list_get_id_list_class_method>`
+    - Gets the list of IDs in the list.
+  * - :ref:`getLargestFace<tracked_face_list_get_largest_face_class_method>`
+    - Gets the largest face in the list.
+  * - :ref:`removeAt<tracked_face_list_remove_at_class_method>`
+    - Removes an element of the TrackedFaceList object.
+  * - :ref:`rescaleAll<tracked_face_list_rescale_all_class_method>`
+    - Rescales all tracked faces in the list.
+  * - :ref:`resize<tracked_face_list_resize_class_method>`
+    - TrackedFaceList object.
+  * - :ref:`set<tracked_face_list_set_class_method>`
+    - Sets an item of the TrackedFaceList object.

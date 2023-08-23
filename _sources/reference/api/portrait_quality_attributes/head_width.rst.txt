@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.headWidth Property
+
+.. _portrait_quality_attributes_head_width_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.headWidth Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the width of the head is correct.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeadWidth
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int headWidth
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeadWidth
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int headWidth
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int head_width
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int headWidth
+

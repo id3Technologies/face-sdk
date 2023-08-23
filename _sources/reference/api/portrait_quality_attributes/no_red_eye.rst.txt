@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noRedEye Property
+
+.. _portrait_quality_attributes_no_red_eye_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noRedEye Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether no red-eye is present.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoRedEye
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noRedEye
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoRedEye
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noRedEye
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int no_red_eye
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noRedEye
+

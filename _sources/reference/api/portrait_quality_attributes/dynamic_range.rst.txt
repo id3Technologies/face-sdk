@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.dynamicRange Property
+
+.. _portrait_quality_attributes_dynamic_range_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.dynamicRange Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the dynamic range on the image is sufficient.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int DynamicRange
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int dynamicRange
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int DynamicRange
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int dynamicRange
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int dynamic_range
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int dynamicRange
+

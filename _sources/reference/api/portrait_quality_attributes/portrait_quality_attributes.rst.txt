@@ -1,0 +1,196 @@
+.. index:: 
+  !PortraitQualityAttributes Structure
+
+.. _portrait_quality_attributes_struct:
+
+===============================================================================
+PortraitQualityAttributes Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  closedMouth<closed_mouth>
+  colorizedImage<colorized_image>
+  dynamicRange<dynamic_range>
+  equalBrightness<equal_brightness>
+  frontalPose<frontal_pose>
+  headHeight<head_height>
+  headWidth<head_width>
+  horizontalPosition<horizontal_position>
+  naturalSkinColor<natural_skin_color>
+  neutralExpression<neutral_expression>
+  noFlashReflection<no_flash_reflection>
+  noGlasses<no_glasses>
+  noHat<no_hat>
+  noNoise<no_noise>
+  noOverExposure<no_over_exposure>
+  noPixelation<no_pixelation>
+  noRedEye<no_red_eye>
+  noSmile<no_smile>
+  noUnderExposure<no_under_exposure>
+  openEyes<open_eyes>
+  resolution<resolution>
+  sharpness<sharpness>
+  straightLook<straight_look>
+  uniformBackgroundColor<uniform_background_color>
+  uniformBackgroundStructure<uniform_background_structure>
+  verticalPosition<vertical_position>
+  visibleLeftEye<visible_left_eye>
+  visibleMouth<visible_mouth>
+  visibleNose<visible_nose>
+  visibleRightEye<visible_right_eye>
+
+Definition
+----------
+.. line-block::
+    Represents the portrait quality attributes.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FacePortraitQualityAttributes
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class PortraitQualityAttributes
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct PortraitQualityAttributes
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class PortraitQualityAttributes
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class PortraitQualityAttributes
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias PortraitQualityAttributes = id3FacePortraitQualityAttributes
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`closedMouth<portrait_quality_attributes_closed_mouth_struct_member>`
+    - int
+    - Value indicating whether the mouth is closed.
+  * - :ref:`colorizedImage<portrait_quality_attributes_colorized_image_struct_member>`
+    - int
+    - Value indicating whether the image is colorized, not grayscale.
+  * - :ref:`dynamicRange<portrait_quality_attributes_dynamic_range_struct_member>`
+    - int
+    - Value indicating whether the dynamic range on the image is sufficient.
+  * - :ref:`equalBrightness<portrait_quality_attributes_equal_brightness_struct_member>`
+    - int
+    - Value indicating whether lighting is equally distributed on the face, in particular symmetrically, i.e., there is no difference between the brightness of the right and left side of the face.
+  * - :ref:`frontalPose<portrait_quality_attributes_frontal_pose_struct_member>`
+    - int
+    - Value indicating whether the subject's face is frontal.
+  * - :ref:`headHeight<portrait_quality_attributes_head_height_struct_member>`
+    - int
+    - Value indicating whether the height of the head is correct.
+  * - :ref:`headWidth<portrait_quality_attributes_head_width_struct_member>`
+    - int
+    - Value indicating whether the width of the head is correct.
+  * - :ref:`horizontalPosition<portrait_quality_attributes_horizontal_position_struct_member>`
+    - int
+    - Value indicating whether the horizontal position of the head is correct.
+  * - :ref:`naturalSkinColor<portrait_quality_attributes_natural_skin_color_struct_member>`
+    - int
+    - Value indicating whether the skin looks natural.
+  * - :ref:`neutralExpression<portrait_quality_attributes_neutral_expression_struct_member>`
+    - int
+    - Value indicating whether no emotion is visible on the subject's face.
+  * - :ref:`noFlashReflection<portrait_quality_attributes_no_flash_reflection_struct_member>`
+    - int
+    - Value indicating whether no flash reflection is visible.
+  * - :ref:`noGlasses<portrait_quality_attributes_no_glasses_struct_member>`
+    - int
+    - Value indicating whether the subject does not wear glasses.
+  * - :ref:`noHat<portrait_quality_attributes_no_hat_struct_member>`
+    - int
+    - Value indicating whether the subject does not wear a hat.
+  * - :ref:`noNoise<portrait_quality_attributes_no_noise_struct_member>`
+    - int
+    - Value indicating whether no noise is present in the image.
+  * - :ref:`noOverExposure<portrait_quality_attributes_no_over_exposure_struct_member>`
+    - int
+    - Value indicating whether the image is not over-exposed.
+  * - :ref:`noPixelation<portrait_quality_attributes_no_pixelation_struct_member>`
+    - int
+    - Value indicating whether the image is not pixelated.
+  * - :ref:`noRedEye<portrait_quality_attributes_no_red_eye_struct_member>`
+    - int
+    - Value indicating whether no red-eye is present.
+  * - :ref:`noSmile<portrait_quality_attributes_no_smile_struct_member>`
+    - int
+    - Value indicating whether the subject is not smiling.
+  * - :ref:`noUnderExposure<portrait_quality_attributes_no_under_exposure_struct_member>`
+    - int
+    - Value indicating whether the image is not under-exposed.
+  * - :ref:`openEyes<portrait_quality_attributes_open_eyes_struct_member>`
+    - int
+    - Value indicating whether the eyes are open.
+  * - :ref:`resolution<portrait_quality_attributes_resolution_struct_member>`
+    - int
+    - Value indicating whether the image resolution is correct.
+  * - :ref:`sharpness<portrait_quality_attributes_sharpness_struct_member>`
+    - int
+    - Value indicating whether the image is sharp.
+  * - :ref:`straightLook<portrait_quality_attributes_straight_look_struct_member>`
+    - int
+    - Value indicating whether the subject looks straight towards the camera.
+  * - :ref:`uniformBackgroundColor<portrait_quality_attributes_uniform_background_color_struct_member>`
+    - int
+    - Value indicating whether the color of the background is uniform.
+  * - :ref:`uniformBackgroundStructure<portrait_quality_attributes_uniform_background_structure_struct_member>`
+    - int
+    - Value indicating whether the structure of the background is uniform.
+  * - :ref:`verticalPosition<portrait_quality_attributes_vertical_position_struct_member>`
+    - int
+    - Value indicating whether the vertical position of the head is correct.
+  * - :ref:`visibleLeftEye<portrait_quality_attributes_visible_left_eye_struct_member>`
+    - int
+    - Value indicating whether the left eye is visible.
+  * - :ref:`visibleMouth<portrait_quality_attributes_visible_mouth_struct_member>`
+    - int
+    - Value indicating whether the mouth is visible.
+  * - :ref:`visibleNose<portrait_quality_attributes_visible_nose_struct_member>`
+    - int
+    - Value indicating whether the nose is visible.
+  * - :ref:`visibleRightEye<portrait_quality_attributes_visible_right_eye_struct_member>`
+    - int
+    - Value indicating whether the right eye is visible.

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.faceDetectionModel Property
+
+.. _portrait_processor_face_detection_model_class_member:
+
+===============================================================================
+PortraitProcessor.faceDetectionModel Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: :ref:`FaceModel<face_model_enum>`
+
+Definition
+----------
+
+Specifies the model used to detect and track faces.
+
+.. hint:: Default value is FaceDetector4B. Some better accuracy/speed balances can be found by choosing another model.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceDetectionModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel * eFaceDetectionModel)
+      int id3FacePortraitProcessor_SetFaceDetectionModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel eFaceDetectionModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceModel get faceDetectionModel => getFaceDetectionModel();
+      set faceDetectionModel(FaceModel value) => setFaceDetectionModel(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceModel faceDetectionModel
+      {
+          get => GetfaceDetectionModel();
+          set => SetfaceDetectionModel(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceModel getFaceDetectionModel() throws FaceException
+      public void setFaceDetectionModel(FaceModel faceDetectionModel) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      face_detection_model: FaceModel
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,120 @@
+.. index:: 
+  !FaceEncoder.processingUnit Property
+
+.. _face_encoder_processing_unit_class_member:
+
+===============================================================================
+FaceEncoder.processingUnit Property
+===============================================================================
+
+Module: :ref:`FaceEncoder<face_encoder_class>`
+
+Type: :ref:`ProcessingUnit<processing_unit_enum>`
+
+Definition
+----------
+
+Processing unit where to run the encoding process.
+
+.. hint:: Default value is CPU.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceEncoder_GetProcessingUnit (ID3_FACE_ENCODER hFaceEncoder, id3FaceProcessingUnit * eProcessingUnit)
+      int id3FaceEncoder_SetProcessingUnit (ID3_FACE_ENCODER hFaceEncoder, id3FaceProcessingUnit eProcessingUnit)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      ProcessingUnit get processingUnit => getProcessingUnit();
+      set processingUnit(ProcessingUnit value) => setProcessingUnit(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public ProcessingUnit processingUnit
+      {
+          get => GetprocessingUnit();
+          set => SetprocessingUnit(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public ProcessingUnit getProcessingUnit() throws FaceException
+      public void setProcessingUnit(ProcessingUnit processingUnit) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      processing_unit: ProcessingUnit
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

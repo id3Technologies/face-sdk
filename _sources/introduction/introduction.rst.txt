@@ -1,0 +1,17 @@
+.. _introduction:
+
+============
+Introduction 
+============
+
+|product-name| is a cross-platform library aimed at system integrators willing to quickly add face detection, tracking, analysis, liveness check and recognition capabilities to their products. 
+It is available as a Software Development Kit (SDK) offering a comprehensive interface to simplify integration of the library on servers, desktops/laptops, mobile and edge devices.
+
+.. toctree::
+
+   overview
+   technology
+   editions
+   image_formats
+   terms
+

@@ -1,0 +1,63 @@
+.. index:: 
+  !GeometricAttributes.horizontalPosition Property
+
+.. _geometric_attributes_horizontal_position_struct_member:
+
+===============================================================================
+GeometricAttributes.horizontalPosition Property
+===============================================================================
+
+Structure: :ref:`GeometricAttributes<geometric_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the head is correctly centered horizontally.
+
+.. hint:: For ICAO compliance, the value must be in the range 45 to 55.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HorizontalPosition
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int horizontalPosition
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HorizontalPosition
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int horizontalPosition
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int horizontal_position
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int horizontalPosition
+

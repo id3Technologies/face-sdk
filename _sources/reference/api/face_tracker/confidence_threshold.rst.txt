@@ -1,0 +1,122 @@
+.. index:: 
+  !FaceTracker.confidenceThreshold Property
+
+.. _face_tracker_confidence_threshold_class_member:
+
+===============================================================================
+FaceTracker.confidenceThreshold Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: int
+
+Definition
+----------
+
+Confidence threshold, in the range [0;100].
+
+.. hint:: Default value is 50.
+
+.. note:: Setting a high threshold reduces false detection but can increase the number of undetected faces.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetConfidenceThreshold (ID3_FACE_TRACKER hFaceTracker, int * confidenceThreshold)
+      int id3FaceTracker_SetConfidenceThreshold (ID3_FACE_TRACKER hFaceTracker, int confidenceThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get confidenceThreshold => getConfidenceThreshold();
+      set confidenceThreshold(int value) => setConfidenceThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int confidenceThreshold
+      {
+          get => GetconfidenceThreshold();
+          set => SetconfidenceThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getConfidenceThreshold() throws FaceException
+      public void setConfidenceThreshold(int confidenceThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      confidence_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

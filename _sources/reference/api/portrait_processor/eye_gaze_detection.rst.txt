@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.eyeGazeDetection Property
+
+.. _portrait_processor_eye_gaze_detection_class_member:
+
+===============================================================================
+PortraitProcessor.eyeGazeDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether eye gaze detection is enabled.
+
+.. important:: This option requires the EyeGazeEstimator model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEyeGazeDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * eyeGazeDetection)
+      int id3FacePortraitProcessor_SetEyeGazeDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool eyeGazeDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get eyeGazeDetection => getEyeGazeDetection();
+      set eyeGazeDetection(bool value) => setEyeGazeDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool eyeGazeDetection
+      {
+          get => GeteyeGazeDetection();
+          set => SeteyeGazeDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getEyeGazeDetection() throws FaceException
+      public void setEyeGazeDetection(boolean eyeGazeDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      eye_gaze_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

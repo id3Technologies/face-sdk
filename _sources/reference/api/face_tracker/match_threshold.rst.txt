@@ -1,0 +1,120 @@
+.. index:: 
+  !FaceTracker.matchThreshold Property
+
+.. _face_tracker_match_threshold_class_member:
+
+===============================================================================
+FaceTracker.matchThreshold Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum match score to reach to preserve the ID of a tracked face between frame 't-1' and frame 't'.
+
+.. hint:: Default value is 3000 which corresponds to a False Match Rate of 1/1000.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetMatchThreshold (ID3_FACE_TRACKER hFaceTracker, int * matchThreshold)
+      int id3FaceTracker_SetMatchThreshold (ID3_FACE_TRACKER hFaceTracker, int matchThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get matchThreshold => getMatchThreshold();
+      set matchThreshold(int value) => setMatchThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int matchThreshold
+      {
+          get => GetmatchThreshold();
+          set => SetmatchThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMatchThreshold() throws FaceException
+      public void setMatchThreshold(int matchThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      match_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

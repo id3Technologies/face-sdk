@@ -1,0 +1,65 @@
+.. index:: 
+  !GlassesAttributes.heavyFrame Property
+
+.. _glasses_attributes_heavy_frame_struct_member:
+
+===============================================================================
+GlassesAttributes.heavyFrame Property
+===============================================================================
+
+Structure: :ref:`GlassesAttributes<glasses_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the glasses' frame is too heavy, in the range [0; 100].
+
+0 means that the frame is super thick.
+
+.. hint:: The recommended value is over 20.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeavyFrame
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int heavyFrame
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeavyFrame
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int heavyFrame
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int heavy_frame
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int heavyFrame
+

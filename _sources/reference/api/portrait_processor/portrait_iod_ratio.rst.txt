@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.portraitIodRatio Property
+
+.. _portrait_processor_portrait_iod_ratio_class_member:
+
+===============================================================================
+PortraitProcessor.portraitIodRatio Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Ratio between the interocular distance (IOD) and the image width for ICAO portrait cropping. Must be in the range ]0;1[.
+
+.. hint:: Default value is 0.25.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPortraitIodRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitIodRatio)
+      int id3FacePortraitProcessor_SetPortraitIodRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitIodRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get portraitIodRatio => getPortraitIodRatio();
+      set portraitIodRatio(double value) => setPortraitIodRatio(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float portraitIodRatio
+      {
+          get => GetportraitIodRatio();
+          set => SetportraitIodRatio(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getPortraitIodRatio() throws FaceException
+      public void setPortraitIodRatio(float portraitIodRatio) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      portrait_iod_ratio: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

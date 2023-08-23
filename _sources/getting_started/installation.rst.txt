@@ -1,0 +1,51 @@
+==================
+Installing the SDK
+==================
+
+1. Download the archive
+2. Uncompress the archive.
+
+
+SDK Archive
+===========
+
+|product-name| is delivered as a compressed archive (ZIP file) that contains the following directories and files: 
+
+::
+
+    ├───activation                      # License activation tools for Windows, Linux and Jetson Nano
+    │   ├───cli-tool
+    │   │   ├───linux
+    │   │   ├───macos
+    │   │   └───windows
+    │   └───windows-tool
+    ├───bin                             # C dynamic libraries + benchmark tool
+    │   ├───android
+    │   ├───apple
+    │   ├───linux
+    │   │   ├───armv8-jetson-nano
+    │   │   ├───x64
+    │   │   ├───x64-ubuntu1804
+    │   │   ├───x64_gpu
+    │   │   └───x64_gpu-ubuntu1804
+    │   └───windows
+    │       ├───x64
+    │       ├───x64_gpu
+    │       └───x86
+    ├───dart                            # Dart wrapper source code
+    │   └───id3_face
+    │       ├───doc
+    │       └───lib
+    ├───docs                            # API reference and Developer Guide
+    │   ├───3rdparty
+    │   ├───c-reference-api
+    │   ├───dotnet-reference-api
+    │   ├───javadoc
+    │   └───python-reference-api
+    ├───dotnet                          # .NET dynamic libraries
+    ├───include                         # C header files
+    ├───java                            # Java jar archives
+    ├── CHANGELOG.md
+    ├── LICENSE.md
+    └── README.md
+

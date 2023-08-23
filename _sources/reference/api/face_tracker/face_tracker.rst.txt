@@ -1,0 +1,222 @@
+.. index:: 
+  !FaceTracker Class
+
+.. _face_tracker_class:
+
+===============================================================================
+FaceTracker Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  confidenceThreshold<confidence_threshold>
+  detectionModel<detection_model>
+  encodingModel<encoding_model>
+  matchThreshold<match_threshold>
+  maximumTrackedFaceAge<maximum_tracked_face_age>
+  minimumTrackedFaceAge<minimum_tracked_face_age>
+  nmsIouThreshold<nms_iou_threshold>
+  processingUnit<processing_unit>
+  threadCount<thread_count>
+  trackFaces<track_faces>
+  warmUp<warm_up>
+
+
+Definition
+----------
+.. line-block::
+    Tracks faces on consecutive images and automatically creates and updates associated face templates.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTracker *ID3_FACE_TRACKER;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceTracker implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceTracker
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceTracker implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceTracker
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceTracker
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TRACKER hFaceTracker{};
+        int err = id3FaceTracker_Initialize(&hFaceTracker);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTracker_Dispose(&hFaceTracker);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceTracker = sdk.FaceTracker();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceTracker.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceTracker = new FaceTracker())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceTracker = new FaceTracker()
+        // ...
+        faceTracker.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceTracker faceTracker = new FaceTracker()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceTracker faceTracker = new FaceTracker();
+        // ...
+        faceTracker.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceTracker = FaceTracker()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTracker
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceTracker: FaceTracker? = nil
+        faceTracker = try FaceTracker()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`confidenceThreshold<face_tracker_confidence_threshold_class_member>`
+    - int
+    - Confidence threshold, in the range [0;100].
+  * - :ref:`detectionModel<face_tracker_detection_model_class_member>`
+    - :ref:`FaceModel<face_model_enum>`
+    - Model used to detect and track faces.
+  * - :ref:`encodingModel<face_tracker_encoding_model_class_member>`
+    - :ref:`FaceModel<face_model_enum>`
+    - Model used to create features and assess consistancy among views of a given face.
+  * - :ref:`matchThreshold<face_tracker_match_threshold_class_member>`
+    - int
+    - Minimum match score to reach to preserve the ID of a tracked face between frame 't-1' and frame 't'.
+  * - :ref:`maximumTrackedFaceAge<face_tracker_maximum_tracked_face_age_class_member>`
+    - int
+    - Maximum number of consecutive non-detections to reach before deleting a tracked face.
+  * - :ref:`minimumTrackedFaceAge<face_tracker_minimum_tracked_face_age_class_member>`
+    - int
+    - Minimum number of consecutive detections to reach before creating a tracked face.
+  * - :ref:`nmsIouThreshold<face_tracker_nms_iou_threshold_class_member>`
+    - int
+    - Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the range is [0;100].
+  * - :ref:`processingUnit<face_tracker_processing_unit_class_member>`
+    - :ref:`ProcessingUnit<processing_unit_enum>`
+    - Processing unit where to run the detection process.
+  * - :ref:`threadCount<face_tracker_thread_count_class_member>`
+    - int
+    - Number of threads to use for detection or tracking.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`trackFaces<face_tracker_track_faces_class_method>`
+    - Tracks faces in an image and update their info in a TrackedFaceList object.
+  * - :ref:`warmUp<face_tracker_warm_up_class_method>`
+    - Gets the face tracker module ready to work on a specific image size by initializing all its internal memory layout.

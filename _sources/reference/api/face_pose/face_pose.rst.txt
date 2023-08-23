@@ -1,0 +1,88 @@
+.. index:: 
+  !FacePose Structure
+
+.. _face_pose_struct:
+
+===============================================================================
+FacePose Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  pitch<pitch>
+  roll<roll>
+  yaw<yaw>
+
+Definition
+----------
+.. line-block::
+    Represents the face pose (yaw, pitch, roll).
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FacePose
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class FacePose
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct FacePose
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class FacePose
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class FacePose
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias FacePose = id3FacePose
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`pitch<face_pose_pitch_struct_member>`
+    - float
+    - Pitch angle in degrees.
+  * - :ref:`roll<face_pose_roll_struct_member>`
+    - float
+    - Roll angle in degrees.
+  * - :ref:`yaw<face_pose_yaw_struct_member>`
+    - float
+    - Yaw angle in degrees.

@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.sharpness Property
+
+.. _portrait_quality_attributes_sharpness_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.sharpness Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the image is sharp.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Sharpness
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int sharpness
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int Sharpness
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int sharpness
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int sharpness
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int sharpness
+

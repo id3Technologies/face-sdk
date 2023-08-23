@@ -1,0 +1,114 @@
+.. index:: 
+  !FaceTemplate.format Property
+
+.. _face_template_format_class_member:
+
+===============================================================================
+FaceTemplate.format Property
+===============================================================================
+
+Module: :ref:`FaceTemplate<face_template_class>`
+
+Type: :ref:`FaceTemplateFormat<face_template_format_enum>`
+
+Definition
+----------
+
+Format of the face template.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTemplate_GetFormat (ID3_FACE_TEMPLATE hFaceTemplate, id3FaceTemplateFormat * eFormat)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceTemplateFormat get format => getFormat();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceTemplateFormat format
+      {
+          get => Getformat();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceTemplateFormat getFormat() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      format: FaceTemplateFormat
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

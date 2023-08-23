@@ -1,0 +1,95 @@
+.. index:: 
+  !Requirements
+  
+.. _requirements:
+
+=============
+Requirements
+=============
+
+System Requirements
+===================
+
+|product-name| is compatible with the following platforms: 
+
+.. list-table::
+    :width: 100%
+    :widths: 25 45 30
+    :header-rows: 1
+
+    * - Platforms
+      - Operating Systems
+      - Processor Architectures
+
+    * - Server
+      - 
+        | Windows Server 2012 (64 bits)
+        | Ubuntu 18.04, 20.04
+      - Intel Core, Xeon (x64)
+
+    * - PC (desktop, laptop)
+      - 
+        | Windows 7, 8, 10, 11 (32/64 bits)
+        | GNU/Linux with Kernel version >2.6.32 (64 bits)
+      - Intel Core, Xeon (x86, x64)
+  
+    * - Mac
+      - macOS X (version 10.12.6 or newer)
+      - arm64, M1, M2
+
+    * - Android (phone, tablet)
+      - Android 5.0+ (API >= 21)
+      - ARMv7 (armeabi-v7a), ARMv8 (arm64-v8a)
+
+    * - iPhone, iPad
+      - iOS 10.9+
+      - ARMv7, ARMv7s, ARMv8
+
+    * - NVIDIA Jetson Nano
+      - JetPack 4.6
+      - ARMv8
+
+    * - Raspberry Pi 4
+      - Raspberry Pi OS
+      - armv7l
+
+    * - NXP i.MX8 System-on-Module
+      - Linux Yocto
+      - NXP i.MX SoC
+
+.. _gpu_version:
+
+Additional Requirements for GPU version
+---------------------------------------
+For Windows or Linux, GPU is supported only for the x86_64 architecture only. Please be aware that not all models support GPU acceleration.
+
+Following additional dependencies are required, please refer to NVIDIA documentation for installation procedures relative to your operating system.
+
+For the Ubuntu 20.04 build:
+
+- Cuda Toolkit v11.5
+- Cudnn Toolkit v8.3.1 for Cuda 11.5
+
+For the Ubuntu 18.04 build:
+
+- Cuda Toolkit v10.2
+- Cudnn Toolkit v7.6.5 for Cuda 10.2
+
+Programming languages
+=====================
+
+|product-name| provides API for the following programming languages:
+
+- C
+- C++
+- C\#
+- Dart
+- Java
+- Kotlin
+- Objective C
+- Python
+- Swift
+
+.. note:: 
+  | Python packages are provided for 64-bit Windows and Linux operating systems.
+  | Python version 3.9 or 3.11 is required.

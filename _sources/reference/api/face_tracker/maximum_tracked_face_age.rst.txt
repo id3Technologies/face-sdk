@@ -1,0 +1,120 @@
+.. index:: 
+  !FaceTracker.maximumTrackedFaceAge Property
+
+.. _face_tracker_maximum_tracked_face_age_class_member:
+
+===============================================================================
+FaceTracker.maximumTrackedFaceAge Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: int
+
+Definition
+----------
+
+Maximum number of consecutive non-detections to reach before deleting a tracked face.
+
+.. hint:: Default value is 30 which corresponds to 2s at a frame rate of 15 FPS. One must adapt this value to its needs in terms of tracker identity memory (in seconds) and measured frame rate on target platform.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * maximumTrackedFaceAge)
+      int id3FaceTracker_SetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int maximumTrackedFaceAge)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maximumTrackedFaceAge => getMaximumTrackedFaceAge();
+      set maximumTrackedFaceAge(int value) => setMaximumTrackedFaceAge(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maximumTrackedFaceAge
+      {
+          get => GetmaximumTrackedFaceAge();
+          set => SetmaximumTrackedFaceAge(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaximumTrackedFaceAge() throws FaceException
+      public void setMaximumTrackedFaceAge(int maximumTrackedFaceAge) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_tracked_face_age: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

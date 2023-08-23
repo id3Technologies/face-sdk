@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.eyeOcclusionThreshold Property
+
+.. _portrait_processor_eye_occlusion_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.eyeOcclusionThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Visible eye threshold.
+
+If the score is above this value, the eye is probably occluded.
+
+.. hint:: Default value 80.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEyeOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * eyeOcclusionThreshold)
+      int id3FacePortraitProcessor_SetEyeOcclusionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int eyeOcclusionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get eyeOcclusionThreshold => getEyeOcclusionThreshold();
+      set eyeOcclusionThreshold(int value) => setEyeOcclusionThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int eyeOcclusionThreshold
+      {
+          get => GeteyeOcclusionThreshold();
+          set => SeteyeOcclusionThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getEyeOcclusionThreshold() throws FaceException
+      public void setEyeOcclusionThreshold(int eyeOcclusionThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      eye_occlusion_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

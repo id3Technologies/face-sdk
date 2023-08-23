@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.pixelationThreshold Property
+
+.. _portrait_processor_pixelation_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.pixelationThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Pixelation detection threshold.
+
+Above this threshold, the image is probably pixelated.
+
+.. hint:: Default value is 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * pixelationThreshold)
+      int id3FacePortraitProcessor_SetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int pixelationThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get pixelationThreshold => getPixelationThreshold();
+      set pixelationThreshold(int value) => setPixelationThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int pixelationThreshold
+      {
+          get => GetpixelationThreshold();
+          set => SetpixelationThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getPixelationThreshold() throws FaceException
+      public void setPixelationThreshold(int pixelationThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      pixelation_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

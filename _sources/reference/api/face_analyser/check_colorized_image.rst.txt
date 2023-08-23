@@ -1,0 +1,202 @@
+.. index:: 
+  !FaceAnalyser.checkColorizedImage Method
+  
+.. _face_analyser_check_colorized_image_class_method:
+
+===============================================================================
+FaceAnalyser.checkColorizedImage Method
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Definition
+----------
+
+Verifies if an image is colorized or grayscale.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_CheckColorizedImage (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            bool * isColorized)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``isColorized`` bool *
+          :guilabel:`out` The boolean decision: True if colorized, False if grayscale.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        bool checkColorizedImage(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          The boolean decision: True if colorized, False if grayscale.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public bool CheckColorizedImage(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          The boolean decision: True if colorized, False if grayscale.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public boolean checkColorizedImage(Image image) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``boolean``
+          The boolean decision: True if colorized, False if grayscale.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        check_colorized_image(self, image: Image) -> bool
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bool``
+          The boolean decision: True if colorized, False if grayscale.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func checkColorizedImage(image: Image) throws -> Bool
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Bool``
+          The boolean decision: True if colorized, False if grayscale.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

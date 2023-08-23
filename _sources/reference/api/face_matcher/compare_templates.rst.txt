@@ -1,0 +1,221 @@
+.. index:: 
+  !FaceMatcher.compareTemplates Method
+  
+.. _face_matcher_compare_templates_class_method:
+
+===============================================================================
+FaceMatcher.compareTemplates Method
+===============================================================================
+
+Module: :ref:`FaceMatcher<face_matcher_class>`
+
+Definition
+----------
+
+Compares two templates and outputs a comparison score.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceMatcher_CompareTemplates (
+            ID3_FACE_MATCHER hFaceMatcher, 
+            ID3_FACE_TEMPLATE hReference, 
+            ID3_FACE_TEMPLATE hProbe, 
+            int * score)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceMatcher`` :ref:`ID3_FACE_MATCHER<face_matcher_class>`
+          :guilabel:`in` Handle to the FaceMatcher object.
+
+          ``hReference`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``hProbe`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Probe template.
+
+          ``score`` int *
+          :guilabel:`out` The comparison score, in the range [0;65535].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int compareTemplates(FaceTemplate reference, FaceTemplate probe)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Probe template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int CompareTemplates(FaceTemplate reference, FaceTemplate probe)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Probe template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int compareTemplates(FaceTemplate reference, FaceTemplate probe) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Probe template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compare_templates(self, reference: FaceTemplate, probe: FaceTemplate) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Probe template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func compareTemplates(reference: FaceTemplate, probe: FaceTemplate) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``reference`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Reference template.
+
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` Probe template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The comparison score, in the range [0;65535].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

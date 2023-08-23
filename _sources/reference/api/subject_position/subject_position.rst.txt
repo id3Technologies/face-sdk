@@ -1,0 +1,97 @@
+.. index:: 
+  !SubjectPosition Enumeration
+
+.. _subject_position_enum:
+
+===============================================================================
+SubjectPosition Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the positions of a subject in an image.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceSubjectPosition
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum SubjectPosition
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum SubjectPosition
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum SubjectPosition
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class SubjectPosition
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum SubjectPosition
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``undefined``
+    - 0
+    - The position is undefined.
+  * - ``correct``
+    - 1
+    - The position is correct.
+  * - ``tooClose``
+    - 2
+    - The subject is too close.
+  * - ``tooFar``
+    - 3
+    - The subject is too far.
+  * - ``tooLeft``
+    - 4
+    - The subject is too left.
+  * - ``tooRight``
+    - 5
+    - The subject is too right.
+  * - ``tooHigh``
+    - 6
+    - The subject is too high.
+  * - ``tooLow``
+    - 7
+    - The subject is too low.

@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.overExposureThreshold Property
+
+.. _portrait_processor_over_exposure_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.overExposureThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Over exposure threshold.
+
+Above this threshold, the ratio of face pixels are over-exposed. 
+
+.. hint:: Default value is 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * overExposureThreshold)
+      int id3FacePortraitProcessor_SetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int overExposureThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get overExposureThreshold => getOverExposureThreshold();
+      set overExposureThreshold(int value) => setOverExposureThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int overExposureThreshold
+      {
+          get => GetoverExposureThreshold();
+          set => SetoverExposureThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getOverExposureThreshold() throws FaceException
+      public void setOverExposureThreshold(int overExposureThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      over_exposure_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

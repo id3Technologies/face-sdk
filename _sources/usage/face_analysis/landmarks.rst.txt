@@ -1,0 +1,11 @@
+.. _landmarks:
+
+=========
+Landmarks
+=========
+
+|product-name| allows to locate the position of the facial landmarks including face, eye, eyebrow, lip and nose contours as shown in the figure below. Those landmarks are useful for other portrait quality features.
+
+.. image:: ../img/facelandmarks.jpg
+
+.. note:: Required AI model: **FaceLandmarksEstimator2A**

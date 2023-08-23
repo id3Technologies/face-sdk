@@ -1,0 +1,141 @@
+.. _general_considerations:
+
+======================
+General considerations
+======================
+
+Naming conventions
+------------------
+For the sake of clarity in this multi-language documentation, the following naming conventions have been adopted.
+
+Classes
+=======
+- Class names are written in Pascal case. Example: ``License``.
+- Class method names are written in Camel case. Example: ``activateSerialKey``
+- Class property names are written in Camel case. Example: ``Image.pixelFormat``
+  
+
+Enumerations
+============
+- Enumerations are always written in Camel case. Example : ``LicenseError.invalidLicense``.
+
+The field name should be formatted according to the programming language. For example:
+
+.. tab-set::
+
+    .. tab-item:: C
+        :sync: c
+
+        The field name is format as follow: id3<enumeration_name>_<field_name>.
+
+        .. code-block:: C
+
+            id3LicenseError_InvalidLicense
+
+    .. tab-item:: Dart
+        :sync: dart
+
+        .. code-block:: dart
+
+            LicenseError.invalidLicense
+
+    .. tab-item:: C#
+        :sync: csharp
+
+        .. code-block:: c#
+
+            LicenseError.InvalidLicense
+
+    .. tab-item:: Java
+        :sync: java
+   
+        .. code-block:: java
+        
+            LicenseError.invalidLicense
+
+    .. tab-item:: Python
+        :sync: python
+
+        .. code-block:: python
+
+            LicenseError.invalidLicense
+
+    .. tab-item:: Swift
+        :sync: swift
+
+        .. code-block:: swift
+
+            LicenseError.InvalidLicense
+
+Adding the library to your project
+----------------------------------
+
+.. tab-set::
+
+    .. tab-item:: C
+        :sync: c
+
+        .. code-block:: C
+
+            #include "id3Face.h"
+
+    .. tab-item:: Dart
+        :sync: dart
+
+        .. code-block:: C
+
+            TODO
+
+    .. tab-item:: C#
+        :sync: csharp
+
+        id3 Face C# API is available in the package `id3.Face`:
+
+        .. code-block:: c#
+
+            using id3.Face;
+
+    .. tab-item:: Java
+        :sync: java
+   
+        .. code-block:: java
+        
+            import eu.id3.face;
+
+    .. tab-item:: Python
+        :sync: python
+
+        .. code-block:: python
+
+            TODO
+
+
+
+
+Loading the models
+------------------
+
+.. tab-set::
+
+    .. tab-item:: C
+        :sync: c
+
+        .. literalinclude:: /_static/samples/init.cpp
+            :language: c
+
+    .. tab-item:: C#
+        :sync: csharp
+
+        .. literalinclude:: /_static/samples/init.cs
+            :language: c#
+            :start-after: [load_models]
+            :end-before: [load_models]
+            :dedent: 12
+
+
+
+See also
+--------
+- :ref:`license_activation`
+- :ref:`face_library_check_license_class_method`
+- :ref:`face_library_load_model_class_method`

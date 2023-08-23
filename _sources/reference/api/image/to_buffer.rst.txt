@@ -1,0 +1,233 @@
+.. index:: 
+  !Image.toBuffer Method
+  
+.. _image_to_buffer_class_method:
+
+===============================================================================
+Image.toBuffer Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Exports the image object to a buffer. The compression level meaning depends on the used algorithm:
+
+- For JPEG compression, the value is the expected quality and may vary from 1 to 100.
+
+- For JPEG2000 compression, the value is the compression rate and may vary from 1 to 512.
+
+- For PNG compression, the value is the compression rate and may vary from 1 to 10.
+
+- For all other formats, the value is ignored.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ToBuffer (
+            ID3_FACE_IMAGE hImage, 
+            id3FaceImageFormat eImageFormat, 
+            float compressionLevel, 
+            unsigned char * data, 
+            int * dataSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``eImageFormat`` :ref:`id3FaceImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` float
+          :guilabel:`in` Compression level to apply.
+
+          ``data`` unsigned char *
+          :guilabel:`out` Buffer to export the image object to.
+
+          ``dataSize`` int *
+          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Uint8List toBuffer(ImageFormat imageFormat, double compressionLevel)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageFormat`` :ref:`ImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` double
+          :guilabel:`in` Compression level to apply.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Uint8List``
+          Buffer to export the image object to.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public byte[] ToBuffer(ImageFormat imageFormat, float compressionLevel)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageFormat`` :ref:`ImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` float
+          :guilabel:`in` Compression level to apply.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``byte[]``
+          Buffer to export the image object to.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public byte[] toBuffer(ImageFormat imageFormat, float compressionLevel) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageFormat`` :ref:`ImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` float
+          :guilabel:`in` Compression level to apply.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``byte[]``
+          Buffer to export the image object to.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        to_buffer(self, image_format: ImageFormat, compression_level: float) -> bytearray
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image_format`` :ref:`ImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compression_level`` float
+          :guilabel:`in` Compression level to apply.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``bytearray``
+          Buffer to export the image object to.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func toBuffer(imageFormat: ImageFormat, compressionLevel: Float) throws -> [UInt8]
+
+      **Parameters**
+
+        .. line-block::
+
+          ``imageFormat`` :ref:`ImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` Float
+          :guilabel:`in` Compression level to apply.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``[UInt8]``
+          Buffer to export the image object to.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

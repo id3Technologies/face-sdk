@@ -1,0 +1,205 @@
+.. index:: 
+  !FaceEncoder Class
+
+.. _face_encoder_class:
+
+===============================================================================
+FaceEncoder Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  computeQuality<compute_quality>
+  createTemplate<create_template>
+  minimalIod<minimal_iod>
+  model<model>
+  processingUnit<processing_unit>
+  threadCount<thread_count>
+  warmUp<warm_up>
+
+
+Definition
+----------
+.. line-block::
+    Extracts facial features and encodes face templates.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceEncoder *ID3_FACE_ENCODER;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceEncoder implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceEncoder
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceEncoder implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceEncoder
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceEncoder
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_ENCODER hFaceEncoder{};
+        int err = id3FaceEncoder_Initialize(&hFaceEncoder);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceEncoder_Dispose(&hFaceEncoder);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceEncoder = sdk.FaceEncoder();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceEncoder.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceEncoder = new FaceEncoder())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceEncoder = new FaceEncoder()
+        // ...
+        faceEncoder.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceEncoder faceEncoder = new FaceEncoder()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceEncoder faceEncoder = new FaceEncoder();
+        // ...
+        faceEncoder.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceEncoder = FaceEncoder()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceEncoder
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceEncoder: FaceEncoder? = nil
+        faceEncoder = try FaceEncoder()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`minimalIod<face_encoder_minimal_iod_class_member>`
+    - int
+    - Minimal interocular distance (IOD) in pixels required to perform a face encoding.
+  * - :ref:`model<face_encoder_model_class_member>`
+    - :ref:`FaceModel<face_model_enum>`
+    - Model used to create templates.
+  * - :ref:`processingUnit<face_encoder_processing_unit_class_member>`
+    - :ref:`ProcessingUnit<processing_unit_enum>`
+    - Processing unit where to run the encoding process.
+  * - :ref:`threadCount<face_encoder_thread_count_class_member>`
+    - int
+    - Number of threads to use for encoding templates.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`computeQuality<face_encoder_compute_quality_class_method>`
+    - Computes the quality of a detected face.
+  * - :ref:`createTemplate<face_encoder_create_template_class_method>`
+    - Extracts the unique features of a detected face and store them in a FaceTemplate.
+  * - :ref:`warmUp<face_encoder_warm_up_class_method>`
+    - Gets the face encoder module ready to work by initializing all its internal memory layout.

@@ -1,0 +1,114 @@
+.. index:: 
+  !TrackedFace.trackingStatus Property
+
+.. _tracked_face_tracking_status_class_member:
+
+===============================================================================
+TrackedFace.trackingStatus Property
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Type: :ref:`TrackingStatus<tracking_status_enum>`
+
+Definition
+----------
+
+Status of the tracked face. See FaceTrackingStatus for more details.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetTrackingStatus (ID3_TRACKED_FACE hTrackedFace, id3FaceTrackingStatus * eTrackingStatus)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      TrackingStatus get trackingStatus => getTrackingStatus();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public TrackingStatus trackingStatus
+      {
+          get => GettrackingStatus();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public TrackingStatus getTrackingStatus() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      tracking_status: TrackingStatus
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

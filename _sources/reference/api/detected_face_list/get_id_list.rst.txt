@@ -1,0 +1,162 @@
+.. index:: 
+  !DetectedFaceList.getIdList Method
+  
+.. _detected_face_list_get_id_list_class_method:
+
+===============================================================================
+DetectedFaceList.getIdList Method
+===============================================================================
+
+Module: :ref:`DetectedFaceList<detected_face_list_class>`
+
+Definition
+----------
+
+Gets the list of IDs in the list.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_GetIdList (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            int * ids, 
+            int * idsSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``ids`` int *
+          :guilabel:`out` The list of IDs in the list.
+
+          ``idsSize`` int *
+          :guilabel:`in` Size of the 'ids' buffer. Receives the number of elements in the 'ids' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        List<int> getIdList()
+
+      **Returns**
+
+        .. line-block::
+
+          ``List<int>``
+          The list of IDs in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int[] GetIdList()
+
+      **Returns**
+
+        .. line-block::
+
+          ``int[]``
+          The list of IDs in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int[] getIdList() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``int[]``
+          The list of IDs in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_id_list(self) -> List[int]
+
+      **Returns**
+
+        .. line-block::
+
+          ``List[int]``
+          The list of IDs in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getIdList() throws -> [Int32]
+
+      **Returns**
+
+        .. line-block::
+
+          ``[Int]``
+          The list of IDs in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

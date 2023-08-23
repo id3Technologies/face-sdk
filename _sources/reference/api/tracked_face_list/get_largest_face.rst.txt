@@ -1,0 +1,158 @@
+.. index:: 
+  !TrackedFaceList.getLargestFace Method
+  
+.. _tracked_face_list_get_largest_face_class_method:
+
+===============================================================================
+TrackedFaceList.getLargestFace Method
+===============================================================================
+
+Module: :ref:`TrackedFaceList<tracked_face_list_class>`
+
+Definition
+----------
+
+Gets the largest face in the list.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_GetLargestFace (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            ID3_TRACKED_FACE hLargestFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``hLargestFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`out` The largest tracked face in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        TrackedFace getLargestFace()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The largest tracked face in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public TrackedFace GetLargestFace()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The largest tracked face in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public TrackedFace getLargestFace() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The largest tracked face in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_largest_face(self) -> TrackedFace
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The largest tracked face in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getLargestFace() throws -> TrackedFace
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The largest tracked face in the list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

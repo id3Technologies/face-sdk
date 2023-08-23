@@ -1,0 +1,217 @@
+.. index:: 
+  !ImageList Class
+
+.. _image_list_class:
+
+===============================================================================
+ImageList Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  add<add>
+  clear<clear>
+  clone<clone>
+  count<count>
+  get<get>
+  getCount<get_count>
+  removeAt<remove_at>
+  resize<resize>
+  set<set>
+
+
+Definition
+----------
+.. line-block::
+    Represents a list of images.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImageList *ID3_FACE_IMAGE_LIST;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class ImageList implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class ImageList
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class ImageList implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class ImageList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class ImageList
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE_LIST hImageList{};
+        int err = id3FaceImageList_Initialize(&hImageList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImageList_Dispose(&hImageList);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final imageList = sdk.ImageList();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        imageList.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var imageList = new ImageList())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var imageList = new ImageList()
+        // ...
+        imageList.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (ImageList imageList = new ImageList()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        ImageList imageList = new ImageList();
+        // ...
+        imageList.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        imageList = ImageList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del imageList
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var imageList: ImageList? = nil
+        imageList = try ImageList()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`count<image_list_count_class_member>`
+    - int
+    - Gets the number of elements contained in the list
+  * - operator [int index]
+    - :ref:`Image<image_class>`
+    - Gets or sets the element at the specified index in the list.
+
+Iteration
+---------
+
+These class support iteration for Dart, C#, Java and Python languages.
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`add<image_list_add_class_method>`
+    - Adds an item to the ImageList object.
+  * - :ref:`clear<image_list_clear_class_method>`
+    - Clears the ImageList object.
+  * - :ref:`clone<image_list_clone_class_method>`
+    - Clones the ImageList object.
+  * - :ref:`get<image_list_get_class_method>`
+    - Gets an item of the ImageList object.
+  * - :ref:`getCount<image_list_get_count_class_method>`
+    - Gets the number of elements in the ImageList object.
+  * - :ref:`removeAt<image_list_remove_at_class_method>`
+    - Removes an element of the ImageList object.
+  * - :ref:`resize<image_list_resize_class_method>`
+    - ImageList object.
+  * - :ref:`set<image_list_set_class_method>`
+    - Sets an item of the ImageList object.

@@ -1,0 +1,163 @@
+.. index:: 
+  !FaceIndexer.deleteTemplate Method
+  
+.. _face_indexer_delete_template_class_method:
+
+===============================================================================
+FaceIndexer.deleteTemplate Method
+===============================================================================
+
+Module: :ref:`FaceIndexer<face_indexer_class>`
+
+Definition
+----------
+
+Deletes a template from the face indexer.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceIndexer_DeleteTemplate (
+            ID3_FACE_INDEXER hFaceIndexer, 
+            const char * id)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
+          :guilabel:`in` Handle to the FaceIndexer object.
+
+          ``id`` const char *
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void deleteTemplate(String? id)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` String
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void DeleteTemplate(string id)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` string
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void deleteTemplate(String id) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` String
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        delete_template(self, id: str) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` str
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func deleteTemplate(id: String) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` String
+          :guilabel:`in` ID of the face template to delete.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

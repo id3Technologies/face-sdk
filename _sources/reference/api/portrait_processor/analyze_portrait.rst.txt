@@ -1,0 +1,254 @@
+.. index:: 
+  !PortraitProcessor.analyzePortrait Method
+  
+.. _portrait_processor_analyze_portrait_class_method:
+
+===============================================================================
+PortraitProcessor.analyzePortrait Method
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Definition
+----------
+
+Analyzes a still image and creates a portrait with the first detected face.
+
+This method performs the following tasks:
+
+- Face detection and tracking with prediction models
+
+- Landmark detection (68 points)
+
+- Head pose estimation
+
+- Subject's position verification
+
+- Geometric attributes computation
+
+- Template encoding
+
+- Additional optional computations:
+
+   * age estimation
+
+   * background uniformity computation
+
+   * emotion detection
+
+   * eye gaze detection
+
+   * eye opening detection
+
+   * face mask detection
+
+   * gender estimation
+
+   * glasses detection
+
+   * hat detection
+
+   * make-up detection
+
+   * mouth opening estimation
+
+   * occlusion detection
+
+   * photographic attributes computation
+
+   * presentation attack detection
+
+   * red-eye detection
+
+   * smile detection
+
+- Verification of compliance on many quality attributes
+
+- Unified quality score computation
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortraitProcessor_AnalyzePortrait (
+            ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_FACE_PORTRAIT hPortrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortraitProcessor`` :ref:`ID3_FACE_PORTRAIT_PROCESSOR<portrait_processor_class>`
+          :guilabel:`in` Handle to the PortraitProcessor object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Input image to process.
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`out` The newly created portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Portrait analyzePortrait(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Input image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public Portrait AnalyzePortrait(Image image)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Input image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public Portrait analyzePortrait(Image image) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Input image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        analyze_portrait(self, image: Image) -> Portrait
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Input image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func analyzePortrait(image: Image) throws -> Portrait
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Input image to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

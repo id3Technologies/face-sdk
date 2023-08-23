@@ -1,0 +1,63 @@
+.. index:: 
+  !PhotographicAttributes.faceDynamicRange Property
+
+.. _photographic_attributes_face_dynamic_range_struct_member:
+
+===============================================================================
+PhotographicAttributes.faceDynamicRange Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating the dynamic range of the image in the face region.
+
+.. hint:: The recommended value for a portrait is over 110.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int FaceDynamicRange
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int faceDynamicRange
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int FaceDynamicRange
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int faceDynamicRange
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int face_dynamic_range
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int faceDynamicRange
+

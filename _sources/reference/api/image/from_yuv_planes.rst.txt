@@ -1,0 +1,344 @@
+.. index:: 
+  !Image.fromYuvPlanes Method
+  
+.. _image_from_yuv_planes_class_method:
+
+===============================================================================
+Image.fromYuvPlanes Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Imports the image object from YUV planes.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_FromYuvPlanes (
+            ID3_FACE_IMAGE hImage, 
+            unsigned char * yPlane, 
+            int yPlaneSize, 
+            unsigned char * uPlane, 
+            int uPlaneSize, 
+            unsigned char * vPlane, 
+            int vPlaneSize, 
+            int yWidth, 
+            int yHeight, 
+            int uvPixelStride, 
+            int uvRowStride, 
+            id3FacePixelFormat eDstPixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``yPlane`` unsigned char *
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``yPlaneSize`` int
+          :guilabel:`in` Size of the 'yPlane' buffer.
+
+          ``uPlane`` unsigned char *
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``uPlaneSize`` int
+          :guilabel:`in` Size of the 'uPlane' buffer.
+
+          ``vPlane`` unsigned char *
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``vPlaneSize`` int
+          :guilabel:`in` Size of the 'vPlane' buffer.
+
+          ``yWidth`` int
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``yHeight`` int
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uvPixelStride`` int
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uvRowStride`` int
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``eDstPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        static Image fromYuvPlanes(Uint8List? yPlane, Uint8List? uPlane, Uint8List? vPlane, int yWidth, int yHeight, int uvPixelStride, int uvRowStride, PixelFormat dstPixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``yPlane`` Uint8List
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``uPlane`` Uint8List
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``vPlane`` Uint8List
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``yWidth`` int
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``yHeight`` int
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uvPixelStride`` int
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uvRowStride`` int
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static Image FromYuvPlanes(byte[] yPlane, byte[] uPlane, byte[] vPlane, int yWidth, int yHeight, int uvPixelStride, int uvRowStride, PixelFormat dstPixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``yPlane`` byte[]
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``uPlane`` byte[]
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``vPlane`` byte[]
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``yWidth`` int
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``yHeight`` int
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uvPixelStride`` int
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uvRowStride`` int
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public static Image fromYuvPlanes(byte[] yPlane, byte[] uPlane, byte[] vPlane, int yWidth, int yHeight, int uvPixelStride, int uvRowStride, PixelFormat dstPixelFormat) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``yPlane`` byte[]
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``uPlane`` byte[]
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``vPlane`` byte[]
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``yWidth`` int
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``yHeight`` int
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uvPixelStride`` int
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uvRowStride`` int
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        @staticmethod
+        from_yuv_planes(y_plane: bytearray, u_plane: bytearray, v_plane: bytearray, y_width: int, y_height: int, uv_pixel_stride: int, uv_row_stride: int, dst_pixel_format: PixelFormat) -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``y_plane`` bytearray
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``u_plane`` bytearray
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``v_plane`` bytearray
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``y_width`` int
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``y_height`` int
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uv_pixel_stride`` int
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uv_row_stride`` int
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``dst_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public static func fromYuvPlanes(yPlane: [UInt8], uPlane: [UInt8], vPlane: [UInt8], yWidth: Int32, yHeight: Int32, uvPixelStride: Int32, uvRowStride: Int32, dstPixelFormat: PixelFormat) throws -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``yPlane`` [UInt8]
+          :guilabel:`in` Buffer containing the Y plane.
+
+          ``uPlane`` [UInt8]
+          :guilabel:`in` Buffer containing the U plane.
+
+          ``vPlane`` [UInt8]
+          :guilabel:`in` Buffer containing the V plane.
+
+          ``yWidth`` Int32
+          :guilabel:`in` Width in pixels of the Y plane.
+
+          ``yHeight`` Int32
+          :guilabel:`in` Height in pixels of the Y plane.
+
+          ``uvPixelStride`` Int32
+          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+
+          ``uvRowStride`` Int32
+          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+
+          ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input image to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

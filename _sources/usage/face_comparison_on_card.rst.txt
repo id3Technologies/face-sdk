@@ -1,0 +1,202 @@
+.. _face_comparison_on_card:
+
+=======================
+Face comparison on card
+=======================
+
+Face comparison on smart card, also known as Match-on-Card technology, means that the final stage of biometric verification is carried out on an integrated circuit card (ICC). This technology makes a smart card truly personal by replacing the PIN code needed to give access to the card with facial recognition.
+
+.. note:: `Contact us <mailto:contact@id3.eu>`_ for a list of cards compatible with our Match-on-Card technology.
+
+Enrolment data
+==============
+
+The biometric data to be sent to the card for the purpose of enrolment must be in the form of a Biometric Information Template (BIT), as per ISO/IEC 7816-11.
+The BIT contains descriptive information about the associated biometric template data.
+
+The template data shall be generated using the :ref:`FaceEncoder<face_encoder_class>`.
+Then call the :ref:`face_template_to_bit_class_method` for correctly formatted data.
+
+.. important:: 
+  The BIT must contain the decision threshold associated with the face template. See :ref:`match_on_card_decision_threshold` for details.
+
+Verification data
+=================
+
+The biometric data to be sent to the card for the purpose of verification must be in the form of a Biometric Data Template (BDT) as per ISO/IEC 7816-11.
+The BDT contains biometric template data encapsulated in a BER-TLV data object '7F2E'.
+
+The template data shall be generated using the :ref:`FaceEncoder<face_encoder_class>`.
+Then call the :ref:`face_template_to_bdt_class_method` for correctly formatted data.
+
+.. _match_on_card_decision_threshold:
+
+Decision thresholds
+===================
+
+The decision threshold for reaching a specific FMR varies according to the facial encoder used.
+
+Encoder version 9A
+------------------
+The table below defines typical matching decision values for use with version 9A of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 494
+  * - 0.1%
+    - 632
+  * - 0.01%
+    - 744
+  * - 0.001%
+    - 843
+  * - 0.0001%
+    - 946
+
+Encoder version 9B
+------------------
+The table below defines typical matching decision values for use with version 9B of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 4228
+  * - 0.1%
+    - 5399
+  * - 0.01%
+    - 6316
+  * - 0.001%
+    - 7026
+  * - 0.0001%
+    - 7531
+
+Encoder version 8A
+------------------
+The table below defines typical matching decision values for use with version 8A of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 472
+  * - 0.1%
+    - 613
+  * - 0.01%
+    - 735
+  * - 0.001%
+    - 845
+  * - 0.0001%
+    - 940
+
+Encoder version 8B
+------------------
+The table below defines typical matching decision values for use with version 8B of the facial feature encoder:
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - False Match Rate
+    - Decision threshold
+  * - 1.0%
+    - 3661
+  * - 0.1%
+    - 4871
+  * - 0.01%
+    - 5825
+  * - 0.001%
+    - 6602
+  * - 0.0001%
+    - 7216
+
+Example
+=======
+
+The example below demonstrates how to obtain the biometric data template (BDT) from a face image.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. literalinclude:: /_static/samples/sample.c
+        :language: c
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 4
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. literalinclude:: /_static/samples/sample.dart
+        :language: dart
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 2
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. literalinclude:: /_static/samples/sample.cs
+        :language: c#
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 12
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. literalinclude:: /_static/samples/sample.java
+        :language: java
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 8
+
+    .. tab-item:: Kotlin
+      :sync: Kotlin
+
+      .. literalinclude:: /_static/samples/sample.kt
+        :language: kotlin
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 4
+
+    .. tab-item:: Python
+      :sync: python
+
+      .. literalinclude:: /_static/samples/sample.py
+        :language: python
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 4
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. literalinclude:: /_static/samples/sample.swift
+        :language: swift
+        :start-after: [face_comparison_on_card]
+        :end-before: [face_comparison_on_card]
+        :dedent: 4
+
+
+See also
+========
+
+- :ref:`face_encoder_class`
+- :ref:`face_template_class`

@@ -1,0 +1,61 @@
+.. index:: 
+  !DetectedFaceAttackSupport.attackSupport Property
+
+.. _detected_face_attack_support_attack_support_struct_member:
+
+===============================================================================
+DetectedFaceAttackSupport.attackSupport Property
+===============================================================================
+
+Structure: :ref:`DetectedFaceAttackSupport<detected_face_attack_support_struct>`
+
+Definition
+----------
+
+Attack support type.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      id3FaceAttackSupport AttackSupport
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceAttackSupport attackSupport
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      FaceAttackSupport AttackSupport
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      FaceAttackSupport attackSupport
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      FaceAttackSupport attack_support
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      FaceAttackSupport attackSupport
+

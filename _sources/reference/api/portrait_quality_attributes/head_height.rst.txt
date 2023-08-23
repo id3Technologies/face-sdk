@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.headHeight Property
+
+.. _portrait_quality_attributes_head_height_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.headHeight Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the height of the head is correct.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeadHeight
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int headHeight
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeadHeight
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int headHeight
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int head_height
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int headHeight
+

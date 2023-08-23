@@ -1,0 +1,65 @@
+.. index:: 
+  !FaceOcclusionScores.leftEyeOcclusionScore Property
+
+.. _face_occlusion_scores_left_eye_occlusion_score_struct_member:
+
+===============================================================================
+FaceOcclusionScores.leftEyeOcclusionScore Property
+===============================================================================
+
+Structure: :ref:`FaceOcclusionScores<face_occlusion_scores_struct>`
+
+Definition
+----------
+
+Value indicating whether the left eye is occluded or not.
+
+100 means that the left eye is definitely occluded.
+
+.. hint:: The maximum recommended value is 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int LeftEyeOcclusionScore
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int leftEyeOcclusionScore
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int LeftEyeOcclusionScore
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int leftEyeOcclusionScore
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int left_eye_occlusion_score
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int leftEyeOcclusionScore
+

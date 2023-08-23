@@ -1,0 +1,122 @@
+.. index:: 
+  !FaceTracker.detectionModel Property
+
+.. _face_tracker_detection_model_class_member:
+
+===============================================================================
+FaceTracker.detectionModel Property
+===============================================================================
+
+Module: :ref:`FaceTracker<face_tracker_class>`
+
+Type: :ref:`FaceModel<face_model_enum>`
+
+Definition
+----------
+
+Model used to detect and track faces.
+
+.. hint:: Default value is FaceDetector4B.
+
+.. note:: Some better accuracy/speed balances can be found by choosing another model.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel * eDetectionModel)
+      int id3FaceTracker_SetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel eDetectionModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceModel get detectionModel => getDetectionModel();
+      set detectionModel(FaceModel value) => setDetectionModel(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceModel detectionModel
+      {
+          get => GetdetectionModel();
+          set => SetdetectionModel(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceModel getDetectionModel() throws FaceException
+      public void setDetectionModel(FaceModel detectionModel) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      detection_model: FaceModel
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

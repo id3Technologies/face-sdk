@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.equalBrightness Property
+
+.. _portrait_quality_attributes_equal_brightness_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.equalBrightness Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether lighting is equally distributed on the face, in particular symmetrically, i.e., there is no difference between the brightness of the right and left side of the face.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int EqualBrightness
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int equalBrightness
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int EqualBrightness
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int equalBrightness
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int equal_brightness
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int equalBrightness
+

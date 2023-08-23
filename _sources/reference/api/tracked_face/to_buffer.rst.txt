@@ -1,0 +1,162 @@
+.. index:: 
+  !TrackedFace.toBuffer Method
+  
+.. _tracked_face_to_buffer_class_method:
+
+===============================================================================
+TrackedFace.toBuffer Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Exports the face object to a buffer.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_ToBuffer (
+            ID3_TRACKED_FACE hTrackedFace, 
+            unsigned char * data, 
+            int * dataSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``data`` unsigned char *
+          :guilabel:`out` The buffer to which the face object is exported.
+
+          ``dataSize`` int *
+          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Uint8List toBuffer()
+
+      **Returns**
+
+        .. line-block::
+
+          ``Uint8List``
+          The buffer to which the face object is exported.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public byte[] ToBuffer()
+
+      **Returns**
+
+        .. line-block::
+
+          ``byte[]``
+          The buffer to which the face object is exported.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public byte[] toBuffer() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          ``byte[]``
+          The buffer to which the face object is exported.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        to_buffer(self) -> bytearray
+
+      **Returns**
+
+        .. line-block::
+
+          ``bytearray``
+          The buffer to which the face object is exported.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func toBuffer() throws -> [UInt8]
+
+      **Returns**
+
+        .. line-block::
+
+          ``[UInt8]``
+          The buffer to which the face object is exported.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

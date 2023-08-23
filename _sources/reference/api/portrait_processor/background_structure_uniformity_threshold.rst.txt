@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.backgroundStructureUniformityThreshold Property
+
+.. _portrait_processor_background_structure_uniformity_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.backgroundStructureUniformityThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Background structure uniformity threshold.
+
+If the score is above this value, the background structure of the image is definitely uniform.
+
+.. hint:: Default value is 80.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetBackgroundStructureUniformityThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * backgroundStructureUniformityThreshold)
+      int id3FacePortraitProcessor_SetBackgroundStructureUniformityThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int backgroundStructureUniformityThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get backgroundStructureUniformityThreshold => getBackgroundStructureUniformityThreshold();
+      set backgroundStructureUniformityThreshold(int value) => setBackgroundStructureUniformityThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int backgroundStructureUniformityThreshold
+      {
+          get => GetbackgroundStructureUniformityThreshold();
+          set => SetbackgroundStructureUniformityThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getBackgroundStructureUniformityThreshold() throws FaceException
+      public void setBackgroundStructureUniformityThreshold(int backgroundStructureUniformityThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      background_structure_uniformity_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

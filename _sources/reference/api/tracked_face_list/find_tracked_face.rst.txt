@@ -1,0 +1,202 @@
+.. index:: 
+  !TrackedFaceList.findTrackedFace Method
+  
+.. _tracked_face_list_find_tracked_face_class_method:
+
+===============================================================================
+TrackedFaceList.findTrackedFace Method
+===============================================================================
+
+Module: :ref:`TrackedFaceList<tracked_face_list_class>`
+
+Definition
+----------
+
+Finds a tracked face by ID.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_FindTrackedFace (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            int id, 
+            ID3_TRACKED_FACE hTrackedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``id`` int
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`out` The found tracked face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        TrackedFace findTrackedFace(int id)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` int
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The found tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public TrackedFace FindTrackedFace(int id)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` int
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The found tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public TrackedFace findTrackedFace(int id) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` int
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The found tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        find_tracked_face(self, id: int) -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` int
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The found tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func findTrackedFace(id: Int32) throws -> TrackedFace
+
+      **Parameters**
+
+        .. line-block::
+
+          ``id`` Int32
+          :guilabel:`in` ID of the tracked face to find in the list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`TrackedFace<tracked_face_class>`
+          The found tracked face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,64 @@
+.. index:: 
+  !Face encoding
+
+.. _face_encoding:
+
+=============
+Face encoding
+=============
+
+Face encoding is the process of extracting facial features from a :ref:`detected face<face_detection>`. It outputs a :ref:`face template<face_template>` to be used for :ref:`face comparison<face_comparison>` or :ref:`face search<face_search>`.
+
+Encoding models
+===============
+
+.. list-table::
+    :width: 100
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Model
+      - Size
+      - Description
+
+    * - FaceEncoder9A
+      - 127.36 MB
+      - This model provides the best accuracy. It is recommended for 1-to-N applications or in an uncontrolled environment. Generated template size is 264 bytes.
+
+    * - FaceEncoder9B
+      - 1.99 MB
+      - This model provides a good balance of accuracy, speed, and size. This model is less robust to variations of head pose than the 9A version and should therefore only be used in a controlled environment. Generated template size is 140 bytes.
+
+    * - FaceEncoder8A
+      - 152.46 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 9A whenever possible. Generated template size is 268 bytes.
+
+    * - FaceEncoder8B
+      - 2.12 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 9B whenever possible. Generated template size is 140 bytes.
+
+.. note:: Call the :ref:`face_library_load_model_class_method` to load the chosen model on application start.
+
+.. hint:: On startup, call the :ref:`face_encoder_warm_up_class_method` to prepare inference of the AI model.
+
+
+.. _face_template:
+
+Face template
+=============
+
+A face template is a small representation of a face, only 140 bytes or 264 bytes depending on the encoding model used. It is used for :ref:`face comparison<face_comparison>` or :ref:`face search<face_search>`.
+
+A face template can be also exported to the format required by id3 Face Match-on-Card solution.
+
+Encoding quality
+================
+
+The component also provides a quality estimator that aims at predicting the power of matching of a created template.
+
+.. important:: This functionality requires the model FaceEncodingQualityEstimator_2A to be loaded.
+
+See also
+========
+- :ref:`face_encoder_class`
+- :ref:`face_template_class`

@@ -1,0 +1,177 @@
+.. index:: 
+  !FaceMatcher Class
+
+.. _face_matcher_class:
+
+===============================================================================
+FaceMatcher Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  compareTemplateLists<compare_template_lists>
+  compareTemplates<compare_templates>
+  searchTemplate<search_template>
+
+
+Definition
+----------
+.. line-block::
+    Compares two face templates and searches for a face template in a list.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceMatcher *ID3_FACE_MATCHER;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceMatcher implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceMatcher
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceMatcher implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceMatcher
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceMatcher
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_MATCHER hFaceMatcher{};
+        int err = id3FaceMatcher_Initialize(&hFaceMatcher);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceMatcher_Dispose(&hFaceMatcher);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceMatcher = sdk.FaceMatcher();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceMatcher.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceMatcher = new FaceMatcher())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceMatcher = new FaceMatcher()
+        // ...
+        faceMatcher.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceMatcher faceMatcher = new FaceMatcher()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceMatcher faceMatcher = new FaceMatcher();
+        // ...
+        faceMatcher.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceMatcher = FaceMatcher()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceMatcher
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceMatcher: FaceMatcher? = nil
+        faceMatcher = try FaceMatcher()
+
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`compareTemplateLists<face_matcher_compare_template_lists_class_method>`
+    - Compares two template lists and outputs a comparison score.
+  * - :ref:`compareTemplates<face_matcher_compare_templates_class_method>`
+    - Compares two templates and outputs a comparison score.
+  * - :ref:`searchTemplate<face_matcher_search_template_class_method>`
+    - Performs a one-to-many search of a biometric probe against a previously initialized dictionary of biometric references and outputs a candidate list.

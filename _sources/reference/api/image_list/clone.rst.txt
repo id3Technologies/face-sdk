@@ -1,0 +1,158 @@
+.. index:: 
+  !ImageList.clone Method
+  
+.. _image_list_clone_class_method:
+
+===============================================================================
+ImageList.clone Method
+===============================================================================
+
+Module: :ref:`ImageList<image_list_class>`
+
+Definition
+----------
+
+Clones the ImageList object.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageList_CopyTo (
+            ID3_FACE_IMAGE_LIST hImageList, 
+            ID3_FACE_IMAGE_LIST hImageListDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`in` Handle to the ImageList object.
+
+          ``hImageListDst`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`out` The newly created image list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        ImageList clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public ImageList Clone()
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public ImageList clone() throws FaceException
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        clone(self) -> ImageList
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func clone() throws -> ImageList
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

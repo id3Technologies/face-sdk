@@ -1,0 +1,210 @@
+.. index:: 
+  !PortraitProcessor.cropIcaoPortrait Method
+  
+.. _portrait_processor_crop_icao_portrait_class_method:
+
+===============================================================================
+PortraitProcessor.cropIcaoPortrait Method
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Definition
+----------
+
+Creates an ICAO-compliant portrait image by cropping the source image around the detected face.
+
+This method uses the following parameters:
+
+- Portrait aspect ratio
+
+- Portrait eye position ratio
+
+- Portrait IOD ratio
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortraitProcessor_CropIcaoPortrait (
+            ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, 
+            ID3_FACE_PORTRAIT hPortrait, 
+            ID3_FACE_IMAGE hImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortraitProcessor`` :ref:`ID3_FACE_PORTRAIT_PROCESSOR<portrait_processor_class>`
+          :guilabel:`in` Handle to the PortraitProcessor object.
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`out` The output cropped image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Image cropIcaoPortrait(Portrait portrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output cropped image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public Image CropIcaoPortrait(Portrait portrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output cropped image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public Image cropIcaoPortrait(Portrait portrait) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output cropped image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        crop_icao_portrait(self, portrait: Portrait) -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output cropped image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func cropIcaoPortrait(portrait: Portrait) throws -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``portrait`` :ref:`Portrait<portrait_class>`
+          :guilabel:`in` Source portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output cropped image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

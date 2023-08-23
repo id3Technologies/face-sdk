@@ -1,0 +1,125 @@
+.. index:: 
+  !FaceEncoder.warmUp Method
+  
+.. _face_encoder_warm_up_class_method:
+
+===============================================================================
+FaceEncoder.warmUp Method
+===============================================================================
+
+Module: :ref:`FaceEncoder<face_encoder_class>`
+
+Definition
+----------
+
+Gets the face encoder module ready to work by initializing all its internal memory layout.
+
+This function can be called after setting all the parameters of the face encoder module.
+
+Calling this function is not mandatory as the internal memory layout is automatically initialized in the first call to createTemplate() if missing.
+
+.. important:: Loading a face encoder model is required to use this function. This SDK supports id3 face encoders 9A, 9B, 8A and 8B.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceEncoder_WarmUp (
+            ID3_FACE_ENCODER hFaceEncoder)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceEncoder`` :ref:`ID3_FACE_ENCODER<face_encoder_class>`
+          :guilabel:`in` Handle to the FaceEncoder object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void warmUp()
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void WarmUp()
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void warmUp() throws FaceException
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        warm_up(self) -> None
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func warmUp() throws
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

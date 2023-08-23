@@ -1,0 +1,97 @@
+.. index:: 
+  !FaceExpression Enumeration
+
+.. _face_expression_enum:
+
+===============================================================================
+FaceExpression Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the possible facial expressions.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceExpression
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum FaceExpression
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum FaceExpression
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum FaceExpression
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class FaceExpression
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum FaceExpression
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``unknown``
+    - 0
+    - Unknown.
+  * - ``angriness``
+    - 1
+    - Angriness.
+  * - ``disgust``
+    - 2
+    - Disgust.
+  * - ``fear``
+    - 3
+    - Fear.
+  * - ``happiness``
+    - 4
+    - Happiness.
+  * - ``neutrality``
+    - 5
+    - Neutrality.
+  * - ``sadness``
+    - 6
+    - Sadness.
+  * - ``surprise``
+    - 7
+    - Surprise.

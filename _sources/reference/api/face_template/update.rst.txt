@@ -1,0 +1,163 @@
+.. index:: 
+  !FaceTemplate.update Method
+  
+.. _face_template_update_class_method:
+
+===============================================================================
+FaceTemplate.update Method
+===============================================================================
+
+Module: :ref:`FaceTemplate<face_template_class>`
+
+Definition
+----------
+
+Updates the face template by combining it with the specified face template.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_Update (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            ID3_FACE_TEMPLATE hNewFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``hNewFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void update(FaceTemplate newFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``newFaceTemplate`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Update(FaceTemplate newFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``newFaceTemplate`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void update(FaceTemplate newFaceTemplate) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``newFaceTemplate`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        update(self, new_face_template: FaceTemplate) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``new_face_template`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func update(newFaceTemplate: FaceTemplate) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``newFaceTemplate`` :ref:`FaceTemplate<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

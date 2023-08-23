@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.makeupDetection Property
+
+.. _portrait_processor_makeup_detection_class_member:
+
+===============================================================================
+PortraitProcessor.makeupDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether makeup detection is enabled.
+
+.. important:: This option requires the FaceAttributesClassifier model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMakeupDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * makeupDetection)
+      int id3FacePortraitProcessor_SetMakeupDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool makeupDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get makeupDetection => getMakeupDetection();
+      set makeupDetection(bool value) => setMakeupDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool makeupDetection
+      {
+          get => GetmakeupDetection();
+          set => SetmakeupDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getMakeupDetection() throws FaceException
+      public void setMakeupDetection(boolean makeupDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      makeup_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

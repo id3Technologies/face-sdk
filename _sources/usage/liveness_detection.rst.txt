@@ -1,0 +1,43 @@
+.. index:: 
+  !Presentation attack detection
+
+.. _liveness_detection:
+
+=============================
+Presentation attack detection
+=============================
+
+Detecting presentation attack in a face recognition system is a challenging topic.
+
+The FacePAD component allows to detect presentation attacks in still images or video frames.
+
+It includes the following methods:
+- Passive liveness method based on high-resolution color image analysis.
+- Passive liveness method based on low-resolution color image analysis.
+- Passive liveness method based on depth-map analysis.
+
+.. note:: An active liveness method can also be implemented with this SDK using, for example, the head pose information or the smile.
+
+Color-based PAD
+===============
+
+The |product-name| provides various methods of PAD for color images:
+
+- A classifier that infers the live or spoof decision based on a high-resolution image. This method requires the model file **FaceColorPad1A** to be loaded. It is required to use a face image with an IOD of at least 64 pixels for this method. This algorithm is mainly designed for mobile phones applications.
+- A blurriness detector that allows to detect low-resolution attacks such as small ID card photos. This method requires the model **FaceBlurrinessDetector1A** to be loaded.
+- An attack support detector that allows to detect screen attacks and ID card attacks. This method requires the model **FaceAttackSupportDetector1A** to be loaded.
+
+Each of those algorithms target various cases. They can each be used alone or be merged together using late fusion. If doing so, it is recommended to trigger an attack alert as soon as one of the methods outputs an attack decision. Otherwise, if none of the algorithms triggers an attack decision, then the presentation can be assumed to be bona-fide.
+
+Depth-based PAD
+===============
+
+This feature requires the model **FaceDepthPad2A** to be loaded. It also requires a depth camera. When using this PAD method, one must be careful about the range of validity of the depth information provided by the 3rd party sensor. It is recommended to use this PAD algorithm only in a valid range of depths. It is also required to use a face image with an IOD of at least 16 pixels for this method.
+
+
+
+See Also 
+========
+
+- :ref:`face_pad_class`
+

@@ -1,0 +1,242 @@
+.. index:: 
+  !TrackedFace.getPortraitBounds Method
+  
+.. _tracked_face_get_portrait_bounds_class_method:
+
+===============================================================================
+TrackedFace.getPortraitBounds Method
+===============================================================================
+
+Module: :ref:`TrackedFace<tracked_face_class>`
+
+Definition
+----------
+
+Gets the bounding box of the detected face for ICAO portrait cropping.
+
+This method shall be used to ensure compliance with the ICAO standard.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_GetPortraitBounds (
+            ID3_TRACKED_FACE hTrackedFace, 
+            float eyeImageWidthRatio, 
+            float eyeImageHeightRatio, 
+            float imageRatio, 
+            id3FaceRectangle * sPortraitBounds)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``eyeImageWidthRatio`` float
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eyeImageHeightRatio`` float
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``imageRatio`` float
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+          ``sPortraitBounds`` :ref:`id3FaceRectangle *<rectangle_struct>`
+          :guilabel:`out` The portrait bounds of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Rectangle getPortraitBounds(double eyeImageWidthRatio, double eyeImageHeightRatio, double imageRatio)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eyeImageWidthRatio`` double
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eyeImageHeightRatio`` double
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``imageRatio`` double
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public Rectangle GetPortraitBounds(float eyeImageWidthRatio, float eyeImageHeightRatio, float imageRatio)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eyeImageWidthRatio`` float
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eyeImageHeightRatio`` float
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``imageRatio`` float
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public Rectangle getPortraitBounds(float eyeImageWidthRatio, float eyeImageHeightRatio, float imageRatio) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eyeImageWidthRatio`` float
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eyeImageHeightRatio`` float
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``imageRatio`` float
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        get_portrait_bounds(self, eye_image_width_ratio: float, eye_image_height_ratio: float, image_ratio: float) -> Rectangle
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eye_image_width_ratio`` float
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eye_image_height_ratio`` float
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``image_ratio`` float
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func getPortraitBounds(eyeImageWidthRatio: Float, eyeImageHeightRatio: Float, imageRatio: Float) throws -> Rectangle
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eyeImageWidthRatio`` Float
+          :guilabel:`in` Ratio between eye distance and image width. Must be in the range ]0;1[. Default recommended value is 0.25.
+
+          ``eyeImageHeightRatio`` Float
+          :guilabel:`in` Ratio between eye distance to top and image height. Must be in the range ]0;1[. Default recommended value is 0.45.
+
+          ``imageRatio`` Float
+          :guilabel:`in` Ratio between image height and image width. Default recommended value is 1.33 (4/3).
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,92 @@
+.. index:: 
+  !EyeGaze Structure
+
+.. _eye_gaze_struct:
+
+===============================================================================
+EyeGaze Structure
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  leftEyeXGaze<left_eye_x_gaze>
+  leftEyeYGaze<left_eye_y_gaze>
+  rightEyeXGaze<right_eye_x_gaze>
+  rightEyeYGaze<right_eye_y_gaze>
+
+Definition
+----------
+.. line-block::
+    Represents the eye gaze.
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceEyeGaze
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      class EyeGaze
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public partial struct EyeGaze
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public class EyeGaze
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      class EyeGaze
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public typealias EyeGaze = id3FaceEyeGaze
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`leftEyeXGaze<eye_gaze_left_eye_x_gaze_struct_member>`
+    - float
+    - Value indicating the gaze alongside the x-axis of the left eye in degrees.
+  * - :ref:`leftEyeYGaze<eye_gaze_left_eye_y_gaze_struct_member>`
+    - float
+    - Value indicating the gaze alongside the y-axis of the left eye in degrees.
+  * - :ref:`rightEyeXGaze<eye_gaze_right_eye_x_gaze_struct_member>`
+    - float
+    - Value indicating the gaze alongside the x-axis of the right eye in degrees.
+  * - :ref:`rightEyeYGaze<eye_gaze_right_eye_y_gaze_struct_member>`
+    - float
+    - Value indicating the gaze alongside the y-axis of the right eye in degrees.

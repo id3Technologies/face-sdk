@@ -1,0 +1,65 @@
+.. index:: 
+  !GlassesAttributes.tintedGlasses Property
+
+.. _glasses_attributes_tinted_glasses_struct_member:
+
+===============================================================================
+GlassesAttributes.tintedGlasses Property
+===============================================================================
+
+Structure: :ref:`GlassesAttributes<glasses_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if the glasses are tinted.
+
+100 means that the glasses are completely transparent.
+
+.. hint:: The recommended value is over 25.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int TintedGlasses
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int tintedGlasses
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int TintedGlasses
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int tintedGlasses
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int tinted_glasses
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int tintedGlasses
+

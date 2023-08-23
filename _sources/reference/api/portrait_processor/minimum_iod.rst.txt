@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.minimumIod Property
+
+.. _portrait_processor_minimum_iod_class_member:
+
+===============================================================================
+PortraitProcessor.minimumIod Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum intra-occular distance, in pixels.
+
+This parameter is used to the limit the distance from the subject to the camera.
+
+.. hint:: Default value is 0.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumIod)
+      int id3FacePortraitProcessor_SetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get minimumIod => getMinimumIod();
+      set minimumIod(int value) => setMinimumIod(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int minimumIod
+      {
+          get => GetminimumIod();
+          set => SetminimumIod(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMinimumIod() throws FaceException
+      public void setMinimumIod(int minimumIod) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      minimum_iod: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

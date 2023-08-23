@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.backgroundColorUniformityThreshold Property
+
+.. _portrait_processor_background_color_uniformity_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.backgroundColorUniformityThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Background color uniformity threshold.
+
+If the score is above this value, the background color of the image is definitely uniform.
+
+.. hint:: Default value is 80.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetBackgroundColorUniformityThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * backgroundColorUniformityThreshold)
+      int id3FacePortraitProcessor_SetBackgroundColorUniformityThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int backgroundColorUniformityThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get backgroundColorUniformityThreshold => getBackgroundColorUniformityThreshold();
+      set backgroundColorUniformityThreshold(int value) => setBackgroundColorUniformityThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int backgroundColorUniformityThreshold
+      {
+          get => GetbackgroundColorUniformityThreshold();
+          set => SetbackgroundColorUniformityThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getBackgroundColorUniformityThreshold() throws FaceException
+      public void setBackgroundColorUniformityThreshold(int backgroundColorUniformityThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      background_color_uniformity_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

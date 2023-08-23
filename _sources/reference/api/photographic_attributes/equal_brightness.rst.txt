@@ -1,0 +1,65 @@
+.. index:: 
+  !PhotographicAttributes.equalBrightness Property
+
+.. _photographic_attributes_equal_brightness_struct_member:
+
+===============================================================================
+PhotographicAttributes.equalBrightness Property
+===============================================================================
+
+Structure: :ref:`PhotographicAttributes<photographic_attributes_struct>`
+
+Definition
+----------
+
+Value indicating if one side of the face is ligther than the other side.
+
+0 means that brightness is perfectly equal on both sides of the face.
+
+.. hint:: The recommended value is over 90.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int EqualBrightness
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int equalBrightness
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int EqualBrightness
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int equalBrightness
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int equal_brightness
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int equalBrightness
+

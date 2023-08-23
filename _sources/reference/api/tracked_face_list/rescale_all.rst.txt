@@ -1,0 +1,163 @@
+.. index:: 
+  !TrackedFaceList.rescaleAll Method
+  
+.. _tracked_face_list_rescale_all_class_method:
+
+===============================================================================
+TrackedFaceList.rescaleAll Method
+===============================================================================
+
+Module: :ref:`TrackedFaceList<tracked_face_list_class>`
+
+Definition
+----------
+
+Rescales all tracked faces in the list.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_RescaleAll (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            float scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``scale`` float
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void rescaleAll(double scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` double
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void RescaleAll(float scale)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void rescaleAll(float scale) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        rescale_all(self, scale: float) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` float
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func rescaleAll(scale: Float) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``scale`` Float
+          :guilabel:`in` Scale factor to apply. Range is [0;+inf[.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

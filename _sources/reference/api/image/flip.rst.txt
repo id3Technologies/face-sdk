@@ -1,0 +1,182 @@
+.. index:: 
+  !Image.flip Method
+  
+.. _image_flip_class_method:
+
+===============================================================================
+Image.flip Method
+===============================================================================
+
+Module: :ref:`Image<image_class>`
+
+Definition
+----------
+
+Flips the image object in-place.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_Flip (
+            ID3_FACE_IMAGE hImage, 
+            bool flipHorizontally, 
+            bool flipVertically)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``flipHorizontally`` bool
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flipVertically`` bool
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        void flip(bool flipHorizontally, bool flipVertically)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``flipHorizontally`` bool
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flipVertically`` bool
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public void Flip(bool flipHorizontally, bool flipVertically)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``flipHorizontally`` bool
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flipVertically`` bool
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public void flip(boolean flipHorizontally, boolean flipVertically) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``flipHorizontally`` boolean
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flipVertically`` boolean
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        flip(self, flip_horizontally: bool, flip_vertically: bool) -> None
+
+      **Parameters**
+
+        .. line-block::
+
+          ``flip_horizontally`` bool
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flip_vertically`` bool
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func flip(flipHorizontally: Bool, flipVertically: Bool) throws
+
+      **Parameters**
+
+        .. line-block::
+
+          ``flipHorizontally`` Bool
+          :guilabel:`in` Set to 'true' to flip horizontally the image.
+
+          ``flipVertically`` Bool
+          :guilabel:`in` Set to 'true' to flip vertically the image.
+
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

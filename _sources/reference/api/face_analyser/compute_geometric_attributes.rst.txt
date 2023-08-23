@@ -1,0 +1,240 @@
+.. index:: 
+  !FaceAnalyser.computeGeometricAttributes Method
+  
+.. _face_analyser_compute_geometric_attributes_class_method:
+
+===============================================================================
+FaceAnalyser.computeGeometricAttributes Method
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Definition
+----------
+
+Computes the geometric attributes of a detected face. This function must be used for a portrait image with only one face in it.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeGeometricAttributes (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            ID3_FACE_POINT_LIST hLandmarks, 
+            id3FaceGeometricAttributes * sGeometricAttributes)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+          ``sGeometricAttributes`` :ref:`id3FaceGeometricAttributes *<geometric_attributes_struct>`
+          :guilabel:`out` The estimated geometric attributes of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        GeometricAttributes computeGeometricAttributes(Image image, DetectedFace detectedFace, PointList landmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`GeometricAttributes<geometric_attributes_struct>`
+          The estimated geometric attributes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public GeometricAttributes ComputeGeometricAttributes(Image image, DetectedFace detectedFace, PointList landmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`GeometricAttributes<geometric_attributes_struct>`
+          The estimated geometric attributes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public GeometricAttributes computeGeometricAttributes(Image image, DetectedFace detectedFace, PointList landmarks) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`GeometricAttributes<geometric_attributes_struct>`
+          The estimated geometric attributes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        compute_geometric_attributes(self, image: Image, detected_face: DetectedFace, landmarks: PointList) -> GeometricAttributes
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`GeometricAttributes<geometric_attributes_struct>`
+          The estimated geometric attributes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func computeGeometricAttributes(image: Image, detectedFace: DetectedFace, landmarks: PointList) throws -> GeometricAttributes
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``landmarks`` :ref:`PointList<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`GeometricAttributes<geometric_attributes_struct>`
+          The estimated geometric attributes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

@@ -1,0 +1,61 @@
+.. index:: 
+  !FacePose.pitch Property
+
+.. _face_pose_pitch_struct_member:
+
+===============================================================================
+FacePose.pitch Property
+===============================================================================
+
+Structure: :ref:`FacePose<face_pose_struct>`
+
+Definition
+----------
+
+Pitch angle in degrees.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float Pitch
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double pitch
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      float Pitch
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      float pitch
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      float pitch
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Float pitch
+

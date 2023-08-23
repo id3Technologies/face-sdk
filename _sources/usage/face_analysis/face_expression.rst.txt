@@ -1,0 +1,18 @@
+.. _face_expression:
+
+===============
+Face Expression
+===============
+
+Facial expressions of a subject are classified in six universal emotions: 
+
+- angriness
+- disgust
+- fear
+- happiness
+- sadness
+- surprise
+- neutral
+
+
+.. note:: Required AI model: **FaceExpressionClassifier1A**

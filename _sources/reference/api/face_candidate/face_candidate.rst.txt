@@ -1,0 +1,191 @@
+.. index:: 
+  !FaceCandidate Class
+
+.. _face_candidate_class:
+
+===============================================================================
+FaceCandidate Class
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+.. toctree::
+  :hidden:
+
+  clone<clone>
+  id<id>
+  score<score>
+
+
+Definition
+----------
+.. line-block::
+    Represents a candidate in a one-to-many search.
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceCandidate *ID3_FACE_CANDIDATE;
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        class FaceCandidate implements Finalizable
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public partial class FaceCandidate
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public class FaceCandidate implements AutoCloseable, Serializable
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceCandidate
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public class FaceCandidate
+
+
+
+Usage
+-----
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_CANDIDATE hFaceCandidate{};
+        int err = id3FaceCandidate_Initialize(&hFaceCandidate);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceCandidate_Dispose(&hFaceCandidate);
+        }
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        final faceCandidate = sdk.FaceCandidate();
+        // ...
+
+      **Explicit destruction**
+
+      .. code:: Dart
+
+        // ...
+        faceCandidate.dispose()
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        using (var faceCandidate = new FaceCandidate())
+        {
+           // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: C#
+
+        var faceCandidate = new FaceCandidate()
+        // ...
+        faceCandidate.Dispose()
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        try (FaceCandidate faceCandidate = new FaceCandidate()) {
+        // ...
+        }
+
+      **Explicit destruction**
+
+      .. code:: Java
+
+        FaceCandidate faceCandidate = new FaceCandidate();
+        // ...
+        faceCandidate.close();
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        faceCandidate = FaceCandidate()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceCandidate
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        private var faceCandidate: FaceCandidate? = nil
+        faceCandidate = try FaceCandidate()
+
+
+Properties
+----------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 5 65
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+  * - :ref:`id<face_candidate_id_class_member>`
+    - string
+    - ID of the most similar face template as defined in the reference face template list used to perform the search.
+  * - :ref:`score<face_candidate_score_class_member>`
+    - int
+    - Match score between the face probe template and the most similar one in the reference face template list used to perform the search.
+
+Methods
+-------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Name
+    - Description
+  * - :ref:`clone<face_candidate_clone_class_method>`
+    - Clones the FaceCandidate object.

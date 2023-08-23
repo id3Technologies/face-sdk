@@ -1,0 +1,227 @@
+.. index:: 
+  !FaceAnalyser.detectFaceMask Method
+  
+.. _face_analyser_detect_face_mask_class_method:
+
+===============================================================================
+FaceAnalyser.detectFaceMask Method
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Definition
+----------
+
+Detects the presence of a face mask on a detected face.
+
+A high score means that there is a high chance that the person is wearing a mask.
+
+The minimum recommended threshold is 15.
+
+.. important:: Loading the FaceMaskClassifier2A, model is required to use this function.
+
+
+.. tab-set::
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_DetectFaceMask (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            int * score)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``score`` int *
+          :guilabel:`out` The face mask presence score of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        int detectFaceMask(Image image, DetectedFace detectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The face mask presence score of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public int DetectFaceMask(Image image, DetectedFace detectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The face mask presence score of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public int detectFaceMask(Image image, DetectedFace detectedFace) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The face mask presence score of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        detect_face_mask(self, image: Image, detected_face: DetectedFace) -> int
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          The face mask presence score of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func detectFaceMask(image: Image, detectedFace: DetectedFace) throws -> Int32
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``detectedFace`` :ref:`DetectedFace<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``Int``
+          The face mask presence score of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+

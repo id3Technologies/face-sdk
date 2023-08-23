@@ -1,0 +1,22 @@
+.. _glasses_detection:
+
+==================
+Glasses Detection
+==================
+
+Glasses attributes provide additional information about the eye glasses, if present. It includes:
+
+- Frame on eye
+- Heavy frame
+- Tinted glasses
+
+#.. image:: ../../img/frame-crossing-the-eyes.jpg
+
+
+.. note:: Required AI model: **FaceAttributesClassifier2A**
+
+
+See Also
+--------
+- :ref:`face_attributes_struct`
+- :ref:`glasses_attributes_struct`

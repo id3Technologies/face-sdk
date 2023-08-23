@@ -1,0 +1,122 @@
+.. index:: 
+  !FaceAnalyser.overExposureSensibility Property
+
+.. _face_analyser_over_exposure_sensibility_class_member:
+
+===============================================================================
+FaceAnalyser.overExposureSensibility Property
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Type: int
+
+Definition
+----------
+
+Sensibility of the over-exposure classifier, from 0 to 255.
+
+The lower the value, the more sensitive the algorithm will be, meaning that it will be more likely to estimate over-exposed face images.
+
+.. hint:: Default value is 188.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceAnalyser_GetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int * overExposureSensibility)
+      int id3FaceAnalyser_SetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int overExposureSensibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get overExposureSensibility => getOverExposureSensibility();
+      set overExposureSensibility(int value) => setOverExposureSensibility(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int overExposureSensibility
+      {
+          get => GetoverExposureSensibility();
+          set => SetoverExposureSensibility(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getOverExposureSensibility() throws FaceException
+      public void setOverExposureSensibility(int overExposureSensibility) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      over_exposure_sensibility: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.maximumYawAngle Property
+
+.. _portrait_processor_maximum_yaw_angle_class_member:
+
+===============================================================================
+PortraitProcessor.maximumYawAngle Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: float
+
+Definition
+----------
+
+Maximum head yaw angle, in degrees.
+
+.. hint:: Default value is 8.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumYawAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * maximumYawAngle)
+      int id3FacePortraitProcessor_SetMaximumYawAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float maximumYawAngle)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      double get maximumYawAngle => getMaximumYawAngle();
+      set maximumYawAngle(double value) => setMaximumYawAngle(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public float maximumYawAngle
+      {
+          get => GetmaximumYawAngle();
+          set => SetmaximumYawAngle(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public float getMaximumYawAngle() throws FaceException
+      public void setMaximumYawAngle(float maximumYawAngle) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_yaw_angle: float
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.trackerMatchingThreshold Property
+
+.. _portrait_processor_tracker_matching_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.trackerMatchingThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Minimum match score to reach to preserve the ID of a tracked face between frame 't-1' and frame 't'.
+
+.. hint:: Default value is 3000 which corresponds to a False Match Rate of 1/1000.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * trackerMatchingThreshold)
+      int id3FacePortraitProcessor_SetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int trackerMatchingThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get trackerMatchingThreshold => getTrackerMatchingThreshold();
+      set trackerMatchingThreshold(int value) => setTrackerMatchingThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int trackerMatchingThreshold
+      {
+          get => GettrackerMatchingThreshold();
+          set => SettrackerMatchingThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getTrackerMatchingThreshold() throws FaceException
+      public void setTrackerMatchingThreshold(int trackerMatchingThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      tracker_matching_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

@@ -1,0 +1,120 @@
+.. index:: 
+  !PortraitProcessor.maximumEyeGazeY Property
+
+.. _portrait_processor_maximum_eye_gaze_y_class_member:
+
+===============================================================================
+PortraitProcessor.maximumEyeGazeY Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Maximum value of the eye gaze alongside the Y axis.
+
+.. hint:: Default value is 10.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumEyeGazeY (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumEyeGazeY)
+      int id3FacePortraitProcessor_SetMaximumEyeGazeY (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumEyeGazeY)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get maximumEyeGazeY => getMaximumEyeGazeY();
+      set maximumEyeGazeY(int value) => setMaximumEyeGazeY(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int maximumEyeGazeY
+      {
+          get => GetmaximumEyeGazeY();
+          set => SetmaximumEyeGazeY(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMaximumEyeGazeY() throws FaceException
+      public void setMaximumEyeGazeY(int maximumEyeGazeY) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      maximum_eye_gaze_y: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+

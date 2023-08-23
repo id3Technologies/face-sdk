@@ -1,0 +1,122 @@
+.. index:: 
+  !PortraitProcessor.makeupThreshold Property
+
+.. _portrait_processor_makeup_threshold_class_member:
+
+===============================================================================
+PortraitProcessor.makeupThreshold Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: int
+
+Definition
+----------
+
+Make-up detection threshold.
+
+If the detection score is above this value, the persone is definitely wearing make-up.
+
+.. hint:: Default value 50.
+
+
+.. tab-set::
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMakeupThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * makeupThreshold)
+      int id3FacePortraitProcessor_SetMakeupThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int makeupThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get makeupThreshold => getMakeupThreshold();
+      set makeupThreshold(int value) => setMakeupThreshold(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int makeupThreshold
+      {
+          get => GetmakeupThreshold();
+          set => SetmakeupThreshold(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getMakeupThreshold() throws FaceException
+      public void setMakeupThreshold(int makeupThreshold) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      makeup_threshold: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      TODO
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        ``FaceException``
+        An error has occurred during Face Library execution.
+
