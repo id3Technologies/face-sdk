@@ -19,20 +19,20 @@ Stride in bytes.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceImage_GetStride (ID3_FACE_IMAGE hImage, int * stride)
+      stride: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -46,7 +46,7 @@ Stride in bytes.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -64,7 +64,7 @@ Stride in bytes.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -79,22 +79,7 @@ Stride in bytes.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      stride: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -102,13 +87,32 @@ Stride in bytes.
 
     .. code:: Swift
 
-      TODO
+      public var stride: Int
+          get {
+              return Int(try! getStride())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceImage_GetStride (ID3_FACE_IMAGE hImage, int * stride)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

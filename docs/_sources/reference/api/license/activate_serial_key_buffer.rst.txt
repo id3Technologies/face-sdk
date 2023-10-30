@@ -12,50 +12,47 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves a license file buffer using a serial key.
+Activates a license using a serial key and returns the license in a data buffer.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_ActivateSerialKeyBuffer (
-            const char * hardwareCode, 
-            const char * serialKey, 
-            const char * commentary, 
-            unsigned char * licenseFileBuffer, 
-            int * licenseFileBufferSize)
+        @staticmethod
+        activate_serial_key_buffer(hardware_code: str, serial_key: str, commentary: str) -> bytearray
 
       **Parameters**
 
         .. line-block::
 
-          ``hardwareCode`` const char *
+          ``hardware_code`` str
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
-          ``serialKey`` const char *
+          ``serial_key`` str
           :guilabel:`in` The id3 serial key.
 
-          ``commentary`` const char *
+          ``commentary`` str
           :guilabel:`in` Commentary associated to this license activation.
-
-          ``licenseFileBuffer`` unsigned char *
-          :guilabel:`out` Pointer to a pre-allocated buffer to receive the license data.
-
-          ``licenseFileBufferSize`` int *
-          :guilabel:`in` Size of the 'licenseFileBuffer' buffer. Receives the number of elements in the 'licenseFileBuffer' array.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bytearray``
+          The license data buffer.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -83,7 +80,7 @@ Retrieves a license file buffer using a serial key.
         .. line-block::
 
           ``Uint8List``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data buffer.
 
       **Exceptions**
 
@@ -119,7 +116,7 @@ Retrieves a license file buffer using a serial key.
         .. line-block::
 
           ``byte[]``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data buffer.
 
       **Exceptions**
 
@@ -155,44 +152,7 @@ Retrieves a license file buffer using a serial key.
         .. line-block::
 
           ``byte[]``
-          Pointer to a pre-allocated buffer to receive the license data.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        activate_serial_key_buffer(hardware_code: str, serial_key: str, commentary: str) -> bytearray
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hardware_code`` str
-          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
-
-          ``serial_key`` str
-          :guilabel:`in` The id3 serial key.
-
-          ``commentary`` str
-          :guilabel:`in` Commentary associated to this license activation.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``bytearray``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data buffer.
 
       **Exceptions**
 
@@ -228,7 +188,7 @@ Retrieves a license file buffer using a serial key.
         .. line-block::
 
           ``[UInt8]``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data buffer.
 
       **Exceptions**
 
@@ -237,5 +197,45 @@ Retrieves a license file buffer using a serial key.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_ActivateSerialKeyBuffer (
+            const char * hardwareCode, 
+            const char * serialKey, 
+            const char * commentary, 
+            unsigned char * licenseFileBuffer, 
+            int * licenseFileBufferSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hardwareCode`` const char *
+          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
+
+          ``serialKey`` const char *
+          :guilabel:`in` The id3 serial key.
+
+          ``commentary`` const char *
+          :guilabel:`in` Commentary associated to this license activation.
+
+          ``licenseFileBuffer`` unsigned char *
+          :guilabel:`out` The license data buffer.
+
+          ``licenseFileBufferSize`` int *
+          :guilabel:`in` Size of the 'licenseFileBuffer' buffer. Receives the number of elements in the 'licenseFileBuffer' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

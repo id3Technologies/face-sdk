@@ -17,31 +17,22 @@ Retrieves the hardware code of the external drive you run the library on. This f
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetExternalDriveHardwareCode (
-            id3FaceLicenseHardwareCodeType eHardwareCodeType, 
-            char * code, 
-            int * codeSize, 
-            const char * externalDrivePath)
+        @staticmethod
+        get_external_drive_hardware_code(hardware_code_type: LicenseHardwareCodeType, external_drive_path: str=None) -> str
 
       **Parameters**
 
         .. line-block::
 
-          ``eHardwareCodeType`` :ref:`id3FaceLicenseHardwareCodeType<license_hardware_code_type_enum>`
-          :guilabel:`in` The requested hardware code type. Must be Windows USB.
+          ``hardware_code_type`` :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
+          :guilabel:`in` The requested hardware code type. Must be windowsUsb.
 
-          ``code`` char *
-          :guilabel:`out` Pointer to a pre-allocated buffer to receive the device hardware code.
-
-          ``codeSize`` int *
-          :guilabel:`in` Size of the 'code' buffer. Receives the minimum required buffer size to hold the 'code' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'code' (excluding terminating NULL character).
-
-          ``externalDrivePath`` const char *
+          ``external_drive_path`` str
           :guilabel:`in` On Windows to activate a license on a USB device, it must contain the path to the requested USB drive (e.g 'G:\').
 
 
@@ -49,9 +40,16 @@ Retrieves the hardware code of the external drive you run the library on. This f
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``str``
+          The device hardware code.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -65,7 +63,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``hardwareCodeType`` :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
-          :guilabel:`in` The requested hardware code type. Must be Windows USB.
+          :guilabel:`in` The requested hardware code type. Must be windowsUsb.
 
           ``externalDrivePath`` String
           :guilabel:`in` On Windows to activate a license on a USB device, it must contain the path to the requested USB drive (e.g 'G:\').
@@ -76,7 +74,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the device hardware code.
+          The device hardware code.
 
       **Exceptions**
 
@@ -98,7 +96,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``hardwareCodeType`` :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
-          :guilabel:`in` The requested hardware code type. Must be Windows USB.
+          :guilabel:`in` The requested hardware code type. Must be windowsUsb.
 
           ``externalDrivePath`` string
           :guilabel:`in` On Windows to activate a license on a USB device, it must contain the path to the requested USB drive (e.g 'G:\').
@@ -109,7 +107,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``string``
-          Pointer to a pre-allocated buffer to receive the device hardware code.
+          The device hardware code.
 
       **Exceptions**
 
@@ -131,7 +129,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``hardwareCodeType`` :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
-          :guilabel:`in` The requested hardware code type. Must be Windows USB.
+          :guilabel:`in` The requested hardware code type. Must be windowsUsb.
 
           ``externalDrivePath`` String
           :guilabel:`in` On Windows to activate a license on a USB device, it must contain the path to the requested USB drive (e.g 'G:\').
@@ -142,7 +140,7 @@ Retrieves the hardware code of the external drive you run the library on. This f
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the device hardware code.
+          The device hardware code.
 
       **Exceptions**
 
@@ -152,22 +150,31 @@ Retrieves the hardware code of the external drive you run the library on. This f
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
+    .. tab-item:: C
+      :sync: C
 
-      .. code:: Python
+      .. code:: C
 
-        @staticmethod
-        get_external_drive_hardware_code(hardware_code_type: LicenseHardwareCodeType, external_drive_path: str=None) -> str
+        int id3FaceLicense_GetExternalDriveHardwareCode (
+            id3FaceLicenseHardwareCodeType eHardwareCodeType, 
+            char * code, 
+            int * codeSize, 
+            const char * externalDrivePath)
 
       **Parameters**
 
         .. line-block::
 
-          ``hardware_code_type`` :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
-          :guilabel:`in` The requested hardware code type. Must be Windows USB.
+          ``eHardwareCodeType`` :ref:`id3FaceLicenseHardwareCodeType<license_hardware_code_type_enum>`
+          :guilabel:`in` The requested hardware code type. Must be windowsUsb.
 
-          ``external_drive_path`` str
+          ``code`` char *
+          :guilabel:`out` The device hardware code.
+
+          ``codeSize`` int *
+          :guilabel:`in` Size of the 'code' buffer. Receives the minimum required buffer size to hold the 'code' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'code' (excluding terminating NULL character).
+
+          ``externalDrivePath`` const char *
           :guilabel:`in` On Windows to activate a license on a USB device, it must contain the path to the requested USB drive (e.g 'G:\').
 
 
@@ -175,15 +182,8 @@ Retrieves the hardware code of the external drive you run the library on. This f
 
         .. line-block::
 
-          ``str``
-          Pointer to a pre-allocated buffer to receive the device hardware code.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

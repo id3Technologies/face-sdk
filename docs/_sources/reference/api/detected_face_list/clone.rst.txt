@@ -17,33 +17,27 @@ Clones the DetectedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFaceList_CopyTo (
-            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
-            ID3_DETECTED_FACE_LIST hDetectedFaceListDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`in` Handle to the DetectedFaceList object.
-
-          ``hDetectedFaceListDst`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`out` The newly created detected face list.
-
+        clone(self) -> DetectedFaceList
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`DetectedFaceList<detected_face_list_class>`
+          The newly created detected face list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the DetectedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> DetectedFaceList
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`DetectedFaceList<detected_face_list_class>`
-          The newly created detected face list.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the DetectedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_CopyTo (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            ID3_DETECTED_FACE_LIST hDetectedFaceListDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``hDetectedFaceListDst`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`out` The newly created detected face list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

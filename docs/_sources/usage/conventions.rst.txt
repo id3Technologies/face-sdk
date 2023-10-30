@@ -19,8 +19,56 @@ Examples
 
 .. tab-set::
 
+    .. tab-item:: Python
+        :sync: Python
+
+        - Class name: ``License``
+        - Function name: ``activate_serial_key``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.INVALID_LICENSE``
+
+    .. tab-item:: Dart
+        :sync: Dart
+
+        - Class name: ``License``
+        - Function name: ``activateSerialKey``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.invalidLicense``
+
+    .. tab-item:: C#
+        :sync: C#
+
+        - Class name: ``License``
+        - Function name: ``ActivateSerialKey``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.InvalidLicense``
+
+    .. tab-item:: Java
+        :sync: Java
+
+        - Class name: ``License``
+        - Function name: ``activateSerialKey``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.INVALID_LICENSE``
+
+    .. tab-item:: Kotlin
+        :sync: Kotlin
+
+        - Class name: ``License``
+        - Function name: ``activateSerialKey``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.INVALID_LICENSE``
+
+    .. tab-item:: Swift
+        :sync: Swift
+
+        - Class name: ``License``
+        - Function name: ``activateSerialKey``
+        - Structure: ``FacePoint``
+        - Enumeration field: ``LicenseError.invalidLicense``
+
     .. tab-item:: C
-        :sync: c
+        :sync: C
         
         - Class name: ``id3License_``
         - Function name: ``id3License_ActivateSerialKey``
@@ -29,53 +77,5 @@ Examples
 
         .. note:: 
             The C API implements pseudo object-oriented programming concepts where the object is passed explicitly to a member function as first parameter.
-
-    .. tab-item:: Dart
-        :sync: dart
-
-        - Class name: ``License``
-        - Function name: ``activateSerialKey``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.invalidLicense``
-
-    .. tab-item:: C#
-        :sync: csharp
-
-        - Class name: ``License``
-        - Function name: ``ActivateSerialKey``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.InvalidLicense``
-
-    .. tab-item:: Java
-        :sync: java
-
-        - Class name: ``License``
-        - Function name: ``activateSerialKey``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.INVALID_LICENSE``
-
-    .. tab-item:: Kotlin
-        :sync: kotlin
-
-        - Class name: ``License``
-        - Function name: ``activateSerialKey``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.INVALID_LICENSE``
-
-    .. tab-item:: Python
-        :sync: python
-
-        - Class name: ``License``
-        - Function name: ``activate_serial_key``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.INVALID_LICENSE``
-
-    .. tab-item:: Swift
-        :sync: swift
-
-        - Class name: ``License``
-        - Function name: ``activateSerialKey``
-        - Structure: ``FacePoint``
-        - Enumeration field: ``LicenseError.invalidLicense``
 
 

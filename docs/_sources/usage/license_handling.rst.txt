@@ -9,30 +9,30 @@ Activating a license
 
 One of the following methods can be used to activate a license programmatically:
 
-- :ref:`license_activate_class_method`
-- :ref:`license_activate_buffer_class_method`
-- :ref:`license_activate_activation_key_class_method`
-- :ref:`license_activate_activation_key_buffer_class_method`
-- :ref:`license_activate_serial_key_class_method`
-- :ref:`license_activate_serial_key_buffer_class_method`
+- :ref:`face_license_activate_class_method`
+- :ref:`face_license_activate_buffer_class_method`
+- :ref:`face_license_activate_activation_key_class_method`
+- :ref:`face_license_activate_activation_key_buffer_class_method`
+- :ref:`face_license_activate_serial_key_class_method`
+- :ref:`face_license_activate_serial_key_buffer_class_method`
 
 Here is an example how to activate a license using a serial number:
 
 .. tab-set::
 
-    .. tab-item:: C
-        :sync: c
-
-        .. literalinclude:: /_static/samples/sample.c
-            :language: c
+    .. tab-item:: Python
+        :sync: Python
+   
+        .. literalinclude:: /../samples/sample.py
+            :language: python
             :start-after: [license_activation]
             :end-before: [license_activation]
             :dedent: 4
 
     .. tab-item:: C#
-        :sync: csharp
+        :sync: C#
    
-        .. literalinclude:: /_static/samples/sample.cs
+        .. literalinclude:: /../samples/sample.cs
             :language: c#
             :start-after: [license_activation]
             :end-before: [license_activation]
@@ -40,28 +40,37 @@ Here is an example how to activate a license using a serial number:
 
 
     .. tab-item:: Dart
-        :sync: dart
+        :sync: Dart
 
-        .. literalinclude:: /_static/samples/sample.dart
+        .. literalinclude:: /../samples/sample.dart
             :language: dart
             :start-after: [license_activation]
             :end-before: [license_activation]
             :dedent: 2
 
     .. tab-item:: Java
-        :sync: java
+        :sync: Java
    
-        .. literalinclude:: /_static/samples/sample.java
+        .. literalinclude:: /../samples/sample.java
             :language: java
             :start-after: [license_activation]
             :end-before: [license_activation]
             :dedent: 8
 
     .. tab-item:: Kotlin
-        :sync: kotlin
+        :sync: Kotlin
    
-        .. literalinclude:: /_static/samples/sample.kt
+        .. literalinclude:: /../samples/sample.kt
             :language: kotlin
+            :start-after: [license_activation]
+            :end-before: [license_activation]
+            :dedent: 4
+
+    .. tab-item:: C
+        :sync: c
+
+        .. literalinclude:: /../samples/sample.c
+            :language: c
             :start-after: [license_activation]
             :end-before: [license_activation]
             :dedent: 4
@@ -83,56 +92,63 @@ Before calling any function of the SDK, you need to check a valid license file f
 
 .. tab-set::
 
-    .. tab-item:: C
-        :sync: c
-
-        .. literalinclude:: /_static/samples/sample.c
-            :language: c
+    .. tab-item:: Python
+        :sync: Python
+   
+        .. literalinclude:: /../samples/sample.py
+            :language: python
             :start-after: [license_check]
             :end-before: [license_check]
             :dedent: 4
 
     .. tab-item:: C#
-        :sync: csharp
+        :sync: C#
    
-        .. literalinclude:: /_static/samples/sample.cs
+        .. literalinclude:: /../samples/sample.cs
             :language: c#
             :start-after: [license_check]
             :end-before: [license_check]
             :dedent: 12
 
-
     .. tab-item:: Dart
-        :sync: dart
+        :sync: Dart
 
-        .. literalinclude:: /_static/samples/sample.dart
+        .. literalinclude:: /../samples/sample.dart
             :language: dart
             :start-after: [license_check]
             :end-before: [license_check]
             :dedent: 2
 
     .. tab-item:: Java
-        :sync: java
+        :sync: Java
    
-        .. literalinclude:: /_static/samples/sample.java
+        .. literalinclude:: /../samples/sample.java
             :language: java
             :start-after: [license_check]
             :end-before: [license_check]
             :dedent: 8
 
     .. tab-item:: Kotlin
-        :sync: kotlin
+        :sync: Kotlin
    
-        .. literalinclude:: /_static/samples/sample.kt
+        .. literalinclude:: /../samples/sample.kt
             :language: kotlin
             :start-after: [license_check]
             :end-before: [license_check]
             :dedent: 4
 
+    .. tab-item:: C
+        :sync: C
+
+        .. literalinclude:: /../samples/sample.c
+            :language: c
+            :start-after: [license_check]
+            :end-before: [license_check]
+            :dedent: 4
 
 See also
 ========
 - :ref:`license_activation`
 - :ref:`license_hardware_id`
-- :ref:`license_activate_serial_key_class_method`
-- :ref:`license_get_host_hardware_code_class_method`
+- :ref:`face_license_activate_serial_key_class_method`
+- :ref:`face_license_get_host_hardware_code_class_method`

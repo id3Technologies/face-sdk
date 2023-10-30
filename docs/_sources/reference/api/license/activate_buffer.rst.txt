@@ -12,58 +12,53 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves a license file buffer using id3 account credentials and a product reference.
+Retrieves a license file buffer using customer credentials and a product reference and returns the license in a data buffer.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_ActivateBuffer (
-            const char * hardwareCode, 
-            const char * login, 
-            const char * password, 
-            const char * productReference, 
-            const char * commentary, 
-            unsigned char * licenseFileBuffer, 
-            int * licenseFileBufferSize)
+        @staticmethod
+        activate_buffer(hardware_code: str, login: str, password: str, product_reference: str, commentary: str) -> bytearray
 
       **Parameters**
 
         .. line-block::
 
-          ``hardwareCode`` const char *
+          ``hardware_code`` str
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
-          ``login`` const char *
-          :guilabel:`in` The id3 account login.
+          ``login`` str
+          :guilabel:`in` The customer login.
 
-          ``password`` const char *
-          :guilabel:`in` The id3 account password.
+          ``password`` str
+          :guilabel:`in` The customer password.
 
-          ``productReference`` const char *
+          ``product_reference`` str
           :guilabel:`in` The requested product reference.
 
-          ``commentary`` const char *
-          :guilabel:`in` Commentary associated to this license activation.
-
-          ``licenseFileBuffer`` unsigned char *
-          :guilabel:`out` Pointer to a pre-allocated buffer to receive the license data.
-
-          ``licenseFileBufferSize`` int *
-          :guilabel:`in` Size of the 'licenseFileBuffer' buffer. Receives the number of elements in the 'licenseFileBuffer' array.
+          ``commentary`` str
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bytearray``
+          The license data.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -80,16 +75,16 @@ Retrieves a license file buffer using id3 account credentials and a product refe
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``login`` String
-          :guilabel:`in` The id3 account login.
+          :guilabel:`in` The customer login.
 
           ``password`` String
-          :guilabel:`in` The id3 account password.
+          :guilabel:`in` The customer password.
 
           ``productReference`` String
           :guilabel:`in` The requested product reference.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
 
       **Returns**
@@ -97,7 +92,7 @@ Retrieves a license file buffer using id3 account credentials and a product refe
         .. line-block::
 
           ``Uint8List``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data.
 
       **Exceptions**
 
@@ -122,16 +117,16 @@ Retrieves a license file buffer using id3 account credentials and a product refe
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``login`` string
-          :guilabel:`in` The id3 account login.
+          :guilabel:`in` The customer login.
 
           ``password`` string
-          :guilabel:`in` The id3 account password.
+          :guilabel:`in` The customer password.
 
           ``productReference`` string
           :guilabel:`in` The requested product reference.
 
           ``commentary`` string
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
 
       **Returns**
@@ -139,7 +134,7 @@ Retrieves a license file buffer using id3 account credentials and a product refe
         .. line-block::
 
           ``byte[]``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data.
 
       **Exceptions**
 
@@ -164,16 +159,16 @@ Retrieves a license file buffer using id3 account credentials and a product refe
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``login`` String
-          :guilabel:`in` The id3 account login.
+          :guilabel:`in` The customer login.
 
           ``password`` String
-          :guilabel:`in` The id3 account password.
+          :guilabel:`in` The customer password.
 
           ``productReference`` String
           :guilabel:`in` The requested product reference.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
 
       **Returns**
@@ -181,50 +176,7 @@ Retrieves a license file buffer using id3 account credentials and a product refe
         .. line-block::
 
           ``byte[]``
-          Pointer to a pre-allocated buffer to receive the license data.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        activate_buffer(hardware_code: str, login: str, password: str, product_reference: str, commentary: str) -> bytearray
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hardware_code`` str
-          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
-
-          ``login`` str
-          :guilabel:`in` The id3 account login.
-
-          ``password`` str
-          :guilabel:`in` The id3 account password.
-
-          ``product_reference`` str
-          :guilabel:`in` The requested product reference.
-
-          ``commentary`` str
-          :guilabel:`in` Commentary associated to this license activation.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``bytearray``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data.
 
       **Exceptions**
 
@@ -249,16 +201,16 @@ Retrieves a license file buffer using id3 account credentials and a product refe
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``login`` String
-          :guilabel:`in` The id3 account login.
+          :guilabel:`in` The customer login.
 
           ``password`` String
-          :guilabel:`in` The id3 account password.
+          :guilabel:`in` The customer password.
 
           ``productReference`` String
           :guilabel:`in` The requested product reference.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
 
       **Returns**
@@ -266,7 +218,7 @@ Retrieves a license file buffer using id3 account credentials and a product refe
         .. line-block::
 
           ``[UInt8]``
-          Pointer to a pre-allocated buffer to receive the license data.
+          The license data.
 
       **Exceptions**
 
@@ -275,5 +227,53 @@ Retrieves a license file buffer using id3 account credentials and a product refe
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_ActivateBuffer (
+            const char * hardwareCode, 
+            const char * login, 
+            const char * password, 
+            const char * productReference, 
+            const char * commentary, 
+            unsigned char * licenseFileBuffer, 
+            int * licenseFileBufferSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hardwareCode`` const char *
+          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
+
+          ``login`` const char *
+          :guilabel:`in` The customer login.
+
+          ``password`` const char *
+          :guilabel:`in` The customer password.
+
+          ``productReference`` const char *
+          :guilabel:`in` The requested product reference.
+
+          ``commentary`` const char *
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
+
+          ``licenseFileBuffer`` unsigned char *
+          :guilabel:`out` The license data.
+
+          ``licenseFileBufferSize`` int *
+          :guilabel:`in` Size of the 'licenseFileBuffer' buffer. Receives the number of elements in the 'licenseFileBuffer' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

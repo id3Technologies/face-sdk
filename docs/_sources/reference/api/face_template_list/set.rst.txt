@@ -17,37 +17,31 @@ Sets an item of the FaceTemplateList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplateList_Set (
-            ID3_FACE_TEMPLATE_LIST hFaceTemplateList, 
-            int index, 
-            ID3_FACE_TEMPLATE hFaceTemplateItem)
+        set(self, index: int, face_template_item: FaceTemplate) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceTemplateList`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
-          :guilabel:`in` Handle to the FaceTemplateList object.
-
           ``index`` int
           :guilabel:`in` Index of the FaceTemplate item to set.
 
-          ``hFaceTemplateItem`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          ``face_template_item`` :ref:`FaceTemplate<face_template_class>`
           :guilabel:`in` FaceTemplate item to set.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -127,32 +121,6 @@ Sets an item of the FaceTemplateList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        set(self, index: int, face_template_item: FaceTemplate) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the FaceTemplate item to set.
-
-          ``face_template_item`` :ref:`FaceTemplate<face_template_class>`
-          :guilabel:`in` FaceTemplate item to set.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -178,5 +146,37 @@ Sets an item of the FaceTemplateList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplateList_Set (
+            ID3_FACE_TEMPLATE_LIST hFaceTemplateList, 
+            int index, 
+            ID3_FACE_TEMPLATE hFaceTemplateItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplateList`` :ref:`ID3_FACE_TEMPLATE_LIST<face_template_list_class>`
+          :guilabel:`in` Handle to the FaceTemplateList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceTemplate item to set.
+
+          ``hFaceTemplateItem`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` FaceTemplate item to set.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -17,29 +17,20 @@ Clears the ImageDict object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImageDict_Clear (
-            ID3_FACE_IMAGE_DICT hImageDict)
+        clear(self) -> None
 
-      **Parameters**
-
-        .. line-block::
-
-          ``hImageDict`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
-          :guilabel:`in` Handle to the ImageDict object.
-
-
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -86,21 +77,6 @@ Clears the ImageDict object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clear(self) -> None
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -115,5 +91,29 @@ Clears the ImageDict object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageDict_Clear (
+            ID3_FACE_IMAGE_DICT hImageDict)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageDict`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
+          :guilabel:`in` Handle to the ImageDict object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

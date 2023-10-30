@@ -12,42 +12,40 @@ Module: :ref:`FaceLibrary<face_library_class>`
 Definition
 ----------
 
-Loads a model from the zoo into the required processing unit.
+Loads a model into memory from the specified directory.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLibrary_LoadModel (
-            const char * modelPath, 
-            id3FaceModel eFaceModel, 
-            id3FaceProcessingUnit eProcessingUnit)
+        @staticmethod
+        load_model(model_path: str, face_model: FaceModel, processing_unit: ProcessingUnit) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``modelPath`` const char *
-          :guilabel:`in` Path to the models' directory.
+          ``model_path`` str
+          :guilabel:`in` The path to directory containing the AI model files.
 
-          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
+          ``face_model`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` The AI model to be loaded.
 
-          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
+          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` The processing unit to be used.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -61,13 +59,13 @@ Loads a model from the zoo into the required processing unit.
         .. line-block::
 
           ``modelPath`` String
-          :guilabel:`in` Path to the models' directory.
+          :guilabel:`in` The path to directory containing the AI model files.
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
+          :guilabel:`in` The AI model to be loaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
+          :guilabel:`in` The processing unit to be used.
 
 
       **Exceptions**
@@ -90,13 +88,13 @@ Loads a model from the zoo into the required processing unit.
         .. line-block::
 
           ``modelPath`` string
-          :guilabel:`in` Path to the models' directory.
+          :guilabel:`in` The path to directory containing the AI model files.
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
+          :guilabel:`in` The AI model to be loaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
+          :guilabel:`in` The processing unit to be used.
 
 
       **Exceptions**
@@ -119,43 +117,13 @@ Loads a model from the zoo into the required processing unit.
         .. line-block::
 
           ``modelPath`` String
-          :guilabel:`in` Path to the models' directory.
+          :guilabel:`in` The path to directory containing the AI model files.
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
+          :guilabel:`in` The AI model to be loaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        load_model(model_path: str, face_model: FaceModel, processing_unit: ProcessingUnit) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``model_path`` str
-          :guilabel:`in` Path to the models' directory.
-
-          ``face_model`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
-
-          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
+          :guilabel:`in` The processing unit to be used.
 
 
       **Exceptions**
@@ -178,13 +146,13 @@ Loads a model from the zoo into the required processing unit.
         .. line-block::
 
           ``modelPath`` String
-          :guilabel:`in` Path to the models' directory.
+          :guilabel:`in` The path to directory containing the AI model files.
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to load.
+          :guilabel:`in` The AI model to be loaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to load the model into.
+          :guilabel:`in` The processing unit to be used.
 
 
       **Exceptions**
@@ -194,5 +162,37 @@ Loads a model from the zoo into the required processing unit.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLibrary_LoadModel (
+            const char * modelPath, 
+            id3FaceModel eFaceModel, 
+            id3FaceProcessingUnit eProcessingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``modelPath`` const char *
+          :guilabel:`in` The path to directory containing the AI model files.
+
+          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
+          :guilabel:`in` The AI model to be loaded.
+
+          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` The processing unit to be used.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

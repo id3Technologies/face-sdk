@@ -1,0 +1,124 @@
+.. index:: 
+  !FaceAnalyser.threadCount Property
+
+.. _face_analyser_thread_count_class_member:
+
+===============================================================================
+FaceAnalyser.threadCount Property
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Type: int
+
+Definition
+----------
+
+Number of threads to be used for face analysis.
+
+.. hint:: Default value is 1. Allocating more than one thread can increase the speed of the process.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      thread_count: int
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int get threadCount => getThreadCount();
+      set threadCount(int value) => setThreadCount(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public int threadCount
+      {
+          get => GetthreadCount();
+          set => SetthreadCount(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public int getThreadCount() throws FaceException
+      public void setThreadCount(int threadCount) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public var threadCount: Int
+          get {
+              return Int(try! getThreadCount())
+          }
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceAnalyser_GetThreadCount (ID3_FACE_ANALYSER hFaceAnalyser, int * threadCount)
+      int id3FaceAnalyser_SetThreadCount (ID3_FACE_ANALYSER hFaceAnalyser, int threadCount)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+

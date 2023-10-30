@@ -17,37 +17,31 @@ Sets an item of the DetectedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFaceList_Set (
-            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
-            int index, 
-            ID3_DETECTED_FACE hDetectedFaceItem)
+        set(self, index: int, detected_face_item: DetectedFace) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`in` Handle to the DetectedFaceList object.
-
           ``index`` int
           :guilabel:`in` Index of the DetectedFace item to set.
 
-          ``hDetectedFaceItem`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face_item`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` DetectedFace item to set.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -127,32 +121,6 @@ Sets an item of the DetectedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        set(self, index: int, detected_face_item: DetectedFace) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the DetectedFace item to set.
-
-          ``detected_face_item`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` DetectedFace item to set.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -178,5 +146,37 @@ Sets an item of the DetectedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_Set (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            int index, 
+            ID3_DETECTED_FACE hDetectedFaceItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the DetectedFace item to set.
+
+          ``hDetectedFaceItem`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` DetectedFace item to set.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.noseVisible Property
+
+.. _portrait_quality_attributes_nose_visible_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.noseVisible Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the nose is visible.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int nose_visible
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int noseVisible
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int NoseVisible
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int noseVisible
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int noseVisible
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoseVisible
+

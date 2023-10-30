@@ -21,21 +21,20 @@ Specifies the face detection confidence threshold, in the range is [0;100].
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetFaceDetectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * faceDetectionThreshold)
-      int id3FacePortraitProcessor_SetFaceDetectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int faceDetectionThreshold)
+      face_detection_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Specifies the face detection confidence threshold, in the range is [0;100].
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Specifies the face detection confidence threshold, in the range is [0;100].
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Specifies the face detection confidence threshold, in the range is [0;100].
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      face_detection_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Specifies the face detection confidence threshold, in the range is [0;100].
 
     .. code:: Swift
 
-      TODO
+      public var faceDetectionThreshold: Int
+          get {
+              return Int(try! getFaceDetectionThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceDetectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * faceDetectionThreshold)
+      int id3FacePortraitProcessor_SetFaceDetectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int faceDetectionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

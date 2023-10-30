@@ -34,12 +34,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3TrackedFaceList *ID3_TRACKED_FACE_LIST;
+        class TrackedFaceList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -62,19 +62,19 @@ Definition
 
         public class TrackedFaceList implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class TrackedFaceList
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class TrackedFaceList
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3TrackedFaceList *ID3_TRACKED_FACE_LIST;
 
 
 
@@ -83,17 +83,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_TRACKED_FACE_LIST hTrackedFaceList{};
-        int err = id3TrackedFaceList_Initialize(&hTrackedFaceList);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3TrackedFaceList_Dispose(&hTrackedFaceList);
-        }
+        trackedFaceList = TrackedFaceList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del trackedFaceList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -145,21 +148,6 @@ Usage
         // ...
         trackedFaceList.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        trackedFaceList = TrackedFaceList()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del trackedFaceList
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -167,6 +155,18 @@ Usage
 
         private var trackedFaceList: TrackedFaceList? = nil
         trackedFaceList = try TrackedFaceList()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_TRACKED_FACE_LIST hTrackedFaceList{};
+        int err = id3TrackedFaceList_Initialize(&hTrackedFaceList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3TrackedFaceList_Dispose(&hTrackedFaceList);
+        }
 
 
 Properties
@@ -190,7 +190,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 
 Methods

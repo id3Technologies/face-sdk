@@ -12,38 +12,37 @@ Module: :ref:`FaceLibrary<face_library_class>`
 Definition
 ----------
 
-Unloads a model from the processing unit it was loaded into.
+Unloads a model from memory.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLibrary_UnloadModel (
-            id3FaceModel eFaceModel, 
-            id3FaceProcessingUnit eProcessingUnit)
+        @staticmethod
+        unload_model(face_model: FaceModel, processing_unit: ProcessingUnit) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
+          ``face_model`` :ref:`FaceModel<face_model_enum>`
+          :guilabel:`in` The AI model to be unloaded.
 
-          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
+          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` The processing unit used for the model.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -57,10 +56,10 @@ Unloads a model from the processing unit it was loaded into.
         .. line-block::
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
+          :guilabel:`in` The AI model to be unloaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
+          :guilabel:`in` The processing unit used for the model.
 
 
       **Exceptions**
@@ -83,10 +82,10 @@ Unloads a model from the processing unit it was loaded into.
         .. line-block::
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
+          :guilabel:`in` The AI model to be unloaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
+          :guilabel:`in` The processing unit used for the model.
 
 
       **Exceptions**
@@ -109,37 +108,10 @@ Unloads a model from the processing unit it was loaded into.
         .. line-block::
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
+          :guilabel:`in` The AI model to be unloaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        unload_model(face_model: FaceModel, processing_unit: ProcessingUnit) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``face_model`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
-
-          ``processing_unit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
+          :guilabel:`in` The processing unit used for the model.
 
 
       **Exceptions**
@@ -162,10 +134,10 @@ Unloads a model from the processing unit it was loaded into.
         .. line-block::
 
           ``faceModel`` :ref:`FaceModel<face_model_enum>`
-          :guilabel:`in` Face model to unload.
+          :guilabel:`in` The AI model to be unloaded.
 
           ``processingUnit`` :ref:`ProcessingUnit<processing_unit_enum>`
-          :guilabel:`in` Processing unit to unload the model from.
+          :guilabel:`in` The processing unit used for the model.
 
 
       **Exceptions**
@@ -175,5 +147,33 @@ Unloads a model from the processing unit it was loaded into.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLibrary_UnloadModel (
+            id3FaceModel eFaceModel, 
+            id3FaceProcessingUnit eProcessingUnit)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eFaceModel`` :ref:`id3FaceModel<face_model_enum>`
+          :guilabel:`in` The AI model to be unloaded.
+
+          ``eProcessingUnit`` :ref:`id3FaceProcessingUnit<processing_unit_enum>`
+          :guilabel:`in` The processing unit used for the model.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

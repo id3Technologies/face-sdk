@@ -17,12 +17,12 @@ Value indicating whether the subject's face is frontal.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int FrontalPose
+      int frontal_pose
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the subject's face is frontal.
 
       int frontalPose
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int frontal_pose
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int frontalPose
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int FrontalPose
 

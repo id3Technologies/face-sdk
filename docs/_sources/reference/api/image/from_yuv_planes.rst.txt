@@ -12,78 +12,62 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Imports the image object from YUV planes.
+Creates an Image from the specified YUV planes.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_FromYuvPlanes (
-            ID3_FACE_IMAGE hImage, 
-            unsigned char * yPlane, 
-            int yPlaneSize, 
-            unsigned char * uPlane, 
-            int uPlaneSize, 
-            unsigned char * vPlane, 
-            int vPlaneSize, 
-            int yWidth, 
-            int yHeight, 
-            int uvPixelStride, 
-            int uvRowStride, 
-            id3FacePixelFormat eDstPixelFormat)
+        @staticmethod
+        from_yuv_planes(y_plane: bytearray, u_plane: bytearray, v_plane: bytearray, y_width: int, y_height: int, uv_pixel_stride: int, uv_row_stride: int, dst_pixel_format: PixelFormat) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
+          ``y_plane`` bytearray
+          :guilabel:`in` A buffer that contains the Y plane.
 
-          ``yPlane`` unsigned char *
-          :guilabel:`in` Buffer containing the Y plane.
+          ``u_plane`` bytearray
+          :guilabel:`in` A buffer that contains the U plane.
 
-          ``yPlaneSize`` int
-          :guilabel:`in` Size of the 'yPlane' buffer.
+          ``v_plane`` bytearray
+          :guilabel:`in` A buffer that contains the V plane.
 
-          ``uPlane`` unsigned char *
-          :guilabel:`in` Buffer containing the U plane.
+          ``y_width`` int
+          :guilabel:`in` The width, in pixels, of the Y plane.
 
-          ``uPlaneSize`` int
-          :guilabel:`in` Size of the 'uPlane' buffer.
+          ``y_height`` int
+          :guilabel:`in` The height, in pixels, of the Y plane.
 
-          ``vPlane`` unsigned char *
-          :guilabel:`in` Buffer containing the V plane.
+          ``uv_pixel_stride`` int
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
 
-          ``vPlaneSize`` int
-          :guilabel:`in` Size of the 'vPlane' buffer.
+          ``uv_row_stride`` int
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
 
-          ``yWidth`` int
-          :guilabel:`in` Width in pixels of the Y plane.
-
-          ``yHeight`` int
-          :guilabel:`in` Height in pixels of the Y plane.
-
-          ``uvPixelStride`` int
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
-
-          ``uvRowStride`` int
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
-
-          ``eDstPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          ``dst_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -97,28 +81,28 @@ Imports the image object from YUV planes.
         .. line-block::
 
           ``yPlane`` Uint8List
-          :guilabel:`in` Buffer containing the Y plane.
+          :guilabel:`in` A buffer that contains the Y plane.
 
           ``uPlane`` Uint8List
-          :guilabel:`in` Buffer containing the U plane.
+          :guilabel:`in` A buffer that contains the U plane.
 
           ``vPlane`` Uint8List
-          :guilabel:`in` Buffer containing the V plane.
+          :guilabel:`in` A buffer that contains the V plane.
 
           ``yWidth`` int
-          :guilabel:`in` Width in pixels of the Y plane.
+          :guilabel:`in` The width, in pixels, of the Y plane.
 
           ``yHeight`` int
-          :guilabel:`in` Height in pixels of the Y plane.
+          :guilabel:`in` The height, in pixels, of the Y plane.
 
           ``uvPixelStride`` int
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
 
           ``uvRowStride`` int
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -148,28 +132,28 @@ Imports the image object from YUV planes.
         .. line-block::
 
           ``yPlane`` byte[]
-          :guilabel:`in` Buffer containing the Y plane.
+          :guilabel:`in` A buffer that contains the Y plane.
 
           ``uPlane`` byte[]
-          :guilabel:`in` Buffer containing the U plane.
+          :guilabel:`in` A buffer that contains the U plane.
 
           ``vPlane`` byte[]
-          :guilabel:`in` Buffer containing the V plane.
+          :guilabel:`in` A buffer that contains the V plane.
 
           ``yWidth`` int
-          :guilabel:`in` Width in pixels of the Y plane.
+          :guilabel:`in` The width, in pixels, of the Y plane.
 
           ``yHeight`` int
-          :guilabel:`in` Height in pixels of the Y plane.
+          :guilabel:`in` The height, in pixels, of the Y plane.
 
           ``uvPixelStride`` int
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
 
           ``uvRowStride`` int
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -199,80 +183,28 @@ Imports the image object from YUV planes.
         .. line-block::
 
           ``yPlane`` byte[]
-          :guilabel:`in` Buffer containing the Y plane.
+          :guilabel:`in` A buffer that contains the Y plane.
 
           ``uPlane`` byte[]
-          :guilabel:`in` Buffer containing the U plane.
+          :guilabel:`in` A buffer that contains the U plane.
 
           ``vPlane`` byte[]
-          :guilabel:`in` Buffer containing the V plane.
+          :guilabel:`in` A buffer that contains the V plane.
 
           ``yWidth`` int
-          :guilabel:`in` Width in pixels of the Y plane.
+          :guilabel:`in` The width, in pixels, of the Y plane.
 
           ``yHeight`` int
-          :guilabel:`in` Height in pixels of the Y plane.
+          :guilabel:`in` The height, in pixels, of the Y plane.
 
           ``uvPixelStride`` int
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
 
           ``uvRowStride`` int
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          The newly created image.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        from_yuv_planes(y_plane: bytearray, u_plane: bytearray, v_plane: bytearray, y_width: int, y_height: int, uv_pixel_stride: int, uv_row_stride: int, dst_pixel_format: PixelFormat) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``y_plane`` bytearray
-          :guilabel:`in` Buffer containing the Y plane.
-
-          ``u_plane`` bytearray
-          :guilabel:`in` Buffer containing the U plane.
-
-          ``v_plane`` bytearray
-          :guilabel:`in` Buffer containing the V plane.
-
-          ``y_width`` int
-          :guilabel:`in` Width in pixels of the Y plane.
-
-          ``y_height`` int
-          :guilabel:`in` Height in pixels of the Y plane.
-
-          ``uv_pixel_stride`` int
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
-
-          ``uv_row_stride`` int
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
-
-          ``dst_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -302,28 +234,28 @@ Imports the image object from YUV planes.
         .. line-block::
 
           ``yPlane`` [UInt8]
-          :guilabel:`in` Buffer containing the Y plane.
+          :guilabel:`in` A buffer that contains the Y plane.
 
           ``uPlane`` [UInt8]
-          :guilabel:`in` Buffer containing the U plane.
+          :guilabel:`in` A buffer that contains the U plane.
 
           ``vPlane`` [UInt8]
-          :guilabel:`in` Buffer containing the V plane.
+          :guilabel:`in` A buffer that contains the V plane.
 
           ``yWidth`` Int32
-          :guilabel:`in` Width in pixels of the Y plane.
+          :guilabel:`in` The width, in pixels, of the Y plane.
 
           ``yHeight`` Int32
-          :guilabel:`in` Height in pixels of the Y plane.
+          :guilabel:`in` The height, in pixels, of the Y plane.
 
           ``uvPixelStride`` Int32
-          :guilabel:`in` Pixel-level stride in pixels of the U and V planes.
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
 
           ``uvRowStride`` Int32
-          :guilabel:`in` Row-level stride in pixels of the U and V planes.
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -340,5 +272,73 @@ Imports the image object from YUV planes.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_FromYuvPlanes (
+            ID3_FACE_IMAGE hImage, 
+            unsigned char * yPlane, 
+            int yPlaneSize, 
+            unsigned char * uPlane, 
+            int uPlaneSize, 
+            unsigned char * vPlane, 
+            int vPlaneSize, 
+            int yWidth, 
+            int yHeight, 
+            int uvPixelStride, 
+            int uvRowStride, 
+            id3FacePixelFormat eDstPixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``yPlane`` unsigned char *
+          :guilabel:`in` A buffer that contains the Y plane.
+
+          ``yPlaneSize`` int
+          :guilabel:`in` Size of the 'yPlane' buffer.
+
+          ``uPlane`` unsigned char *
+          :guilabel:`in` A buffer that contains the U plane.
+
+          ``uPlaneSize`` int
+          :guilabel:`in` Size of the 'uPlane' buffer.
+
+          ``vPlane`` unsigned char *
+          :guilabel:`in` A buffer that contains the V plane.
+
+          ``vPlaneSize`` int
+          :guilabel:`in` Size of the 'vPlane' buffer.
+
+          ``yWidth`` int
+          :guilabel:`in` The width, in pixels, of the Y plane.
+
+          ``yHeight`` int
+          :guilabel:`in` The height, in pixels, of the Y plane.
+
+          ``uvPixelStride`` int
+          :guilabel:`in` The pixel-level stride, in pixels, of the U and V planes.
+
+          ``uvRowStride`` int
+          :guilabel:`in` The row-level stride, in pixels, of the U and V planes.
+
+          ``eDstPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format into which to convert the input image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

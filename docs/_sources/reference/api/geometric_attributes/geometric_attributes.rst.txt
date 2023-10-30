@@ -25,12 +25,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3FaceGeometricAttributes
+      class GeometricAttributes
 
   .. tab-item:: Dart
     :sync: Dart
@@ -53,19 +53,19 @@ Definition
 
       public class GeometricAttributes
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class GeometricAttributes
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias GeometricAttributes = id3FaceGeometricAttributes
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceGeometricAttributes
 
 
 Properties

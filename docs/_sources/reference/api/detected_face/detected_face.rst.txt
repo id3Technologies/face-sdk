@@ -38,12 +38,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3DetectedFace *ID3_DETECTED_FACE;
+        class DetectedFace
 
     .. tab-item:: Dart
       :sync: Dart
@@ -66,19 +66,19 @@ Definition
 
         public class DetectedFace implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class DetectedFace
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class DetectedFace
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3DetectedFace *ID3_DETECTED_FACE;
 
 
 
@@ -87,17 +87,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_DETECTED_FACE hDetectedFace{};
-        int err = id3DetectedFace_Initialize(&hDetectedFace);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3DetectedFace_Dispose(&hDetectedFace);
-        }
+        detectedFace = DetectedFace()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del detectedFace
 
     .. tab-item:: Dart
       :sync: Dart
@@ -149,21 +152,6 @@ Usage
         // ...
         detectedFace.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        detectedFace = DetectedFace()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del detectedFace
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -171,6 +159,18 @@ Usage
 
         private var detectedFace: DetectedFace? = nil
         detectedFace = try DetectedFace()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_DETECTED_FACE hDetectedFace{};
+        int err = id3DetectedFace_Initialize(&hDetectedFace);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3DetectedFace_Dispose(&hDetectedFace);
+        }
 
 
 Properties

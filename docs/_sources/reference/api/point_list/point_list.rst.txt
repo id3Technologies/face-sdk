@@ -26,16 +26,16 @@ Namespace: :ref:`id3.Face<reference_api>`
 Definition
 ----------
 .. line-block::
-    This class represents a PointList
+    Represents a point list.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FacePointList *ID3_FACE_POINT_LIST;
+        class PointList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -58,19 +58,19 @@ Definition
 
         public class PointList implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class PointList
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class PointList
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePointList *ID3_FACE_POINT_LIST;
 
 
 
@@ -79,17 +79,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_POINT_LIST hPointList{};
-        int err = id3FacePointList_Initialize(&hPointList);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FacePointList_Dispose(&hPointList);
-        }
+        pointList = PointList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del pointList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -141,21 +144,6 @@ Usage
         // ...
         pointList.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        pointList = PointList()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del pointList
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -163,6 +151,18 @@ Usage
 
         private var pointList: PointList? = nil
         pointList = try PointList()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_POINT_LIST hPointList{};
+        int err = id3FacePointList_Initialize(&hPointList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePointList_Dispose(&hPointList);
+        }
 
 
 Properties
@@ -186,7 +186,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 
 Methods

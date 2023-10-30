@@ -13,16 +13,16 @@ Definition
 ----------
 
 .. line-block::
-    Enumeration of possible values for a LicenseType of the Face module.
+    Enumerates the license types.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code-block:: C
+    .. code-block:: Python
 
-      typedef enum id3FaceLicenseType
+      class LicenseType
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,19 +45,19 @@ Definition
 
       public enum LicenseType
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code-block:: Python
-
-      class LicenseType
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code-block:: Swift
 
       public enum LicenseType
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceLicenseType
 
 
 Fields

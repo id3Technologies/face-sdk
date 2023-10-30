@@ -12,38 +12,34 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Checks if a module is present in the license.
-
-
-
-This function checks if a module (defined by his name as a string) is present in a previously loaded license.
+Checks if a module is present in the previously loaded license.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_CheckModule (
-            const char * moduleName)
+        @staticmethod
+        check_module(module_name: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``moduleName`` const char *
+          ``module_name`` str
           :guilabel:`in` The module name.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,30 +110,6 @@ This function checks if a module (defined by his name as a string) is present in
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        check_module(module_name: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``module_name`` str
-          :guilabel:`in` The module name.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -160,5 +132,29 @@ This function checks if a module (defined by his name as a string) is present in
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_CheckModule (
+            const char * moduleName)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``moduleName`` const char *
+          :guilabel:`in` The module name.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

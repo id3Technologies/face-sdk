@@ -1,0 +1,124 @@
+.. index:: 
+  !PortraitProcessor.expressionDetection Property
+
+.. _portrait_processor_expression_detection_class_member:
+
+===============================================================================
+PortraitProcessor.expressionDetection Property
+===============================================================================
+
+Module: :ref:`PortraitProcessor<portrait_processor_class>`
+
+Type: bool
+
+Definition
+----------
+
+Value indicating whether expression detection is enabled.
+
+.. important:: This option requires the FaceExpressionClassifier model to be loaded.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      expression_detection: bool
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      bool get expressionDetection => getExpressionDetection();
+      set expressionDetection(bool value) => setExpressionDetection(value);
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public bool expressionDetection
+      {
+          get => GetexpressionDetection();
+          set => SetexpressionDetection(ref value);
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public boolean getExpressionDetection() throws FaceException
+      public void setExpressionDetection(boolean expressionDetection) throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public var expressionDetection: Bool
+          get {
+              return try! getExpressionDetection()
+          }
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetExpressionDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * expressionDetection)
+      int id3FacePortraitProcessor_SetExpressionDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool expressionDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+

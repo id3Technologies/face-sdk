@@ -12,36 +12,27 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Imports the image object from a buffer.
+Creates an Image from the specified data buffer.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_FromBuffer (
-            ID3_FACE_IMAGE hImage, 
-            unsigned char * data, 
-            int dataSize, 
-            id3FacePixelFormat ePixelFormat)
+        @staticmethod
+        from_buffer(data: bytearray, pixel_format: PixelFormat) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
+          ``data`` bytearray
+          :guilabel:`in` A buffer that contains the image data.
 
-          ``data`` unsigned char *
-          :guilabel:`in` Buffer to import the image object from.
-
-          ``dataSize`` int
-          :guilabel:`in` Size of the 'data' buffer.
-
-          ``ePixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          ``pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
           :guilabel:`in` The destination pixel format to convert the input to.
 
 
@@ -49,9 +40,16 @@ Imports the image object from a buffer.
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -65,7 +63,7 @@ Imports the image object from a buffer.
         .. line-block::
 
           ``data`` Uint8List
-          :guilabel:`in` Buffer to import the image object from.
+          :guilabel:`in` A buffer that contains the image data.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
           :guilabel:`in` The destination pixel format to convert the input to.
@@ -98,7 +96,7 @@ Imports the image object from a buffer.
         .. line-block::
 
           ``data`` byte[]
-          :guilabel:`in` Buffer to import the image object from.
+          :guilabel:`in` A buffer that contains the image data.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
           :guilabel:`in` The destination pixel format to convert the input to.
@@ -131,43 +129,9 @@ Imports the image object from a buffer.
         .. line-block::
 
           ``data`` byte[]
-          :guilabel:`in` Buffer to import the image object from.
+          :guilabel:`in` A buffer that contains the image data.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input to.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          The newly created image.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        from_buffer(data: bytearray, pixel_format: PixelFormat) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``data`` bytearray
-          :guilabel:`in` Buffer to import the image object from.
-
-          ``pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
           :guilabel:`in` The destination pixel format to convert the input to.
 
 
@@ -198,7 +162,7 @@ Imports the image object from a buffer.
         .. line-block::
 
           ``data`` [UInt8]
-          :guilabel:`in` Buffer to import the image object from.
+          :guilabel:`in` A buffer that contains the image data.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
           :guilabel:`in` The destination pixel format to convert the input to.
@@ -218,5 +182,41 @@ Imports the image object from a buffer.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_FromBuffer (
+            ID3_FACE_IMAGE hImage, 
+            unsigned char * data, 
+            int dataSize, 
+            id3FacePixelFormat ePixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``data`` unsigned char *
+          :guilabel:`in` A buffer that contains the image data.
+
+          ``dataSize`` int
+          :guilabel:`in` Size of the 'data' buffer.
+
+          ``ePixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The destination pixel format to convert the input to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

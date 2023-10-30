@@ -16,26 +16,25 @@ Definition
 
 Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the range [0;100].
 
-.. hint:: Default value is 0. Setting a high threshold allows to detect more overlapping faces which can be useful in a multi-face secenario. On the contrary, in a portrait scenario, a low NMS IOU threshold should be preferred.
+.. hint:: Default value is 0. Setting a high threshold allows to detect more overlapping faces which can be useful in a multi-face scenario. On the contrary, in a portrait scenario, a low NMS IOU threshold should be preferred.
 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetTrackerNmsIouThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * trackerNmsIouThreshold)
-      int id3FacePortraitProcessor_SetTrackerNmsIouThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int trackerNmsIouThreshold)
+      tracker_nms_iou_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the ra
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the ra
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the ra
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      tracker_nms_iou_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Non-maximum suppression (NMS) intersection-over-union (IOU) threshold, in the ra
 
     .. code:: Swift
 
-      TODO
+      public var trackerNmsIouThreshold: Int
+          get {
+              return Int(try! getTrackerNmsIouThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetTrackerNmsIouThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * trackerNmsIouThreshold)
+      int id3FacePortraitProcessor_SetTrackerNmsIouThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int trackerNmsIouThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -9,29 +9,45 @@ Face detection
 
 The :ref:`FaceDetector<face_detector_class>` class detects human faces in still images.
 
-.. important:: The face detector requires the relevant AI models to run. See :ref:`face_detection_models` for details.
-
-.. _detected_face:
-
-The face detector outputs a list of :ref:`DetectedFace<detected_face_class>` objects containing the following information:
-
-- An identifier
-- A face detection score
-- The :ref:`face_detection_face_bounds`
-- The :ref:`face_detection_portrait_bounds`
-- The interocular distance (IOD)
-- The 5 landmark features (eyes, nose and mouth)
-
-.. warning:: The identifier is an auto-incremented value and is not linked to a user's identity.
-
-.. _face_detection_face_bounds:
-.. include:: face_bounds.rst
-
-.. _face_detection_portrait_bounds:
-.. include:: portrait_bounds.rst
-
 .. _face_detection_models:
-.. include:: face_detection_models.rst
+
+Detection models
+================
+
+The face detector requires a machine learning model to be loaded into memory. The model should be selected according to the target platform and use-case.
+
+.. list-table::
+    :width: 100
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Model
+      - Size
+      - Description
+
+    * - FaceDetector4A
+      - 8.29 MB
+      - This model provides the best accuracy. It is recommended for 1-to-N applications or in an uncontrolled environment.
+
+    * - FaceDetector4B
+      - 1.25 MB
+      - This model provides a good balance of accuracy, speed, and size. This model is less robust to variations of head pose than the 4A version and should therefore only be used in a controlled environment.
+
+    * - FaceDetector3A
+      - 57.66 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 4A whenever possible.
+
+    * - FaceDetector3B
+      - 0.98 MB
+      - :guilabel:`Obsolete`. Provided for backward compatibility. Use model 4B whenever possible.
+
+    * - FaceDetector3C
+      - 0.22 MB
+      - Ultra-light detector, dedicated to short-range real-time detection/tracking applications only.
+
+.. note:: Call the :ref:`face_library_load_model_class_method` to load the chosen model on application start.
+
+.. hint:: On startup, call the :ref:`face_detector_warm_up_class_method` to prepare inference of the AI model.
 
 Tolerance
 =========
@@ -49,6 +65,63 @@ The face detection tolerance depends on the AI model used. The following charact
 
 .. warning:: The algorithm searches for faces in the range [16px;512px]. If the image is too large to fit this range, one must resize it before the detection process.
 .. hint:: For optimum facial recognition performance, a minimum distance of 100 pixels between eyes is recommended.
+
+.. _detected_face:
+
+Detected face
+=============
+The :ref:`FaceDetector<face_detector_class>` outputs a list of :ref:`DetectedFace<detected_face_class>` objects containing the following information:
+
+- :ref:`face_id`
+- :ref:`face_detection_score`
+- :ref:`face_detection_face_bounds`
+- :ref:`face_detection_portrait_bounds`
+- Interocular distance (IOD)
+- Landmarks (eyes, nose and mouth)
+
+.. note:: Only faces with a confidence score above the configured threshold are returned. See :ref:`face_detection_parameters` for details.
+
+.. _face_id:
+
+Face ID
+-------
+
+The face ID is an auto-incremented value used to track faces.
+
+.. warning:: The face ID is not linked to a user's identity.
+
+.. _face_detection_score:
+
+Confidence score
+----------------
+
+The confidence score ranges from 0 to 100. A high confidence score indicates that it is more likely that the face detected is really a face.
+
+.. _face_detection_face_bounds:
+
+Face bounds
+-----------
+
+|product-name| detects human faces and returns a rectangle around the detected faces, as shown in the figure
+below.
+
+.. image:: img/Multi-face-recognition.jpg
+  :width: 50%
+
+
+.. _face_detection_portrait_bounds:
+
+Portrait bounds
+---------------
+
+|product-name| detects human faces and returns a rectangle for ISO/ICAO compliant portraits, as shown in the
+figure below.
+
+.. image:: img/face-portrait-rectangle.jpg
+  :width: 50%
+
+
+.. _face_detection_parameters:
 
 Parameters
 ==========
@@ -86,73 +159,22 @@ The following parameters are defined:
 Example
 =======
 
+The example below demonstrates how to detect faces in an image:
+
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-      .. literalinclude:: /_static/samples/sample.c
-        :language: c
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 4
-
-    .. tab-item:: Dart
-      :sync: Dart
-
-      .. literalinclude:: /_static/samples/sample.dart
-        :language: dart
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 2
-
-    .. tab-item:: C#
-      :sync: C#
-
-      .. literalinclude:: /_static/samples/sample.cs
-        :language: c#
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 12
-
-    .. tab-item:: Java
-      :sync: Java
-
-      .. literalinclude:: /_static/samples/sample.java
-        :language: java
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 8
-
-    .. tab-item:: Kotlin
-      :sync: Kotlin
-
-      .. literalinclude:: /_static/samples/sample.kt
-        :language: kotlin
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 4
-
-    .. tab-item:: Python
-      :sync: python
-
-      .. literalinclude:: /_static/samples/sample.py
-        :language: python
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 4
-
-    .. tab-item:: Swift
-      :sync: Swift
-
-      .. literalinclude:: /_static/samples/sample.swift
-        :language: swift
-        :start-after: [face_detection]
-        :end-before: [face_detection]
-        :dedent: 4
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_detection]
+      :end-before: [face_detection]
+      :dedent: 4
 
 
-See Also
+
+See also
 ========
 
 - :ref:`face_detector_class`

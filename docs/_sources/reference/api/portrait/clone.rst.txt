@@ -17,33 +17,27 @@ Clones the Portrait object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FacePortrait_CopyTo (
-            ID3_FACE_PORTRAIT hPortrait, 
-            ID3_FACE_PORTRAIT hPortraitDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
-          :guilabel:`in` Handle to the Portrait object.
-
-          ``hPortraitDst`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
-          :guilabel:`out` The newly created portrait.
-
+        clone(self) -> Portrait
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Portrait<portrait_class>`
+          The newly created portrait.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the Portrait object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> Portrait
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Portrait<portrait_class>`
-          The newly created portrait.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the Portrait object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortrait_CopyTo (
+            ID3_FACE_PORTRAIT hPortrait, 
+            ID3_FACE_PORTRAIT hPortraitDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`in` Handle to the Portrait object.
+
+          ``hPortraitDst`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`out` The newly created portrait.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

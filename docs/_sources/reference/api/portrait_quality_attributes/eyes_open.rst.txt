@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.eyesOpen Property
+
+.. _portrait_quality_attributes_eyes_open_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.eyesOpen Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the eyes are open.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int eyes_open
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int eyesOpen
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int EyesOpen
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int eyesOpen
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int eyesOpen
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int EyesOpen
+

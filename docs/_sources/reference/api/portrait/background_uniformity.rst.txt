@@ -19,20 +19,20 @@ Result of the background uniformity computation.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortrait_GetBackgroundUniformity (ID3_FACE_PORTRAIT hPortrait, id3FaceBackgroundUniformity * sBackgroundUniformity)
+      background_uniformity: BackgroundUniformity
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -46,7 +46,7 @@ Result of the background uniformity computation.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -64,7 +64,7 @@ Result of the background uniformity computation.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -79,22 +79,7 @@ Result of the background uniformity computation.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      background_uniformity: BackgroundUniformity
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -102,13 +87,32 @@ Result of the background uniformity computation.
 
     .. code:: Swift
 
-      TODO
+      public var backgroundUniformity: BackgroundUniformity
+          get {
+              return try! getBackgroundUniformity()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetBackgroundUniformity (ID3_FACE_PORTRAIT hPortrait, id3FaceBackgroundUniformity * sBackgroundUniformity)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -23,21 +23,20 @@ The lower the value, the more sensitive the algorithm will be, meaning that it w
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceAnalyser_GetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int * overExposureSensibility)
-      int id3FaceAnalyser_SetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int overExposureSensibility)
+      over_exposure_sensibility: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ The lower the value, the more sensitive the algorithm will be, meaning that it w
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ The lower the value, the more sensitive the algorithm will be, meaning that it w
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ The lower the value, the more sensitive the algorithm will be, meaning that it w
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      over_exposure_sensibility: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ The lower the value, the more sensitive the algorithm will be, meaning that it w
 
     .. code:: Swift
 
-      TODO
+      public var overExposureSensibility: Int
+          get {
+              return Int(try! getOverExposureSensibility())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceAnalyser_GetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int * overExposureSensibility)
+      int id3FaceAnalyser_SetOverExposureSensibility (ID3_FACE_ANALYSER hFaceAnalyser, int overExposureSensibility)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

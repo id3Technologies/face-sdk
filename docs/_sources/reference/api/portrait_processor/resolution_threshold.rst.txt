@@ -21,21 +21,20 @@ Threshold indicating whether the image resolution is sufficient.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetResolutionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * resolutionThreshold)
-      int id3FacePortraitProcessor_SetResolutionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int resolutionThreshold)
+      resolution_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Threshold indicating whether the image resolution is sufficient.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Threshold indicating whether the image resolution is sufficient.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Threshold indicating whether the image resolution is sufficient.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      resolution_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Threshold indicating whether the image resolution is sufficient.
 
     .. code:: Swift
 
-      TODO
+      public var resolutionThreshold: Int
+          get {
+              return Int(try! getResolutionThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetResolutionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * resolutionThreshold)
+      int id3FacePortraitProcessor_SetResolutionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int resolutionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

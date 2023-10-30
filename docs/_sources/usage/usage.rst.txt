@@ -16,7 +16,9 @@ This section describes the main usages of |product-name|.
     error_handling
     license_handling
     image_handling
-    face_analysis/face_analysis
+    ai_models
+    face_analysis
+    face_background_removal
     face_comparison
     face_comparison_on_card
     face_detection
@@ -24,29 +26,29 @@ This section describes the main usages of |product-name|.
     face_tracking
     face_search
     liveness_detection
-..    portrait_processing/portrait_processing
+    portrait_processing
 
 Adding the library to your project
 ==================================
 
 .. tab-set::
 
-    .. tab-item:: C
-        :sync: c
+    .. tab-item:: Python
+        :sync: Python
 
-        .. code-block:: c
+        .. code-block:: python
 
-            #include "id3Face.h"
+            import id3face
 
     .. tab-item:: Dart
-        :sync: dart
+        :sync: Dart
 
         .. code-block:: dart
 
             import 'package:id3_face/id3_face.dart';
 
     .. tab-item:: C#
-        :sync: csharp
+        :sync: C#
 
         id3 Face C# API is available in the package `id3.Face`:
 
@@ -61,11 +63,10 @@ Adding the library to your project
         
             import eu.id3.face;
 
-    .. tab-item:: Python
-        :sync: python
+    .. tab-item:: C
+        :sync: C
 
-        .. code-block:: python
+        .. code-block:: c
 
-            import id3Face as face_library
-
+            #include "id3Face.h"
 

@@ -21,21 +21,20 @@ Value indicating whether age estimation is enabled.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetAgeEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * ageEstimation)
-      int id3FacePortraitProcessor_SetAgeEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool ageEstimation)
+      age_estimation: bool
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Value indicating whether age estimation is enabled.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Value indicating whether age estimation is enabled.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Value indicating whether age estimation is enabled.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      age_estimation: bool
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Value indicating whether age estimation is enabled.
 
     .. code:: Swift
 
-      TODO
+      public var ageEstimation: Bool
+          get {
+              return try! getAgeEstimation()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetAgeEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * ageEstimation)
+      int id3FacePortraitProcessor_SetAgeEstimation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool ageEstimation)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -19,12 +19,12 @@ Structure uniformity score, in the range [0:100].
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int StructureUniformity
+      int structure_uniformity
 
   .. tab-item:: Dart
     :sync: Dart
@@ -47,17 +47,17 @@ Structure uniformity score, in the range [0:100].
 
       int structureUniformity
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int structure_uniformity
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int structureUniformity
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int StructureUniformity
 

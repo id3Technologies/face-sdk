@@ -23,21 +23,20 @@ If the score is above this value, the eyes are definitely open.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * eyeOpeningThreshold)
-      int id3FacePortraitProcessor_SetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int eyeOpeningThreshold)
+      eye_opening_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ If the score is above this value, the eyes are definitely open.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ If the score is above this value, the eyes are definitely open.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ If the score is above this value, the eyes are definitely open.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      eye_opening_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ If the score is above this value, the eyes are definitely open.
 
     .. code:: Swift
 
-      TODO
+      public var eyeOpeningThreshold: Int
+          get {
+              return Int(try! getEyeOpeningThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * eyeOpeningThreshold)
+      int id3FacePortraitProcessor_SetEyeOpeningThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int eyeOpeningThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

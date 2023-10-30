@@ -12,38 +12,35 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Rotates the image object of the required angle in-place. The rotation is performed counter-clockwise.
+Rotates the image in-place to the specified angle.
+
+.. note:: The rotation is performed counter-clockwise.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_Rotate (
-            ID3_FACE_IMAGE hImage, 
-            int angle)
+        rotate(self, angle: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
           ``angle`` int
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -57,7 +54,7 @@ Rotates the image object of the required angle in-place. The rotation is perform
         .. line-block::
 
           ``angle`` int
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
 
 
       **Exceptions**
@@ -80,7 +77,7 @@ Rotates the image object of the required angle in-place. The rotation is perform
         .. line-block::
 
           ``angle`` int
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
 
 
       **Exceptions**
@@ -103,30 +100,7 @@ Rotates the image object of the required angle in-place. The rotation is perform
         .. line-block::
 
           ``angle`` int
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        rotate(self, angle: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``angle`` int
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
 
 
       **Exceptions**
@@ -149,7 +123,7 @@ Rotates the image object of the required angle in-place. The rotation is perform
         .. line-block::
 
           ``angle`` Int32
-          :guilabel:`in` Counter-clockwise angle to apply. Supported values are [0, 90, 180, 270].
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
 
 
       **Exceptions**
@@ -159,5 +133,33 @@ Rotates the image object of the required angle in-place. The rotation is perform
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_Rotate (
+            ID3_FACE_IMAGE hImage, 
+            int angle)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``angle`` int
+          :guilabel:`in` The rotation angle, in degree. Supported values are [0, 90, 180, 270].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

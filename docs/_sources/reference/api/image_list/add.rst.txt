@@ -17,33 +17,28 @@ Adds an item to the ImageList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImageList_Add (
-            ID3_FACE_IMAGE_LIST hImageList, 
-            ID3_FACE_IMAGE hImageItem)
+        add(self, image_item: Image) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
-          :guilabel:`in` Handle to the ImageList object.
-
-          ``hImageItem`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image_item`` :ref:`Image<image_class>`
           :guilabel:`in` Image item to add.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Adds an item to the ImageList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        add(self, image_item: Image) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image_item`` :ref:`Image<image_class>`
-          :guilabel:`in` Image item to add.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Adds an item to the ImageList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageList_Add (
+            ID3_FACE_IMAGE_LIST hImageList, 
+            ID3_FACE_IMAGE hImageItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`in` Handle to the ImageList object.
+
+          ``hImageItem`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Image item to add.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -12,7 +12,9 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Exports the image object to a file. The compression level meaning depends on the used algorithm:
+Saves the image to the specified file.
+
+The compression level meaning depends on the algorithm used:
 
 - For JPEG compression, the value is the expected quality and may vary from 1 to 100.
 
@@ -25,37 +27,31 @@ Exports the image object to a file. The compression level meaning depends on the
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_ToFile (
-            ID3_FACE_IMAGE hImage, 
-            const char * filepath, 
-            float compressionLevel)
+        to_file(self, filepath: str, compression_level: float) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
+          ``filepath`` str
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
 
-          ``filepath`` const char *
-          :guilabel:`in` Path to the file to export the image object to.
-
-          ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
+          ``compression_level`` float
+          :guilabel:`in` The compression level to be applied.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -69,10 +65,10 @@ Exports the image object to a file. The compression level meaning depends on the
         .. line-block::
 
           ``filepath`` String
-          :guilabel:`in` Path to the file to export the image object to.
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
 
           ``compressionLevel`` double
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Exceptions**
@@ -95,10 +91,10 @@ Exports the image object to a file. The compression level meaning depends on the
         .. line-block::
 
           ``filepath`` string
-          :guilabel:`in` Path to the file to export the image object to.
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
 
           ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Exceptions**
@@ -121,36 +117,10 @@ Exports the image object to a file. The compression level meaning depends on the
         .. line-block::
 
           ``filepath`` String
-          :guilabel:`in` Path to the file to export the image object to.
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
 
           ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_file(self, filepath: str, compression_level: float) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``filepath`` str
-          :guilabel:`in` Path to the file to export the image object to.
-
-          ``compression_level`` float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Exceptions**
@@ -173,10 +143,10 @@ Exports the image object to a file. The compression level meaning depends on the
         .. line-block::
 
           ``filepath`` String
-          :guilabel:`in` Path to the file to export the image object to.
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
 
           ``compressionLevel`` Float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Exceptions**
@@ -186,5 +156,37 @@ Exports the image object to a file. The compression level meaning depends on the
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ToFile (
+            ID3_FACE_IMAGE hImage, 
+            const char * filepath, 
+            float compressionLevel)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``filepath`` const char *
+          :guilabel:`in` A string that contains the name of the file to which to save the image.
+
+          ``compressionLevel`` float
+          :guilabel:`in` The compression level to be applied.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

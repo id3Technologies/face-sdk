@@ -17,37 +17,31 @@ Rotates the face object by a given angle in degrees from a given center.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFace_Rotate (
-            ID3_TRACKED_FACE hTrackedFace, 
-            int angle, 
-            const id3FacePoint * sCenter)
+        rotate(self, angle: int, center: Point) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
-          :guilabel:`in` Handle to the TrackedFace object.
-
           ``angle`` int
           :guilabel:`in` Angle of the rotation to apply to the face object.
 
-          ``sCenter`` :ref:`const id3FacePoint *<point_struct>`
+          ``center`` :ref:`Point<point_struct>`
           :guilabel:`in` Center of the rotation to apply to the face object.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -127,32 +121,6 @@ Rotates the face object by a given angle in degrees from a given center.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        rotate(self, angle: int, center: Point) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``angle`` int
-          :guilabel:`in` Angle of the rotation to apply to the face object.
-
-          ``center`` :ref:`Point<point_struct>`
-          :guilabel:`in` Center of the rotation to apply to the face object.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -178,5 +146,37 @@ Rotates the face object by a given angle in degrees from a given center.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_Rotate (
+            ID3_TRACKED_FACE hTrackedFace, 
+            int angle, 
+            const id3FacePoint * sCenter)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``angle`` int
+          :guilabel:`in` Angle of the rotation to apply to the face object.
+
+          ``sCenter`` :ref:`const id3FacePoint *<point_struct>`
+          :guilabel:`in` Center of the rotation to apply to the face object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

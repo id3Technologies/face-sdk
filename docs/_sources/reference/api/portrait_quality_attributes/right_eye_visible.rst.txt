@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.rightEyeVisible Property
+
+.. _portrait_quality_attributes_right_eye_visible_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.rightEyeVisible Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the right eye is visible.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int right_eye_visible
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int rightEyeVisible
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int RightEyeVisible
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int rightEyeVisible
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int rightEyeVisible
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int RightEyeVisible
+

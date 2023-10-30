@@ -17,33 +17,27 @@ Clones the ImageList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImageList_CopyTo (
-            ID3_FACE_IMAGE_LIST hImageList, 
-            ID3_FACE_IMAGE_LIST hImageListDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
-          :guilabel:`in` Handle to the ImageList object.
-
-          ``hImageListDst`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
-          :guilabel:`out` The newly created image list.
-
+        clone(self) -> ImageList
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`ImageList<image_list_class>`
+          The newly created image list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the ImageList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> ImageList
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`ImageList<image_list_class>`
-          The newly created image list.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the ImageList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageList_CopyTo (
+            ID3_FACE_IMAGE_LIST hImageList, 
+            ID3_FACE_IMAGE_LIST hImageListDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageList`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`in` Handle to the ImageList object.
+
+          ``hImageListDst`` :ref:`ID3_FACE_IMAGE_LIST<image_list_class>`
+          :guilabel:`out` The newly created image list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -25,37 +25,31 @@ In a realtime process, one must use this function instead of DetectFaces() to ke
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceDetector_TrackFaces (
-            ID3_FACE_DETECTOR hFaceDetector, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE_LIST hDetectedFaceList)
+        track_faces(self, image: Image, detected_face_list: DetectedFaceList) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
-          :guilabel:`in` Handle to the FaceDetector object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          ``detected_face_list`` :ref:`DetectedFaceList<detected_face_list_class>`
           :guilabel:`in` List of detected faces.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -135,32 +129,6 @@ In a realtime process, one must use this function instead of DetectFaces() to ke
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        track_faces(self, image: Image, detected_face_list: DetectedFaceList) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face_list`` :ref:`DetectedFaceList<detected_face_list_class>`
-          :guilabel:`in` List of detected faces.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -186,5 +154,37 @@ In a realtime process, one must use this function instead of DetectFaces() to ke
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceDetector_TrackFaces (
+            ID3_FACE_DETECTOR hFaceDetector, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE_LIST hDetectedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
+          :guilabel:`in` Handle to the FaceDetector object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` List of detected faces.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

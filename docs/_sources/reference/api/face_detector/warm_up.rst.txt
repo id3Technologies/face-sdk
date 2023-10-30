@@ -23,37 +23,31 @@ Calling this function is not mandatory as the internal memory layout is automati
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceDetector_WarmUp (
-            ID3_FACE_DETECTOR hFaceDetector, 
-            int imageWidth, 
-            int imageHeight)
+        warm_up(self, image_width: int, image_height: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
-          :guilabel:`in` Handle to the FaceDetector object.
-
-          ``imageWidth`` int
+          ``image_width`` int
           :guilabel:`in` Width of the expected image size.
 
-          ``imageHeight`` int
+          ``image_height`` int
           :guilabel:`in` Height of expected image size.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -133,32 +127,6 @@ Calling this function is not mandatory as the internal memory layout is automati
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        warm_up(self, image_width: int, image_height: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image_width`` int
-          :guilabel:`in` Width of the expected image size.
-
-          ``image_height`` int
-          :guilabel:`in` Height of expected image size.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -184,5 +152,37 @@ Calling this function is not mandatory as the internal memory layout is automati
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceDetector_WarmUp (
+            ID3_FACE_DETECTOR hFaceDetector, 
+            int imageWidth, 
+            int imageHeight)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
+          :guilabel:`in` Handle to the FaceDetector object.
+
+          ``imageWidth`` int
+          :guilabel:`in` Width of the expected image size.
+
+          ``imageHeight`` int
+          :guilabel:`in` Height of expected image size.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

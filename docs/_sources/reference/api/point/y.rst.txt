@@ -17,12 +17,12 @@ Y-coordinate of the point.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int Y
+      int y
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Y-coordinate of the point.
 
       int y
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int y
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int y
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Y
 

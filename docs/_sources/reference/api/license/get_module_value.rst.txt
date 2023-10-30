@@ -12,29 +12,25 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves the value of a given module in the license.
+Retrieves the value associated to the specified license module.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetModuleValue (
-            const char * name, 
-            int * value)
+        @staticmethod
+        get_module_value(name: str) -> int
 
       **Parameters**
 
         .. line-block::
 
-          ``name`` const char *
+          ``name`` str
           :guilabel:`in` Name of the requested module.
-
-          ``value`` int *
-          :guilabel:`out` Pointer to an int which will contain the requested value.
 
 
       **Returns**
@@ -42,8 +38,15 @@ Retrieves the value of a given module in the license.
         .. line-block::
 
           ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          The value associated to the licence module.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -65,7 +68,7 @@ Retrieves the value of a given module in the license.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested value.
+          The value associated to the licence module.
 
       **Exceptions**
 
@@ -95,7 +98,7 @@ Retrieves the value of a given module in the license.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested value.
+          The value associated to the licence module.
 
       **Exceptions**
 
@@ -125,38 +128,7 @@ Retrieves the value of a given module in the license.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested value.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_module_value(name: str) -> int
-
-      **Parameters**
-
-        .. line-block::
-
-          ``name`` str
-          :guilabel:`in` Name of the requested module.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``int``
-          Pointer to an int which will contain the requested value.
+          The value associated to the licence module.
 
       **Exceptions**
 
@@ -186,7 +158,7 @@ Retrieves the value of a given module in the license.
         .. line-block::
 
           ``Int``
-          Pointer to an int which will contain the requested value.
+          The value associated to the licence module.
 
       **Exceptions**
 
@@ -195,5 +167,33 @@ Retrieves the value of a given module in the license.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetModuleValue (
+            const char * name, 
+            int * value)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``name`` const char *
+          :guilabel:`in` Name of the requested module.
+
+          ``value`` int *
+          :guilabel:`out` The value associated to the licence module.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

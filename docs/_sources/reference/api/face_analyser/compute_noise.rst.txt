@@ -17,28 +17,19 @@ Measures the image noise.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_ComputeNoise (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_FACE_IMAGE hImage, 
-            int * noiseScore)
+        compute_noise(self, image: Image) -> int
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
-
-          ``noiseScore`` int *
-          :guilabel:`out` The estimated noise score. 0 means no noise, 100 means no signal.
 
 
       **Returns**
@@ -46,8 +37,15 @@ Measures the image noise.
         .. line-block::
 
           ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          The estimated noise score. 0 means no noise, 100 means no signal.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Measures the image noise.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_noise(self, image: Image) -> int
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``int``
-          The estimated noise score. 0 means no noise, 100 means no signal.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Measures the image noise.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeNoise (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            int * noiseScore)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``noiseScore`` int *
+          :guilabel:`out` The estimated noise score. 0 means no noise, 100 means no signal.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

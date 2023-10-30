@@ -21,21 +21,20 @@ Model used to create features and assess consistancy among views of a given face
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel * eFaceEncodingModel)
-      int id3FacePortraitProcessor_SetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel eFaceEncodingModel)
+      face_encoding_model: FaceModel
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Model used to create features and assess consistancy among views of a given face
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Model used to create features and assess consistancy among views of a given face
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Model used to create features and assess consistancy among views of a given face
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      face_encoding_model: FaceModel
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Model used to create features and assess consistancy among views of a given face
 
     .. code:: Swift
 
-      TODO
+      public var faceEncodingModel: FaceModel
+          get {
+              return try! getFaceEncodingModel()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel * eFaceEncodingModel)
+      int id3FacePortraitProcessor_SetFaceEncodingModel (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, id3FaceModel eFaceEncodingModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

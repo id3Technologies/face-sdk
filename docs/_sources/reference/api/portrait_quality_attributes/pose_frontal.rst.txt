@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.poseFrontal Property
+
+.. _portrait_quality_attributes_pose_frontal_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.poseFrontal Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the subject's face is frontal.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int pose_frontal
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int poseFrontal
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int PoseFrontal
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int poseFrontal
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int poseFrontal
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int PoseFrontal
+

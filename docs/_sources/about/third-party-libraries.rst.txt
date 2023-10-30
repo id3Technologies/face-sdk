@@ -1,7 +1,3 @@
-=====================
-Third-Party Libraries
-=====================
-
-.. include:: ../../../3rdParty/3rdParty-Librairies.txt
+.. include:: ../../../3rdParty/3rdParty-Librairies.md
     :parser: myst_parser.sphinx_
-    
+    :start-line: 0

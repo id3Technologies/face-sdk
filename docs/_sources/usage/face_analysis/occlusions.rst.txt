@@ -1,9 +1,0 @@
-.. _occlusions:
-
-========================
-Face Occlusion Detection
-========================
-
-Presence of occlusions on the subject's face (eyes, nose, mouth).
-
-.. note:: Required AI model: **FaceOcclusionDetector1A**

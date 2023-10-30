@@ -17,12 +17,12 @@ Value indicating whether no emotion is visible on the subject's face.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int NeutralExpression
+      int neutral_expression
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether no emotion is visible on the subject's face.
 
       int neutralExpression
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int neutral_expression
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int neutralExpression
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NeutralExpression
 

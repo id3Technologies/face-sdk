@@ -17,37 +17,35 @@ Finds a detected face by ID.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFaceList_FindDetectedFace (
-            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
-            int id, 
-            ID3_DETECTED_FACE hDetectedFace)
+        find_detected_face(self, id: int) -> DetectedFace
 
       **Parameters**
 
         .. line-block::
 
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`in` Handle to the DetectedFaceList object.
-
           ``id`` int
           :guilabel:`in` ID of the detected face to find in the list.
-
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
-          :guilabel:`out` The found detected face.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`DetectedFace<detected_face_class>`
+          The found detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Finds a detected face by ID.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        find_detected_face(self, id: int) -> DetectedFace
-
-      **Parameters**
-
-        .. line-block::
-
-          ``id`` int
-          :guilabel:`in` ID of the detected face to find in the list.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`DetectedFace<detected_face_class>`
-          The found detected face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Finds a detected face by ID.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_FindDetectedFace (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            int id, 
+            ID3_DETECTED_FACE hDetectedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face to find in the list.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`out` The found detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -17,29 +17,20 @@ Clears all attributes.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FacePortrait_Clear (
-            ID3_FACE_PORTRAIT hPortrait)
+        clear(self) -> None
 
-      **Parameters**
-
-        .. line-block::
-
-          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
-          :guilabel:`in` Handle to the Portrait object.
-
-
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -86,21 +77,6 @@ Clears all attributes.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clear(self) -> None
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -115,5 +91,29 @@ Clears all attributes.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortrait_Clear (
+            ID3_FACE_PORTRAIT hPortrait)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`in` Handle to the Portrait object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

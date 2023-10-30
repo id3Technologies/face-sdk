@@ -12,7 +12,7 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Exports the image object to a numpy array
+Exports the image to a numpy array (Python only)
 
 
 .. tab-set::
@@ -29,7 +29,7 @@ Exports the image object to a numpy array
         .. line-block::
 
           ``bytearray``
-          Buffer to export the image object to (numpy array).
+          Buffer that receives the numpy array.
 
       **Exceptions**
 

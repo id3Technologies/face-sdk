@@ -19,20 +19,20 @@ Value indicating whether the portrait is a presentation attack.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortrait_GetIsPresentationAttack (ID3_FACE_PORTRAIT hPortrait, bool * isPresentationAttack)
+      is_presentation_attack: bool
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -46,7 +46,7 @@ Value indicating whether the portrait is a presentation attack.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -64,7 +64,7 @@ Value indicating whether the portrait is a presentation attack.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -79,22 +79,7 @@ Value indicating whether the portrait is a presentation attack.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      is_presentation_attack: bool
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -102,13 +87,32 @@ Value indicating whether the portrait is a presentation attack.
 
     .. code:: Swift
 
-      TODO
+      public var isPresentationAttack: Bool
+          get {
+              return try! getIsPresentationAttack()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetIsPresentationAttack (ID3_FACE_PORTRAIT hPortrait, bool * isPresentationAttack)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

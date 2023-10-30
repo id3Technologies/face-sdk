@@ -21,41 +21,38 @@ Extracts the unique features of a detected face and store them in a FaceTemplate
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceEncoder_CreateTemplate (
-            ID3_FACE_ENCODER hFaceEncoder, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            ID3_FACE_TEMPLATE hFaceTemplate)
+        create_template(self, image: Image, detected_face: DetectedFace) -> FaceTemplate
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceEncoder`` :ref:`ID3_FACE_ENCODER<face_encoder_class>`
-          :guilabel:`in` Handle to the FaceEncoder object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
-
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`out` The generated face template.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceTemplate<face_template_class>`
+          The generated face template.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -156,39 +153,6 @@ Extracts the unique features of a detected face and store them in a FaceTemplate
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        create_template(self, image: Image, detected_face: DetectedFace) -> FaceTemplate
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceTemplate<face_template_class>`
-          The generated face template.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -221,5 +185,41 @@ Extracts the unique features of a detected face and store them in a FaceTemplate
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceEncoder_CreateTemplate (
+            ID3_FACE_ENCODER hFaceEncoder, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            ID3_FACE_TEMPLATE hFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceEncoder`` :ref:`ID3_FACE_ENCODER<face_encoder_class>`
+          :guilabel:`in` Handle to the FaceEncoder object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`out` The generated face template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

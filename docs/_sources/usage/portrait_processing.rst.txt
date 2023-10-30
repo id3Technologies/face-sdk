@@ -1,0 +1,177 @@
+.. index:: 
+  !Portrait processing
+
+.. _portrait_processing:
+
+====================
+Portrait processing
+====================
+
+The :ref:`PortraitProcessor<portrait_processor_class>` module facilitates the capture and analysis of portraits in various scenarios such as enrolment or face verification.
+
+The module is fed with images and performs the following operations:
+
+* Face detection and tracking with prediction models
+* Landmark detection (68 points)
+* Head pose estimation
+* Subject's position verification
+* Template encoding and updating
+* :ref:`Additional processing options<additional_portrait_processing_options>`
+* Verification of compliance on a number of :ref:`quality check points<portrait_quality_check_points>`
+* Unified quality score computation
+
+.. important:: 
+  The following AI models are required by the :ref:`PortraitProcessor<portrait_processor_class>` module:
+
+  - ``FaceDetector4B`` or another preferred face detector (see :ref:`face_detection` for details).
+  - ``FaceEncoder9B``, or another preferred face encoder (see :ref:`face_encoding` for details).
+  - ``FaceLandmarksEstimator2A``
+  - ``FacePoseEstimator1A``
+
+
+Creating and analyzing a portrait
+=================================
+
+A Portrait is created using either the :ref:`portrait_processor_analyze_portrait_class_method` or :ref:`portrait_processor_update_portrait_class_method`.
+
+Use preferrably the :ref:`updatePortrait<portrait_processor_update_portrait_class_method>` method if the image comes from a camera or video stream.
+
+For single image analysis, the :ref:`analyzePortrait<portrait_processor_analyze_portrait_class_method>` should be used.
+
+.. _additional_portrait_processing_options:
+
+Processing options
+=============================
+Additional processing options are available and can be enabled depending on the application requirements:
+
+.. list-table::
+  :width: 100%
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Option
+    - Description
+
+  * - :ref:`Age estimation<portrait_processor_age_estimation_class_member>`
+    - | Indicates whether the age is estimated.
+      | Required AI model: ``FaceAgeEstimator1A``
+  * - :ref:`Background uniformity computation<portrait_processor_background_uniformity_computation_class_member>`
+    - | Computes both color and structure uniformity of the background.
+      | Required AI model: ``FaceBackgroundUniformityEstimator1A``
+  * - :ref:`Emotion detection<portrait_processor_expression_detection_class_member>`
+    - | Detects the emotion on the subject4s face.
+      | Required AI model: ``FaceExpressionClassifier1A``
+  * - :ref:`Eye gaze detection<portrait_processor_eye_gaze_detection_class_member>`
+    - | Computes eye gaze.
+      | Required AI model: ``EyeGazeEstimator2A``
+  * - :ref:`Eye opening detection<portrait_processor_expression_detection_class_member>`
+    - | Estimates whether the eyes are opened.
+      | Required AI model: ``EyeOpennessDetector1A``
+  * - :ref:`Face mask detection<portrait_processor_face_mask_detection_class_member>`
+    - | Detects whether the subject wear a protective mask.
+      | Required AI model: ``FaceMaskClassifier2A``
+  * - :ref:`Gender estimation<portrait_processor_gender_estimation_class_member>`
+    - | Estimates the gender of the subject.
+      | Required AI model: ``FaceAttributesClassifier2A``
+  * - :ref:`Glasses detection<portrait_processor_glasses_detection_class_member>`
+    - | Detects the presence of glasses.
+      | Required AI model: ``FaceAttributesClassifier2A``
+  * - :ref:`Hat detection<portrait_processor_hat_detection_class_member>`
+    - | Detects the presence of a hat.
+      | Required AI model: ``FaceAttributesClassifier2A``
+  * - :ref:`Make-up detection<portrait_processor_makeup_detection_class_member>`
+    - | Detects the presence of a make-up.
+      | Required AI model: ``FaceAttributesClassifier2A``
+  * - :ref:`Mouth opening estimation<portrait_processor_mouth_opening_detection_class_member>`
+    - | Indicates whether the mouth is opened.
+      | Required AI model: ``FaceAttributesClassifier2A``
+  * - :ref:`Occlusion detection<portrait_processor_occlusion_detection_class_member>`
+    - | Detects occlusions on the face (eyes, nose and mouth).
+      | Required AI model: ``FaceOcclusionDetector2A``
+  * - :ref:`Photographic attributes computation<portrait_processor_photographic_quality_computation_class_member>`
+    - | Computes the photographic characteristics of the portrait image. It includes: image colorization, equal brightness, dynamic range, resolution, natural skin color, flash reflection, noise, over-exposure, under-exposure, pixelation, sharpness
+  * - :ref:`Presentation attack detection<portrait_processor_presentation_attack_detection_class_member>`
+    - | Detects presentation attacks using passive methods.
+      | Required AI model: ``FaceAttackSupportDetector3A``, ``FaceBlurinessDetector1A``, ``FaceColorPad2A``
+  * - :ref:`Red-eye detection<portrait_processor_red_eye_detection_class_member>`
+    - | Detects red-eyes.
+      | Required AI model: ``EyeRednessDetector1A``
+  * - :ref:`Smile detection<portrait_processor_smile_detection_class_member>`
+    - | Detects if the subject is smiling.
+      | Required AI model: ``FaceAttributesClassifier2A``
+
+.. _portrait_quality_check_points:
+
+Quality check points
+====================
+
+The :ref:`PortraitProcessor<portrait_processor_class>` module verifies the compliance to the following quality check points:
+
+.. important:: The quality check points are verified only if the associated processing option is enabled.
+
+Photographic quality
+--------------------
+
+* The image is well exposed.
+* The brightness is well balanced.
+* The image is coloured, not grayscale.
+* The skin looks natural.
+* The image resolution is correct.
+* The dynamic range of the image is correct.
+* The image is sharp.
+* No flash reflection is visible.
+* No noise is present in the image.
+* The image is not pixelated.
+* No red-eye is present.
+* The background is uniform.
+
+Facial attributes
+-----------------
+
+* The subject's face is frontal.
+* The face expression is neutral.
+* The eyes are visible.
+* The eyes are open.
+* The subject does not wear glasses.
+* The subject looks straight towards the camera.
+* The mouth is visible.
+* The mouth is closed.
+* The subject is not smiling.
+* The subject does not wear a hat.
+* The nose is visible.
+  
+Geometry
+--------
+
+* The height of the head in the image is correct.
+* The width of the head in the image is correct.
+* The horizontal position of the head in the image is correct.
+* The vertical position of the head in the image is correct.
+
+.. note:: 
+  Vertical position is the distance from the bottom edge of the image to the imaginary line passing through the center of the eyes, in percentage of the total vertical length of the image.
+
+
+Example
+=======
+
+The example below demonstrates how to analyze a portrait on an image:
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [portrait_processing]
+      :end-before: [portrait_processing]
+      :dedent: 4
+
+
+
+See also
+========
+
+- :ref:`portrait_processor_class`
+- :ref:`portrait_class`

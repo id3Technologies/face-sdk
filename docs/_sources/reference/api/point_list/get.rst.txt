@@ -17,37 +17,35 @@ Gets an item of the PointList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FacePointList_Get (
-            ID3_FACE_POINT_LIST hPointList, 
-            int index, 
-            id3FacePoint * sPointItem)
+        get(self, index: int) -> Point
 
       **Parameters**
 
         .. line-block::
 
-          ``hPointList`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
-          :guilabel:`in` Handle to the PointList object.
-
           ``index`` int
           :guilabel:`in` Index of the Point item to get.
-
-          ``sPointItem`` :ref:`id3FacePoint *<point_struct>`
-          :guilabel:`out` Point item to get.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Point<point_struct>`
+          Point item to get.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Gets an item of the PointList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get(self, index: int) -> Point
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the Point item to get.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Point<point_struct>`
-          Point item to get.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Gets an item of the PointList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePointList_Get (
+            ID3_FACE_POINT_LIST hPointList, 
+            int index, 
+            id3FacePoint * sPointItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPointList`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Handle to the PointList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the Point item to get.
+
+          ``sPointItem`` :ref:`id3FacePoint *<point_struct>`
+          :guilabel:`out` Point item to get.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

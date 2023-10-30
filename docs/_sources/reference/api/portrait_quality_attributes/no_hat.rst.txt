@@ -17,12 +17,12 @@ Value indicating whether the subject does not wear a hat.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int NoHat
+      int no_hat
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the subject does not wear a hat.
 
       int noHat
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int no_hat
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int noHat
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoHat
 

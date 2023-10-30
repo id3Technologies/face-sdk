@@ -12,10 +12,51 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Sets the image object fields. This function does not allocate any memory and is unsafe! The user must handle the pixels pointer carefully.
+Sets the Image object fields.
+
+.. warning:: This function does not allocate any memory and is unsafe! The user must handle the pixels pointer carefully.
 
 
 .. tab-set::
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public static Image Set(int width, int height, PixelFormat pixelFormat, IntPtr pixels)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``width`` int
+          :guilabel:`in` The width, in pixels, of the image.
+
+          ``height`` int
+          :guilabel:`in` The height, in pixels, of the image.
+
+          ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format of the image.
+
+          ``pixels`` IntPtr
+          :guilabel:`in` A pointer to the image pixels of the image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: C
       :sync: C
@@ -37,16 +78,16 @@ Sets the image object fields. This function does not allocate any memory and is 
           :guilabel:`in` Handle to the Image object.
 
           ``width`` int
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` int
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``ePixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
           :guilabel:`in` The pixel format of the image.
 
           ``pixels`` void *
-          :guilabel:`in` Pointer to the pixels of the image. Unsafe!
+          :guilabel:`in` A pointer to the image pixels of the image.
 
 
       **Returns**
@@ -56,44 +97,5 @@ Sets the image object fields. This function does not allocate any memory and is 
           ``int``
           An error code.
           See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
-
-    .. tab-item:: C#
-      :sync: C#
-
-      .. code:: C#
-
-        public static Image Set(int width, int height, PixelFormat pixelFormat, IntPtr pixels)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``width`` int
-          :guilabel:`in` Width in pixels of the image.
-
-          ``height`` int
-          :guilabel:`in` Height in pixels of the image.
-
-          ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The pixel format of the image.
-
-          ``pixels`` IntPtr
-          :guilabel:`in` Pointer to the pixels of the image. Unsafe!
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          The newly created image.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
 
 

@@ -23,21 +23,20 @@ Minimal interocular distance (IOD) in pixels required to perform a face encoding
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceEncoder_GetMinimalIod (ID3_FACE_ENCODER hFaceEncoder, int * minimalIod)
-      int id3FaceEncoder_SetMinimalIod (ID3_FACE_ENCODER hFaceEncoder, int minimalIod)
+      minimal_iod: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Minimal interocular distance (IOD) in pixels required to perform a face encoding
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Minimal interocular distance (IOD) in pixels required to perform a face encoding
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Minimal interocular distance (IOD) in pixels required to perform a face encoding
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      minimal_iod: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Minimal interocular distance (IOD) in pixels required to perform a face encoding
 
     .. code:: Swift
 
-      TODO
+      public var minimalIod: Int
+          get {
+              return Int(try! getMinimalIod())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceEncoder_GetMinimalIod (ID3_FACE_ENCODER hFaceEncoder, int * minimalIod)
+      int id3FaceEncoder_SetMinimalIod (ID3_FACE_ENCODER hFaceEncoder, int minimalIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

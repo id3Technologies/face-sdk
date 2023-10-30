@@ -17,33 +17,28 @@ Removes an element of the FaceCandidateList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceCandidateList_RemoveAt (
-            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
-            int index)
+        remove_at(self, index: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
-          :guilabel:`in` Handle to the FaceCandidateList object.
-
           ``index`` int
           :guilabel:`in` Index of the FaceCandidate item to remove.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Removes an element of the FaceCandidateList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        remove_at(self, index: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the FaceCandidate item to remove.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Removes an element of the FaceCandidateList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceCandidateList_RemoveAt (
+            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
+            int index)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`in` Handle to the FaceCandidateList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the FaceCandidate item to remove.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

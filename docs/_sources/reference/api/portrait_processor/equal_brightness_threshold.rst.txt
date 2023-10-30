@@ -23,21 +23,20 @@ Above this value, the face is equally exposed.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * equalBrightnessThreshold)
-      int id3FacePortraitProcessor_SetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int equalBrightnessThreshold)
+      equal_brightness_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Above this value, the face is equally exposed.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Above this value, the face is equally exposed.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Above this value, the face is equally exposed.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      equal_brightness_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Above this value, the face is equally exposed.
 
     .. code:: Swift
 
-      TODO
+      public var equalBrightnessThreshold: Int
+          get {
+              return Int(try! getEqualBrightnessThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * equalBrightnessThreshold)
+      int id3FacePortraitProcessor_SetEqualBrightnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int equalBrightnessThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

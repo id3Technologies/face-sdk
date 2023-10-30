@@ -17,33 +17,27 @@ Gets the number of elements in the FaceTemplateDict object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplateDict_GetCount (
-            ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, 
-            int * count)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hFaceTemplateDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
-          :guilabel:`in` Handle to the FaceTemplateDict object.
-
-          ``count`` int *
-          :guilabel:`out` Number of elements in the FaceTemplate object.
-
+        get_count(self) -> int
 
       **Returns**
 
         .. line-block::
 
           ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          Number of elements in the FaceTemplate object.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Gets the number of elements in the FaceTemplateDict object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get_count(self) -> int
-
-      **Returns**
-
-        .. line-block::
-
-          ``int``
-          Number of elements in the FaceTemplate object.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Gets the number of elements in the FaceTemplateDict object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplateDict_GetCount (
+            ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, 
+            int * count)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplateDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
+          :guilabel:`in` Handle to the FaceTemplateDict object.
+
+          ``count`` int *
+          :guilabel:`out` Number of elements in the FaceTemplate object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

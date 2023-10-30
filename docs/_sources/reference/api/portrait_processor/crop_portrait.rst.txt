@@ -23,37 +23,35 @@ This method uses the following parameters:
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FacePortraitProcessor_CropPortrait (
-            ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, 
-            ID3_FACE_PORTRAIT hPortrait, 
-            ID3_FACE_IMAGE hImage)
+        crop_portrait(self, portrait: Portrait) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hPortraitProcessor`` :ref:`ID3_FACE_PORTRAIT_PROCESSOR<portrait_processor_class>`
-          :guilabel:`in` Handle to the PortraitProcessor object.
-
-          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          ``portrait`` :ref:`Portrait<portrait_class>`
           :guilabel:`in` The portrait to extract the face from.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`out` The output cropped image of the face.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          The output cropped image of the face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -145,36 +143,6 @@ This method uses the following parameters:
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        crop_portrait(self, portrait: Portrait) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``portrait`` :ref:`Portrait<portrait_class>`
-          :guilabel:`in` The portrait to extract the face from.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          The output cropped image of the face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -204,5 +172,37 @@ This method uses the following parameters:
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePortraitProcessor_CropPortrait (
+            ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, 
+            ID3_FACE_PORTRAIT hPortrait, 
+            ID3_FACE_IMAGE hImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hPortraitProcessor`` :ref:`ID3_FACE_PORTRAIT_PROCESSOR<portrait_processor_class>`
+          :guilabel:`in` Handle to the PortraitProcessor object.
+
+          ``hPortrait`` :ref:`ID3_FACE_PORTRAIT<portrait_class>`
+          :guilabel:`in` The portrait to extract the face from.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`out` The output cropped image of the face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -17,6 +17,13 @@ Definition
 
 .. tab-set::
 
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class FaceException(Exception)
+
     .. tab-item:: Dart
       :sync: Dart
 
@@ -37,13 +44,6 @@ Definition
       .. code:: Java
 
         public class FaceException extends RuntimeException
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceException(Exception)
 
     .. tab-item:: Swift
       :sync: Swift

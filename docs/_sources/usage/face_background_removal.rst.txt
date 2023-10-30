@@ -1,0 +1,47 @@
+.. _background_removal:
+
+=======================
+Face background removal
+=======================
+
+Background removal should be performed in two steps:
+
+#. Call the :ref:`FaceAnalyser.segmentFace<face_analyser_segment_face_class_method>` method to create a segmentation mask.
+#. Call the :ref:`FaceAnalyser.applyMask<face_analyser_apply_mask_class_method>` method to apply the segmentation mask and replace the background by a specified color.
+
+.. important:: 
+    The FaceSegmenter1A model is required to suppress the background.
+
+Alpha mask
+==========
+.. image:: img/alpha_mask.jpg
+  :width: 30%
+
+Segmented image
+===============
+.. image:: img/background_removal.jpg
+  :width: 30%
+
+Example
+=======
+
+The example below demonstrates how to remove the background on a face image.
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_background_removal]
+      :end-before: [face_background_removal]
+      :dedent: 4
+
+
+See also
+========
+- :ref:`face_analyser_class`
+- :ref:`face_analyser_segment_face_class_method`
+- :ref:`face_analyser_apply_mask_class_method`
+- :ref:`face_analyser_apply_alpha_mask_class_method`

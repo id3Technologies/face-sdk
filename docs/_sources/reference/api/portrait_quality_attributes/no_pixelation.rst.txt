@@ -17,12 +17,12 @@ Value indicating whether the image is not pixelated.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int NoPixelation
+      int no_pixelation
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the image is not pixelated.
 
       int noPixelation
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int no_pixelation
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int noPixelation
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int NoPixelation
 

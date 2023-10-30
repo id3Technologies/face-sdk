@@ -22,12 +22,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3DetectedFaceAttackSupport
+      class DetectedFaceAttackSupport
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,19 +50,19 @@ Definition
 
       public class DetectedFaceAttackSupport
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class DetectedFaceAttackSupport
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias DetectedFaceAttackSupport = id3DetectedFaceAttackSupport
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3DetectedFaceAttackSupport
 
 
 Properties

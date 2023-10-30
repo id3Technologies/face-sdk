@@ -19,21 +19,20 @@ Landmarks (eyes, nose and mouth corners) of the detected face.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3DetectedFace_GetLandmarks (ID3_DETECTED_FACE hDetectedFace, ID3_FACE_POINT_LIST hLandmarks)
-      int id3DetectedFace_SetLandmarks (ID3_DETECTED_FACE hDetectedFace, ID3_FACE_POINT_LIST hLandmarks)
+      landmarks: PointList
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -48,7 +47,7 @@ Landmarks (eyes, nose and mouth corners) of the detected face.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -67,7 +66,7 @@ Landmarks (eyes, nose and mouth corners) of the detected face.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -83,22 +82,7 @@ Landmarks (eyes, nose and mouth corners) of the detected face.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      landmarks: PointList
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -106,13 +90,33 @@ Landmarks (eyes, nose and mouth corners) of the detected face.
 
     .. code:: Swift
 
-      TODO
+      public var landmarks: PointList
+          get {
+              return try! getLandmarks()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3DetectedFace_GetLandmarks (ID3_DETECTED_FACE hDetectedFace, ID3_FACE_POINT_LIST hLandmarks)
+      int id3DetectedFace_SetLandmarks (ID3_DETECTED_FACE hDetectedFace, ID3_FACE_POINT_LIST hLandmarks)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

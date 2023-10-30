@@ -12,16 +12,22 @@ Namespace: :ref:`id3.Face<reference_api>`
 .. toctree::
   :hidden:
 
-  closedMouth<closed_mouth>
-  colorizedImage<colorized_image>
+  backgroundUniform<background_uniform>
+  brightnessBalanced<brightness_balanced>
   dynamicRange<dynamic_range>
-  equalBrightness<equal_brightness>
-  frontalPose<frontal_pose>
-  headHeight<head_height>
-  headWidth<head_width>
-  horizontalPosition<horizontal_position>
-  naturalSkinColor<natural_skin_color>
-  neutralExpression<neutral_expression>
+  expressionNeutral<expression_neutral>
+  eyesOpen<eyes_open>
+  headHeightCorrect<head_height_correct>
+  headHorizontalPositionCorrect<head_horizontal_position_correct>
+  headVerticalPositionCorrect<head_vertical_position_correct>
+  headWidthCorrect<head_width_correct>
+  imageColoured<image_coloured>
+  imageResolutionCorrect<image_resolution_correct>
+  imageSharp<image_sharp>
+  leftEyeVisible<left_eye_visible>
+  lookStraight<look_straight>
+  mouthClosed<mouth_closed>
+  mouthVisible<mouth_visible>
   noFlashReflection<no_flash_reflection>
   noGlasses<no_glasses>
   noHat<no_hat>
@@ -31,17 +37,10 @@ Namespace: :ref:`id3.Face<reference_api>`
   noRedEye<no_red_eye>
   noSmile<no_smile>
   noUnderExposure<no_under_exposure>
-  openEyes<open_eyes>
-  resolution<resolution>
-  sharpness<sharpness>
-  straightLook<straight_look>
-  uniformBackgroundColor<uniform_background_color>
-  uniformBackgroundStructure<uniform_background_structure>
-  verticalPosition<vertical_position>
-  visibleLeftEye<visible_left_eye>
-  visibleMouth<visible_mouth>
-  visibleNose<visible_nose>
-  visibleRightEye<visible_right_eye>
+  noseVisible<nose_visible>
+  poseFrontal<pose_frontal>
+  rightEyeVisible<right_eye_visible>
+  skinColorNatural<skin_color_natural>
 
 Definition
 ----------
@@ -50,12 +49,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3FacePortraitQualityAttributes
+      class PortraitQualityAttributes
 
   .. tab-item:: Dart
     :sync: Dart
@@ -78,19 +77,19 @@ Definition
 
       public class PortraitQualityAttributes
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class PortraitQualityAttributes
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias PortraitQualityAttributes = id3FacePortraitQualityAttributes
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FacePortraitQualityAttributes
 
 
 Properties
@@ -104,36 +103,54 @@ Properties
   * - Name
     - Type
     - Description
-  * - :ref:`closedMouth<portrait_quality_attributes_closed_mouth_struct_member>`
+  * - :ref:`backgroundUniform<portrait_quality_attributes_background_uniform_struct_member>`
     - int
-    - Value indicating whether the mouth is closed.
-  * - :ref:`colorizedImage<portrait_quality_attributes_colorized_image_struct_member>`
+    - Value indicating whether the color of the background is uniform.
+  * - :ref:`brightnessBalanced<portrait_quality_attributes_brightness_balanced_struct_member>`
     - int
-    - Value indicating whether the image is colorized, not grayscale.
+    - Value indicating whether lighting is equally distributed on the face, in particular symmetrically, i.e., there is no difference between the brightness of the right and left side of the face.
   * - :ref:`dynamicRange<portrait_quality_attributes_dynamic_range_struct_member>`
     - int
     - Value indicating whether the dynamic range on the image is sufficient.
-  * - :ref:`equalBrightness<portrait_quality_attributes_equal_brightness_struct_member>`
-    - int
-    - Value indicating whether lighting is equally distributed on the face, in particular symmetrically, i.e., there is no difference between the brightness of the right and left side of the face.
-  * - :ref:`frontalPose<portrait_quality_attributes_frontal_pose_struct_member>`
-    - int
-    - Value indicating whether the subject's face is frontal.
-  * - :ref:`headHeight<portrait_quality_attributes_head_height_struct_member>`
-    - int
-    - Value indicating whether the height of the head is correct.
-  * - :ref:`headWidth<portrait_quality_attributes_head_width_struct_member>`
-    - int
-    - Value indicating whether the width of the head is correct.
-  * - :ref:`horizontalPosition<portrait_quality_attributes_horizontal_position_struct_member>`
-    - int
-    - Value indicating whether the horizontal position of the head is correct.
-  * - :ref:`naturalSkinColor<portrait_quality_attributes_natural_skin_color_struct_member>`
-    - int
-    - Value indicating whether the skin looks natural.
-  * - :ref:`neutralExpression<portrait_quality_attributes_neutral_expression_struct_member>`
+  * - :ref:`expressionNeutral<portrait_quality_attributes_expression_neutral_struct_member>`
     - int
     - Value indicating whether no emotion is visible on the subject's face.
+  * - :ref:`eyesOpen<portrait_quality_attributes_eyes_open_struct_member>`
+    - int
+    - Value indicating whether the eyes are open.
+  * - :ref:`headHeightCorrect<portrait_quality_attributes_head_height_correct_struct_member>`
+    - int
+    - Value indicating whether the height of the head in the image is correct.
+  * - :ref:`headHorizontalPositionCorrect<portrait_quality_attributes_head_horizontal_position_correct_struct_member>`
+    - int
+    - Value indicating whether the horizontal position of the head in the image is correct.
+  * - :ref:`headVerticalPositionCorrect<portrait_quality_attributes_head_vertical_position_correct_struct_member>`
+    - int
+    - Value indicating whether the vertical position of the head in the image is correct.
+  * - :ref:`headWidthCorrect<portrait_quality_attributes_head_width_correct_struct_member>`
+    - int
+    - Value indicating whether the width of the head in the image is correct.
+  * - :ref:`imageColoured<portrait_quality_attributes_image_coloured_struct_member>`
+    - int
+    - Value indicating whether the image is coloured, not grayscale.
+  * - :ref:`imageResolutionCorrect<portrait_quality_attributes_image_resolution_correct_struct_member>`
+    - int
+    - Value indicating whether the image resolution is correct.
+  * - :ref:`imageSharp<portrait_quality_attributes_image_sharp_struct_member>`
+    - int
+    - Value indicating whether the image is sharp.
+  * - :ref:`leftEyeVisible<portrait_quality_attributes_left_eye_visible_struct_member>`
+    - int
+    - Value indicating whether the left eye is visible.
+  * - :ref:`lookStraight<portrait_quality_attributes_look_straight_struct_member>`
+    - int
+    - Value indicating whether the subject looks straight towards the camera.
+  * - :ref:`mouthClosed<portrait_quality_attributes_mouth_closed_struct_member>`
+    - int
+    - Value indicating whether the mouth is closed.
+  * - :ref:`mouthVisible<portrait_quality_attributes_mouth_visible_struct_member>`
+    - int
+    - Value indicating whether the mouth is visible.
   * - :ref:`noFlashReflection<portrait_quality_attributes_no_flash_reflection_struct_member>`
     - int
     - Value indicating whether no flash reflection is visible.
@@ -161,36 +178,15 @@ Properties
   * - :ref:`noUnderExposure<portrait_quality_attributes_no_under_exposure_struct_member>`
     - int
     - Value indicating whether the image is not under-exposed.
-  * - :ref:`openEyes<portrait_quality_attributes_open_eyes_struct_member>`
-    - int
-    - Value indicating whether the eyes are open.
-  * - :ref:`resolution<portrait_quality_attributes_resolution_struct_member>`
-    - int
-    - Value indicating whether the image resolution is correct.
-  * - :ref:`sharpness<portrait_quality_attributes_sharpness_struct_member>`
-    - int
-    - Value indicating whether the image is sharp.
-  * - :ref:`straightLook<portrait_quality_attributes_straight_look_struct_member>`
-    - int
-    - Value indicating whether the subject looks straight towards the camera.
-  * - :ref:`uniformBackgroundColor<portrait_quality_attributes_uniform_background_color_struct_member>`
-    - int
-    - Value indicating whether the color of the background is uniform.
-  * - :ref:`uniformBackgroundStructure<portrait_quality_attributes_uniform_background_structure_struct_member>`
-    - int
-    - Value indicating whether the structure of the background is uniform.
-  * - :ref:`verticalPosition<portrait_quality_attributes_vertical_position_struct_member>`
-    - int
-    - Value indicating whether the vertical position of the head is correct.
-  * - :ref:`visibleLeftEye<portrait_quality_attributes_visible_left_eye_struct_member>`
-    - int
-    - Value indicating whether the left eye is visible.
-  * - :ref:`visibleMouth<portrait_quality_attributes_visible_mouth_struct_member>`
-    - int
-    - Value indicating whether the mouth is visible.
-  * - :ref:`visibleNose<portrait_quality_attributes_visible_nose_struct_member>`
+  * - :ref:`noseVisible<portrait_quality_attributes_nose_visible_struct_member>`
     - int
     - Value indicating whether the nose is visible.
-  * - :ref:`visibleRightEye<portrait_quality_attributes_visible_right_eye_struct_member>`
+  * - :ref:`poseFrontal<portrait_quality_attributes_pose_frontal_struct_member>`
+    - int
+    - Value indicating whether the subject's face is frontal.
+  * - :ref:`rightEyeVisible<portrait_quality_attributes_right_eye_visible_struct_member>`
     - int
     - Value indicating whether the right eye is visible.
+  * - :ref:`skinColorNatural<portrait_quality_attributes_skin_color_natural_struct_member>`
+    - int
+    - Value indicating whether the skin looks natural.

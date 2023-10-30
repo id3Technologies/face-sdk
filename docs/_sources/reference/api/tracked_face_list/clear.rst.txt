@@ -17,29 +17,20 @@ Clears the TrackedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFaceList_Clear (
-            ID3_TRACKED_FACE_LIST hTrackedFaceList)
+        clear(self) -> None
 
-      **Parameters**
-
-        .. line-block::
-
-          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
-          :guilabel:`in` Handle to the TrackedFaceList object.
-
-
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -86,21 +77,6 @@ Clears the TrackedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clear(self) -> None
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -115,5 +91,29 @@ Clears the TrackedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_Clear (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

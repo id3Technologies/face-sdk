@@ -24,12 +24,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3FaceEyeGaze
+      class EyeGaze
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,19 +52,19 @@ Definition
 
       public class EyeGaze
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class EyeGaze
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias EyeGaze = id3FaceEyeGaze
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceEyeGaze
 
 
 Properties

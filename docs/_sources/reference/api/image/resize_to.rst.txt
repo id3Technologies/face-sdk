@@ -12,46 +12,39 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Resizes the image object to the required width and height into another.
+Resizes the image to the specified width and height.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_ResizeTo (
-            ID3_FACE_IMAGE hImage, 
-            int width, 
-            int height, 
-            ID3_FACE_IMAGE hDstImage)
+        resize_to(self, width: int, height: int, dst_image: Image) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
           ``width`` int
-          :guilabel:`in` Width to resize the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to resize the image object to.
+          :guilabel:`in` The new height, in pixels.
 
-          ``hDstImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
+          ``dst_image`` :ref:`Image<image_class>`
+          :guilabel:`in` The destination image that receives the resized image.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -65,13 +58,13 @@ Resizes the image object to the required width and height into another.
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to resize the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to resize the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``dstImage`` :ref:`Image<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
+          :guilabel:`in` The destination image that receives the resized image.
 
 
       **Exceptions**
@@ -94,13 +87,13 @@ Resizes the image object to the required width and height into another.
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to resize the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to resize the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``dstImage`` :ref:`Image<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
+          :guilabel:`in` The destination image that receives the resized image.
 
 
       **Exceptions**
@@ -123,42 +116,13 @@ Resizes the image object to the required width and height into another.
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to resize the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to resize the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``dstImage`` :ref:`Image<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        resize_to(self, width: int, height: int, dst_image: Image) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``width`` int
-          :guilabel:`in` Width to resize the image object to.
-
-          ``height`` int
-          :guilabel:`in` Height to resize the image object to.
-
-          ``dst_image`` :ref:`Image<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
+          :guilabel:`in` The destination image that receives the resized image.
 
 
       **Exceptions**
@@ -181,13 +145,13 @@ Resizes the image object to the required width and height into another.
         .. line-block::
 
           ``width`` Int32
-          :guilabel:`in` Width to resize the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` Int32
-          :guilabel:`in` Height to resize the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``dstImage`` :ref:`Image<image_class>`
-          :guilabel:`in` Image object where to store the resized image.
+          :guilabel:`in` The destination image that receives the resized image.
 
 
       **Exceptions**
@@ -197,5 +161,41 @@ Resizes the image object to the required width and height into another.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ResizeTo (
+            ID3_FACE_IMAGE hImage, 
+            int width, 
+            int height, 
+            ID3_FACE_IMAGE hDstImage)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``width`` int
+          :guilabel:`in` The new width, in pixels.
+
+          ``height`` int
+          :guilabel:`in` The new height, in pixels.
+
+          ``hDstImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` The destination image that receives the resized image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

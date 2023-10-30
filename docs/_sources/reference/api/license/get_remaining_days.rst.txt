@@ -12,34 +12,33 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves the number of trial remaining days.
+Retrieves the number of remaining days.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetRemainingDays (
-            int * remainingDays)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``remainingDays`` int *
-          :guilabel:`out` Pointer to an int which will contain the requested remainingDays.
-
+        @staticmethod
+        get_remaining_days() -> int
 
       **Returns**
 
         .. line-block::
 
           ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          The number of remaining days.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -53,7 +52,7 @@ Retrieves the number of trial remaining days.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested remainingDays.
+          The number of remaining days.
 
       **Exceptions**
 
@@ -75,7 +74,7 @@ Retrieves the number of trial remaining days.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested remainingDays.
+          The number of remaining days.
 
       **Exceptions**
 
@@ -97,30 +96,7 @@ Retrieves the number of trial remaining days.
         .. line-block::
 
           ``int``
-          Pointer to an int which will contain the requested remainingDays.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_remaining_days() -> int
-
-      **Returns**
-
-        .. line-block::
-
-          ``int``
-          Pointer to an int which will contain the requested remainingDays.
+          The number of remaining days.
 
       **Exceptions**
 
@@ -142,7 +118,7 @@ Retrieves the number of trial remaining days.
         .. line-block::
 
           ``Int``
-          Pointer to an int which will contain the requested remainingDays.
+          The number of remaining days.
 
       **Exceptions**
 
@@ -151,5 +127,29 @@ Retrieves the number of trial remaining days.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetRemainingDays (
+            int * remainingDays)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``remainingDays`` int *
+          :guilabel:`out` The number of remaining days.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

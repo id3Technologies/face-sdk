@@ -21,21 +21,20 @@ Threshold for confirming that the person is wearing a hat.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetHatThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * hatThreshold)
-      int id3FacePortraitProcessor_SetHatThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int hatThreshold)
+      hat_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Threshold for confirming that the person is wearing a hat.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Threshold for confirming that the person is wearing a hat.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Threshold for confirming that the person is wearing a hat.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      hat_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Threshold for confirming that the person is wearing a hat.
 
     .. code:: Swift
 
-      TODO
+      public var hatThreshold: Int
+          get {
+              return Int(try! getHatThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetHatThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * hatThreshold)
+      int id3FacePortraitProcessor_SetHatThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int hatThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

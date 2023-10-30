@@ -21,21 +21,20 @@ Maximum head roll angle, in degrees.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * maximumRollAngle)
-      int id3FacePortraitProcessor_SetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float maximumRollAngle)
+      maximum_roll_angle: float
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Maximum head roll angle, in degrees.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Maximum head roll angle, in degrees.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Maximum head roll angle, in degrees.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      maximum_roll_angle: float
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Maximum head roll angle, in degrees.
 
     .. code:: Swift
 
-      TODO
+      public var maximumRollAngle: Float
+          get {
+              return try! getMaximumRollAngle()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * maximumRollAngle)
+      int id3FacePortraitProcessor_SetMaximumRollAngle (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float maximumRollAngle)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

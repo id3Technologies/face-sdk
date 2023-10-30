@@ -17,37 +17,35 @@ Determines whether the FaceTemplateDictobject contains the specified key.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplateDict_ContainsKey (
-            ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, 
-            const char * key, 
-            bool * result)
+        contains_key(self, key: str) -> bool
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceTemplateDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
-          :guilabel:`in` Handle to the FaceTemplateDict object.
-
-          ``key`` const char *
+          ``key`` str
           :guilabel:`in` The key to locate in the FaceTemplate object.
-
-          ``result`` bool *
-          :guilabel:`out` true if the FaceTemplate object contains an element with the specified key, otherwise false.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bool``
+          true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Determines whether the FaceTemplateDictobject contains the specified key.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        contains_key(self, key: str) -> bool
-
-      **Parameters**
-
-        .. line-block::
-
-          ``key`` str
-          :guilabel:`in` The key to locate in the FaceTemplate object.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``bool``
-          true if the FaceTemplate object contains an element with the specified key, otherwise false.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Determines whether the FaceTemplateDictobject contains the specified key.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplateDict_ContainsKey (
+            ID3_FACE_TEMPLATE_DICT hFaceTemplateDict, 
+            const char * key, 
+            bool * result)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplateDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
+          :guilabel:`in` Handle to the FaceTemplateDict object.
+
+          ``key`` const char *
+          :guilabel:`in` The key to locate in the FaceTemplate object.
+
+          ``result`` bool *
+          :guilabel:`out` true if the FaceTemplate object contains an element with the specified key, otherwise false.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -13,16 +13,16 @@ Definition
 ----------
 
 .. line-block::
-    Enumeration of possible values for a LicenseError of the Face module.
+    Enumerates the error codes related to license management.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code-block:: C
+    .. code-block:: Python
 
-      typedef enum id3FaceLicenseError
+      class LicenseError
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,19 +45,19 @@ Definition
 
       public enum LicenseError
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code-block:: Python
-
-      class LicenseError
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code-block:: Swift
 
       public enum LicenseError
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceLicenseError
 
 
 Fields

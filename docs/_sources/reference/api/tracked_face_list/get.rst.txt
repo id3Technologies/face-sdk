@@ -17,37 +17,35 @@ Gets an item of the TrackedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFaceList_Get (
-            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
-            int index, 
-            ID3_TRACKED_FACE hTrackedFaceItem)
+        get(self, index: int) -> TrackedFace
 
       **Parameters**
 
         .. line-block::
 
-          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
-          :guilabel:`in` Handle to the TrackedFaceList object.
-
           ``index`` int
           :guilabel:`in` Index of the TrackedFace item to get.
-
-          ``hTrackedFaceItem`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
-          :guilabel:`out` TrackedFace item to get.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`TrackedFace<tracked_face_class>`
+          TrackedFace item to get.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Gets an item of the TrackedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get(self, index: int) -> TrackedFace
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the TrackedFace item to get.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`TrackedFace<tracked_face_class>`
-          TrackedFace item to get.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Gets an item of the TrackedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_Get (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            int index, 
+            ID3_TRACKED_FACE hTrackedFaceItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the TrackedFace item to get.
+
+          ``hTrackedFaceItem`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`out` TrackedFace item to get.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

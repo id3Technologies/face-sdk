@@ -17,29 +17,28 @@ Retrieves the number of modules in the license.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetModuleCount (
-            int * count)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``count`` int *
-          :guilabel:`out` The number of modules in the license.
-
+        @staticmethod
+        get_module_count() -> int
 
       **Returns**
 
         .. line-block::
 
           ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          The number of modules in the license.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -107,29 +106,6 @@ Retrieves the number of modules in the license.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_module_count() -> int
-
-      **Returns**
-
-        .. line-block::
-
-          ``int``
-          The number of modules in the license.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -151,5 +127,29 @@ Retrieves the number of modules in the license.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetModuleCount (
+            int * count)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``count`` int *
+          :guilabel:`out` The number of modules in the license.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

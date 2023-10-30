@@ -17,33 +17,28 @@ Retrieves the license product reference.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetProductReference (
-            char * productReference, 
-            int * productReferenceSize)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``productReference`` char *
-          :guilabel:`out` Pointer to a pre-allocated buffer to receive the product reference.
-
-          ``productReferenceSize`` int *
-          :guilabel:`in` Size of the 'productReference' buffer. Receives the minimum required buffer size to hold the 'productReference' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'productReference' (excluding terminating NULL character).
-
+        @staticmethod
+        get_product_reference() -> str
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``str``
+          The product reference.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -57,7 +52,7 @@ Retrieves the license product reference.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the product reference.
+          The product reference.
 
       **Exceptions**
 
@@ -79,7 +74,7 @@ Retrieves the license product reference.
         .. line-block::
 
           ``string``
-          Pointer to a pre-allocated buffer to receive the product reference.
+          The product reference.
 
       **Exceptions**
 
@@ -101,30 +96,7 @@ Retrieves the license product reference.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the product reference.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_product_reference() -> str
-
-      **Returns**
-
-        .. line-block::
-
-          ``str``
-          Pointer to a pre-allocated buffer to receive the product reference.
+          The product reference.
 
       **Exceptions**
 
@@ -146,7 +118,7 @@ Retrieves the license product reference.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the product reference.
+          The product reference.
 
       **Exceptions**
 
@@ -155,5 +127,33 @@ Retrieves the license product reference.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetProductReference (
+            char * productReference, 
+            int * productReferenceSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``productReference`` char *
+          :guilabel:`out` The product reference.
+
+          ``productReferenceSize`` int *
+          :guilabel:`in` Size of the 'productReference' buffer. Receives the minimum required buffer size to hold the 'productReference' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'productReference' (excluding terminating NULL character).
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

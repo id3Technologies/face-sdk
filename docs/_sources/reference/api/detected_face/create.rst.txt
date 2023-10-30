@@ -17,35 +17,28 @@ Creates a detected face.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFace_Create (
-            ID3_DETECTED_FACE hDetectedFace, 
-            const id3FaceRectangle * sBounds, 
-            int detectionScore, 
-            int id, 
-            ID3_FACE_POINT_LIST hLandmarks)
+        @staticmethod
+        create(bounds: Rectangle, detection_score: int, id: int, landmarks: PointList) -> DetectedFace
 
       **Parameters**
 
         .. line-block::
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
-          :guilabel:`in` Handle to the DetectedFace object.
-
-          ``sBounds`` :ref:`const id3FaceRectangle *<rectangle_struct>`
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
           :guilabel:`in` Bounds of the detected face.
 
-          ``detectionScore`` int
+          ``detection_score`` int
           :guilabel:`in` Confidence score of the detected face.
 
           ``id`` int
           :guilabel:`in` ID of the detected face.
 
-          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          ``landmarks`` :ref:`PointList<point_list_class>`
           :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
 
 
@@ -53,9 +46,16 @@ Creates a detected face.
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`DetectedFace<detected_face_class>`
+          The newly created detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -174,46 +174,6 @@ Creates a detected face.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        create(bounds: Rectangle, detection_score: int, id: int, landmarks: PointList) -> DetectedFace
-
-      **Parameters**
-
-        .. line-block::
-
-          ``bounds`` :ref:`Rectangle<rectangle_struct>`
-          :guilabel:`in` Bounds of the detected face.
-
-          ``detection_score`` int
-          :guilabel:`in` Confidence score of the detected face.
-
-          ``id`` int
-          :guilabel:`in` ID of the detected face.
-
-          ``landmarks`` :ref:`PointList<point_list_class>`
-          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`DetectedFace<detected_face_class>`
-          The newly created detected face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -252,5 +212,45 @@ Creates a detected face.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFace_Create (
+            ID3_DETECTED_FACE hDetectedFace, 
+            const id3FaceRectangle * sBounds, 
+            int detectionScore, 
+            int id, 
+            ID3_FACE_POINT_LIST hLandmarks)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Handle to the DetectedFace object.
+
+          ``sBounds`` :ref:`const id3FaceRectangle *<rectangle_struct>`
+          :guilabel:`in` Bounds of the detected face.
+
+          ``detectionScore`` int
+          :guilabel:`in` Confidence score of the detected face.
+
+          ``id`` int
+          :guilabel:`in` ID of the detected face.
+
+          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Landmarks (eyes, nose and mouth corners) of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

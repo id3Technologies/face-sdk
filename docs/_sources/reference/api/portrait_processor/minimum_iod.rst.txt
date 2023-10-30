@@ -23,21 +23,20 @@ This parameter is used to the limit the distance from the subject to the camera.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumIod)
-      int id3FacePortraitProcessor_SetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumIod)
+      minimum_iod: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ This parameter is used to the limit the distance from the subject to the camera.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ This parameter is used to the limit the distance from the subject to the camera.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ This parameter is used to the limit the distance from the subject to the camera.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      minimum_iod: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ This parameter is used to the limit the distance from the subject to the camera.
 
     .. code:: Swift
 
-      TODO
+      public var minimumIod: Int
+          get {
+              return Int(try! getMinimumIod())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumIod)
+      int id3FacePortraitProcessor_SetMinimumIod (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -29,12 +29,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceStringList *ID3_FACE_STRING_LIST;
+        class StringList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -57,19 +57,19 @@ Definition
 
         public class StringList implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class StringList
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class StringList
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceStringList *ID3_FACE_STRING_LIST;
 
 
 
@@ -78,17 +78,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_STRING_LIST hStringList{};
-        int err = id3FaceStringList_Initialize(&hStringList);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceStringList_Dispose(&hStringList);
-        }
+        stringList = StringList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del stringList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -140,21 +143,6 @@ Usage
         // ...
         stringList.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        stringList = StringList()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del stringList
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -162,6 +150,18 @@ Usage
 
         private var stringList: StringList? = nil
         stringList = try StringList()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_STRING_LIST hStringList{};
+        int err = id3FaceStringList_Initialize(&hStringList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceStringList_Dispose(&hStringList);
+        }
 
 
 Properties
@@ -185,7 +185,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 
 Methods

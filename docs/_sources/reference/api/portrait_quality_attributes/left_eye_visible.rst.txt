@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.leftEyeVisible Property
+
+.. _portrait_quality_attributes_left_eye_visible_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.leftEyeVisible Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the left eye is visible.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int left_eye_visible
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int leftEyeVisible
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int LeftEyeVisible
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int leftEyeVisible
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int leftEyeVisible
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int LeftEyeVisible
+

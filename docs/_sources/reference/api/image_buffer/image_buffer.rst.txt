@@ -20,16 +20,16 @@ Namespace: :ref:`id3.Face<reference_api>`
 Definition
 ----------
 .. line-block::
-    This class represents a ImageBuffer
+    Represents an image buffer.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceImageBuffer *ID3_FACE_IMAGE_BUFFER;
+        class ImageBuffer
 
     .. tab-item:: Dart
       :sync: Dart
@@ -52,19 +52,19 @@ Definition
 
         public class ImageBuffer implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class ImageBuffer
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class ImageBuffer
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImageBuffer *ID3_FACE_IMAGE_BUFFER;
 
 
 
@@ -73,17 +73,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_IMAGE_BUFFER hImageBuffer{};
-        int err = id3FaceImageBuffer_Initialize(&hImageBuffer);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceImageBuffer_Dispose(&hImageBuffer);
-        }
+        imageBuffer = ImageBuffer()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del imageBuffer
 
     .. tab-item:: Dart
       :sync: Dart
@@ -135,21 +138,6 @@ Usage
         // ...
         imageBuffer.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        imageBuffer = ImageBuffer()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del imageBuffer
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -157,6 +145,18 @@ Usage
 
         private var imageBuffer: ImageBuffer? = nil
         imageBuffer = try ImageBuffer()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE_BUFFER hImageBuffer{};
+        int err = id3FaceImageBuffer_Initialize(&hImageBuffer);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImageBuffer_Dispose(&hImageBuffer);
+        }
 
 
 Methods

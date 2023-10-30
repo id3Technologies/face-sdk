@@ -42,12 +42,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3TrackedFace *ID3_TRACKED_FACE;
+        class TrackedFace
 
     .. tab-item:: Dart
       :sync: Dart
@@ -70,19 +70,19 @@ Definition
 
         public class TrackedFace implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class TrackedFace
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class TrackedFace
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3TrackedFace *ID3_TRACKED_FACE;
 
 
 
@@ -91,17 +91,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_TRACKED_FACE hTrackedFace{};
-        int err = id3TrackedFace_Initialize(&hTrackedFace);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3TrackedFace_Dispose(&hTrackedFace);
-        }
+        trackedFace = TrackedFace()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del trackedFace
 
     .. tab-item:: Dart
       :sync: Dart
@@ -153,21 +156,6 @@ Usage
         // ...
         trackedFace.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        trackedFace = TrackedFace()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del trackedFace
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -175,6 +163,18 @@ Usage
 
         private var trackedFace: TrackedFace? = nil
         trackedFace = try TrackedFace()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_TRACKED_FACE hTrackedFace{};
+        int err = id3TrackedFace_Initialize(&hTrackedFace);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3TrackedFace_Dispose(&hTrackedFace);
+        }
 
 
 Properties

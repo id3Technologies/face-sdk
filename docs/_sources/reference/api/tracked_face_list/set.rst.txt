@@ -17,37 +17,31 @@ Sets an item of the TrackedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFaceList_Set (
-            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
-            int index, 
-            ID3_TRACKED_FACE hTrackedFaceItem)
+        set(self, index: int, tracked_face_item: TrackedFace) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
-          :guilabel:`in` Handle to the TrackedFaceList object.
-
           ``index`` int
           :guilabel:`in` Index of the TrackedFace item to set.
 
-          ``hTrackedFaceItem`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          ``tracked_face_item`` :ref:`TrackedFace<tracked_face_class>`
           :guilabel:`in` TrackedFace item to set.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -127,32 +121,6 @@ Sets an item of the TrackedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        set(self, index: int, tracked_face_item: TrackedFace) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the TrackedFace item to set.
-
-          ``tracked_face_item`` :ref:`TrackedFace<tracked_face_class>`
-          :guilabel:`in` TrackedFace item to set.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -178,5 +146,37 @@ Sets an item of the TrackedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_Set (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            int index, 
+            ID3_TRACKED_FACE hTrackedFaceItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the TrackedFace item to set.
+
+          ``hTrackedFaceItem`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` TrackedFace item to set.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

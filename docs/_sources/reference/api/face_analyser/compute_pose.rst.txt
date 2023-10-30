@@ -19,37 +19,35 @@ Computes the pose of a detected face.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_ComputePose (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            id3FacePose * sPose)
+        compute_pose(self, detected_face: DetectedFace) -> FacePose
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
-
-          ``sPose`` :ref:`id3FacePose *<face_pose_struct>`
-          :guilabel:`out` The estimated pose of the detected face.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FacePose<face_pose_struct>`
+          The estimated pose of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -141,36 +139,6 @@ Computes the pose of a detected face.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_pose(self, detected_face: DetectedFace) -> FacePose
-
-      **Parameters**
-
-        .. line-block::
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FacePose<face_pose_struct>`
-          The estimated pose of the detected face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -200,5 +168,37 @@ Computes the pose of a detected face.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputePose (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            id3FacePose * sPose)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``sPose`` :ref:`id3FacePose *<face_pose_struct>`
+          :guilabel:`out` The estimated pose of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

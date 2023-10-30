@@ -17,33 +17,28 @@ Saves the face object to a file.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFace_ToFile (
-            ID3_TRACKED_FACE hTrackedFace, 
-            const char * path)
+        to_file(self, path: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
-          :guilabel:`in` Handle to the TrackedFace object.
-
-          ``path`` const char *
+          ``path`` str
           :guilabel:`in` Path to the file to export the face object to.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Saves the face object to a file.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_file(self, path: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``path`` str
-          :guilabel:`in` Path to the file to export the face object to.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Saves the face object to a file.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFace_ToFile (
+            ID3_TRACKED_FACE hTrackedFace, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFace`` :ref:`ID3_TRACKED_FACE<tracked_face_class>`
+          :guilabel:`in` Handle to the TrackedFace object.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the file to export the face object to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

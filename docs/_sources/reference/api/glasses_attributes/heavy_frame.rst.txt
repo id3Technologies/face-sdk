@@ -21,12 +21,12 @@ Value indicating if the glasses' frame is too heavy, in the range [0; 100].
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int HeavyFrame
+      int heavy_frame
 
   .. tab-item:: Dart
     :sync: Dart
@@ -49,17 +49,17 @@ Value indicating if the glasses' frame is too heavy, in the range [0; 100].
 
       int heavyFrame
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int heavy_frame
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int heavyFrame
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeavyFrame
 

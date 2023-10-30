@@ -12,7 +12,8 @@ Namespace: :ref:`id3.Face<reference_api>`
 .. toctree::
   :hidden:
 
-  applySegmentationMask<apply_segmentation_mask>
+  applyAlphaMask<apply_alpha_mask>
+  applyMask<apply_mask>
   checkColorizedImage<check_colorized_image>
   computeAge<compute_age>
   computeAttributes<compute_attributes>
@@ -33,6 +34,7 @@ Namespace: :ref:`id3.Face<reference_api>`
   expressionSensibility<expression_sensibility>
   overExposureSensibility<over_exposure_sensibility>
   segmentFace<segment_face>
+  threadCount<thread_count>
   underExposureSensibility<under_exposure_sensibility>
 
 
@@ -43,12 +45,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceAnalyser *ID3_FACE_ANALYSER;
+        class FaceAnalyser
 
     .. tab-item:: Dart
       :sync: Dart
@@ -71,19 +73,19 @@ Definition
 
         public class FaceAnalyser implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceAnalyser
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceAnalyser
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceAnalyser *ID3_FACE_ANALYSER;
 
 
 
@@ -92,17 +94,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_ANALYSER hFaceAnalyser{};
-        int err = id3FaceAnalyser_Initialize(&hFaceAnalyser);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceAnalyser_Dispose(&hFaceAnalyser);
-        }
+        faceAnalyser = FaceAnalyser()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceAnalyser
 
     .. tab-item:: Dart
       :sync: Dart
@@ -154,21 +159,6 @@ Usage
         // ...
         faceAnalyser.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceAnalyser = FaceAnalyser()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceAnalyser
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -176,6 +166,18 @@ Usage
 
         private var faceAnalyser: FaceAnalyser? = nil
         faceAnalyser = try FaceAnalyser()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_ANALYSER hFaceAnalyser{};
+        int err = id3FaceAnalyser_Initialize(&hFaceAnalyser);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceAnalyser_Dispose(&hFaceAnalyser);
+        }
 
 
 Properties
@@ -195,6 +197,9 @@ Properties
   * - :ref:`overExposureSensibility<face_analyser_over_exposure_sensibility_class_member>`
     - int
     - Sensibility of the over-exposure classifier, from 0 to 255.
+  * - :ref:`threadCount<face_analyser_thread_count_class_member>`
+    - int
+    - Number of threads to be used for face analysis.
   * - :ref:`underExposureSensibility<face_analyser_under_exposure_sensibility_class_member>`
     - int
     - Sensibility of the under-exposure classifier, from 0 to 255.
@@ -209,8 +214,10 @@ Methods
 
   * - Name
     - Description
-  * - :ref:`applySegmentationMask<face_analyser_apply_segmentation_mask_class_method>`
-    - Applies the face segmentation mask to suppress the background.
+  * - :ref:`applyAlphaMask<face_analyser_apply_alpha_mask_class_method>`
+    - Applies an alpha mask to suppress the background and returns a 32-bit BGRA image.
+  * - :ref:`applyMask<face_analyser_apply_mask_class_method>`
+    - Applies a mask to replace the background with the specified color and returns a 24-bit BGR image.
   * - :ref:`checkColorizedImage<face_analyser_check_colorized_image_class_method>`
     - Verifies if an image is colorized or grayscale.
   * - :ref:`computeAge<face_analyser_compute_age_class_method>`

@@ -17,12 +17,12 @@ Value indicating whether the color of the background is uniform.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int UniformBackgroundColor
+      int uniform_background_color
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the color of the background is uniform.
 
       int uniformBackgroundColor
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int uniform_background_color
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int uniformBackgroundColor
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int UniformBackgroundColor
 

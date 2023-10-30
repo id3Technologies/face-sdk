@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.imageResolutionCorrect Property
+
+.. _portrait_quality_attributes_image_resolution_correct_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.imageResolutionCorrect Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the image resolution is correct.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int image_resolution_correct
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int imageResolutionCorrect
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int ImageResolutionCorrect
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int imageResolutionCorrect
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int imageResolutionCorrect
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int ImageResolutionCorrect
+

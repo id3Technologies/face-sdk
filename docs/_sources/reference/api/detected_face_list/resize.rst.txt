@@ -17,33 +17,28 @@ DetectedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFaceList_Resize (
-            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
-            int newSize)
+        resize(self, new_size: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`in` Handle to the DetectedFaceList object.
-
-          ``newSize`` int
+          ``new_size`` int
           :guilabel:`in` DetectedFace object.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ DetectedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        resize(self, new_size: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``new_size`` int
-          :guilabel:`in` DetectedFace object.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ DetectedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFaceList_Resize (
+            ID3_DETECTED_FACE_LIST hDetectedFaceList, 
+            int newSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`in` Handle to the DetectedFaceList object.
+
+          ``newSize`` int
+          :guilabel:`in` DetectedFace object.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

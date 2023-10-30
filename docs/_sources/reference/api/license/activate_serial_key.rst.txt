@@ -12,46 +12,43 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves a license file using a serial key.
+Activates a license using a serial key and saves the license to a file.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_ActivateSerialKey (
-            const char * hardwareCode, 
-            const char * serialKey, 
-            const char * commentary, 
-            const char * path)
+        @staticmethod
+        activate_serial_key(hardware_code: str, serial_key: str, commentary: str, path: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hardwareCode`` const char *
+          ``hardware_code`` str
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
-          ``serialKey`` const char *
-          :guilabel:`in` The id3 serial key.
+          ``serial_key`` str
+          :guilabel:`in` The serial key to activate.
 
-          ``commentary`` const char *
-          :guilabel:`in` Commentary associated to this license activation.
+          ``commentary`` str
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
-          ``path`` const char *
-          :guilabel:`in` Path to the retrieved license file.
+          ``path`` str
+          :guilabel:`in` Path to the license file.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -68,13 +65,13 @@ Retrieves a license file using a serial key.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``serialKey`` String
-          :guilabel:`in` The id3 serial key.
+          :guilabel:`in` The serial key to activate.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -100,13 +97,13 @@ Retrieves a license file using a serial key.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``serialKey`` string
-          :guilabel:`in` The id3 serial key.
+          :guilabel:`in` The serial key to activate.
 
           ``commentary`` string
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
           ``path`` string
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -132,46 +129,13 @@ Retrieves a license file using a serial key.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``serialKey`` String
-          :guilabel:`in` The id3 serial key.
+          :guilabel:`in` The serial key to activate.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        activate_serial_key(hardware_code: str, serial_key: str, commentary: str, path: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hardware_code`` str
-          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
-
-          ``serial_key`` str
-          :guilabel:`in` The id3 serial key.
-
-          ``commentary`` str
-          :guilabel:`in` Commentary associated to this license activation.
-
-          ``path`` str
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -197,13 +161,13 @@ Retrieves a license file using a serial key.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``serialKey`` String
-          :guilabel:`in` The id3 serial key.
+          :guilabel:`in` The serial key to activate.
 
           ``commentary`` String
-          :guilabel:`in` Commentary associated to this license activation.
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -213,5 +177,41 @@ Retrieves a license file using a serial key.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_ActivateSerialKey (
+            const char * hardwareCode, 
+            const char * serialKey, 
+            const char * commentary, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hardwareCode`` const char *
+          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
+
+          ``serialKey`` const char *
+          :guilabel:`in` The serial key to activate.
+
+          ``commentary`` const char *
+          :guilabel:`in` Commentary associated to this license activation, generally the host name.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the license file.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

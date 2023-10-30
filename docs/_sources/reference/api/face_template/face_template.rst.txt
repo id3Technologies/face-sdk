@@ -31,12 +31,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceTemplate *ID3_FACE_TEMPLATE;
+        class FaceTemplate
 
     .. tab-item:: Dart
       :sync: Dart
@@ -59,19 +59,19 @@ Definition
 
         public class FaceTemplate implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceTemplate
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceTemplate
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTemplate *ID3_FACE_TEMPLATE;
 
 
 
@@ -80,17 +80,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_TEMPLATE hFaceTemplate{};
-        int err = id3FaceTemplate_Initialize(&hFaceTemplate);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceTemplate_Dispose(&hFaceTemplate);
-        }
+        faceTemplate = FaceTemplate()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTemplate
 
     .. tab-item:: Dart
       :sync: Dart
@@ -142,21 +145,6 @@ Usage
         // ...
         faceTemplate.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceTemplate = FaceTemplate()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceTemplate
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -164,6 +152,18 @@ Usage
 
         private var faceTemplate: FaceTemplate? = nil
         faceTemplate = try FaceTemplate()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TEMPLATE hFaceTemplate{};
+        int err = id3FaceTemplate_Initialize(&hFaceTemplate);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTemplate_Dispose(&hFaceTemplate);
+        }
 
 
 Properties
@@ -214,7 +214,7 @@ Methods
   * - :ref:`toBdt<face_template_to_bdt_class_method>`
     - Exports the face template object to a Biometric Data Template (BDT) buffer.
   * - :ref:`toBit<face_template_to_bit_class_method>`
-    - Exports the face template object to a Biometric Information Template (BIT) buffer.
+    - Exports the face template as a Biometric Information Template (BIT) for enrolment on a smart card equipped with id3 Match-on-Card technology.
   * - :ref:`toBuffer<face_template_to_buffer_class_method>`
     - Exports the face template object to a buffer.
   * - :ref:`toFile<face_template_to_file_class_method>`

@@ -19,37 +19,27 @@ This buffer can only be used with id3 Face Match on Card specific implementation
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplate_ToBdt (
-            ID3_FACE_TEMPLATE hFaceTemplate, 
-            unsigned char * data, 
-            int * dataSize)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`in` Handle to the FaceTemplate object.
-
-          ``data`` unsigned char *
-          :guilabel:`out` The buffer to which the BDT buffer is exported.
-
-          ``dataSize`` int *
-          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
-
+        to_bdt(self) -> bytearray
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bytearray``
+          A buffer that receives the biometric data template.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -63,7 +53,7 @@ This buffer can only be used with id3 Face Match on Card specific implementation
         .. line-block::
 
           ``Uint8List``
-          The buffer to which the BDT buffer is exported.
+          A buffer that receives the biometric data template.
 
       **Exceptions**
 
@@ -85,7 +75,7 @@ This buffer can only be used with id3 Face Match on Card specific implementation
         .. line-block::
 
           ``byte[]``
-          The buffer to which the BDT buffer is exported.
+          A buffer that receives the biometric data template.
 
       **Exceptions**
 
@@ -107,29 +97,7 @@ This buffer can only be used with id3 Face Match on Card specific implementation
         .. line-block::
 
           ``byte[]``
-          The buffer to which the BDT buffer is exported.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_bdt(self) -> bytearray
-
-      **Returns**
-
-        .. line-block::
-
-          ``bytearray``
-          The buffer to which the BDT buffer is exported.
+          A buffer that receives the biometric data template.
 
       **Exceptions**
 
@@ -151,7 +119,7 @@ This buffer can only be used with id3 Face Match on Card specific implementation
         .. line-block::
 
           ``[UInt8]``
-          The buffer to which the BDT buffer is exported.
+          A buffer that receives the biometric data template.
 
       **Exceptions**
 
@@ -160,5 +128,37 @@ This buffer can only be used with id3 Face Match on Card specific implementation
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_ToBdt (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            unsigned char * data, 
+            int * dataSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``data`` unsigned char *
+          :guilabel:`out` A buffer that receives the biometric data template.
+
+          ``dataSize`` int *
+          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

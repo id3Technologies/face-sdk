@@ -30,12 +30,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceImageList *ID3_FACE_IMAGE_LIST;
+        class ImageList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -58,19 +58,19 @@ Definition
 
         public class ImageList implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class ImageList
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class ImageList
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImageList *ID3_FACE_IMAGE_LIST;
 
 
 
@@ -79,17 +79,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_IMAGE_LIST hImageList{};
-        int err = id3FaceImageList_Initialize(&hImageList);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceImageList_Dispose(&hImageList);
-        }
+        imageList = ImageList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del imageList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -141,21 +144,6 @@ Usage
         // ...
         imageList.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        imageList = ImageList()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del imageList
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -163,6 +151,18 @@ Usage
 
         private var imageList: ImageList? = nil
         imageList = try ImageList()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE_LIST hImageList{};
+        int err = id3FaceImageList_Initialize(&hImageList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImageList_Dispose(&hImageList);
+        }
 
 
 Properties
@@ -186,7 +186,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 
 Methods

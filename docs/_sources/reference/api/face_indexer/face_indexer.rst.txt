@@ -32,12 +32,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceIndexer *ID3_FACE_INDEXER;
+        class FaceIndexer
 
     .. tab-item:: Dart
       :sync: Dart
@@ -60,19 +60,19 @@ Definition
 
         public class FaceIndexer implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceIndexer
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceIndexer
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceIndexer *ID3_FACE_INDEXER;
 
 
 
@@ -81,17 +81,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_INDEXER hFaceIndexer{};
-        int err = id3FaceIndexer_Initialize(&hFaceIndexer);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceIndexer_Dispose(&hFaceIndexer);
-        }
+        faceIndexer = FaceIndexer()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceIndexer
 
     .. tab-item:: Dart
       :sync: Dart
@@ -143,21 +146,6 @@ Usage
         // ...
         faceIndexer.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceIndexer = FaceIndexer()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceIndexer
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -165,6 +153,18 @@ Usage
 
         private var faceIndexer: FaceIndexer? = nil
         faceIndexer = try FaceIndexer()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_INDEXER hFaceIndexer{};
+        int err = id3FaceIndexer_Initialize(&hFaceIndexer);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceIndexer_Dispose(&hFaceIndexer);
+        }
 
 
 Properties

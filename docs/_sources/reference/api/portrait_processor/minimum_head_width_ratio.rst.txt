@@ -25,21 +25,20 @@ For ICAO compliance, the value must be in the range 50 to 75.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMinimumHeadWidthRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumHeadWidthRatio)
-      int id3FacePortraitProcessor_SetMinimumHeadWidthRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumHeadWidthRatio)
+      minimum_head_width_ratio: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -54,7 +53,7 @@ For ICAO compliance, the value must be in the range 50 to 75.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -73,7 +72,7 @@ For ICAO compliance, the value must be in the range 50 to 75.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -89,22 +88,7 @@ For ICAO compliance, the value must be in the range 50 to 75.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      minimum_head_width_ratio: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -112,13 +96,33 @@ For ICAO compliance, the value must be in the range 50 to 75.
 
     .. code:: Swift
 
-      TODO
+      public var minimumHeadWidthRatio: Int
+          get {
+              return Int(try! getMinimumHeadWidthRatio())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMinimumHeadWidthRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * minimumHeadWidthRatio)
+      int id3FacePortraitProcessor_SetMinimumHeadWidthRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int minimumHeadWidthRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

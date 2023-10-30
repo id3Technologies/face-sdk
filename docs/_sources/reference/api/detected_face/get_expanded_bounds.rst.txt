@@ -17,41 +17,38 @@ Gets the bounding box around the detected face with specified aspect ratio and s
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3DetectedFace_GetExpandedBounds (
-            ID3_DETECTED_FACE hDetectedFace, 
-            float aspectRatio, 
-            float margin, 
-            id3FaceRectangle * sPortraitBounds)
+        get_expanded_bounds(self, aspect_ratio: float, margin: float) -> Rectangle
 
       **Parameters**
 
         .. line-block::
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
-          :guilabel:`in` Handle to the DetectedFace object.
-
-          ``aspectRatio`` float
+          ``aspect_ratio`` float
           :guilabel:`in` Aspect ratio of the bounding box. Default recommended value is 1.33 (4/3).
 
           ``margin`` float
           :guilabel:`in` Relative margin around the detected face. Recommended value is 0.5.
-
-          ``sPortraitBounds`` :ref:`id3FaceRectangle *<rectangle_struct>`
-          :guilabel:`out` The portrait bounds.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Rectangle<rectangle_struct>`
+          The portrait bounds.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -152,39 +149,6 @@ Gets the bounding box around the detected face with specified aspect ratio and s
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get_expanded_bounds(self, aspect_ratio: float, margin: float) -> Rectangle
-
-      **Parameters**
-
-        .. line-block::
-
-          ``aspect_ratio`` float
-          :guilabel:`in` Aspect ratio of the bounding box. Default recommended value is 1.33 (4/3).
-
-          ``margin`` float
-          :guilabel:`in` Relative margin around the detected face. Recommended value is 0.5.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Rectangle<rectangle_struct>`
-          The portrait bounds.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -217,5 +181,41 @@ Gets the bounding box around the detected face with specified aspect ratio and s
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3DetectedFace_GetExpandedBounds (
+            ID3_DETECTED_FACE hDetectedFace, 
+            float aspectRatio, 
+            float margin, 
+            id3FaceRectangle * sPortraitBounds)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Handle to the DetectedFace object.
+
+          ``aspectRatio`` float
+          :guilabel:`in` Aspect ratio of the bounding box. Default recommended value is 1.33 (4/3).
+
+          ``margin`` float
+          :guilabel:`in` Relative margin around the detected face. Recommended value is 0.5.
+
+          ``sPortraitBounds`` :ref:`id3FaceRectangle *<rectangle_struct>`
+          :guilabel:`out` The portrait bounds.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

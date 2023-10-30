@@ -28,12 +28,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceEncoder *ID3_FACE_ENCODER;
+        class FaceEncoder
 
     .. tab-item:: Dart
       :sync: Dart
@@ -56,19 +56,19 @@ Definition
 
         public class FaceEncoder implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceEncoder
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceEncoder
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceEncoder *ID3_FACE_ENCODER;
 
 
 
@@ -77,17 +77,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_ENCODER hFaceEncoder{};
-        int err = id3FaceEncoder_Initialize(&hFaceEncoder);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceEncoder_Dispose(&hFaceEncoder);
-        }
+        faceEncoder = FaceEncoder()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceEncoder
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,21 +142,6 @@ Usage
         // ...
         faceEncoder.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceEncoder = FaceEncoder()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceEncoder
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -161,6 +149,18 @@ Usage
 
         private var faceEncoder: FaceEncoder? = nil
         faceEncoder = try FaceEncoder()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_ENCODER hFaceEncoder{};
+        int err = id3FaceEncoder_Initialize(&hFaceEncoder);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceEncoder_Dispose(&hFaceEncoder);
+        }
 
 
 Properties
@@ -185,7 +185,7 @@ Properties
     - Processing unit where to run the encoding process.
   * - :ref:`threadCount<face_encoder_thread_count_class_member>`
     - int
-    - Number of threads to use for encoding templates.
+    - Number of threads to be used for template encoding.
 
 Methods
 -------

@@ -17,45 +17,37 @@ Performs a one-to-many search of a biometric probe against a previously initiali
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceMatcher_SearchTemplate (
-            ID3_FACE_MATCHER hFaceMatcher, 
-            ID3_FACE_TEMPLATE_DICT hReferenceDict, 
-            ID3_FACE_TEMPLATE hProbe, 
-            int maxCandidates, 
-            ID3_FACE_CANDIDATE_LIST hCandidateList)
+        search_template(self, reference_dict: FaceTemplateDict, probe: FaceTemplate, max_candidates: int, candidate_list: FaceCandidateList) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceMatcher`` :ref:`ID3_FACE_MATCHER<face_matcher_class>`
-          :guilabel:`in` Handle to the FaceMatcher object.
-
-          ``hReferenceDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
+          ``reference_dict`` :ref:`FaceTemplateDict<face_template_dict_class>`
           :guilabel:`in` Reference template dictionary.
 
-          ``hProbe`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          ``probe`` :ref:`FaceTemplate<face_template_class>`
           :guilabel:`in` Probe template.
 
-          ``maxCandidates`` int
+          ``max_candidates`` int
           :guilabel:`in` Maximum number of candidates to output.
 
-          ``hCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          ``candidate_list`` :ref:`FaceCandidateList<face_candidate_list_class>`
           :guilabel:`in` List of candidates sorted by decreasing match score.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -153,38 +145,6 @@ Performs a one-to-many search of a biometric probe against a previously initiali
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        search_template(self, reference_dict: FaceTemplateDict, probe: FaceTemplate, max_candidates: int, candidate_list: FaceCandidateList) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``reference_dict`` :ref:`FaceTemplateDict<face_template_dict_class>`
-          :guilabel:`in` Reference template dictionary.
-
-          ``probe`` :ref:`FaceTemplate<face_template_class>`
-          :guilabel:`in` Probe template.
-
-          ``max_candidates`` int
-          :guilabel:`in` Maximum number of candidates to output.
-
-          ``candidate_list`` :ref:`FaceCandidateList<face_candidate_list_class>`
-          :guilabel:`in` List of candidates sorted by decreasing match score.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -216,5 +176,45 @@ Performs a one-to-many search of a biometric probe against a previously initiali
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceMatcher_SearchTemplate (
+            ID3_FACE_MATCHER hFaceMatcher, 
+            ID3_FACE_TEMPLATE_DICT hReferenceDict, 
+            ID3_FACE_TEMPLATE hProbe, 
+            int maxCandidates, 
+            ID3_FACE_CANDIDATE_LIST hCandidateList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceMatcher`` :ref:`ID3_FACE_MATCHER<face_matcher_class>`
+          :guilabel:`in` Handle to the FaceMatcher object.
+
+          ``hReferenceDict`` :ref:`ID3_FACE_TEMPLATE_DICT<face_template_dict_class>`
+          :guilabel:`in` Reference template dictionary.
+
+          ``hProbe`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Probe template.
+
+          ``maxCandidates`` int
+          :guilabel:`in` Maximum number of candidates to output.
+
+          ``hCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`in` List of candidates sorted by decreasing match score.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

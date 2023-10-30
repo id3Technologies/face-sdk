@@ -17,29 +17,28 @@ Retrieves the license type.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetLicenseType (
-            id3FaceLicenseType * eLicenseType)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``eLicenseType`` :ref:`id3FaceLicenseType *<license_type_enum>`
-          :guilabel:`out` Pointer to a pre-allocated id3LicenseType enum value to receive the type.
-
+        @staticmethod
+        get_license_type() -> LicenseType
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`LicenseType<license_type_enum>`
+          The license type.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -53,7 +52,7 @@ Retrieves the license type.
         .. line-block::
 
           :ref:`LicenseType<license_type_enum>`
-          Pointer to a pre-allocated id3LicenseType enum value to receive the type.
+          The license type.
 
       **Exceptions**
 
@@ -75,7 +74,7 @@ Retrieves the license type.
         .. line-block::
 
           :ref:`LicenseType<license_type_enum>`
-          Pointer to a pre-allocated id3LicenseType enum value to receive the type.
+          The license type.
 
       **Exceptions**
 
@@ -97,30 +96,7 @@ Retrieves the license type.
         .. line-block::
 
           :ref:`LicenseType<license_type_enum>`
-          Pointer to a pre-allocated id3LicenseType enum value to receive the type.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_license_type() -> LicenseType
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`LicenseType<license_type_enum>`
-          Pointer to a pre-allocated id3LicenseType enum value to receive the type.
+          The license type.
 
       **Exceptions**
 
@@ -142,7 +118,7 @@ Retrieves the license type.
         .. line-block::
 
           :ref:`LicenseType<license_type_enum>`
-          Pointer to a pre-allocated id3LicenseType enum value to receive the type.
+          The license type.
 
       **Exceptions**
 
@@ -151,5 +127,29 @@ Retrieves the license type.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetLicenseType (
+            id3FaceLicenseType * eLicenseType)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``eLicenseType`` :ref:`id3FaceLicenseType *<license_type_enum>`
+          :guilabel:`out` The license type.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

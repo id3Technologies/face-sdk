@@ -12,46 +12,41 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Reallocates the internal memory of an image object from parameters. If the given parameters are the same as the ones of the object, then there is nothing done in this function.
+Reallocates the internal memory of the Image from parameters.
+
+.. note:: If the given parameters are the same as the ones of the object, then there is nothing done in this function.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_Reallocate (
-            ID3_FACE_IMAGE hImage, 
-            int width, 
-            int height, 
-            id3FacePixelFormat ePixelFormat)
+        reallocate(self, width: int, height: int, pixel_format: PixelFormat) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
           ``width`` int
-          :guilabel:`in` Width to reallocate the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to reallocate the image object to.
+          :guilabel:`in` The new height, in pixels.
 
-          ``ePixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
+          ``pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The new pixel format.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -65,13 +60,13 @@ Reallocates the internal memory of an image object from parameters. If the given
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to reallocate the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to reallocate the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
+          :guilabel:`in` The new pixel format.
 
 
       **Exceptions**
@@ -94,13 +89,13 @@ Reallocates the internal memory of an image object from parameters. If the given
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to reallocate the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to reallocate the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
+          :guilabel:`in` The new pixel format.
 
 
       **Exceptions**
@@ -123,42 +118,13 @@ Reallocates the internal memory of an image object from parameters. If the given
         .. line-block::
 
           ``width`` int
-          :guilabel:`in` Width to reallocate the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` int
-          :guilabel:`in` Height to reallocate the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        reallocate(self, width: int, height: int, pixel_format: PixelFormat) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``width`` int
-          :guilabel:`in` Width to reallocate the image object to.
-
-          ``height`` int
-          :guilabel:`in` Height to reallocate the image object to.
-
-          ``pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
+          :guilabel:`in` The new pixel format.
 
 
       **Exceptions**
@@ -181,13 +147,13 @@ Reallocates the internal memory of an image object from parameters. If the given
         .. line-block::
 
           ``width`` Int32
-          :guilabel:`in` Width to reallocate the image object to.
+          :guilabel:`in` The new width, in pixels.
 
           ``height`` Int32
-          :guilabel:`in` Height to reallocate the image object to.
+          :guilabel:`in` The new height, in pixels.
 
           ``pixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` Pixel format to reallocate the image object to.
+          :guilabel:`in` The new pixel format.
 
 
       **Exceptions**
@@ -197,5 +163,41 @@ Reallocates the internal memory of an image object from parameters. If the given
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_Reallocate (
+            ID3_FACE_IMAGE hImage, 
+            int width, 
+            int height, 
+            id3FacePixelFormat ePixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``width`` int
+          :guilabel:`in` The new width, in pixels.
+
+          ``height`` int
+          :guilabel:`in` The new height, in pixels.
+
+          ``ePixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The new pixel format.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

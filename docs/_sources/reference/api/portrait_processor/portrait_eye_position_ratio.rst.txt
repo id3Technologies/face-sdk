@@ -21,21 +21,20 @@ Ratio between the vertical eye position and the image height for ICAO portrait c
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitEyePositionRatio)
-      int id3FacePortraitProcessor_SetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitEyePositionRatio)
+      portrait_eye_position_ratio: float
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Ratio between the vertical eye position and the image height for ICAO portrait c
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Ratio between the vertical eye position and the image height for ICAO portrait c
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Ratio between the vertical eye position and the image height for ICAO portrait c
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      portrait_eye_position_ratio: float
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Ratio between the vertical eye position and the image height for ICAO portrait c
 
     .. code:: Swift
 
-      TODO
+      public var portraitEyePositionRatio: Float
+          get {
+              return try! getPortraitEyePositionRatio()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float * portraitEyePositionRatio)
+      int id3FacePortraitProcessor_SetPortraitEyePositionRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, float portraitEyePositionRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

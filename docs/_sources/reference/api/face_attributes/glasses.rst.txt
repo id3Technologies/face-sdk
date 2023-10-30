@@ -12,21 +12,19 @@ Structure: :ref:`FaceAttributes<face_attributes_struct>`
 Definition
 ----------
 
-Value indicating whether the person is wearing glasses or not.
-
-100 means that the person is definitely wearing glasses.
+Value, from 0 to 100, indicating whether the subject is wearing glasses or not.
 
 .. hint:: The recommended threshold is 10.
 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int Glasses
+      int glasses
 
   .. tab-item:: Dart
     :sync: Dart
@@ -49,17 +47,17 @@ Value indicating whether the person is wearing glasses or not.
 
       int glasses
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int glasses
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int glasses
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Glasses
 

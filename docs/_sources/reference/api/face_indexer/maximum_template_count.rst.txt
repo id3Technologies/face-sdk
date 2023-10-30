@@ -19,20 +19,20 @@ Maximum number of templates that this face indexer can hold.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceIndexer_GetMaximumTemplateCount (ID3_FACE_INDEXER hFaceIndexer, int * maximumTemplateCount)
+      maximum_template_count: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -46,7 +46,7 @@ Maximum number of templates that this face indexer can hold.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -64,7 +64,7 @@ Maximum number of templates that this face indexer can hold.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -79,22 +79,7 @@ Maximum number of templates that this face indexer can hold.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      maximum_template_count: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -102,13 +87,32 @@ Maximum number of templates that this face indexer can hold.
 
     .. code:: Swift
 
-      TODO
+      public var maximumTemplateCount: Int
+          get {
+              return Int(try! getMaximumTemplateCount())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceIndexer_GetMaximumTemplateCount (ID3_FACE_INDEXER hFaceIndexer, int * maximumTemplateCount)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.headVerticalPositionCorrect Property
+
+.. _portrait_quality_attributes_head_vertical_position_correct_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.headVerticalPositionCorrect Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the vertical position of the head in the image is correct.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int head_vertical_position_correct
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int headVerticalPositionCorrect
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int HeadVerticalPositionCorrect
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int headVerticalPositionCorrect
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int headVerticalPositionCorrect
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HeadVerticalPositionCorrect
+

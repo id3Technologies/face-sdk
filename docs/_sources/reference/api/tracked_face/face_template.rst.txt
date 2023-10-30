@@ -19,20 +19,20 @@ Computed template the tracked face. It aims at tracking an identity over time an
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3TrackedFace_GetFaceTemplate (ID3_TRACKED_FACE hTrackedFace, ID3_FACE_TEMPLATE hFaceTemplate)
+      face_template: FaceTemplate
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -46,7 +46,7 @@ Computed template the tracked face. It aims at tracking an identity over time an
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -64,7 +64,7 @@ Computed template the tracked face. It aims at tracking an identity over time an
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -79,22 +79,7 @@ Computed template the tracked face. It aims at tracking an identity over time an
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      face_template: FaceTemplate
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -102,13 +87,32 @@ Computed template the tracked face. It aims at tracking an identity over time an
 
     .. code:: Swift
 
-      TODO
+      public var faceTemplate: FaceTemplate
+          get {
+              return try! getFaceTemplate()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3TrackedFace_GetFaceTemplate (ID3_TRACKED_FACE hTrackedFace, ID3_FACE_TEMPLATE hFaceTemplate)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

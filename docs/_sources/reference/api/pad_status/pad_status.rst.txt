@@ -1,0 +1,82 @@
+.. index:: 
+  !PadStatus Enumeration
+
+.. _pad_status_enum:
+
+===============================================================================
+PadStatus Enumeration
+===============================================================================
+
+Namespace: :ref:`id3.Face<reference_api>`
+
+Definition
+----------
+
+.. line-block::
+    Enumerates the statuses of the presentation attack detection (PAD).
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code-block:: Python
+
+      class PadStatus
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code-block:: Dart
+
+      enum PadStatus
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code-block:: C#
+
+      public enum PadStatus
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code-block:: Java
+
+      public enum PadStatus
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code-block:: Swift
+
+      public enum PadStatus
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FacePadStatus
+
+
+Fields
+------
+
+.. list-table:: 
+  :width: 100%
+  :widths: 5 5 90
+  :header-rows: 1
+
+  * - Name
+    - Value
+    - Description
+  * - ``unknown``
+    - 0
+    - No decision could be made.
+  * - ``bonafide``
+    - 1
+    - The detected face is a bonafide (real face).
+  * - ``attack``
+    - 2
+    - The detected face is an attack (spoof).

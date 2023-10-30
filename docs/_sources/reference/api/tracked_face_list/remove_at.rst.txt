@@ -17,33 +17,28 @@ Removes an element of the TrackedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3TrackedFaceList_RemoveAt (
-            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
-            int index)
+        remove_at(self, index: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
-          :guilabel:`in` Handle to the TrackedFaceList object.
-
           ``index`` int
           :guilabel:`in` Index of the TrackedFace item to remove.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Removes an element of the TrackedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        remove_at(self, index: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` Index of the TrackedFace item to remove.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Removes an element of the TrackedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3TrackedFaceList_RemoveAt (
+            ID3_TRACKED_FACE_LIST hTrackedFaceList, 
+            int index)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hTrackedFaceList`` :ref:`ID3_TRACKED_FACE_LIST<tracked_face_list_class>`
+          :guilabel:`in` Handle to the TrackedFaceList object.
+
+          ``index`` int
+          :guilabel:`in` Index of the TrackedFace item to remove.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

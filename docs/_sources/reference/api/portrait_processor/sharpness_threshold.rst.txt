@@ -23,21 +23,20 @@ If the sharpness score is above this value, the image sharpness is sufficient.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetSharpnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * sharpnessThreshold)
-      int id3FacePortraitProcessor_SetSharpnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int sharpnessThreshold)
+      sharpness_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ If the sharpness score is above this value, the image sharpness is sufficient.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ If the sharpness score is above this value, the image sharpness is sufficient.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ If the sharpness score is above this value, the image sharpness is sufficient.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      sharpness_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ If the sharpness score is above this value, the image sharpness is sufficient.
 
     .. code:: Swift
 
-      TODO
+      public var sharpnessThreshold: Int
+          get {
+              return Int(try! getSharpnessThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetSharpnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * sharpnessThreshold)
+      int id3FacePortraitProcessor_SetSharpnessThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int sharpnessThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

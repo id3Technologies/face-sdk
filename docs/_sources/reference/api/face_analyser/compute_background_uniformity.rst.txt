@@ -21,41 +21,38 @@ This function must be used for a portrait image with only one face in it. A high
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_ComputeBackgroundUniformity (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            id3FaceBackgroundUniformity * sBackgroundUniformity)
+        compute_background_uniformity(self, image: Image, detected_face: DetectedFace) -> BackgroundUniformity
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
-
-          ``sBackgroundUniformity`` :ref:`id3FaceBackgroundUniformity *<background_uniformity_struct>`
-          :guilabel:`out` The estimated background uniformity. Both color and texture scores are in the range [0:100]. The minimum recommended thresholds are respectively 80 for color and 80 for texture.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`BackgroundUniformity<background_uniformity_struct>`
+          The estimated background uniformity. Both color and texture scores are in the range [0:100]. The minimum recommended thresholds are respectively 80 for color and 80 for texture.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -156,39 +153,6 @@ This function must be used for a portrait image with only one face in it. A high
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_background_uniformity(self, image: Image, detected_face: DetectedFace) -> BackgroundUniformity
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`BackgroundUniformity<background_uniformity_struct>`
-          The estimated background uniformity. Both color and texture scores are in the range [0:100]. The minimum recommended thresholds are respectively 80 for color and 80 for texture.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -221,5 +185,41 @@ This function must be used for a portrait image with only one face in it. A high
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeBackgroundUniformity (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            id3FaceBackgroundUniformity * sBackgroundUniformity)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``sBackgroundUniformity`` :ref:`id3FaceBackgroundUniformity *<background_uniformity_struct>`
+          :guilabel:`out` The estimated background uniformity. Both color and texture scores are in the range [0:100]. The minimum recommended thresholds are respectively 80 for color and 80 for texture.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -12,62 +12,56 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Imports the image object from a raw buffer.
+Creates an Image from the specified raw data buffer.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_FromRawBuffer (
-            ID3_FACE_IMAGE hImage, 
-            unsigned char * pixels, 
-            int pixelsSize, 
-            int width, 
-            int height, 
-            int stride, 
-            id3FacePixelFormat eSrcPixelFormat, 
-            id3FacePixelFormat eDstPixelFormat)
+        @staticmethod
+        from_raw_buffer(pixels: bytearray, width: int, height: int, stride: int, src_pixel_format: PixelFormat, dst_pixel_format: PixelFormat) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
-          ``pixels`` unsigned char *
-          :guilabel:`in` Buffer containing the pixels of the image.
-
-          ``pixelsSize`` int
-          :guilabel:`in` Size of the 'pixels' buffer.
+          ``pixels`` bytearray
+          :guilabel:`in` A buffer that contains image pixels.
 
           ``width`` int
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` int
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``stride`` int
-          :guilabel:`in` Stride in pixels of the image.
+          :guilabel:`in` The stride, in pixels, of the image.
 
-          ``eSrcPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
+          ``src_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format of the input image.
 
-          ``eDstPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          ``dst_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          The newly created image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -81,22 +75,22 @@ Imports the image object from a raw buffer.
         .. line-block::
 
           ``pixels`` Uint8List
-          :guilabel:`in` Buffer containing the pixels of the image.
+          :guilabel:`in` A buffer that contains image pixels.
 
           ``width`` int
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` int
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``stride`` int
-          :guilabel:`in` Stride in pixels of the image.
+          :guilabel:`in` The stride, in pixels, of the image.
 
           ``srcPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
+          :guilabel:`in` The pixel format of the input image.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -126,22 +120,22 @@ Imports the image object from a raw buffer.
         .. line-block::
 
           ``pixels`` byte[]
-          :guilabel:`in` Buffer containing the pixels of the image.
+          :guilabel:`in` A buffer that contains image pixels.
 
           ``width`` int
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` int
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``stride`` int
-          :guilabel:`in` Stride in pixels of the image.
+          :guilabel:`in` The stride, in pixels, of the image.
 
           ``srcPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
+          :guilabel:`in` The pixel format of the input image.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -171,68 +165,22 @@ Imports the image object from a raw buffer.
         .. line-block::
 
           ``pixels`` byte[]
-          :guilabel:`in` Buffer containing the pixels of the image.
+          :guilabel:`in` A buffer that contains image pixels.
 
           ``width`` int
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` int
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``stride`` int
-          :guilabel:`in` Stride in pixels of the image.
+          :guilabel:`in` The stride, in pixels, of the image.
 
           ``srcPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
+          :guilabel:`in` The pixel format of the input image.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          The newly created image.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        from_raw_buffer(pixels: bytearray, width: int, height: int, stride: int, src_pixel_format: PixelFormat, dst_pixel_format: PixelFormat) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``pixels`` bytearray
-          :guilabel:`in` Buffer containing the pixels of the image.
-
-          ``width`` int
-          :guilabel:`in` Width in pixels of the image.
-
-          ``height`` int
-          :guilabel:`in` Height in pixels of the image.
-
-          ``stride`` int
-          :guilabel:`in` Stride in pixels of the image.
-
-          ``src_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
-
-          ``dst_pixel_format`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -262,22 +210,22 @@ Imports the image object from a raw buffer.
         .. line-block::
 
           ``pixels`` [UInt8]
-          :guilabel:`in` Buffer containing the pixels of the image.
+          :guilabel:`in` A buffer that contains image pixels.
 
           ``width`` Int32
-          :guilabel:`in` Width in pixels of the image.
+          :guilabel:`in` The width, in pixels, of the image.
 
           ``height`` Int32
-          :guilabel:`in` Height in pixels of the image.
+          :guilabel:`in` The height, in pixels, of the image.
 
           ``stride`` Int32
-          :guilabel:`in` Stride in pixels of the image.
+          :guilabel:`in` The stride, in pixels, of the image.
 
           ``srcPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The source pixel format of the input image.
+          :guilabel:`in` The pixel format of the input image.
 
           ``dstPixelFormat`` :ref:`PixelFormat<pixel_format_enum>`
-          :guilabel:`in` The destination pixel format to convert the input image to.
+          :guilabel:`in` The pixel format into which to convert the input image.
 
 
       **Returns**
@@ -294,5 +242,57 @@ Imports the image object from a raw buffer.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_FromRawBuffer (
+            ID3_FACE_IMAGE hImage, 
+            unsigned char * pixels, 
+            int pixelsSize, 
+            int width, 
+            int height, 
+            int stride, 
+            id3FacePixelFormat eSrcPixelFormat, 
+            id3FacePixelFormat eDstPixelFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``pixels`` unsigned char *
+          :guilabel:`in` A buffer that contains image pixels.
+
+          ``pixelsSize`` int
+          :guilabel:`in` Size of the 'pixels' buffer.
+
+          ``width`` int
+          :guilabel:`in` The width, in pixels, of the image.
+
+          ``height`` int
+          :guilabel:`in` The height, in pixels, of the image.
+
+          ``stride`` int
+          :guilabel:`in` The stride, in pixels, of the image.
+
+          ``eSrcPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format of the input image.
+
+          ``eDstPixelFormat`` :ref:`id3FacePixelFormat<pixel_format_enum>`
+          :guilabel:`in` The pixel format into which to convert the input image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

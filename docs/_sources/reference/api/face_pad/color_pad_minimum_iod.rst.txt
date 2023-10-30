@@ -21,21 +21,20 @@ Minimum interocular distance (IOD) required for color PAD processing.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePad_GetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int * colorPadMinimumIod)
-      int id3FacePad_SetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int colorPadMinimumIod)
+      color_pad_minimum_iod: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Minimum interocular distance (IOD) required for color PAD processing.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Minimum interocular distance (IOD) required for color PAD processing.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Minimum interocular distance (IOD) required for color PAD processing.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      color_pad_minimum_iod: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Minimum interocular distance (IOD) required for color PAD processing.
 
     .. code:: Swift
 
-      TODO
+      public var colorPadMinimumIod: Int
+          get {
+              return Int(try! getColorPadMinimumIod())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePad_GetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int * colorPadMinimumIod)
+      int id3FacePad_SetColorPadMinimumIod (ID3_FACE_PAD hFacePad, int colorPadMinimumIod)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -17,12 +17,12 @@ X-coordinate of the point.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int X
+      int x
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ X-coordinate of the point.
 
       int x
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int x
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int x
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int X
 

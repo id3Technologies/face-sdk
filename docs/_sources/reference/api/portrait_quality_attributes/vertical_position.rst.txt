@@ -17,12 +17,12 @@ Value indicating whether the vertical position of the head is correct.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int VerticalPosition
+      int vertical_position
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the vertical position of the head is correct.
 
       int verticalPosition
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int vertical_position
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int verticalPosition
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int VerticalPosition
 

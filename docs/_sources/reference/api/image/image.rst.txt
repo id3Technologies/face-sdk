@@ -48,16 +48,16 @@ Namespace: :ref:`id3.Face<reference_api>`
 Definition
 ----------
 .. line-block::
-    This class represents a Image
+    Represents an image.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceImage *ID3_FACE_IMAGE;
+        class Image
 
     .. tab-item:: Dart
       :sync: Dart
@@ -80,19 +80,19 @@ Definition
 
         public class Image implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class Image
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class Image
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceImage *ID3_FACE_IMAGE;
 
 
 
@@ -101,17 +101,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_IMAGE hImage{};
-        int err = id3FaceImage_Initialize(&hImage);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceImage_Dispose(&hImage);
-        }
+        image = Image()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del image
 
     .. tab-item:: Dart
       :sync: Dart
@@ -163,21 +166,6 @@ Usage
         // ...
         image.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        image = Image()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del image
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -185,6 +173,18 @@ Usage
 
         private var image: Image? = nil
         image = try Image()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_IMAGE hImage{};
+        int err = id3FaceImage_Initialize(&hImage);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceImage_Dispose(&hImage);
+        }
 
 
 Properties
@@ -228,15 +228,15 @@ Static Methods
   * - Name
     - Description
   * - :ref:`fromBuffer<image_from_buffer_class_method>`
-    - Imports the image object from a buffer.
+    - Creates an Image from the specified data buffer.
   * - :ref:`fromFile<image_from_file_class_method>`
-    - Imports the image object from a file.
+    - Creates an Image from the specified file.
   * - :ref:`fromRawBuffer<image_from_raw_buffer_class_method>`
-    - Imports the image object from a raw buffer.
+    - Creates an Image from the specified raw data buffer.
   * - :ref:`fromYuvPlanes<image_from_yuv_planes_class_method>`
-    - Imports the image object from YUV planes.
+    - Creates an Image from the specified YUV planes.
   * - :ref:`set<image_set_class_method>`
-    - Sets the image object fields. This function does not allocate any memory and is unsafe! The user must handle the pixels pointer carefully.
+    - Sets the Image object fields.
 
 Methods
 -------
@@ -251,40 +251,40 @@ Methods
   * - :ref:`clone<image_clone_class_method>`
     - Clones the Image object.
   * - :ref:`compare<image_compare_class_method>`
-    - Compute the difference with another image.
+    - Computes the difference with another image.
   * - :ref:`correctGamma<image_correct_gamma_class_method>`
-    - Applies a gamma correction to the image object.
+    - Applies a gamma correction to the image.
   * - :ref:`downscale<image_downscale_class_method>`
-    - Downscales an image inplace so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+    - Downscales the image in-place so that its maximum dimension is equal to the given maximum size, while preserving the aspect ratio.
   * - :ref:`downscaleTo<image_downscale_to_class_method>`
-    - Downscales an image into another so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+    - Downscales the image so that its maximum dimension equals the given maximum size, while preserving the aspect ratio.
   * - :ref:`extractRoi<image_extract_roi_class_method>`
-    - Extracts a region of interest in the image object according to the given bounds.
+    - Extracts a region of interest in the image according to the given bounds.
   * - :ref:`flip<image_flip_class_method>`
-    - Flips the image object in-place.
+    - Flips the image in-place.
   * - :ref:`flipTo<image_flip_to_class_method>`
-    - Flips the image object into another.
+    - Flips the image.
   * - :ref:`getPixels<image_get_pixels_class_method>`
-    - Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixels pointer carefully.
+    - Gets a pointer to the image pixels.
   * - :ref:`reallocate<image_reallocate_class_method>`
-    - Reallocates the internal memory of an image object from parameters. If the given parameters are the same as the ones of the object, then there is nothing done in this function.
+    - Reallocates the internal memory of the Image from parameters.
   * - :ref:`resize<image_resize_class_method>`
-    - Resizes the image object to the required width and height in-place.
+    - Resizes the image in-place to the required width and height.
   * - :ref:`resizeTo<image_resize_to_class_method>`
-    - Resizes the image object to the required width and height into another.
+    - Resizes the image to the specified width and height.
   * - :ref:`rotate<image_rotate_class_method>`
-    - Rotates the image object of the required angle in-place. The rotation is performed counter-clockwise.
+    - Rotates the image in-place to the specified angle.
   * - :ref:`rotateTo<image_rotate_to_class_method>`
-    - Rotates the image object of the required angle into another. The rotation is performed counter-clockwise.
+    - Rotates the image to the specified angle.
   * - :ref:`toBuffer<image_to_buffer_class_method>`
-    - Exports the image object to a buffer. The compression level meaning depends on the used algorithm:
+    - Exports the image to a buffer.
   * - :ref:`toBufferObject<image_to_buffer_object_class_method>`
-    - Exports the image object to a buffer object. The compression level meaning depends on the used algorithm:
+    - Copies the image to a buffer in the specified format.
   * - :ref:`toFile<image_to_file_class_method>`
-    - Exports the image object to a file. The compression level meaning depends on the used algorithm:
+    - Saves the image to the specified file.
   * - :ref:`toNumpy<image_to_numpy_class_method>`
-    - Exports the image object to a numpy array
+    - Exports the image to a numpy array (Python only)
   * - :ref:`toRawBuffer<image_to_raw_buffer_class_method>`
-    - Convert image to another pixel format dans store the result in a image buffer object.
+    - Copies image pixels in the specified format into a buffer.
   * - :ref:`transpose<image_transpose_class_method>`
     - Transposes the image object.

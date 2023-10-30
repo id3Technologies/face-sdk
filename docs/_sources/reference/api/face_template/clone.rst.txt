@@ -17,33 +17,27 @@ Clones the FaceTemplate object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplate_CopyTo (
-            ID3_FACE_TEMPLATE hFaceTemplate, 
-            ID3_FACE_TEMPLATE hFaceTemplateDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`in` Handle to the FaceTemplate object.
-
-          ``hFaceTemplateDst`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`out` The newly created face template.
-
+        clone(self) -> FaceTemplate
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceTemplate<face_template_class>`
+          The newly created face template.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the FaceTemplate object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> FaceTemplate
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceTemplate<face_template_class>`
-          The newly created face template.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the FaceTemplate object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_CopyTo (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            ID3_FACE_TEMPLATE hFaceTemplateDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``hFaceTemplateDst`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`out` The newly created face template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

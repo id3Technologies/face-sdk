@@ -21,21 +21,20 @@ Minimum match score to reach to preserve the ID of a tracked face between frame 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * trackerMatchingThreshold)
-      int id3FacePortraitProcessor_SetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int trackerMatchingThreshold)
+      tracker_matching_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Minimum match score to reach to preserve the ID of a tracked face between frame 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Minimum match score to reach to preserve the ID of a tracked face between frame 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Minimum match score to reach to preserve the ID of a tracked face between frame 
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      tracker_matching_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Minimum match score to reach to preserve the ID of a tracked face between frame 
 
     .. code:: Swift
 
-      TODO
+      public var trackerMatchingThreshold: Int
+          get {
+              return Int(try! getTrackerMatchingThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * trackerMatchingThreshold)
+      int id3FacePortraitProcessor_SetTrackerMatchingThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int trackerMatchingThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

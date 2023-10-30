@@ -12,7 +12,9 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Exports the image object to a buffer. The compression level meaning depends on the used algorithm:
+Exports the image to a buffer.
+
+The compression level meaning depends on the algorithm used:
 
 - For JPEG compression, the value is the expected quality and may vary from 1 to 100.
 
@@ -25,45 +27,38 @@ Exports the image object to a buffer. The compression level meaning depends on t
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_ToBuffer (
-            ID3_FACE_IMAGE hImage, 
-            id3FaceImageFormat eImageFormat, 
-            float compressionLevel, 
-            unsigned char * data, 
-            int * dataSize)
+        to_buffer(self, image_format: ImageFormat, compression_level: float) -> bytearray
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
-          ``eImageFormat`` :ref:`id3FaceImageFormat<image_format_enum>`
+          ``image_format`` :ref:`ImageFormat<image_format_enum>`
           :guilabel:`in` The image format to export the image to.
 
-          ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
-
-          ``data`` unsigned char *
-          :guilabel:`out` Buffer to export the image object to.
-
-          ``dataSize`` int *
-          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+          ``compression_level`` float
+          :guilabel:`in` The compression level to be applied.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bytearray``
+          Buffer that receives the image data.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -80,7 +75,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
           :guilabel:`in` The image format to export the image to.
 
           ``compressionLevel`` double
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Returns**
@@ -88,7 +83,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
         .. line-block::
 
           ``Uint8List``
-          Buffer to export the image object to.
+          Buffer that receives the image data.
 
       **Exceptions**
 
@@ -113,7 +108,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
           :guilabel:`in` The image format to export the image to.
 
           ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Returns**
@@ -121,7 +116,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
         .. line-block::
 
           ``byte[]``
-          Buffer to export the image object to.
+          Buffer that receives the image data.
 
       **Exceptions**
 
@@ -146,7 +141,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
           :guilabel:`in` The image format to export the image to.
 
           ``compressionLevel`` float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Returns**
@@ -154,40 +149,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
         .. line-block::
 
           ``byte[]``
-          Buffer to export the image object to.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_buffer(self, image_format: ImageFormat, compression_level: float) -> bytearray
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image_format`` :ref:`ImageFormat<image_format_enum>`
-          :guilabel:`in` The image format to export the image to.
-
-          ``compression_level`` float
-          :guilabel:`in` Compression level to apply.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``bytearray``
-          Buffer to export the image object to.
+          Buffer that receives the image data.
 
       **Exceptions**
 
@@ -212,7 +174,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
           :guilabel:`in` The image format to export the image to.
 
           ``compressionLevel`` Float
-          :guilabel:`in` Compression level to apply.
+          :guilabel:`in` The compression level to be applied.
 
 
       **Returns**
@@ -220,7 +182,7 @@ Exports the image object to a buffer. The compression level meaning depends on t
         .. line-block::
 
           ``[UInt8]``
-          Buffer to export the image object to.
+          Buffer that receives the image data.
 
       **Exceptions**
 
@@ -229,5 +191,45 @@ Exports the image object to a buffer. The compression level meaning depends on t
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ToBuffer (
+            ID3_FACE_IMAGE hImage, 
+            id3FaceImageFormat eImageFormat, 
+            float compressionLevel, 
+            unsigned char * data, 
+            int * dataSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``eImageFormat`` :ref:`id3FaceImageFormat<image_format_enum>`
+          :guilabel:`in` The image format to export the image to.
+
+          ``compressionLevel`` float
+          :guilabel:`in` The compression level to be applied.
+
+          ``data`` unsigned char *
+          :guilabel:`out` Buffer that receives the image data.
+
+          ``dataSize`` int *
+          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

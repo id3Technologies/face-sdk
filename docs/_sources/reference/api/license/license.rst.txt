@@ -18,6 +18,8 @@ Namespace: :ref:`id3.Face<reference_api>`
   activateBuffer<activate_buffer>
   activateSerialKey<activate_serial_key>
   activateSerialKeyBuffer<activate_serial_key_buffer>
+  checkLicense<check_license>
+  checkLicenseBuffer<check_license_buffer>
   checkModule<check_module>
   getExpiryDate<get_expiry_date>
   getExternalDriveHardwareCode<get_external_drive_hardware_code>
@@ -33,8 +35,6 @@ Namespace: :ref:`id3.Face<reference_api>`
   getModuleValue<get_module_value>
   getProductReference<get_product_reference>
   getRemainingDays<get_remaining_days>
-  loadLicense<load_license>
-  loadLicenseBuffer<load_license_buffer>
   reactivate<reactivate>
   reactivateBuffer<reactivate_buffer>
 
@@ -42,9 +42,16 @@ Namespace: :ref:`id3.Face<reference_api>`
 Definition
 ----------
 .. line-block::
-    This class represents a License
+    Handles the license to use this SDK.
 
 .. tab-set::
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        class License
 
     .. tab-item:: Dart
       :sync: Dart
@@ -67,13 +74,6 @@ Definition
 
         public class License
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class License
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -93,19 +93,23 @@ Static Methods
   * - Name
     - Description
   * - :ref:`activate<license_activate_class_method>`
-    - Retrieves a license file using id3 account credentials and a product reference.
+    - Activates a license using customer credentials and a product reference and saves the license to a file.
   * - :ref:`activateActivationKey<license_activate_activation_key_class_method>`
-    - Retrieves a license file using an activation key.
+    - Activates a license file using an activation key and saves the license to a file.
   * - :ref:`activateActivationKeyBuffer<license_activate_activation_key_buffer_class_method>`
-    - Retrieves a license file buffer using an activation key.
+    - Activates a license using an activation key and returns the license in a data buffer.
   * - :ref:`activateBuffer<license_activate_buffer_class_method>`
-    - Retrieves a license file buffer using id3 account credentials and a product reference.
+    - Retrieves a license file buffer using customer credentials and a product reference and returns the license in a data buffer.
   * - :ref:`activateSerialKey<license_activate_serial_key_class_method>`
-    - Retrieves a license file using a serial key.
+    - Activates a license using a serial key and saves the license to a file.
   * - :ref:`activateSerialKeyBuffer<license_activate_serial_key_buffer_class_method>`
-    - Retrieves a license file buffer using a serial key.
+    - Activates a license using a serial key and returns the license in a data buffer.
+  * - :ref:`checkLicense<license_check_license_class_method>`
+    - Checks a license from a file.
+  * - :ref:`checkLicenseBuffer<license_check_license_buffer_class_method>`
+    - Checks a license from a buffer.
   * - :ref:`checkModule<license_check_module_class_method>`
-    - Checks if a module is present in the license.
+    - Checks if a module is present in the previously loaded license.
   * - :ref:`getExpiryDate<license_get_expiry_date_class_method>`
     - Retrieves the license expiry date.
   * - :ref:`getExternalDriveHardwareCode<license_get_external_drive_hardware_code_class_method>`
@@ -113,9 +117,9 @@ Static Methods
   * - :ref:`getHostHardwareCode<license_get_host_hardware_code_class_method>`
     - Retrieves the hardware code of the device using the requested hardware code type.
   * - :ref:`getLicenseFileHardwareCode<license_get_license_file_hardware_code_class_method>`
-    - Retrieves the hardware code of the previously loaded license file.
+    - Retrieves the hardware code of the previously loaded license.
   * - :ref:`getLicenseFileSerial<license_get_license_file_serial_class_method>`
-    - Retrieves the serial of the previously loaded license file.
+    - Retrieves the serial number of the previously loaded license.
   * - :ref:`getLicenseName<license_get_license_name_class_method>`
     - Retrieves the license name.
   * - :ref:`getLicenseOwner<license_get_license_owner_class_method>`
@@ -127,18 +131,14 @@ Static Methods
   * - :ref:`getModuleCount<license_get_module_count_class_method>`
     - Retrieves the number of modules in the license.
   * - :ref:`getModuleName<license_get_module_name_class_method>`
-    - Retrieves the name of a given module in the license.
+    - Retrieves the name of the specified license module.
   * - :ref:`getModuleValue<license_get_module_value_class_method>`
-    - Retrieves the value of a given module in the license.
+    - Retrieves the value associated to the specified license module.
   * - :ref:`getProductReference<license_get_product_reference_class_method>`
     - Retrieves the license product reference.
   * - :ref:`getRemainingDays<license_get_remaining_days_class_method>`
-    - Retrieves the number of trial remaining days.
-  * - :ref:`loadLicense<license_load_license_class_method>`
-    - Loads and checks a license from a file.
-  * - :ref:`loadLicenseBuffer<license_load_license_buffer_class_method>`
-    - Loads and checks a license from a buffer.
+    - Retrieves the number of remaining days.
   * - :ref:`reactivate<license_reactivate_class_method>`
-    - Reactivates a license file using hardware code and product reference.
+    - Reactivates a license file using the host hardware code and the product reference.
   * - :ref:`reactivateBuffer<license_reactivate_buffer_class_method>`
-    - Reactivates a license file buffer using hardware code and product reference.
+    - Reactivates a license in a data buffer using the host hardware code and the product reference.

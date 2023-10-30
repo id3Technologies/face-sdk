@@ -12,54 +12,49 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves a license file using id3 account credentials and a product reference.
+Activates a license using customer credentials and a product reference and saves the license to a file.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_Activate (
-            const char * hardwareCode, 
-            const char * login, 
-            const char * password, 
-            const char * productReference, 
-            const char * commentary, 
-            const char * path)
+        @staticmethod
+        activate(hardware_code: str, login: str, password: str, product_reference: str, commentary: str, path: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hardwareCode`` const char *
+          ``hardware_code`` str
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
-          ``login`` const char *
+          ``login`` str
           :guilabel:`in` The id3 account login.
 
-          ``password`` const char *
+          ``password`` str
           :guilabel:`in` The id3 account password.
 
-          ``productReference`` const char *
+          ``product_reference`` str
           :guilabel:`in` The requested product reference.
 
-          ``commentary`` const char *
+          ``commentary`` str
           :guilabel:`in` Commentary associated to this license activation.
 
-          ``path`` const char *
+          ``path`` str
           :guilabel:`in` Path to the retrieved license file.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -175,45 +170,6 @@ Retrieves a license file using id3 account credentials and a product reference.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        activate(hardware_code: str, login: str, password: str, product_reference: str, commentary: str, path: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hardware_code`` str
-          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
-
-          ``login`` str
-          :guilabel:`in` The id3 account login.
-
-          ``password`` str
-          :guilabel:`in` The id3 account password.
-
-          ``product_reference`` str
-          :guilabel:`in` The requested product reference.
-
-          ``commentary`` str
-          :guilabel:`in` Commentary associated to this license activation.
-
-          ``path`` str
-          :guilabel:`in` Path to the retrieved license file.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -251,5 +207,49 @@ Retrieves a license file using id3 account credentials and a product reference.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_Activate (
+            const char * hardwareCode, 
+            const char * login, 
+            const char * password, 
+            const char * productReference, 
+            const char * commentary, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hardwareCode`` const char *
+          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
+
+          ``login`` const char *
+          :guilabel:`in` The id3 account login.
+
+          ``password`` const char *
+          :guilabel:`in` The id3 account password.
+
+          ``productReference`` const char *
+          :guilabel:`in` The requested product reference.
+
+          ``commentary`` const char *
+          :guilabel:`in` Commentary associated to this license activation.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the retrieved license file.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

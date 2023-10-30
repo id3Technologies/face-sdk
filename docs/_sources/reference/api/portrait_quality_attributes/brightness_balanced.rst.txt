@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.brightnessBalanced Property
+
+.. _portrait_quality_attributes_brightness_balanced_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.brightnessBalanced Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether lighting is equally distributed on the face, in particular symmetrically, i.e., there is no difference between the brightness of the right and left side of the face.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int brightness_balanced
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int brightnessBalanced
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int BrightnessBalanced
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int brightnessBalanced
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int brightnessBalanced
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int BrightnessBalanced
+

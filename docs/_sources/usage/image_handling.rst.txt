@@ -16,31 +16,16 @@ Loading an image
 
 To load an image into the memory you need to create an Image object that will contain the image's content.
 
-From a file
------------
-
-The image can be loaded from a file:
+The image can be loaded from a file or a buffer:
 
 .. tab-set-code::
 
-    .. literalinclude:: /_static/samples/init.cs
+    .. literalinclude:: /../samples/sample.cs
        :language: c#
        :start-after: [load_image]
        :end-before: [load_image]
        :dedent: 12
 
-From a buffer
--------------
-
-Or from a memory buffer, either a vector or a raw pointer:
-
-.. tab-set-code::
-
-    .. literalinclude:: /_static/samples/init.cs
-       :language: c#
-       :start-after: [load_image]
-       :end-before: [load_image]
-       :dedent: 12
 
 See also
 --------

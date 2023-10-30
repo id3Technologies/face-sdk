@@ -12,42 +12,40 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Extracts a region of interest in the image object according to the given bounds.
+Extracts a region of interest in the image according to the given bounds.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_ExtractRoi (
-            ID3_FACE_IMAGE hImage, 
-            const id3FaceRectangle * sBounds, 
-            ID3_FACE_IMAGE hImageRoi)
+        extract_roi(self, bounds: Rectangle) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
-          ``sBounds`` :ref:`const id3FaceRectangle *<rectangle_struct>`
+          ``bounds`` :ref:`Rectangle<rectangle_struct>`
           :guilabel:`in` Bounds of the crop to extract.
-
-          ``hImageRoi`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`out` Extracted region of interest.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          The extracted region of interest.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -69,7 +67,7 @@ Extracts a region of interest in the image object according to the given bounds.
         .. line-block::
 
           :ref:`Image<image_class>`
-          Extracted region of interest.
+          The extracted region of interest.
 
       **Exceptions**
 
@@ -99,7 +97,7 @@ Extracts a region of interest in the image object according to the given bounds.
         .. line-block::
 
           :ref:`Image<image_class>`
-          Extracted region of interest.
+          The extracted region of interest.
 
       **Exceptions**
 
@@ -129,37 +127,7 @@ Extracts a region of interest in the image object according to the given bounds.
         .. line-block::
 
           :ref:`Image<image_class>`
-          Extracted region of interest.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        extract_roi(self, bounds: Rectangle) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``bounds`` :ref:`Rectangle<rectangle_struct>`
-          :guilabel:`in` Bounds of the crop to extract.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          Extracted region of interest.
+          The extracted region of interest.
 
       **Exceptions**
 
@@ -189,7 +157,7 @@ Extracts a region of interest in the image object according to the given bounds.
         .. line-block::
 
           :ref:`Image<image_class>`
-          Extracted region of interest.
+          The extracted region of interest.
 
       **Exceptions**
 
@@ -198,5 +166,37 @@ Extracts a region of interest in the image object according to the given bounds.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_ExtractRoi (
+            ID3_FACE_IMAGE hImage, 
+            const id3FaceRectangle * sBounds, 
+            ID3_FACE_IMAGE hImageRoi)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``sBounds`` :ref:`const id3FaceRectangle *<rectangle_struct>`
+          :guilabel:`in` Bounds of the crop to extract.
+
+          ``hImageRoi`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`out` The extracted region of interest.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -17,27 +17,22 @@ Creates an empty face indexer
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceIndexer_Create (
-            ID3_FACE_INDEXER hFaceIndexer, 
-            int maximumTemplateCount, 
-            id3FaceTemplateFormat eFormat)
+        @staticmethod
+        create(maximum_template_count: int, format: FaceTemplateFormat) -> FaceIndexer
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
-          :guilabel:`in` Handle to the FaceIndexer object.
-
-          ``maximumTemplateCount`` int
+          ``maximum_template_count`` int
           :guilabel:`in` Maximum number of templates that this face indexer can hold.
 
-          ``eFormat`` :ref:`id3FaceTemplateFormat<face_template_format_enum>`
+          ``format`` :ref:`FaceTemplateFormat<face_template_format_enum>`
           :guilabel:`in` Face template format accepted by this face indexer.
 
 
@@ -45,9 +40,16 @@ Creates an empty face indexer
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceIndexer<face_indexer_class>`
+          The newly created face indexer.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -148,40 +150,6 @@ Creates an empty face indexer
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        create(maximum_template_count: int, format: FaceTemplateFormat) -> FaceIndexer
-
-      **Parameters**
-
-        .. line-block::
-
-          ``maximum_template_count`` int
-          :guilabel:`in` Maximum number of templates that this face indexer can hold.
-
-          ``format`` :ref:`FaceTemplateFormat<face_template_format_enum>`
-          :guilabel:`in` Face template format accepted by this face indexer.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceIndexer<face_indexer_class>`
-          The newly created face indexer.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -214,5 +182,37 @@ Creates an empty face indexer
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceIndexer_Create (
+            ID3_FACE_INDEXER hFaceIndexer, 
+            int maximumTemplateCount, 
+            id3FaceTemplateFormat eFormat)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
+          :guilabel:`in` Handle to the FaceIndexer object.
+
+          ``maximumTemplateCount`` int
+          :guilabel:`in` Maximum number of templates that this face indexer can hold.
+
+          ``eFormat`` :ref:`id3FaceTemplateFormat<face_template_format_enum>`
+          :guilabel:`in` Face template format accepted by this face indexer.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

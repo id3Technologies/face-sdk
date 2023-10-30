@@ -32,12 +32,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceTracker *ID3_FACE_TRACKER;
+        class FaceTracker
 
     .. tab-item:: Dart
       :sync: Dart
@@ -60,19 +60,19 @@ Definition
 
         public class FaceTracker implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceTracker
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceTracker
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTracker *ID3_FACE_TRACKER;
 
 
 
@@ -81,17 +81,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_TRACKER hFaceTracker{};
-        int err = id3FaceTracker_Initialize(&hFaceTracker);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceTracker_Dispose(&hFaceTracker);
-        }
+        faceTracker = FaceTracker()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTracker
 
     .. tab-item:: Dart
       :sync: Dart
@@ -143,21 +146,6 @@ Usage
         // ...
         faceTracker.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceTracker = FaceTracker()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceTracker
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -165,6 +153,18 @@ Usage
 
         private var faceTracker: FaceTracker? = nil
         faceTracker = try FaceTracker()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TRACKER hFaceTracker{};
+        int err = id3FaceTracker_Initialize(&hFaceTracker);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTracker_Dispose(&hFaceTracker);
+        }
 
 
 Properties
@@ -204,7 +204,7 @@ Properties
     - Processing unit where to run the detection process.
   * - :ref:`threadCount<face_tracker_thread_count_class_member>`
     - int
-    - Number of threads to use for detection or tracking.
+    - Number of threads to be used for face detection and tracking.
 
 Methods
 -------

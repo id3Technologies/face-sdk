@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.mouthVisible Property
+
+.. _portrait_quality_attributes_mouth_visible_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.mouthVisible Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether the mouth is visible.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int mouth_visible
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int mouthVisible
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int MouthVisible
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int mouthVisible
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int mouthVisible
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int MouthVisible
+

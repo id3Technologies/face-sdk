@@ -23,21 +23,20 @@ Above this threshold, the image is probably pixelated.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * pixelationThreshold)
-      int id3FacePortraitProcessor_SetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int pixelationThreshold)
+      pixelation_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Above this threshold, the image is probably pixelated.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Above this threshold, the image is probably pixelated.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Above this threshold, the image is probably pixelated.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      pixelation_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Above this threshold, the image is probably pixelated.
 
     .. code:: Swift
 
-      TODO
+      public var pixelationThreshold: Int
+          get {
+              return Int(try! getPixelationThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * pixelationThreshold)
+      int id3FacePortraitProcessor_SetPixelationThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int pixelationThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

@@ -23,21 +23,20 @@ If the detection score is above this value, the person is probably wearing a mas
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * faceMaskThreshold)
-      int id3FacePortraitProcessor_SetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int faceMaskThreshold)
+      face_mask_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ If the detection score is above this value, the person is probably wearing a mas
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ If the detection score is above this value, the person is probably wearing a mas
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ If the detection score is above this value, the person is probably wearing a mas
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      face_mask_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ If the detection score is above this value, the person is probably wearing a mas
 
     .. code:: Swift
 
-      TODO
+      public var faceMaskThreshold: Int
+          get {
+              return Int(try! getFaceMaskThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * faceMaskThreshold)
+      int id3FacePortraitProcessor_SetFaceMaskThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int faceMaskThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

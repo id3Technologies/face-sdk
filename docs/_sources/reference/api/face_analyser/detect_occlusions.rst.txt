@@ -19,41 +19,38 @@ Detects the presence of occlusions on top of a detected face.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_DetectOcclusions (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            id3FaceOcclusionScores * sScores)
+        detect_occlusions(self, image: Image, detected_face: DetectedFace) -> FaceOcclusionScores
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
-
-          ``sScores`` :ref:`id3FaceOcclusionScores *<face_occlusion_scores_struct>`
-          :guilabel:`out` The occlusion scores of the detected face.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceOcclusionScores<face_occlusion_scores_struct>`
+          The occlusion scores of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -154,39 +151,6 @@ Detects the presence of occlusions on top of a detected face.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        detect_occlusions(self, image: Image, detected_face: DetectedFace) -> FaceOcclusionScores
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceOcclusionScores<face_occlusion_scores_struct>`
-          The occlusion scores of the detected face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -219,5 +183,41 @@ Detects the presence of occlusions on top of a detected face.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_DetectOcclusions (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            id3FaceOcclusionScores * sScores)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``sScores`` :ref:`id3FaceOcclusionScores *<face_occlusion_scores_struct>`
+          :guilabel:`out` The occlusion scores of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

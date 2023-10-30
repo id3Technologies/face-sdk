@@ -23,21 +23,20 @@ Above this threshold, the flash reflexion is probably present on the face.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetNoFlashReflectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * noFlashReflectionThreshold)
-      int id3FacePortraitProcessor_SetNoFlashReflectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int noFlashReflectionThreshold)
+      no_flash_reflection_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Above this threshold, the flash reflexion is probably present on the face.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Above this threshold, the flash reflexion is probably present on the face.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Above this threshold, the flash reflexion is probably present on the face.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      no_flash_reflection_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Above this threshold, the flash reflexion is probably present on the face.
 
     .. code:: Swift
 
-      TODO
+      public var noFlashReflectionThreshold: Int
+          get {
+              return Int(try! getNoFlashReflectionThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetNoFlashReflectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * noFlashReflectionThreshold)
+      int id3FacePortraitProcessor_SetNoFlashReflectionThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int noFlashReflectionThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

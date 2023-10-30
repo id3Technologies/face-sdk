@@ -17,33 +17,27 @@ Clones the ImageBuffer object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImageBuffer_CopyTo (
-            ID3_FACE_IMAGE_BUFFER hImageBuffer, 
-            ID3_FACE_IMAGE_BUFFER hImageBufferDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hImageBuffer`` :ref:`ID3_FACE_IMAGE_BUFFER<image_buffer_class>`
-          :guilabel:`in` Handle to the ImageBuffer object.
-
-          ``hImageBufferDst`` :ref:`ID3_FACE_IMAGE_BUFFER<image_buffer_class>`
-          :guilabel:`out` The newly created image buffer.
-
+        clone(self) -> ImageBuffer
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`ImageBuffer<image_buffer_class>`
+          The newly created image buffer.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the ImageBuffer object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> ImageBuffer
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`ImageBuffer<image_buffer_class>`
-          The newly created image buffer.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the ImageBuffer object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageBuffer_CopyTo (
+            ID3_FACE_IMAGE_BUFFER hImageBuffer, 
+            ID3_FACE_IMAGE_BUFFER hImageBufferDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageBuffer`` :ref:`ID3_FACE_IMAGE_BUFFER<image_buffer_class>`
+          :guilabel:`in` Handle to the ImageBuffer object.
+
+          ``hImageBufferDst`` :ref:`ID3_FACE_IMAGE_BUFFER<image_buffer_class>`
+          :guilabel:`out` The newly created image buffer.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

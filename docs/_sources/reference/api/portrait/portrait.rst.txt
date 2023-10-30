@@ -16,7 +16,7 @@ Namespace: :ref:`id3.Face<reference_api>`
   backgroundUniformity<background_uniformity>
   clear<clear>
   clone<clone>
-  emotion<emotion>
+  expression<expression>
   eyeGaze<eye_gaze>
   faceId<face_id>
   faceMask<face_mask>
@@ -29,7 +29,6 @@ Namespace: :ref:`id3.Face<reference_api>`
   imageCenter<image_center>
   imageScale<image_scale>
   imageTranslation<image_translation>
-  isPresentationAttack<is_presentation_attack>
   landmarks<landmarks>
   leftEyeOpening<left_eye_opening>
   leftEyeVisibility<left_eye_visibility>
@@ -37,8 +36,7 @@ Namespace: :ref:`id3.Face<reference_api>`
   mouthOpening<mouth_opening>
   mouthVisibility<mouth_visibility>
   noseVisibility<nose_visibility>
-  padAttackSupport<pad_attack_support>
-  padColor<pad_color>
+  padStatus<pad_status>
   photographicAttributes<photographic_attributes>
   pose<pose>
   qualityAttributes<quality_attributes>
@@ -58,12 +56,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FacePortrait *ID3_FACE_PORTRAIT;
+        class Portrait
 
     .. tab-item:: Dart
       :sync: Dart
@@ -86,19 +84,19 @@ Definition
 
         public class Portrait implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class Portrait
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class Portrait
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePortrait *ID3_FACE_PORTRAIT;
 
 
 
@@ -107,17 +105,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_PORTRAIT hPortrait{};
-        int err = id3FacePortrait_Initialize(&hPortrait);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FacePortrait_Dispose(&hPortrait);
-        }
+        portrait = Portrait()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del portrait
 
     .. tab-item:: Dart
       :sync: Dart
@@ -169,21 +170,6 @@ Usage
         // ...
         portrait.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        portrait = Portrait()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del portrait
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -191,6 +177,18 @@ Usage
 
         private var portrait: Portrait? = nil
         portrait = try Portrait()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_PORTRAIT hPortrait{};
+        int err = id3FacePortrait_Initialize(&hPortrait);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePortrait_Dispose(&hPortrait);
+        }
 
 
 Properties
@@ -210,9 +208,9 @@ Properties
   * - :ref:`backgroundUniformity<portrait_background_uniformity_class_member>`
     - :ref:`BackgroundUniformity<background_uniformity_struct>`
     - Result of the background uniformity computation.
-  * - :ref:`emotion<portrait_emotion_class_member>`
+  * - :ref:`expression<portrait_expression_class_member>`
     - :ref:`FaceExpression<face_expression_enum>`
-    - Estimated emotion of the subject (angriness, disgust, fear, happiness, sadness, surprise, or neutral). Unknown if not computed.
+    - Estimated expression of the subject (angriness, disgust, fear, happiness, sadness, surprise, or neutral). Unknown if not computed.
   * - :ref:`eyeGaze<portrait_eye_gaze_class_member>`
     - :ref:`EyeGaze<eye_gaze_struct>`
     - Estimated gaze.
@@ -249,9 +247,6 @@ Properties
   * - :ref:`imageTranslation<portrait_image_translation_class_member>`
     - :ref:`Point<point_struct>`
     - Translation to be applied to the source image to display the portrait.
-  * - :ref:`isPresentationAttack<portrait_is_presentation_attack_class_member>`
-    - bool
-    - Value indicating whether the portrait is a presentation attack.
   * - :ref:`landmarks<portrait_landmarks_class_member>`
     - :ref:`PointList<point_list_class>`
     - 68-points landmarks.
@@ -273,12 +268,9 @@ Properties
   * - :ref:`noseVisibility<portrait_nose_visibility_class_member>`
     - int
     - Value estimating the visibility of the nose. -1 if not computed. The range is 0-100, 100 meaning the nose is fully visible.
-  * - :ref:`padAttackSupport<portrait_pad_attack_support_class_member>`
-    - int
-    - Presentation attack support detection result. -1 if not computed. The range is 0-100, 100 meaning an attack has definitely been detected.
-  * - :ref:`padColor<portrait_pad_color_class_member>`
-    - :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
-    - Color-based PAD result. -1 if not computed. The range is 0-100, 100 meaning an attack a definitely been detected.
+  * - :ref:`padStatus<portrait_pad_status_class_member>`
+    - :ref:`PadStatus<pad_status_enum>`
+    - Status of the presentation attack detection.
   * - :ref:`photographicAttributes<portrait_photographic_attributes_class_member>`
     - :ref:`PhotographicAttributes<photographic_attributes_struct>`
     - Photographic attributes.

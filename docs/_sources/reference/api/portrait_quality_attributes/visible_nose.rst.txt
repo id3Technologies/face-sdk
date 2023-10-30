@@ -17,12 +17,12 @@ Value indicating whether the nose is visible.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int VisibleNose
+      int visible_nose
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Value indicating whether the nose is visible.
 
       int visibleNose
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int visible_nose
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int visibleNose
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int VisibleNose
 

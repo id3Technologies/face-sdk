@@ -58,6 +58,22 @@ The component also provides a quality estimator that aims at predicting the powe
 
 .. important:: This functionality requires the model FaceEncodingQualityEstimator_2A to be loaded.
 
+Example
+=======
+
+The example below demonstrates how to encode a face image and generate a :ref:`FaceTemplate<face_template_class>`:
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_encoding]
+      :end-before: [face_encoding]
+      :dedent: 4
+
 See also
 ========
 - :ref:`face_encoder_class`

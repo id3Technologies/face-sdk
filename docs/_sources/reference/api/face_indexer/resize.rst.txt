@@ -17,33 +17,28 @@ Resizes the maximum number of templates that the face indexer can hold.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceIndexer_Resize (
-            ID3_FACE_INDEXER hFaceIndexer, 
-            int maximumCount)
+        resize(self, maximum_count: int) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
-          :guilabel:`in` Handle to the FaceIndexer object.
-
-          ``maximumCount`` int
+          ``maximum_count`` int
           :guilabel:`in` Maximum number of templates that this face indexer can hold.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Resizes the maximum number of templates that the face indexer can hold.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        resize(self, maximum_count: int) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``maximum_count`` int
-          :guilabel:`in` Maximum number of templates that this face indexer can hold.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Resizes the maximum number of templates that the face indexer can hold.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceIndexer_Resize (
+            ID3_FACE_INDEXER hFaceIndexer, 
+            int maximumCount)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
+          :guilabel:`in` Handle to the FaceIndexer object.
+
+          ``maximumCount`` int
+          :guilabel:`in` Maximum number of templates that this face indexer can hold.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

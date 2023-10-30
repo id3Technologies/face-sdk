@@ -17,33 +17,28 @@ Updates the face template by combining it with the specified face template.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplate_Update (
-            ID3_FACE_TEMPLATE hFaceTemplate, 
-            ID3_FACE_TEMPLATE hNewFaceTemplate)
+        update(self, new_face_template: FaceTemplate) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`in` Handle to the FaceTemplate object.
-
-          ``hNewFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          ``new_face_template`` :ref:`FaceTemplate<face_template_class>`
           :guilabel:`in` New face template to combine.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -114,29 +109,6 @@ Updates the face template by combining it with the specified face template.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        update(self, new_face_template: FaceTemplate) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``new_face_template`` :ref:`FaceTemplate<face_template_class>`
-          :guilabel:`in` New face template to combine.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -159,5 +131,33 @@ Updates the face template by combining it with the specified face template.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_Update (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            ID3_FACE_TEMPLATE hNewFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``hNewFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` New face template to combine.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

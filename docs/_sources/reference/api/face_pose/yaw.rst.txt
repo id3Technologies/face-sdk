@@ -17,12 +17,12 @@ Yaw angle in degrees.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      float Yaw
+      float yaw
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Yaw angle in degrees.
 
       float yaw
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      float yaw
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Float yaw
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float Yaw
 

@@ -21,49 +21,41 @@ The maximum recommanded value for an ICAO-compliant portrait is 10.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_ComputeEyeRedness (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            ID3_FACE_POINT_LIST hLandmarks, 
-            int * eyeRednessScores, 
-            int * eyeRednessScoresSize)
+        compute_eye_redness(self, image: Image, detected_face: DetectedFace, landmarks: PointList) -> List[int]
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
 
-          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          ``landmarks`` :ref:`PointList<point_list_class>`
           :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
-
-          ``eyeRednessScores`` int *
-          :guilabel:`out` The estimated redness scores of left and right eyes of the detected face in this order.
-
-          ``eyeRednessScoresSize`` int *
-          :guilabel:`in` Size of the 'eyeRednessScores' buffer. Receives the number of elements in the 'eyeRednessScores' array.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``List[int]``
+          The estimated redness scores of left and right eyes of the detected face in this order.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -173,42 +165,6 @@ The maximum recommanded value for an ICAO-compliant portrait is 10.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_eye_redness(self, image: Image, detected_face: DetectedFace, landmarks: PointList) -> List[int]
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-          ``landmarks`` :ref:`PointList<point_list_class>`
-          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``List[int]``
-          The estimated redness scores of left and right eyes of the detected face in this order.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -244,5 +200,49 @@ The maximum recommanded value for an ICAO-compliant portrait is 10.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeEyeRedness (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            ID3_FACE_POINT_LIST hLandmarks, 
+            int * eyeRednessScores, 
+            int * eyeRednessScoresSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+          ``eyeRednessScores`` int *
+          :guilabel:`out` The estimated redness scores of left and right eyes of the detected face in this order.
+
+          ``eyeRednessScoresSize`` int *
+          :guilabel:`in` Size of the 'eyeRednessScores' buffer. Receives the number of elements in the 'eyeRednessScores' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

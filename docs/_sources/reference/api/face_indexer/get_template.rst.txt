@@ -17,37 +17,35 @@ Retrieves a template from the face indexer by ID.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceIndexer_GetTemplate (
-            ID3_FACE_INDEXER hFaceIndexer, 
-            const char * id, 
-            ID3_FACE_TEMPLATE hFaceTemplate)
+        get_template(self, id: str) -> FaceTemplate
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
-          :guilabel:`in` Handle to the FaceIndexer object.
-
-          ``id`` const char *
+          ``id`` str
           :guilabel:`in` ID of the required face template.
-
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`out` The face template.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceTemplate<face_template_class>`
+          The face template.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Retrieves a template from the face indexer by ID.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get_template(self, id: str) -> FaceTemplate
-
-      **Parameters**
-
-        .. line-block::
-
-          ``id`` str
-          :guilabel:`in` ID of the required face template.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceTemplate<face_template_class>`
-          The face template.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Retrieves a template from the face indexer by ID.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceIndexer_GetTemplate (
+            ID3_FACE_INDEXER hFaceIndexer, 
+            const char * id, 
+            ID3_FACE_TEMPLATE hFaceTemplate)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceIndexer`` :ref:`ID3_FACE_INDEXER<face_indexer_class>`
+          :guilabel:`in` Handle to the FaceIndexer object.
+
+          ``id`` const char *
+          :guilabel:`in` ID of the required face template.
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`out` The face template.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

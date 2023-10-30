@@ -21,21 +21,20 @@ Value indicating whether presentation attack detection using passive methods is 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetPresentationAttackDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * presentationAttackDetection)
-      int id3FacePortraitProcessor_SetPresentationAttackDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool presentationAttackDetection)
+      presentation_attack_detection: bool
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Value indicating whether presentation attack detection using passive methods is 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Value indicating whether presentation attack detection using passive methods is 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Value indicating whether presentation attack detection using passive methods is 
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      presentation_attack_detection: bool
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Value indicating whether presentation attack detection using passive methods is 
 
     .. code:: Swift
 
-      TODO
+      public var presentationAttackDetection: Bool
+          get {
+              return try! getPresentationAttackDetection()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPresentationAttackDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * presentationAttackDetection)
+      int id3FacePortraitProcessor_SetPresentationAttackDetection (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool presentationAttackDetection)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

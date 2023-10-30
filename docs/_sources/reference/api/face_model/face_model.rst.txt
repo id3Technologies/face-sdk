@@ -17,12 +17,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code-block:: C
+    .. code-block:: Python
 
-      typedef enum id3FaceModel
+      class FaceModel
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,19 +45,19 @@ Definition
 
       public enum FaceModel
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code-block:: Python
-
-      class FaceModel
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code-block:: Swift
 
       public enum FaceModel
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceModel
 
 
 Fields
@@ -152,6 +152,9 @@ Fields
   * - ``faceAttackSupportDetector2A``
     - 1831
     - Face attack support detector 2A.
+  * - ``faceAttackSupportDetector3A``
+    - 1841
+    - Face attack support detector 3A.
   * - ``faceDepthBasedPad2A``
     - 1850
     - Face depth-based presentation attack detector (PAD) 2A.

@@ -12,58 +12,47 @@ Module: :ref:`FaceTemplate<face_template_class>`
 Definition
 ----------
 
-Exports the face template object to a Biometric Information Template (BIT) buffer.
+Exports the face template as a Biometric Information Template (BIT) for enrolment on a smart card equipped with id3 Match-on-Card technology.
 
-This buffer can only be used with id3 Face Match on Card specific implementations to enroll a face template.
+.. note:: The threshold value is required and should be set according to the used Face Encoder and desired security level.
 
-Threshold value is required and should be set according to the used Face Encoder and desired security level.
-
-.. note:: Threshold values are specific and can be found in the id3 Face Match-On-Card documentation.
-
-.. important:: Reference data qualifier should be set according to the id3 Face Match-On-Card documentation.
+.. important:: The reference data qualifier (RDQ) should be defined in accordance with the smart card application specifications.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplate_ToBit (
-            ID3_FACE_TEMPLATE hFaceTemplate, 
-            int threshold, 
-            unsigned char referenceDataQualifier, 
-            unsigned char * data, 
-            int * dataSize)
+        to_bit(self, threshold: int, reference_data_qualifier: int) -> bytearray
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`in` Handle to the FaceTemplate object.
-
           ``threshold`` int
-          :guilabel:`in` Matching threshold for this BIT buffer.
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
 
-          ``referenceDataQualifier`` unsigned char
+          ``reference_data_qualifier`` int
           :guilabel:`in` Reference data qualifier.
-
-          ``data`` unsigned char *
-          :guilabel:`out` The buffer to which the BIT buffer is exported.
-
-          ``dataSize`` int *
-          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``bytearray``
+          A buffer that receives the biometric information template.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -77,7 +66,7 @@ Threshold value is required and should be set according to the used Face Encoder
         .. line-block::
 
           ``threshold`` int
-          :guilabel:`in` Matching threshold for this BIT buffer.
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
 
           ``referenceDataQualifier`` int
           :guilabel:`in` Reference data qualifier.
@@ -88,7 +77,7 @@ Threshold value is required and should be set according to the used Face Encoder
         .. line-block::
 
           ``Uint8List``
-          The buffer to which the BIT buffer is exported.
+          A buffer that receives the biometric information template.
 
       **Exceptions**
 
@@ -103,16 +92,16 @@ Threshold value is required and should be set according to the used Face Encoder
 
       .. code:: C#
 
-        public byte[] ToBit(int threshold, byte referenceDataQualifier)
+        public byte[] ToBit(int threshold, int referenceDataQualifier)
 
       **Parameters**
 
         .. line-block::
 
           ``threshold`` int
-          :guilabel:`in` Matching threshold for this BIT buffer.
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
 
-          ``referenceDataQualifier`` byte
+          ``referenceDataQualifier`` int
           :guilabel:`in` Reference data qualifier.
 
 
@@ -121,7 +110,7 @@ Threshold value is required and should be set according to the used Face Encoder
         .. line-block::
 
           ``byte[]``
-          The buffer to which the BIT buffer is exported.
+          A buffer that receives the biometric information template.
 
       **Exceptions**
 
@@ -136,16 +125,16 @@ Threshold value is required and should be set according to the used Face Encoder
 
       .. code:: Java
 
-        public byte[] toBit(int threshold, byte referenceDataQualifier) throws FaceException
+        public byte[] toBit(int threshold, int referenceDataQualifier) throws FaceException
 
       **Parameters**
 
         .. line-block::
 
           ``threshold`` int
-          :guilabel:`in` Matching threshold for this BIT buffer.
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
 
-          ``referenceDataQualifier`` byte
+          ``referenceDataQualifier`` int
           :guilabel:`in` Reference data qualifier.
 
 
@@ -154,40 +143,7 @@ Threshold value is required and should be set according to the used Face Encoder
         .. line-block::
 
           ``byte[]``
-          The buffer to which the BIT buffer is exported.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_bit(self, threshold: int, reference_data_qualifier: int) -> bytearray
-
-      **Parameters**
-
-        .. line-block::
-
-          ``threshold`` int
-          :guilabel:`in` Matching threshold for this BIT buffer.
-
-          ``reference_data_qualifier`` int
-          :guilabel:`in` Reference data qualifier.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``bytearray``
-          The buffer to which the BIT buffer is exported.
+          A buffer that receives the biometric information template.
 
       **Exceptions**
 
@@ -202,16 +158,16 @@ Threshold value is required and should be set according to the used Face Encoder
 
       .. code:: Swift
 
-        public func toBit(threshold: Int32, referenceDataQualifier: UInt8) throws -> [UInt8]
+        public func toBit(threshold: Int32, referenceDataQualifier: Int32) throws -> [UInt8]
 
       **Parameters**
 
         .. line-block::
 
           ``threshold`` Int32
-          :guilabel:`in` Matching threshold for this BIT buffer.
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
 
-          ``referenceDataQualifier`` UInt8
+          ``referenceDataQualifier`` Int32
           :guilabel:`in` Reference data qualifier.
 
 
@@ -220,7 +176,7 @@ Threshold value is required and should be set according to the used Face Encoder
         .. line-block::
 
           ``[UInt8]``
-          The buffer to which the BIT buffer is exported.
+          A buffer that receives the biometric information template.
 
       **Exceptions**
 
@@ -229,5 +185,45 @@ Threshold value is required and should be set according to the used Face Encoder
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_ToBit (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            int threshold, 
+            int referenceDataQualifier, 
+            unsigned char * data, 
+            int * dataSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``threshold`` int
+          :guilabel:`in` The decision threshold, from 0 to 653535, to be applied during the face comparison on the smart card. See FaceMatcherThreshold for a list of typical values.
+
+          ``referenceDataQualifier`` int
+          :guilabel:`in` Reference data qualifier.
+
+          ``data`` unsigned char *
+          :guilabel:`out` A buffer that receives the biometric information template.
+
+          ``dataSize`` int *
+          :guilabel:`in` Size of the 'data' buffer. Receives the number of elements in the 'data' array.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

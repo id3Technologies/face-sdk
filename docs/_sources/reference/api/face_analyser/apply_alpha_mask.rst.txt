@@ -1,0 +1,221 @@
+.. index:: 
+  !FaceAnalyser.applyAlphaMask Method
+  
+.. _face_analyser_apply_alpha_mask_class_method:
+
+===============================================================================
+FaceAnalyser.applyAlphaMask Method
+===============================================================================
+
+Module: :ref:`FaceAnalyser<face_analyser_class>`
+
+Definition
+----------
+
+Applies an alpha mask to suppress the background and returns a 32-bit BGRA image.
+
+
+.. tab-set::
+
+    .. tab-item:: Python
+      :sync: Python
+
+      .. code:: Python
+
+        apply_alpha_mask(self, image: Image, mask: Image) -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``mask`` :ref:`Image<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Dart
+      :sync: Dart
+
+      .. code:: Dart
+
+        Image applyAlphaMask(Image image, Image mask)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``mask`` :ref:`Image<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public Image ApplyAlphaMask(Image image, Image mask)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``mask`` :ref:`Image<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Java
+      :sync: Java
+
+      .. code:: Java
+
+        public Image applyAlphaMask(Image image, Image mask) throws FaceException
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``mask`` :ref:`Image<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: Swift
+      :sync: Swift
+
+      .. code:: Swift
+
+        public func applyAlphaMask(image: Image, mask: Image) throws -> Image
+
+      **Parameters**
+
+        .. line-block::
+
+          ``image`` :ref:`Image<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``mask`` :ref:`Image<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          :ref:`Image<image_class>`
+          The output image.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ApplyAlphaMask (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_FACE_IMAGE hMask, 
+            ID3_FACE_IMAGE hSegmentedFace)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hMask`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Mask of segmented face.
+
+          ``hSegmentedFace`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`out` The output image.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+
+

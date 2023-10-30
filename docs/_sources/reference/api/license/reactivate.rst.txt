@@ -12,42 +12,40 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Reactivates a license file using hardware code and product reference.
+Reactivates a license file using the host hardware code and the product reference.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_Reactivate (
-            const char * hardwareCode, 
-            const char * productReference, 
-            const char * path)
+        @staticmethod
+        reactivate(hardware_code: str, product_reference: str, path: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hardwareCode`` const char *
+          ``hardware_code`` str
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
-          ``productReference`` const char *
-          :guilabel:`in` The requested product reference.
+          ``product_reference`` str
+          :guilabel:`in` The product reference.
 
-          ``path`` const char *
-          :guilabel:`in` Path to the retrieved license file.
+          ``path`` str
+          :guilabel:`in` Path to the license file.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -64,10 +62,10 @@ Reactivates a license file using hardware code and product reference.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``productReference`` String
-          :guilabel:`in` The requested product reference.
+          :guilabel:`in` The product reference.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -93,10 +91,10 @@ Reactivates a license file using hardware code and product reference.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``productReference`` string
-          :guilabel:`in` The requested product reference.
+          :guilabel:`in` The product reference.
 
           ``path`` string
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -122,40 +120,10 @@ Reactivates a license file using hardware code and product reference.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``productReference`` String
-          :guilabel:`in` The requested product reference.
+          :guilabel:`in` The product reference.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        reactivate(hardware_code: str, product_reference: str, path: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hardware_code`` str
-          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
-
-          ``product_reference`` str
-          :guilabel:`in` The requested product reference.
-
-          ``path`` str
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -181,10 +149,10 @@ Reactivates a license file using hardware code and product reference.
           :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
 
           ``productReference`` String
-          :guilabel:`in` The requested product reference.
+          :guilabel:`in` The product reference.
 
           ``path`` String
-          :guilabel:`in` Path to the retrieved license file.
+          :guilabel:`in` Path to the license file.
 
 
       **Exceptions**
@@ -194,5 +162,37 @@ Reactivates a license file using hardware code and product reference.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_Reactivate (
+            const char * hardwareCode, 
+            const char * productReference, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hardwareCode`` const char *
+          :guilabel:`in` The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.
+
+          ``productReference`` const char *
+          :guilabel:`in` The product reference.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the license file.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -12,42 +12,42 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Downscales an image inplace so that its maximum dimension equals the given maximum size while preserving the aspect ratio. If the maximum dimension is already smaller than the given maximum size, the function does nothing and the returned scale ratio is 1.
+Downscales the image in-place so that its maximum dimension is equal to the given maximum size, while preserving the aspect ratio.
+
+.. note:: If the maximum dimension is already smaller than the given maximum size, the function does nothing and the scaling ration returned is 1.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImage_Downscale (
-            ID3_FACE_IMAGE hImage, 
-            int maxSize, 
-            float * scaleRatio)
+        downscale(self, max_size: int) -> float
 
       **Parameters**
 
         .. line-block::
 
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`in` Handle to the Image object.
-
-          ``maxSize`` int
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
-
-          ``scaleRatio`` float *
-          :guilabel:`out` Applied scale ratio. Range is ]0:1].
+          ``max_size`` int
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``float``
+          The scaling ratio applied to the image. Range is ]0:1].
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -61,7 +61,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``maxSize`` int
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
 
 
       **Returns**
@@ -69,7 +69,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``double``
-          Applied scale ratio. Range is ]0:1].
+          The scaling ratio applied to the image. Range is ]0:1].
 
       **Exceptions**
 
@@ -91,7 +91,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``maxSize`` int
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
 
 
       **Returns**
@@ -99,7 +99,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``float``
-          Applied scale ratio. Range is ]0:1].
+          The scaling ratio applied to the image. Range is ]0:1].
 
       **Exceptions**
 
@@ -121,7 +121,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``maxSize`` int
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
 
 
       **Returns**
@@ -129,37 +129,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``float``
-          Applied scale ratio. Range is ]0:1].
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        downscale(self, max_size: int) -> float
-
-      **Parameters**
-
-        .. line-block::
-
-          ``max_size`` int
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``float``
-          Applied scale ratio. Range is ]0:1].
+          The scaling ratio applied to the image. Range is ]0:1].
 
       **Exceptions**
 
@@ -181,7 +151,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``maxSize`` Int32
-          :guilabel:`in` Maximum size to fit the image in. Range is [1:+inf[.
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
 
 
       **Returns**
@@ -189,7 +159,7 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
         .. line-block::
 
           ``Float``
-          Applied scale ratio. Range is ]0:1].
+          The scaling ratio applied to the image. Range is ]0:1].
 
       **Exceptions**
 
@@ -198,5 +168,37 @@ Downscales an image inplace so that its maximum dimension equals the given maxim
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImage_Downscale (
+            ID3_FACE_IMAGE hImage, 
+            int maxSize, 
+            float * scaleRatio)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Handle to the Image object.
+
+          ``maxSize`` int
+          :guilabel:`in` Maximum image size, in pixels. The value must be greater than 0.
+
+          ``scaleRatio`` float *
+          :guilabel:`out` The scaling ratio applied to the image. Range is ]0:1].
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

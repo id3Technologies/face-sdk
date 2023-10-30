@@ -21,37 +21,35 @@ Detects faces in an image and store their info in a DetectedFaceList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceDetector_DetectFaces (
-            ID3_FACE_DETECTOR hFaceDetector, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE_LIST hDetectedFaceList)
+        detect_faces(self, image: Image) -> DetectedFaceList
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
-          :guilabel:`in` Handle to the FaceDetector object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
-
-          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
-          :guilabel:`out` The list of detected faces.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`DetectedFaceList<detected_face_list_class>`
+          The list of detected faces.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -143,36 +141,6 @@ Detects faces in an image and store their info in a DetectedFaceList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        detect_faces(self, image: Image) -> DetectedFaceList
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`DetectedFaceList<detected_face_list_class>`
-          The list of detected faces.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -202,5 +170,37 @@ Detects faces in an image and store their info in a DetectedFaceList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceDetector_DetectFaces (
+            ID3_FACE_DETECTOR hFaceDetector, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE_LIST hDetectedFaceList)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceDetector`` :ref:`ID3_FACE_DETECTOR<face_detector_class>`
+          :guilabel:`in` Handle to the FaceDetector object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFaceList`` :ref:`ID3_DETECTED_FACE_LIST<detected_face_list_class>`
+          :guilabel:`out` The list of detected faces.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -21,21 +21,20 @@ Minimum number of consecutive detections to reach before creating a tracked face
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceTracker_GetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * minimumTrackedFaceAge)
-      int id3FaceTracker_SetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int minimumTrackedFaceAge)
+      minimum_tracked_face_age: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Minimum number of consecutive detections to reach before creating a tracked face
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Minimum number of consecutive detections to reach before creating a tracked face
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Minimum number of consecutive detections to reach before creating a tracked face
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      minimum_tracked_face_age: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Minimum number of consecutive detections to reach before creating a tracked face
 
     .. code:: Swift
 
-      TODO
+      public var minimumTrackedFaceAge: Int
+          get {
+              return Int(try! getMinimumTrackedFaceAge())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * minimumTrackedFaceAge)
+      int id3FaceTracker_SetMinimumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int minimumTrackedFaceAge)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

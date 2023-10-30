@@ -24,12 +24,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceCandidate *ID3_FACE_CANDIDATE;
+        class FaceCandidate
 
     .. tab-item:: Dart
       :sync: Dart
@@ -52,19 +52,19 @@ Definition
 
         public class FaceCandidate implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceCandidate
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceCandidate
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceCandidate *ID3_FACE_CANDIDATE;
 
 
 
@@ -73,17 +73,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_CANDIDATE hFaceCandidate{};
-        int err = id3FaceCandidate_Initialize(&hFaceCandidate);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceCandidate_Dispose(&hFaceCandidate);
-        }
+        faceCandidate = FaceCandidate()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceCandidate
 
     .. tab-item:: Dart
       :sync: Dart
@@ -135,21 +138,6 @@ Usage
         // ...
         faceCandidate.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceCandidate = FaceCandidate()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceCandidate
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -157,6 +145,18 @@ Usage
 
         private var faceCandidate: FaceCandidate? = nil
         faceCandidate = try FaceCandidate()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_CANDIDATE hFaceCandidate{};
+        int err = id3FaceCandidate_Initialize(&hFaceCandidate);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceCandidate_Dispose(&hFaceCandidate);
+        }
 
 
 Properties

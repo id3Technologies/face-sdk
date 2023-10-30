@@ -19,12 +19,12 @@ Value indicating if the head is correctly centered horizontally.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int HorizontalPosition
+      int horizontal_position
 
   .. tab-item:: Dart
     :sync: Dart
@@ -47,17 +47,17 @@ Value indicating if the head is correctly centered horizontally.
 
       int horizontalPosition
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int horizontal_position
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int horizontalPosition
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int HorizontalPosition
 

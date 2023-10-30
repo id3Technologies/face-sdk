@@ -26,12 +26,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3FaceAttributes
+      class FaceAttributes
 
   .. tab-item:: Dart
     :sync: Dart
@@ -54,19 +54,19 @@ Definition
 
       public class FaceAttributes
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class FaceAttributes
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias FaceAttributes = id3FaceAttributes
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceAttributes
 
 
 Properties
@@ -82,19 +82,19 @@ Properties
     - Description
   * - :ref:`glasses<face_attributes_glasses_struct_member>`
     - int
-    - Value indicating whether the person is wearing glasses or not.
+    - Value, from 0 to 100, indicating whether the subject is wearing glasses or not.
   * - :ref:`hat<face_attributes_hat_struct_member>`
     - int
-    - Value indicating whether the person is wearing a hat or not.
+    - Value, from 0 to 100, indicating whether the subject is wearing a hat or not.
   * - :ref:`makeUp<face_attributes_make_up_struct_member>`
     - int
-    - Value indicating whether the person is wearing make-up or not.
+    - Value, from 0 to 100, indicating whether the subject is wearing makeup or not.
   * - :ref:`male<face_attributes_male_struct_member>`
     - int
-    - Value indicating whether the person is a male or a female.
+    - Value, from 0 to 100, indicating the estimated gender of the subject.
   * - :ref:`mouthOpen<face_attributes_mouth_open_struct_member>`
     - int
-    - Value indicating whether the person's mouth is open or not.
+    - Value, from 0 to 100, indicating whether the subject's mouth is open or not.
   * - :ref:`smile<face_attributes_smile_struct_member>`
     - int
-    - Value indicating whether the person is smiling or not.
+    - Value, from 0 to 100, indicating whether the subject is smiling or not.

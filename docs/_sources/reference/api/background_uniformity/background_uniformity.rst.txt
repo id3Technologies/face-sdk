@@ -22,12 +22,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      typedef struct id3FaceBackgroundUniformity
+      class BackgroundUniformity
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,19 +50,19 @@ Definition
 
       public class BackgroundUniformity
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      class BackgroundUniformity
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       public typealias BackgroundUniformity = id3FaceBackgroundUniformity
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      typedef struct id3FaceBackgroundUniformity
 
 
 Properties

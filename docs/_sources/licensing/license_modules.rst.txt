@@ -35,4 +35,4 @@ A license module gives access to some functionalities of the SDK as described be
   * - EdgeEdition
     - Identifies the edge edition (Raspberry PI)
 
-.. hint:: In your application, call the :ref:`license_check_module_class_method` to find out whether a particular module is enabled in your license.
+.. hint:: In your application, call the :ref:`face_license_check_module_class_method` to find out whether a particular module is enabled in your license.

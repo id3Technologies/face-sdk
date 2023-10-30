@@ -1,0 +1,61 @@
+.. index:: 
+  !PortraitQualityAttributes.expressionNeutral Property
+
+.. _portrait_quality_attributes_expression_neutral_struct_member:
+
+===============================================================================
+PortraitQualityAttributes.expressionNeutral Property
+===============================================================================
+
+Structure: :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
+
+Definition
+----------
+
+Value indicating whether no emotion is visible on the subject's face.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      int expression_neutral
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      int expressionNeutral
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      int ExpressionNeutral
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      int expressionNeutral
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      Int expressionNeutral
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int ExpressionNeutral
+

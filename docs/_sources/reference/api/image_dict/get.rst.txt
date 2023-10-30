@@ -17,37 +17,35 @@ Gets an item of the ImageDict object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceImageDict_Get (
-            ID3_FACE_IMAGE_DICT hImageDict, 
-            const char * key, 
-            ID3_FACE_IMAGE hImageItem)
+        get(self, key: str) -> Image
 
       **Parameters**
 
         .. line-block::
 
-          ``hImageDict`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
-          :guilabel:`in` Handle to the ImageDict object.
-
-          ``key`` const char *
+          ``key`` str
           :guilabel:`in` Unique key of the Image item to get.
-
-          ``hImageItem`` :ref:`ID3_FACE_IMAGE<image_class>`
-          :guilabel:`out` Image item to get.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`Image<image_class>`
+          Image item to get.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -139,36 +137,6 @@ Gets an item of the ImageDict object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        get(self, key: str) -> Image
-
-      **Parameters**
-
-        .. line-block::
-
-          ``key`` str
-          :guilabel:`in` Unique key of the Image item to get.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`Image<image_class>`
-          Image item to get.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -198,5 +166,37 @@ Gets an item of the ImageDict object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceImageDict_Get (
+            ID3_FACE_IMAGE_DICT hImageDict, 
+            const char * key, 
+            ID3_FACE_IMAGE hImageItem)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hImageDict`` :ref:`ID3_FACE_IMAGE_DICT<image_dict_class>`
+          :guilabel:`in` Handle to the ImageDict object.
+
+          ``key`` const char *
+          :guilabel:`in` Unique key of the Image item to get.
+
+          ``hImageItem`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`out` Image item to get.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

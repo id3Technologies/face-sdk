@@ -104,16 +104,3 @@ Parameters
         The higher the value, the more sensitive the algorithm will be, meaning that it will be more likely to estimate under-exposed face images.
         Default value is 70.
 
-Initializing the :ref:`face_analyser_class` module
---------------------------------------------------
-
-.. tab-set-code::
-
-    .. literalinclude:: /_static/samples/init.cs
-       :language: c#
-       :start-after: [init_face_analyser]
-       :end-before: [init_face_analyser]
-       :dedent: 12
-
-    .. literalinclude:: /_static/samples/init.cpp
-       :language: c

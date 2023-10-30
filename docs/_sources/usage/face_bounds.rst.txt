@@ -1,8 +1,0 @@
-Face bounds
-===========
-
-|product-name| detects human faces and returns a rectangle around the detected faces, as shown in the figure
-below.
-
-.. image:: img/Multi-face-recognition.jpg
-

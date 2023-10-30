@@ -1,0 +1,118 @@
+.. index:: 
+  !Portrait.expression Property
+
+.. _portrait_expression_class_member:
+
+===============================================================================
+Portrait.expression Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: :ref:`FaceExpression<face_expression_enum>`
+
+Definition
+----------
+
+Estimated expression of the subject (angriness, disgust, fear, happiness, sadness, surprise, or neutral). Unknown if not computed.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      expression: FaceExpression
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      FaceExpression get expression => getExpression();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public FaceExpression expression
+      {
+          get => Getexpression();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public FaceExpression getExpression() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public var expression: FaceExpression
+          get {
+              return try! getExpression()
+          }
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetExpression (ID3_FACE_PORTRAIT hPortrait, id3FaceExpression * eExpression)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+

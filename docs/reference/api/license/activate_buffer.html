@@ -6,13 +6,13 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="License.activateSerialKey Method" href="activate_serial_key.html" /><link rel="prev" title="License.activateActivationKeyBuffer Method" href="activate_activation_key_buffer.html" />
 
     <!-- Generated with Sphinx 7.2.2 and Furo 2023.08.19 -->
-        <title>License.activateBuffer Method - Face SDK 0.0.0</title>
+        <title>License.activateBuffer Method - id3 Face Toolkit</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=6f1d9fac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=ec15d6dd" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
@@ -28,7 +28,8 @@
   --admonition-title-font-size: 0.9rem;
   --color-highlight-on-target: transparent;
   --color-background-border: #eeebee;
-  --sidebar-item-line-height: 12px;
+  --sidebar-item-line-height: 1rem;
+  --sidebar-item-spacing-vertical: 0.4rem;
   
   }
   @media not print {
@@ -38,6 +39,8 @@
   --admonition-font-size: 0.9rem;
   --admonition-title-font-size: 0.9rem;
   --color-highlight-on-target: transparent;
+  --sidebar-item-line-height: 1rem;
+  --sidebar-item-spacing-vertical: 0.4rem;
   
     }
     @media (prefers-color-scheme: dark) {
@@ -47,6 +50,8 @@
   --admonition-font-size: 0.9rem;
   --admonition-title-font-size: 0.9rem;
   --color-highlight-on-target: transparent;
+  --sidebar-item-line-height: 1rem;
+  --sidebar-item-spacing-vertical: 0.4rem;
   
       }
     }
@@ -140,7 +145,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Face SDK 0.0.0</div></a>
+      <a href="../../../index.html"><div class="brand">id3 Face Toolkit</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -166,7 +171,7 @@
     <img class="sidebar-logo" src="../../../_static/id3_logo_100.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Face SDK 0.0.0</span>
+  <span class="sidebar-brand-text">id3 Face Toolkit</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -180,12 +185,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction/technology.html">Technology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction/editions.html">Editions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction/image_formats.html">Image formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction/programming_languages.html">Programming languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../introduction/terms.html">Terms and Definitions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../requirements/requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../quick_start/quick_start.html">Quick start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ai_models/ai_models.html">AI Models</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../licensing/licensing.html">Licensing</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Licensing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../licensing/license_types.html">License types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../licensing/license_modules.html">License modules</a></li>
@@ -195,12 +200,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../licensing/license_transfer.html">License repositionning</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../distribution/distribution.html">Distribution</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Distribution</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_windows_apps.html">Distributing Windows applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_linux_apps.html">Distributing Linux applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_android_apps.html">Distributing Android applications</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/conventions.html">Naming conventions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/error_handling.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/license_handling.html">License handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/image_handling.html">Image handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../usage/face_analysis/face_analysis.html">Face analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/ai_models.html">AI Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/face_analysis.html">Face analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/face_background_removal.html">Face background removal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/face_comparison.html">Face comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/face_comparison_on_card.html">Face comparison on card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/face_detection.html">Face detection</a></li>
@@ -210,15 +226,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../usage/liveness_detection.html">Presentation attack detection</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../distribution/distribution.html">Distribution</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Distribution</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_windows_apps.html">Distributing Windows applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_linux_apps.html">Distributing Linux applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../distribution/distributing_android_apps.html">Distributing Android applications</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">id3 Face API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of id3 Face API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../background_uniformity/background_uniformity.html">BackgroundUniformity</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of BackgroundUniformity</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../background_uniformity/color_uniformity.html">colorUniformity</a></li>
@@ -279,7 +286,8 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../face_analyser/face_analyser.html">FaceAnalyser</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of FaceAnalyser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../face_analyser/apply_segmentation_mask.html">applySegmentationMask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../face_analyser/apply_alpha_mask.html">applyAlphaMask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../face_analyser/apply_mask.html">applyMask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/check_colorized_image.html">checkColorizedImage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/compute_age.html">computeAge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/compute_attributes.html">computeAttributes</a></li>
@@ -300,6 +308,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/expression_sensibility.html">expressionSensibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/over_exposure_sensibility.html">overExposureSensibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/segment_face.html">segmentFace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../face_analyser/thread_count.html">threadCount</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_analyser/under_exposure_sensibility.html">underExposureSensibility</a></li>
 </ul>
 </li>
@@ -370,9 +379,8 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../face_library/face_library.html">FaceLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of FaceLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../face_library/check_license.html">checkLicense</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../face_library/check_license_buffer.html">checkLicenseBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_library/get_version.html">getVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../face_library/get_version_ex.html">getVersionEx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_library/load_model.html">loadModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_library/load_model_buffer.html">loadModelBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_library/unload_model.html">unloadModel</a></li>
@@ -421,7 +429,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../face_template/update.html">update</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../face_template_buffer_type/face_template_buffer_type.html">FaceTemplateBufferType</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../face_template_dict/face_template_dict.html">FaceTemplateDict</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of FaceTemplateDict</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../face_template_dict/add.html">add</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../face_template_dict/clear.html">clear</a></li>
@@ -543,13 +550,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../image_list/set.html">set</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="license.html">License</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of License</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../lib_version/lib_version.html">LibVersion</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of LibVersion</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lib_version/build.html">build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lib_version/major.html">major</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lib_version/minor.html">minor</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="license.html">License</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of License</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="activate.html">activate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="activate_activation_key.html">activateActivationKey</a></li>
 <li class="toctree-l3"><a class="reference internal" href="activate_activation_key_buffer.html">activateActivationKeyBuffer</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">activateBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="activate_serial_key.html">activateSerialKey</a></li>
 <li class="toctree-l3"><a class="reference internal" href="activate_serial_key_buffer.html">activateSerialKeyBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="check_license.html">checkLicense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="check_license_buffer.html">checkLicenseBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="check_module.html">checkModule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_expiry_date.html">getExpiryDate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_external_drive_hardware_code.html">getExternalDriveHardwareCode</a></li>
@@ -565,8 +580,6 @@
 <li class="toctree-l3"><a class="reference internal" href="get_module_value.html">getModuleValue</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_product_reference.html">getProductReference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_remaining_days.html">getRemainingDays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="load_license.html">loadLicense</a></li>
-<li class="toctree-l3"><a class="reference internal" href="load_license_buffer.html">loadLicenseBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reactivate.html">reactivate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reactivate_buffer.html">reactivateBuffer</a></li>
 </ul>
@@ -574,7 +587,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../license_error/license_error.html">LicenseError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../license_hardware_code_type/license_hardware_code_type.html">LicenseHardwareCodeType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../license_type/license_type.html">LicenseType</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../photographic_attributes/photographic_attributes.html">PhotographicAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of PhotographicAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../photographic_attributes/photographic_attributes.html">PhotographicAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of PhotographicAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../photographic_attributes/equal_brightness.html">equalBrightness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../photographic_attributes/face_dynamic_range.html">faceDynamicRange</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../photographic_attributes/flash_reflection.html">flashReflection</a></li>
@@ -586,12 +599,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../pixel_format/pixel_format.html">PixelFormat</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../point/point.html">Point</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of Point</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../point/point.html">Point</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of Point</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../point/x.html">x</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../point/y.html">y</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../point_list/point_list.html">PointList</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of PointList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../point_list/point_list.html">PointList</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of PointList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../point_list/add.html">add</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../point_list/clear.html">clear</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../point_list/clone.html">clone</a></li>
@@ -604,7 +617,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../pooling_method/pooling_method.html">PoolingMethod</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait/portrait.html">Portrait</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of Portrait</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait/portrait.html">Portrait</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of Portrait</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../portrait/age.html">age</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait/background_uniformity.html">backgroundUniformity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait/clear.html">clear</a></li>
@@ -644,7 +657,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../portrait/tracked_face.html">trackedFace</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait_processor/portrait_processor.html">PortraitProcessor</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of PortraitProcessor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait_processor/portrait_processor.html">PortraitProcessor</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of PortraitProcessor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_processor/age_estimation.html">ageEstimation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_processor/analyze_portrait.html">analyzePortrait</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_processor/background_color_uniformity_threshold.html">backgroundColorUniformityThreshold</a></li>
@@ -730,7 +743,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../portrait_processor/update_portrait.html">updatePortrait</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait_quality_attributes/portrait_quality_attributes.html">PortraitQualityAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of PortraitQualityAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../portrait_quality_attributes/portrait_quality_attributes.html">PortraitQualityAttributes</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" role="switch" type="checkbox"/><label for="toctree-checkbox-41"><div class="visually-hidden">Toggle navigation of PortraitQualityAttributes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_quality_attributes/closed_mouth.html">closedMouth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_quality_attributes/colorized_image.html">colorizedImage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../portrait_quality_attributes/dynamic_range.html">dynamicRange</a></li>
@@ -765,14 +778,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../portrait_status/portrait_status.html">PortraitStatus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../processing_unit/processing_unit.html">ProcessingUnit</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rectangle/rectangle.html">Rectangle</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" role="switch" type="checkbox"/><label for="toctree-checkbox-41"><div class="visually-hidden">Toggle navigation of Rectangle</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rectangle/rectangle.html">Rectangle</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" role="switch" type="checkbox"/><label for="toctree-checkbox-42"><div class="visually-hidden">Toggle navigation of Rectangle</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../rectangle/bottom_left.html">bottomLeft</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../rectangle/bottom_right.html">bottomRight</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../rectangle/top_left.html">topLeft</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../rectangle/top_right.html">topRight</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../string_list/string_list.html">StringList</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" role="switch" type="checkbox"/><label for="toctree-checkbox-42"><div class="visually-hidden">Toggle navigation of StringList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../string_list/string_list.html">StringList</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" role="switch" type="checkbox"/><label for="toctree-checkbox-43"><div class="visually-hidden">Toggle navigation of StringList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../string_list/add.html">add</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../string_list/clear.html">clear</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../string_list/count.html">count</a></li>
@@ -784,7 +797,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../subject_position/subject_position.html">SubjectPosition</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../tracked_face/tracked_face.html">TrackedFace</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" role="switch" type="checkbox"/><label for="toctree-checkbox-43"><div class="visually-hidden">Toggle navigation of TrackedFace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tracked_face/tracked_face.html">TrackedFace</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" role="switch" type="checkbox"/><label for="toctree-checkbox-44"><div class="visually-hidden">Toggle navigation of TrackedFace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face/bounds.html">bounds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face/clone.html">clone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face/create.html">create</a></li>
@@ -808,7 +821,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face/translate.html">translate</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../tracked_face_list/tracked_face_list.html">TrackedFaceList</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" role="switch" type="checkbox"/><label for="toctree-checkbox-44"><div class="visually-hidden">Toggle navigation of TrackedFaceList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tracked_face_list/tracked_face_list.html">TrackedFaceList</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" role="switch" type="checkbox"/><label for="toctree-checkbox-45"><div class="visually-hidden">Toggle navigation of TrackedFaceList</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face_list/add.html">add</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face_list/clear.html">clear</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tracked_face_list/clone.html">clone</a></li>
@@ -874,52 +887,46 @@
 <p>Module: <a class="reference internal" href="license.html#license-class"><span class="std std-ref">License</span></a></p>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
-<p>Retrieves a license file buffer using id3 account credentials and a product reference.</p>
+<p>Retrieves a license file buffer using customer credentials and a product reference and returns the license in a data buffer.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="C" for="sd-tab-item-0">
-C</label><div class="sd-tab-content docutils">
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">id3FaceLicense_ActivateBuffer</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hardwareCode</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">login</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">productReference</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">commentary</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">licenseFileBuffer</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">licenseFileBufferSize</span><span class="p">)</span>
+</input><label class="sd-tab-label" data-sync-id="Python" for="sd-tab-item-0">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="n">activate_buffer</span><span class="p">(</span><span class="n">hardware_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">login</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">product_reference</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">commentary</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytearray</span>
 </pre></div>
 </div>
 <p><strong>Parameters</strong></p>
 <blockquote>
 <div><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">hardwareCode</span></code> const char *</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hardware_code</span></code> str</div>
 <div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
 <div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> const char *</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> str</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
 <div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> const char *</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> str</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
 <div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> const char *</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">product_reference</span></code> str</div>
 <div class="line"><span class="guilabel">in</span> The requested product reference.</div>
 <div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> const char *</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">licenseFileBuffer</span></code> unsigned char *</div>
-<div class="line"><span class="guilabel">out</span> Pointer to a pre-allocated buffer to receive the license data.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">licenseFileBufferSize</span></code> int *</div>
-<div class="line"><span class="guilabel">in</span> Size of the ‘licenseFileBuffer’ buffer. Receives the number of elements in the ‘licenseFileBuffer’ array.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> str</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
 </div>
 </div></blockquote>
 <p><strong>Returns</strong></p>
 <blockquote>
 <div><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">int</span></code></div>
-<div class="line">An error code.</div>
-<div class="line">See <a class="reference internal" href="../face_error/face_error.html#face-error-enum"><span class="std std-ref">id3FaceError</span></a> file for the list of possible error codes.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">bytearray</span></code></div>
+<div class="line">The license data.</div>
+</div>
+</div></blockquote>
+<p><strong>Exceptions</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference internal" href="../face_exception/face_exception.html#face-exception"><span class="std std-ref">FaceException</span></a></div>
+<div class="line">An error has occurred during Face Library execution.</div>
 </div>
 </div></blockquote>
 </div>
@@ -936,23 +943,23 @@ Dart</label><div class="sd-tab-content docutils">
 <div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> String</div>
 <div class="line"><span class="guilabel">in</span> The requested product reference.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
 </div>
 </div></blockquote>
 <p><strong>Returns</strong></p>
 <blockquote>
 <div><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">Uint8List</span></code></div>
-<div class="line">Pointer to a pre-allocated buffer to receive the license data.</div>
+<div class="line">The license data.</div>
 </div>
 </div></blockquote>
 <p><strong>Exceptions</strong></p>
@@ -976,23 +983,23 @@ C#</label><div class="sd-tab-content docutils">
 <div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> string</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> string</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> string</div>
 <div class="line"><span class="guilabel">in</span> The requested product reference.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> string</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
 </div>
 </div></blockquote>
 <p><strong>Returns</strong></p>
 <blockquote>
 <div><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">byte[]</span></code></div>
-<div class="line">Pointer to a pre-allocated buffer to receive the license data.</div>
+<div class="line">The license data.</div>
 </div>
 </div></blockquote>
 <p><strong>Exceptions</strong></p>
@@ -1016,23 +1023,23 @@ Java</label><div class="sd-tab-content docutils">
 <div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> String</div>
 <div class="line"><span class="guilabel">in</span> The requested product reference.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
 </div>
 </div></blockquote>
 <p><strong>Returns</strong></p>
 <blockquote>
 <div><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">byte[]</span></code></div>
-<div class="line">Pointer to a pre-allocated buffer to receive the license data.</div>
+<div class="line">The license data.</div>
 </div>
 </div></blockquote>
 <p><strong>Exceptions</strong></p>
@@ -1044,48 +1051,7 @@ Java</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="Python" for="sd-tab-item-4">
-Python</label><div class="sd-tab-content docutils">
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
-<span class="n">activate_buffer</span><span class="p">(</span><span class="n">hardware_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">login</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">product_reference</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">commentary</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytearray</span>
-</pre></div>
-</div>
-<p><strong>Parameters</strong></p>
-<blockquote>
-<div><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">hardware_code</span></code> str</div>
-<div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> str</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> str</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">product_reference</span></code> str</div>
-<div class="line"><span class="guilabel">in</span> The requested product reference.</div>
-<div class="line"><br /></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> str</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
-</div>
-</div></blockquote>
-<p><strong>Returns</strong></p>
-<blockquote>
-<div><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">bytearray</span></code></div>
-<div class="line">Pointer to a pre-allocated buffer to receive the license data.</div>
-</div>
-</div></blockquote>
-<p><strong>Exceptions</strong></p>
-<blockquote>
-<div><div class="line-block">
-<div class="line"><a class="reference internal" href="../face_exception/face_exception.html#face-exception"><span class="std std-ref">FaceException</span></a></div>
-<div class="line">An error has occurred during Face Library execution.</div>
-</div>
-</div></blockquote>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="Swift" for="sd-tab-item-5">
+</input><label class="sd-tab-label" data-sync-id="Swift" for="sd-tab-item-4">
 Swift</label><div class="sd-tab-content docutils">
 <div class="highlight-Swift notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">activateBuffer</span><span class="p">(</span><span class="n">hardwareCode</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">login</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">productReference</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">commentary</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="kr">throws</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">UInt8</span><span class="p">]</span>
 </pre></div>
@@ -1097,23 +1063,23 @@ Swift</label><div class="sd-tab-content docutils">
 <div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account login.</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> The id3 account password.</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> String</div>
 <div class="line"><span class="guilabel">in</span> The requested product reference.</div>
 <div class="line"><br /></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> String</div>
-<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation.</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
 </div>
 </div></blockquote>
 <p><strong>Returns</strong></p>
 <blockquote>
 <div><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">[UInt8]</span></code></div>
-<div class="line">Pointer to a pre-allocated buffer to receive the license data.</div>
+<div class="line">The license data.</div>
 </div>
 </div></blockquote>
 <p><strong>Exceptions</strong></p>
@@ -1121,6 +1087,53 @@ Swift</label><div class="sd-tab-content docutils">
 <div><div class="line-block">
 <div class="line"><a class="reference internal" href="../face_exception/face_exception.html#face-exception"><span class="std std-ref">FaceException</span></a></div>
 <div class="line">An error has occurred during Face Library execution.</div>
+</div>
+</div></blockquote>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="C" for="sd-tab-item-5">
+C</label><div class="sd-tab-content docutils">
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">id3FaceLicense_ActivateBuffer</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hardwareCode</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">login</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">productReference</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">commentary</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">licenseFileBuffer</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">licenseFileBufferSize</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hardwareCode</span></code> const char *</div>
+<div class="line"><span class="guilabel">in</span> The hardware code on which the license file will be attached, to be retrieved using the GetHostHardwareCode function.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">login</span></code> const char *</div>
+<div class="line"><span class="guilabel">in</span> The customer login.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">password</span></code> const char *</div>
+<div class="line"><span class="guilabel">in</span> The customer password.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">productReference</span></code> const char *</div>
+<div class="line"><span class="guilabel">in</span> The requested product reference.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">commentary</span></code> const char *</div>
+<div class="line"><span class="guilabel">in</span> Commentary associated to this license activation, generally the host name.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">licenseFileBuffer</span></code> unsigned char *</div>
+<div class="line"><span class="guilabel">out</span> The license data.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">licenseFileBufferSize</span></code> int *</div>
+<div class="line"><span class="guilabel">in</span> Size of the ‘licenseFileBuffer’ buffer. Receives the number of elements in the ‘licenseFileBuffer’ array.</div>
+</div>
+</div></blockquote>
+<p><strong>Returns</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">int</span></code></div>
+<div class="line">An error code.</div>
+<div class="line">See <a class="reference internal" href="../face_error/face_error.html#face-error-enum"><span class="std std-ref">id3FaceError</span></a> file for the list of possible error codes.</div>
 </div>
 </div></blockquote>
 </div>

@@ -17,12 +17,12 @@ Definition
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code-block:: C
+    .. code-block:: Python
 
-      typedef enum id3FaceTemplateFormat
+      class FaceTemplateFormat
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,19 +45,19 @@ Definition
 
       public enum FaceTemplateFormat
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code-block:: Python
-
-      class FaceTemplateFormat
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code-block:: Swift
 
       public enum FaceTemplateFormat
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code-block:: C
+
+      typedef enum id3FaceTemplateFormat
 
 
 Fields
@@ -76,22 +76,22 @@ Fields
     - Undefined template format.
   * - ``v8A``
     - 0x218A
-    - Template generated with model FaceEncoder8A.
+    - Template generated with the FaceEncoder8A model.
   * - ``v8B``
     - 0x218B
-    - Template generated with model FaceEncoder8B.
+    - Template generated with the FaceEncoder8B model.
   * - ``v9A``
     - 0x219A
-    - Template generated with model FaceEncoder9A.
+    - Template generated with the FaceEncoder9A model.
   * - ``v9B``
     - 0x219B
-    - Template generated with model FaceEncoder9B.
+    - Template generated with the FaceEncoder9B model.
   * - ``v9C``
     - 0x219C
-    - Template generated with model FaceEncoder9C.
+    - Template generated with the FaceEncoder9C model.
   * - ``periocularV2A``
     - 0x222A
-    - Template generated with model FacePeriocularEncoder2A.
+    - Template generated with the FacePeriocularEncoder2A model.
   * - ``periocularV2B``
     - 0x222B
-    - Template generated with model FacePeriocularEncoder2B.
+    - Template generated with the FacePeriocularEncoder2B model.

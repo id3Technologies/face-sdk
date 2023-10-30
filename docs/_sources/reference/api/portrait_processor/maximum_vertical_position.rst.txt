@@ -23,21 +23,20 @@ For ICAO compliance, the value must be in the range 30 to 50.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMaximumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumVerticalPosition)
-      int id3FacePortraitProcessor_SetMaximumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumVerticalPosition)
+      maximum_vertical_position: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ For ICAO compliance, the value must be in the range 30 to 50.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ For ICAO compliance, the value must be in the range 30 to 50.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ For ICAO compliance, the value must be in the range 30 to 50.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      maximum_vertical_position: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ For ICAO compliance, the value must be in the range 30 to 50.
 
     .. code:: Swift
 
-      TODO
+      public var maximumVerticalPosition: Int
+          get {
+              return Int(try! getMaximumVerticalPosition())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumVerticalPosition)
+      int id3FacePortraitProcessor_SetMaximumVerticalPosition (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumVerticalPosition)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

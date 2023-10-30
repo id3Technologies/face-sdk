@@ -17,12 +17,12 @@ Pitch angle in degrees.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      float Pitch
+      float pitch
 
   .. tab-item:: Dart
     :sync: Dart
@@ -45,17 +45,17 @@ Pitch angle in degrees.
 
       float pitch
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      float pitch
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Float pitch
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      float Pitch
 

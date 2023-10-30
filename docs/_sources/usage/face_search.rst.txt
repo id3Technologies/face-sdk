@@ -13,6 +13,37 @@ The :ref:`FaceMatcher<face_matcher_class>` module provides a search method that 
 
 For large databases (over 1000 templates), the :ref:`FaceIndexer<face_indexer_class>` module offers a more efficient way of performing a one-to-many search. From an index file created from a list of :ref:`face templates<face_template_class>`, it uses modern indexing techniques for fast, lossless searching.
 
+Constructing a face index
+==========================
+
+The example below demonstrates how to construct a face index:
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_indexer_construction]
+      :end-before: [face_indexer_construction]
+      :dedent: 4
+
+Searching in the index
+======================
+
+The example below demonstrates how to search for a face using the index:
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_indexer_search]
+      :end-before: [face_indexer_search]
+      :dedent: 4
 
 See also
 ========

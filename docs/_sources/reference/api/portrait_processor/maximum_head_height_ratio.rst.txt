@@ -23,21 +23,20 @@ For ICAO compliance, this distance must be in the range 60 to 90.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMaximumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumHeadHeightRatio)
-      int id3FacePortraitProcessor_SetMaximumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumHeadHeightRatio)
+      maximum_head_height_ratio: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ For ICAO compliance, this distance must be in the range 60 to 90.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ For ICAO compliance, this distance must be in the range 60 to 90.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ For ICAO compliance, this distance must be in the range 60 to 90.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      maximum_head_height_ratio: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ For ICAO compliance, this distance must be in the range 60 to 90.
 
     .. code:: Swift
 
-      TODO
+      public var maximumHeadHeightRatio: Int
+          get {
+              return Int(try! getMaximumHeadHeightRatio())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMaximumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * maximumHeadHeightRatio)
+      int id3FacePortraitProcessor_SetMaximumHeadHeightRatio (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int maximumHeadHeightRatio)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

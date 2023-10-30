@@ -12,42 +12,41 @@ Module: :ref:`License<license_class>`
 Definition
 ----------
 
-Retrieves the name of a given module in the license.
+Retrieves the name of the specified license module.
 
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceLicense_GetModuleName (
-            int index, 
-            char * name, 
-            int * nameSize)
+        @staticmethod
+        get_module_name(index: int) -> str
 
       **Parameters**
 
         .. line-block::
 
           ``index`` int
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
-
-          ``name`` char *
-          :guilabel:`out` Pointer to a pre-allocated buffer to receive the name.
-
-          ``nameSize`` int *
-          :guilabel:`in` Size of the 'name' buffer. Receives the minimum required buffer size to hold the 'name' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'name' (excluding terminating NULL character).
+          :guilabel:`in` Index of the module, starting from 0.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          ``str``
+          The license module name.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -61,7 +60,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``index`` int
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
+          :guilabel:`in` Index of the module, starting from 0.
 
 
       **Returns**
@@ -69,7 +68,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the name.
+          The license module name.
 
       **Exceptions**
 
@@ -91,7 +90,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``index`` int
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
+          :guilabel:`in` Index of the module, starting from 0.
 
 
       **Returns**
@@ -99,7 +98,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``string``
-          Pointer to a pre-allocated buffer to receive the name.
+          The license module name.
 
       **Exceptions**
 
@@ -121,7 +120,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``index`` int
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
+          :guilabel:`in` Index of the module, starting from 0.
 
 
       **Returns**
@@ -129,38 +128,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the name.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        @staticmethod
-        get_module_name(index: int) -> str
-
-      **Parameters**
-
-        .. line-block::
-
-          ``index`` int
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
-
-
-      **Returns**
-
-        .. line-block::
-
-          ``str``
-          Pointer to a pre-allocated buffer to receive the name.
+          The license module name.
 
       **Exceptions**
 
@@ -182,7 +150,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``index`` Int32
-          :guilabel:`in` index of the module in range [0 ; GetModuleCount() - 1].
+          :guilabel:`in` Index of the module, starting from 0.
 
 
       **Returns**
@@ -190,7 +158,7 @@ Retrieves the name of a given module in the license.
         .. line-block::
 
           ``String``
-          Pointer to a pre-allocated buffer to receive the name.
+          The license module name.
 
       **Exceptions**
 
@@ -199,5 +167,37 @@ Retrieves the name of a given module in the license.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceLicense_GetModuleName (
+            int index, 
+            char * name, 
+            int * nameSize)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``index`` int
+          :guilabel:`in` Index of the module, starting from 0.
+
+          ``name`` char *
+          :guilabel:`out` The license module name.
+
+          ``nameSize`` int *
+          :guilabel:`in` Size of the 'name' buffer. Receives the minimum required buffer size to hold the 'name' string if the given one is too small (including the terminating NULL character), otherwise receives the number of characters in 'name' (excluding terminating NULL character).
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

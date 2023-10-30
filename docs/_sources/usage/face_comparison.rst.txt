@@ -55,6 +55,23 @@ The decision threshold is defined according to the following table:
   
   :math:`S' = MIN(100, S * 8 / 250)`
 
+
+Example
+=======
+
+The example below demonstrates how to compare two faces:
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. literalinclude:: /../samples/sample.py
+      :language: python
+      :start-after: [face_comparison]
+      :end-before: [face_comparison]
+      :dedent: 4
+
 See also
 ========
 

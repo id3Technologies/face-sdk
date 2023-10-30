@@ -19,45 +19,41 @@ Computes the eye gaze of a detected face.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceAnalyser_ComputeEyeGaze (
-            ID3_FACE_ANALYSER hFaceAnalyser, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            ID3_FACE_POINT_LIST hLandmarks, 
-            id3FaceEyeGaze * sEyeGaze)
+        compute_eye_gaze(self, image: Image, detected_face: DetectedFace, landmarks: PointList) -> EyeGaze
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
-          :guilabel:`in` Handle to the FaceAnalyser object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
 
-          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          ``landmarks`` :ref:`PointList<point_list_class>`
           :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
-
-          ``sEyeGaze`` :ref:`id3FaceEyeGaze *<eye_gaze_struct>`
-          :guilabel:`out` The estimated gaze of left and right eyes of the detected face.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`EyeGaze<eye_gaze_struct>`
+          The estimated gaze of left and right eyes of the detected face.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -167,42 +163,6 @@ Computes the eye gaze of a detected face.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_eye_gaze(self, image: Image, detected_face: DetectedFace, landmarks: PointList) -> EyeGaze
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-          ``landmarks`` :ref:`PointList<point_list_class>`
-          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`EyeGaze<eye_gaze_struct>`
-          The estimated gaze of left and right eyes of the detected face.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -238,5 +198,45 @@ Computes the eye gaze of a detected face.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceAnalyser_ComputeEyeGaze (
+            ID3_FACE_ANALYSER hFaceAnalyser, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            ID3_FACE_POINT_LIST hLandmarks, 
+            id3FaceEyeGaze * sEyeGaze)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceAnalyser`` :ref:`ID3_FACE_ANALYSER<face_analyser_class>`
+          :guilabel:`in` Handle to the FaceAnalyser object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``hLandmarks`` :ref:`ID3_FACE_POINT_LIST<point_list_class>`
+          :guilabel:`in` Estimated landmarks of the detected face. Must be computed with the face analyser.
+
+          ``sEyeGaze`` :ref:`id3FaceEyeGaze *<eye_gaze_struct>`
+          :guilabel:`out` The estimated gaze of left and right eyes of the detected face.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

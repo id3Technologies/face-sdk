@@ -25,41 +25,38 @@ A low confidence means that the quality of the image is not sufficient enough to
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FacePad_ComputeColorBasedScore (
-            ID3_FACE_PAD hFacePad, 
-            ID3_FACE_IMAGE hImage, 
-            ID3_DETECTED_FACE hDetectedFace, 
-            id3FaceColorBasedPadResult * sColorBasedPadResult)
+        compute_color_based_score(self, image: Image, detected_face: DetectedFace) -> ColorBasedPadResult
 
       **Parameters**
 
         .. line-block::
 
-          ``hFacePad`` :ref:`ID3_FACE_PAD<face_pad_class>`
-          :guilabel:`in` Handle to the FacePad object.
-
-          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          ``image`` :ref:`Image<image_class>`
           :guilabel:`in` Source image to process.
 
-          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
           :guilabel:`in` Detected face to process.
-
-          ``sColorBasedPadResult`` :ref:`id3FaceColorBasedPadResult *<color_based_pad_result_struct>`
-          :guilabel:`out` The computed PAD result including score and confidence.
 
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
+          The computed PAD result including score and confidence.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -160,39 +157,6 @@ A low confidence means that the quality of the image is not sufficient enough to
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        compute_color_based_score(self, image: Image, detected_face: DetectedFace) -> ColorBasedPadResult
-
-      **Parameters**
-
-        .. line-block::
-
-          ``image`` :ref:`Image<image_class>`
-          :guilabel:`in` Source image to process.
-
-          ``detected_face`` :ref:`DetectedFace<detected_face_class>`
-          :guilabel:`in` Detected face to process.
-
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`ColorBasedPadResult<color_based_pad_result_struct>`
-          The computed PAD result including score and confidence.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -225,5 +189,41 @@ A low confidence means that the quality of the image is not sufficient enough to
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FacePad_ComputeColorBasedScore (
+            ID3_FACE_PAD hFacePad, 
+            ID3_FACE_IMAGE hImage, 
+            ID3_DETECTED_FACE hDetectedFace, 
+            id3FaceColorBasedPadResult * sColorBasedPadResult)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFacePad`` :ref:`ID3_FACE_PAD<face_pad_class>`
+          :guilabel:`in` Handle to the FacePad object.
+
+          ``hImage`` :ref:`ID3_FACE_IMAGE<image_class>`
+          :guilabel:`in` Source image to process.
+
+          ``hDetectedFace`` :ref:`ID3_DETECTED_FACE<detected_face_class>`
+          :guilabel:`in` Detected face to process.
+
+          ``sColorBasedPadResult`` :ref:`id3FaceColorBasedPadResult *<color_based_pad_result_struct>`
+          :guilabel:`out` The computed PAD result including score and confidence.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -17,51 +17,39 @@ Exports the face template object to a file.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceTemplate_ToFile (
-            ID3_FACE_TEMPLATE hFaceTemplate, 
-            id3FaceTemplateBufferType eTemplateBufferType, 
-            const char * path)
+        to_file(self, path: str) -> None
 
       **Parameters**
 
         .. line-block::
 
-          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
-          :guilabel:`in` Handle to the FaceTemplate object.
-
-          ``eTemplateBufferType`` :ref:`id3FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
-
-          ``path`` const char *
+          ``path`` str
           :guilabel:`in` Path to the file to export the face template object to.
 
 
-      **Returns**
+      **Exceptions**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
 
       .. code:: Dart
 
-        void toFile(FaceTemplateBufferType templateBufferType, String? path)
+        void toFile(String? path)
 
       **Parameters**
 
         .. line-block::
-
-          ``templateBufferType`` :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
 
           ``path`` String
           :guilabel:`in` Path to the file to export the face template object to.
@@ -80,14 +68,11 @@ Exports the face template object to a file.
 
       .. code:: C#
 
-        public void ToFile(FaceTemplateBufferType templateBufferType, string path)
+        public void ToFile(string path)
 
       **Parameters**
 
         .. line-block::
-
-          ``templateBufferType`` :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
 
           ``path`` string
           :guilabel:`in` Path to the file to export the face template object to.
@@ -106,42 +91,13 @@ Exports the face template object to a file.
 
       .. code:: Java
 
-        public void toFile(FaceTemplateBufferType templateBufferType, String path) throws FaceException
+        public void toFile(String path) throws FaceException
 
       **Parameters**
 
         .. line-block::
-
-          ``templateBufferType`` :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
 
           ``path`` String
-          :guilabel:`in` Path to the file to export the face template object to.
-
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        to_file(self, template_buffer_type: FaceTemplateBufferType, path: str) -> None
-
-      **Parameters**
-
-        .. line-block::
-
-          ``template_buffer_type`` :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
-
-          ``path`` str
           :guilabel:`in` Path to the file to export the face template object to.
 
 
@@ -158,14 +114,11 @@ Exports the face template object to a file.
 
       .. code:: Swift
 
-        public func toFile(templateBufferType: FaceTemplateBufferType, path: String) throws
+        public func toFile(path: String) throws
 
       **Parameters**
 
         .. line-block::
-
-          ``templateBufferType`` :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-          :guilabel:`in` Face template buffer type to export the face template object to.
 
           ``path`` String
           :guilabel:`in` Path to the file to export the face template object to.
@@ -178,5 +131,33 @@ Exports the face template object to a file.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceTemplate_ToFile (
+            ID3_FACE_TEMPLATE hFaceTemplate, 
+            const char * path)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceTemplate`` :ref:`ID3_FACE_TEMPLATE<face_template_class>`
+          :guilabel:`in` Handle to the FaceTemplate object.
+
+          ``path`` const char *
+          :guilabel:`in` Path to the file to export the face template object to.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

@@ -30,12 +30,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceCandidateList *ID3_FACE_CANDIDATE_LIST;
+        class FaceCandidateList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -58,19 +58,19 @@ Definition
 
         public class FaceCandidateList implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceCandidateList
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceCandidateList
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceCandidateList *ID3_FACE_CANDIDATE_LIST;
 
 
 
@@ -79,17 +79,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_CANDIDATE_LIST hFaceCandidateList{};
-        int err = id3FaceCandidateList_Initialize(&hFaceCandidateList);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceCandidateList_Dispose(&hFaceCandidateList);
-        }
+        faceCandidateList = FaceCandidateList()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceCandidateList
 
     .. tab-item:: Dart
       :sync: Dart
@@ -141,21 +144,6 @@ Usage
         // ...
         faceCandidateList.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceCandidateList = FaceCandidateList()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceCandidateList
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -163,6 +151,18 @@ Usage
 
         private var faceCandidateList: FaceCandidateList? = nil
         faceCandidateList = try FaceCandidateList()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_CANDIDATE_LIST hFaceCandidateList{};
+        int err = id3FaceCandidateList_Initialize(&hFaceCandidateList);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceCandidateList_Dispose(&hFaceCandidateList);
+        }
 
 
 Properties
@@ -186,7 +186,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 
 Methods

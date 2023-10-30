@@ -12,21 +12,19 @@ Structure: :ref:`FaceAttributes<face_attributes_struct>`
 Definition
 ----------
 
-Value indicating whether the person is wearing a hat or not.
-
-100 means that the person is definitely wearing a hat.
+Value, from 0 to 100, indicating whether the subject is wearing a hat or not.
 
 .. hint:: The recommended value is less than 10.
 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int Hat
+      int hat
 
   .. tab-item:: Dart
     :sync: Dart
@@ -49,17 +47,17 @@ Value indicating whether the person is wearing a hat or not.
 
       int hat
 
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      int hat
-
   .. tab-item:: Swift
     :sync: Swift
 
     .. code:: Swift
 
       Int hat
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int Hat
 

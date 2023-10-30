@@ -21,21 +21,20 @@ It includes image colorization, equal brightness, dynamic range, resolution, nat
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * photographicQualityComputation)
-      int id3FacePortraitProcessor_SetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool photographicQualityComputation)
+      photographic_quality_computation: bool
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ It includes image colorization, equal brightness, dynamic range, resolution, nat
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ It includes image colorization, equal brightness, dynamic range, resolution, nat
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ It includes image colorization, equal brightness, dynamic range, resolution, nat
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      photographic_quality_computation: bool
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ It includes image colorization, equal brightness, dynamic range, resolution, nat
 
     .. code:: Swift
 
-      TODO
+      public var photographicQualityComputation: Bool
+          get {
+              return try! getPhotographicQualityComputation()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool * photographicQualityComputation)
+      int id3FacePortraitProcessor_SetPhotographicQualityComputation (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, bool photographicQualityComputation)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

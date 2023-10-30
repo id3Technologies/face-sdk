@@ -18,26 +18,25 @@ Mouth opening threshold.
 
 If the mouth opening score is above this value, the mouth of detected face is definitely open.
 
-.. hint:: Default value is 5.
+.. hint:: Default value is 35.
 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetMouthOpenThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * mouthOpenThreshold)
-      int id3FacePortraitProcessor_SetMouthOpenThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int mouthOpenThreshold)
+      mouth_open_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ If the mouth opening score is above this value, the mouth of detected face is de
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ If the mouth opening score is above this value, the mouth of detected face is de
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ If the mouth opening score is above this value, the mouth of detected face is de
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      mouth_open_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ If the mouth opening score is above this value, the mouth of detected face is de
 
     .. code:: Swift
 
-      TODO
+      public var mouthOpenThreshold: Int
+          get {
+              return Int(try! getMouthOpenThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetMouthOpenThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * mouthOpenThreshold)
+      int id3FacePortraitProcessor_SetMouthOpenThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int mouthOpenThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

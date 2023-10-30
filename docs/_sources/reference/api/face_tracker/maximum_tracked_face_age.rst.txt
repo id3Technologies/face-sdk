@@ -21,21 +21,20 @@ Maximum number of consecutive non-detections to reach before deleting a tracked 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceTracker_GetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * maximumTrackedFaceAge)
-      int id3FaceTracker_SetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int maximumTrackedFaceAge)
+      maximum_tracked_face_age: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Maximum number of consecutive non-detections to reach before deleting a tracked 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Maximum number of consecutive non-detections to reach before deleting a tracked 
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Maximum number of consecutive non-detections to reach before deleting a tracked 
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      maximum_tracked_face_age: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Maximum number of consecutive non-detections to reach before deleting a tracked 
 
     .. code:: Swift
 
-      TODO
+      public var maximumTrackedFaceAge: Int
+          get {
+              return Int(try! getMaximumTrackedFaceAge())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int * maximumTrackedFaceAge)
+      int id3FaceTracker_SetMaximumTrackedFaceAge (ID3_FACE_TRACKER hFaceTracker, int maximumTrackedFaceAge)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

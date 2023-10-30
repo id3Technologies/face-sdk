@@ -14,28 +14,27 @@ Type: int
 Definition
 ----------
 
-Number of threads to use for detection and encoding.
+Number of threads to be used for portrait processing.
 
-.. hint:: Default value is 1. Allocating more than 1 thread here can increase the speed of the process.
+.. hint:: Default value is 1. Allocating more than one thread can increase the speed of the process.
 
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetThreadCount (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * threadCount)
-      int id3FacePortraitProcessor_SetThreadCount (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int threadCount)
+      thread_count: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -50,7 +49,7 @@ Number of threads to use for detection and encoding.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -69,7 +68,7 @@ Number of threads to use for detection and encoding.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -85,22 +84,7 @@ Number of threads to use for detection and encoding.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      thread_count: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -108,13 +92,33 @@ Number of threads to use for detection and encoding.
 
     .. code:: Swift
 
-      TODO
+      public var threadCount: Int
+          get {
+              return Int(try! getThreadCount())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetThreadCount (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * threadCount)
+      int id3FacePortraitProcessor_SetThreadCount (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int threadCount)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

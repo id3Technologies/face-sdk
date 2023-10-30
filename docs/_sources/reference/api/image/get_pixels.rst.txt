@@ -12,10 +12,34 @@ Module: :ref:`Image<image_class>`
 Definition
 ----------
 
-Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixels pointer carefully.
+Gets a pointer to the image pixels.
+
+.. warning:: This method is unsafe! The user must handle the pixels pointer carefully.
 
 
 .. tab-set::
+
+    .. tab-item:: C#
+      :sync: C#
+
+      .. code:: C#
+
+        public IntPtr GetPixels()
+
+      **Returns**
+
+        .. line-block::
+
+          ``IntPtr``
+          Pointer to the image pixels.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: C
       :sync: C
@@ -34,7 +58,7 @@ Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixe
           :guilabel:`in` Handle to the Image object.
 
           ``pixels`` void **
-          :guilabel:`out` Pointer to the pixels of the image.
+          :guilabel:`out` Pointer to the image pixels.
 
 
       **Returns**
@@ -44,27 +68,5 @@ Gets a pointer to the pixels of the image. Unsafe! The user must handle the pixe
           ``int``
           An error code.
           See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
-
-    .. tab-item:: C#
-      :sync: C#
-
-      .. code:: C#
-
-        public IntPtr GetPixels()
-
-      **Returns**
-
-        .. line-block::
-
-          ``IntPtr``
-          Pointer to the pixels of the image.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
 
 

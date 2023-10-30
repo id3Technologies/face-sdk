@@ -1,0 +1,118 @@
+.. index:: 
+  !Portrait.padStatus Property
+
+.. _portrait_pad_status_class_member:
+
+===============================================================================
+Portrait.padStatus Property
+===============================================================================
+
+Module: :ref:`Portrait<portrait_class>`
+
+Type: :ref:`PadStatus<pad_status_enum>`
+
+Definition
+----------
+
+Status of the presentation attack detection.
+
+
+.. tab-set::
+
+  .. tab-item:: Python
+    :sync: Python
+
+    .. code:: Python
+
+      pad_status: PadStatus
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Dart
+    :sync: Dart
+
+    .. code:: Dart
+
+      PadStatus get padStatus => getPadStatus();
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C#
+    :sync: C#
+
+    .. code:: C#
+
+      public PadStatus padStatus
+      {
+          get => GetpadStatus();
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Java
+    :sync: Java
+
+    .. code:: Java
+
+      public PadStatus getPadStatus() throws FaceException
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: Swift
+    :sync: Swift
+
+    .. code:: Swift
+
+      public var padStatus: PadStatus
+          get {
+              return try! getPadStatus()
+          }
+      }
+
+
+    **Exceptions**
+
+      .. line-block::
+
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortrait_GetPadStatus (ID3_FACE_PORTRAIT hPortrait, id3FacePadStatus * ePadStatus)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+

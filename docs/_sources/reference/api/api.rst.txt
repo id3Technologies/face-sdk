@@ -31,6 +31,7 @@ It includes:
   FaceExpression <face_expression/face_expression>
   FaceIndexer <face_indexer/face_indexer>
   FaceLibrary <face_library/face_library>
+  FaceLicense <face_license/face_license>
   FaceMatcher <face_matcher/face_matcher>
   FaceMatcherThreshold <face_matcher_threshold/face_matcher_threshold>
   FaceModel <face_model/face_model>
@@ -38,7 +39,6 @@ It includes:
   FacePad <face_pad/face_pad>
   FacePose <face_pose/face_pose>
   FaceTemplate <face_template/face_template>
-  FaceTemplateBufferType <face_template_buffer_type/face_template_buffer_type>
   FaceTemplateDict <face_template_dict/face_template_dict>
   FaceTemplateFormat <face_template_format/face_template_format>
   FaceTemplateList <face_template_list/face_template_list>
@@ -51,10 +51,11 @@ It includes:
   ImageError <image_error/image_error>
   ImageFormat <image_format/image_format>
   ImageList <image_list/image_list>
-  License <license/license>
+  LibVersion <lib_version/lib_version>
   LicenseError <license_error/license_error>
   LicenseHardwareCodeType <license_hardware_code_type/license_hardware_code_type>
   LicenseType <license_type/license_type>
+  PadStatus <pad_status/pad_status>
   PhotographicAttributes <photographic_attributes/photographic_attributes>
   PixelFormat <pixel_format/pixel_format>
   Point <point/point>
@@ -114,7 +115,11 @@ Classes
 
   * - :ref:`FaceLibrary <face_library_class>`
     - 
-     | Initialises the face SDK library.
+     | Initialises the SDK library.
+
+  * - :ref:`FaceLicense <face_license_class>`
+    - 
+     | Handles the license to use this SDK.
 
   * - :ref:`FaceMatcher <face_matcher_class>`
     - 
@@ -142,11 +147,11 @@ Classes
 
   * - :ref:`Image <image_class>`
     - 
-     | This class represents a Image
+     | Represents an image.
 
   * - :ref:`ImageBuffer <image_buffer_class>`
     - 
-     | This class represents a ImageBuffer
+     | Represents an image buffer.
 
   * - :ref:`ImageDict <image_dict_class>`
     - 
@@ -156,13 +161,9 @@ Classes
     - 
      | Represents a list of images.
 
-  * - :ref:`License <license_class>`
-    - 
-     | This class represents a License
-
   * - :ref:`PointList <point_list_class>`
     - 
-     | This class represents a PointList
+     | Represents a point list.
 
   * - :ref:`Portrait <portrait_class>`
     - 
@@ -212,37 +213,37 @@ Enumerations
     - 
      | Enumerates the AI models available in this SDK.
 
-  * - :ref:`FaceTemplateBufferType<face_template_buffer_type_enum>`
-    - 
-     | Enumerates the buffer types for face templates.
-
   * - :ref:`FaceTemplateFormat<face_template_format_enum>`
     - 
      | Enumerates the face template formats.
 
   * - :ref:`ImageError<image_error_enum>`
     - 
-     | Enumeration of possible values for a ImageError of the Face module.
+     | Enumerates possible error codes related to image management.
 
   * - :ref:`ImageFormat<image_format_enum>`
     - 
-     | Enumeration of possible values for a ImageFormat of the Face module.
+     | Enumerates supported image formats.
 
   * - :ref:`LicenseError<license_error_enum>`
     - 
-     | Enumeration of possible values for a LicenseError of the Face module.
+     | Enumerates the error codes related to license management.
 
   * - :ref:`LicenseHardwareCodeType<license_hardware_code_type_enum>`
     - 
-     | Enumeration of possible values for a LicenseHardwareCodeType of the Face module.
+     | Enumerates the types of hardware codes.
 
   * - :ref:`LicenseType<license_type_enum>`
     - 
-     | Enumeration of possible values for a LicenseType of the Face module.
+     | Enumerates the license types.
+
+  * - :ref:`PadStatus<pad_status_enum>`
+    - 
+     | Enumerates the statuses of the presentation attack detection (PAD).
 
   * - :ref:`PixelFormat<pixel_format_enum>`
     - 
-     | Enumeration of possible values for a PixelFormat of the Face module.
+     | Enumerates supported pixel formats.
 
   * - :ref:`PoolingMethod<pooling_method_enum>`
     - 
@@ -308,13 +309,17 @@ Structures
     - 
      | Represents some glasses attributes.
 
+  * - :ref:`LibVersion<lib_version_struct>`
+    - 
+     | Contains data for LibVersion
+
   * - :ref:`PhotographicAttributes<photographic_attributes_struct>`
     - 
      | Represents the photographic attributes of a portrait image.
 
   * - :ref:`Point<point_struct>`
     - 
-     | Contains data for Point
+     | Represents a point.
 
   * - :ref:`PortraitQualityAttributes<portrait_quality_attributes_struct>`
     - 
@@ -322,7 +327,7 @@ Structures
 
   * - :ref:`Rectangle<rectangle_struct>`
     - 
-     | Contains data for Rectangle
+     | Represents a rectangle.
 
 
 

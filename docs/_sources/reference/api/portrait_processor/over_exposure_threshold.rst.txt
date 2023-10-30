@@ -23,21 +23,20 @@ Above this threshold, the ratio of face pixels are over-exposed.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FacePortraitProcessor_GetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * overExposureThreshold)
-      int id3FacePortraitProcessor_SetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int overExposureThreshold)
+      over_exposure_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Above this threshold, the ratio of face pixels are over-exposed.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Above this threshold, the ratio of face pixels are over-exposed.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Above this threshold, the ratio of face pixels are over-exposed.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      over_exposure_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Above this threshold, the ratio of face pixels are over-exposed.
 
     .. code:: Swift
 
-      TODO
+      public var overExposureThreshold: Int
+          get {
+              return Int(try! getOverExposureThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FacePortraitProcessor_GetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int * overExposureThreshold)
+      int id3FacePortraitProcessor_SetOverExposureThreshold (ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor, int overExposureThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

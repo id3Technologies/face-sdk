@@ -23,21 +23,20 @@ Confidence threshold, in the range [0;100].
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceDetector_GetConfidenceThreshold (ID3_FACE_DETECTOR hFaceDetector, int * confidenceThreshold)
-      int id3FaceDetector_SetConfidenceThreshold (ID3_FACE_DETECTOR hFaceDetector, int confidenceThreshold)
+      confidence_threshold: int
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Confidence threshold, in the range [0;100].
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Confidence threshold, in the range [0;100].
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Confidence threshold, in the range [0;100].
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      confidence_threshold: int
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Confidence threshold, in the range [0;100].
 
     .. code:: Swift
 
-      TODO
+      public var confidenceThreshold: Int
+          get {
+              return Int(try! getConfidenceThreshold())
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceDetector_GetConfidenceThreshold (ID3_FACE_DETECTOR hFaceDetector, int * confidenceThreshold)
+      int id3FaceDetector_SetConfidenceThreshold (ID3_FACE_DETECTOR hFaceDetector, int confidenceThreshold)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

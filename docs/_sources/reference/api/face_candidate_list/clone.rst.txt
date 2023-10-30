@@ -17,33 +17,27 @@ Clones the FaceCandidateList object.
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        int id3FaceCandidateList_CopyTo (
-            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
-            ID3_FACE_CANDIDATE_LIST hFaceCandidateListDst)
-
-      **Parameters**
-
-        .. line-block::
-
-          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
-          :guilabel:`in` Handle to the FaceCandidateList object.
-
-          ``hFaceCandidateListDst`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
-          :guilabel:`out` The newly created face candidate list.
-
+        clone(self) -> FaceCandidateList
 
       **Returns**
 
         .. line-block::
 
-          ``int``
-          An error code.
-          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+          :ref:`FaceCandidateList<face_candidate_list_class>`
+          The newly created face candidate list.
+
+      **Exceptions**
+
+        .. line-block::
+
+          :ref:`FaceException<face_exception>`
+          An error has occurred during Face Library execution.
+
 
     .. tab-item:: Dart
       :sync: Dart
@@ -111,28 +105,6 @@ Clones the FaceCandidateList object.
           An error has occurred during Face Library execution.
 
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        clone(self) -> FaceCandidateList
-
-      **Returns**
-
-        .. line-block::
-
-          :ref:`FaceCandidateList<face_candidate_list_class>`
-          The newly created face candidate list.
-
-      **Exceptions**
-
-        .. line-block::
-
-          :ref:`FaceException<face_exception>`
-          An error has occurred during Face Library execution.
-
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -154,5 +126,33 @@ Clones the FaceCandidateList object.
           :ref:`FaceException<face_exception>`
           An error has occurred during Face Library execution.
 
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        int id3FaceCandidateList_CopyTo (
+            ID3_FACE_CANDIDATE_LIST hFaceCandidateList, 
+            ID3_FACE_CANDIDATE_LIST hFaceCandidateListDst)
+
+      **Parameters**
+
+        .. line-block::
+
+          ``hFaceCandidateList`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`in` Handle to the FaceCandidateList object.
+
+          ``hFaceCandidateListDst`` :ref:`ID3_FACE_CANDIDATE_LIST<face_candidate_list_class>`
+          :guilabel:`out` The newly created face candidate list.
+
+
+      **Returns**
+
+        .. line-block::
+
+          ``int``
+          An error code.
+          See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 
 

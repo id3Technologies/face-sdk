@@ -23,21 +23,20 @@ Model used to detect and track faces.
 
 .. tab-set::
 
-  .. tab-item:: C
-    :sync: C
+  .. tab-item:: Python
+    :sync: Python
 
-    .. code:: C
+    .. code:: Python
 
-      int id3FaceTracker_GetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel * eDetectionModel)
-      int id3FaceTracker_SetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel eDetectionModel)
+      detection_model: FaceModel
 
-    **Returns**
-   
+
+    **Exceptions**
+
       .. line-block::
 
-        ``int``
-        An error code.
-        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
+        :ref:`FaceException<face_exception>`
+        An error has occurred during Face Library execution.
 
   .. tab-item:: Dart
     :sync: Dart
@@ -52,7 +51,7 @@ Model used to detect and track faces.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: C#
@@ -71,7 +70,7 @@ Model used to detect and track faces.
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Java
@@ -87,22 +86,7 @@ Model used to detect and track faces.
 
       .. line-block::
 
-        ``FaceException``
-        An error has occurred during Face Library execution.
-
-  .. tab-item:: Python
-    :sync: Python
-
-    .. code:: Python
-
-      detection_model: FaceModel
-
-
-    **Exceptions**
-
-      .. line-block::
-
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
 
   .. tab-item:: Swift
@@ -110,13 +94,33 @@ Model used to detect and track faces.
 
     .. code:: Swift
 
-      TODO
+      public var detectionModel: FaceModel
+          get {
+              return try! getDetectionModel()
+          }
+      }
 
 
     **Exceptions**
 
       .. line-block::
 
-        ``FaceException``
+        :ref:`FaceException<face_exception>`
         An error has occurred during Face Library execution.
+
+  .. tab-item:: C
+    :sync: C
+
+    .. code:: C
+
+      int id3FaceTracker_GetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel * eDetectionModel)
+      int id3FaceTracker_SetDetectionModel (ID3_FACE_TRACKER hFaceTracker, id3FaceModel eDetectionModel)
+
+    **Returns**
+   
+      .. line-block::
+
+        ``int``
+        An error code.
+        See :ref:`id3FaceError<face_error_enum>` file for the list of possible error codes.
 

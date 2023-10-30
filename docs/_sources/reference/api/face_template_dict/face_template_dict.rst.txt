@@ -31,12 +31,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceTemplateDict *ID3_FACE_TEMPLATE_DICT;
+        class FaceTemplateDict
 
     .. tab-item:: Dart
       :sync: Dart
@@ -59,19 +59,19 @@ Definition
 
         public class FaceTemplateDict implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceTemplateDict
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceTemplateDict
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceTemplateDict *ID3_FACE_TEMPLATE_DICT;
 
 
 
@@ -80,17 +80,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_TEMPLATE_DICT hFaceTemplateDict{};
-        int err = id3FaceTemplateDict_Initialize(&hFaceTemplateDict);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceTemplateDict_Dispose(&hFaceTemplateDict);
-        }
+        faceTemplateDict = FaceTemplateDict()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceTemplateDict
 
     .. tab-item:: Dart
       :sync: Dart
@@ -142,21 +145,6 @@ Usage
         // ...
         faceTemplateDict.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceTemplateDict = FaceTemplateDict()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceTemplateDict
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -164,6 +152,18 @@ Usage
 
         private var faceTemplateDict: FaceTemplateDict? = nil
         faceTemplateDict = try FaceTemplateDict()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_TEMPLATE_DICT hFaceTemplateDict{};
+        int err = id3FaceTemplateDict_Initialize(&hFaceTemplateDict);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceTemplateDict_Dispose(&hFaceTemplateDict);
+        }
 
 
 Properties
@@ -190,7 +190,7 @@ Properties
 Iteration
 ---------
 
-These class support iteration for Dart, C#, Java and Python languages.
+This class supports iteration in Dart, C#, Java and Python.
 
 The iteration is done on keys
 

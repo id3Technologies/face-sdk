@@ -22,11 +22,11 @@ Namespace: :ref:`id3.Face<reference_api>`
   computePhotographicAttributes<compute_photographic_attributes>
   cropIcaoPortrait<crop_icao_portrait>
   cropPortrait<crop_portrait>
-  detectEmotion<detect_emotion>
+  detectExpression<detect_expression>
   dynamicRangeThreshold<dynamic_range_threshold>
-  emotionDetection<emotion_detection>
   equalBrightnessThreshold<equal_brightness_threshold>
   estimateAge<estimate_age>
+  expressionDetection<expression_detection>
   expressionSensibility<expression_sensibility>
   eyeGazeDetection<eye_gaze_detection>
   eyeOcclusionThreshold<eye_occlusion_threshold>
@@ -43,8 +43,6 @@ Namespace: :ref:`id3.Face<reference_api>`
   glassesThreshold<glasses_threshold>
   hatDetection<hat_detection>
   hatThreshold<hat_threshold>
-  headPoseEstimation<head_pose_estimation>
-  landmarkDetection<landmark_detection>
   makeupDetection<makeup_detection>
   makeupThreshold<makeup_threshold>
   maleThreshold<male_threshold>
@@ -104,12 +102,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FacePortraitProcessor *ID3_FACE_PORTRAIT_PROCESSOR;
+        class PortraitProcessor
 
     .. tab-item:: Dart
       :sync: Dart
@@ -132,19 +130,19 @@ Definition
 
         public class PortraitProcessor implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class PortraitProcessor
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class PortraitProcessor
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FacePortraitProcessor *ID3_FACE_PORTRAIT_PROCESSOR;
 
 
 
@@ -153,17 +151,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor{};
-        int err = id3FacePortraitProcessor_Initialize(&hPortraitProcessor);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FacePortraitProcessor_Dispose(&hPortraitProcessor);
-        }
+        portraitProcessor = PortraitProcessor()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del portraitProcessor
 
     .. tab-item:: Dart
       :sync: Dart
@@ -215,21 +216,6 @@ Usage
         // ...
         portraitProcessor.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        portraitProcessor = PortraitProcessor()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del portraitProcessor
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -237,6 +223,18 @@ Usage
 
         private var portraitProcessor: PortraitProcessor? = nil
         portraitProcessor = try PortraitProcessor()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_PORTRAIT_PROCESSOR hPortraitProcessor{};
+        int err = id3FacePortraitProcessor_Initialize(&hPortraitProcessor);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FacePortraitProcessor_Dispose(&hPortraitProcessor);
+        }
 
 
 Properties
@@ -265,12 +263,12 @@ Properties
   * - :ref:`dynamicRangeThreshold<portrait_processor_dynamic_range_threshold_class_member>`
     - int
     - Face dynamic range threshold.
-  * - :ref:`emotionDetection<portrait_processor_emotion_detection_class_member>`
-    - bool
-    - Value indicating whether emotion detection is enabled.
   * - :ref:`equalBrightnessThreshold<portrait_processor_equal_brightness_threshold_class_member>`
     - int
     - Equal brightness threshold.
+  * - :ref:`expressionDetection<portrait_processor_expression_detection_class_member>`
+    - bool
+    - Value indicating whether expression detection is enabled.
   * - :ref:`expressionSensibility<portrait_processor_expression_sensibility_class_member>`
     - int
     - Sensibility of the expression classifier.
@@ -319,12 +317,6 @@ Properties
   * - :ref:`hatThreshold<portrait_processor_hat_threshold_class_member>`
     - int
     - Threshold for confirming that the person is wearing a hat.
-  * - :ref:`headPoseEstimation<portrait_processor_head_pose_estimation_class_member>`
-    - bool
-    - Value indicating whether head pose estimation is enabled.
-  * - :ref:`landmarkDetection<portrait_processor_landmark_detection_class_member>`
-    - bool
-    - Value indicating whether landmark detection is enabled.
   * - :ref:`makeupDetection<portrait_processor_makeup_detection_class_member>`
     - bool
     - Value indicating whether makeup detection is enabled.
@@ -456,7 +448,7 @@ Properties
     - Smile threshold.
   * - :ref:`threadCount<portrait_processor_thread_count_class_member>`
     - int
-    - Number of threads to use for detection and encoding.
+    - Number of threads to be used for portrait processing.
   * - :ref:`tintedGlassThreshold<portrait_processor_tinted_glass_threshold_class_member>`
     - int
     - Tinted glass detection threshold.
@@ -492,8 +484,8 @@ Methods
     - Creates an ICAO-compliant portrait image by cropping the source image around the detected face.
   * - :ref:`cropPortrait<portrait_processor_crop_portrait_class_method>`
     - Creates a portrait image by cropping the source image around the detected face.
-  * - :ref:`detectEmotion<portrait_processor_detect_emotion_class_method>`
-    - Detects the subject's emotion on the specified portrait.
+  * - :ref:`detectExpression<portrait_processor_detect_expression_class_method>`
+    - Detects the subject's expression on the specified portrait.
   * - :ref:`estimateAge<portrait_processor_estimate_age_class_method>`
     - Estimates the age of the person.
   * - :ref:`reset<portrait_processor_reset_class_method>`

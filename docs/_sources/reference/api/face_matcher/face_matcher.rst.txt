@@ -24,12 +24,12 @@ Definition
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        typedef struct id3FaceMatcher *ID3_FACE_MATCHER;
+        class FaceMatcher
 
     .. tab-item:: Dart
       :sync: Dart
@@ -52,19 +52,19 @@ Definition
 
         public class FaceMatcher implements AutoCloseable, Serializable
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        class FaceMatcher
-
     .. tab-item:: Swift
       :sync: Swift
 
       .. code:: Swift
 
         public class FaceMatcher
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        typedef struct id3FaceMatcher *ID3_FACE_MATCHER;
 
 
 
@@ -73,17 +73,20 @@ Usage
 
 .. tab-set::
 
-    .. tab-item:: C
-      :sync: C
+    .. tab-item:: Python
+      :sync: Python
 
-      .. code:: C
+      .. code:: Python
 
-        ID3_FACE_MATCHER hFaceMatcher{};
-        int err = id3FaceMatcher_Initialize(&hFaceMatcher);
-        if (err == ID3_SUCCESS) {
-            // ...
-            id3FaceMatcher_Dispose(&hFaceMatcher);
-        }
+        faceMatcher = FaceMatcher()
+        # ...
+
+      **Explicit destruction**
+
+      .. code:: Python
+
+        # ...
+        del faceMatcher
 
     .. tab-item:: Dart
       :sync: Dart
@@ -135,21 +138,6 @@ Usage
         // ...
         faceMatcher.close();
 
-    .. tab-item:: Python
-      :sync: Python
-
-      .. code:: Python
-
-        faceMatcher = FaceMatcher()
-        # ...
-
-      **Explicit destruction**
-
-      .. code:: Python
-
-        # ...
-        del faceMatcher
-
     .. tab-item:: Swift
       :sync: Swift
 
@@ -157,6 +145,18 @@ Usage
 
         private var faceMatcher: FaceMatcher? = nil
         faceMatcher = try FaceMatcher()
+
+    .. tab-item:: C
+      :sync: C
+
+      .. code:: C
+
+        ID3_FACE_MATCHER hFaceMatcher{};
+        int err = id3FaceMatcher_Initialize(&hFaceMatcher);
+        if (err == ID3_SUCCESS) {
+            // ...
+            id3FaceMatcher_Dispose(&hFaceMatcher);
+        }
 
 
 Methods
